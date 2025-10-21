@@ -17,6 +17,7 @@ A modern, production-ready Next.js starter template with TypeScript, Tailwind CS
 ## 📋 Prerequisites
 
 Before you begin, ensure you have the following installed:
+
 - **Node.js** 20.x or higher
 - **npm** 10.x or higher (comes with Node.js)
 
@@ -111,6 +112,7 @@ TypeScript is configured in `tsconfig.json` with strict mode enabled for better 
 ### Next.js
 
 Next.js configuration is in `next.config.ts`. The project uses:
+
 - App Router (Next.js 13+ routing)
 - Turbopack for faster development builds
 - Optimized image handling with `next/image`
@@ -118,6 +120,7 @@ Next.js configuration is in `next.config.ts`. The project uses:
 ### Environment Variables
 
 Create a `.env.local` file based on `.env.example` to configure:
+
 - Application settings
 - API keys
 - Database connections
@@ -134,6 +137,7 @@ npm run build
 ```
 
 This will:
+
 1. Type-check your TypeScript code
 2. Build and optimize your application
 3. Generate static pages where possible
@@ -159,6 +163,7 @@ The easiest way to deploy your Next.js app is to use [Vercel](https://vercel.com
 ### Other Platforms
 
 You can also deploy to:
+
 - **Netlify** - Configure build command: `npm run build`, publish directory: `.next`
 - **AWS Amplify** - Similar configuration to Vercel
 - **Docker** - Create a Dockerfile for containerized deployment
@@ -175,6 +180,7 @@ We welcome contributions! Please follow these steps:
 5. Open a Pull Request using our PR template
 
 Please ensure:
+
 - Your code follows the project's code style
 - All tests pass
 - You've updated documentation as needed
@@ -182,6 +188,7 @@ Please ensure:
 ## 📝 Issue Templates
 
 When creating an issue, please use one of our templates:
+
 - **Bug Report** - For reporting bugs
 - **Feature Request** - For suggesting new features
 - **Documentation** - For documentation improvements
@@ -189,15 +196,18 @@ When creating an issue, please use one of our templates:
 ## 📚 Learn More
 
 ### Next.js Resources
+
 - [Next.js Documentation](https://nextjs.org/docs) - Learn about Next.js features and API
 - [Learn Next.js](https://nextjs.org/learn) - Interactive Next.js tutorial
 - [Next.js GitHub](https://github.com/vercel/next.js) - Next.js repository
 
 ### Tailwind CSS Resources
+
 - [Tailwind CSS v4 Documentation](https://tailwindcss.com/docs) - Official documentation
 - [Tailwind CSS v4 Blog Post](https://tailwindcss.com/blog/tailwindcss-v4-alpha) - What's new in v4
 
 ### TypeScript Resources
+
 - [TypeScript Documentation](https://www.typescriptlang.org/docs/) - Official TypeScript docs
 - [React TypeScript Cheatsheet](https://react-typescript-cheatsheet.netlify.app/) - React + TypeScript guide
 
