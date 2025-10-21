@@ -1,0 +1,24 @@
+name: CI
+
+on:
+    push:
+        branches: ["*"]
+    pull_request:
+        branches: ["*"]
+jobs:
+    lint:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout repo
+              uses: actions/checkout@v3
+            - name: set up node
+              uses: actions/setup-node@v3
+              with:
+                  node-version: "20"
+            - name: install dependencies
+              run: npm ci
+            - name: Run linter
+              run: npm run lint
+
+            
+        
