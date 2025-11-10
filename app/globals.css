@@ -1,5 +1,62 @@
 @import "tailwindcss";
 
+@theme {
+  /* ------------ COLORING ------------ */
+
+  /* Button color*/
+  --color-btn-yellow: #e1aa4c;
+
+  /* Widely used colors */
+  --color-main-darkpurple: #514776; /* Used for footer and buttons */
+  --color-main-grey: #575757; /* Used for most text */
+  --color-main-yellow: #f5ca77; /* Used for footer */
+
+  /* Text highlighting and headers */
+  --color-link-blue: #2c03fc; /* Links */
+  --color-secondary-grey: #505050; /* Some sub text */
+  --color-header-purple: #60588e; /* Purple header text */
+  --color-header-teal: #3d8a8a; /* Teal subheader text */
+  --color-footer-text: #9791ad; /* Text used in the footer of the page */
+}
+
+/* ------------ TEXT SIZING ------------ */
+
+/* Titles */
+@utility text-title {
+  font-size: 70px;
+  line-height: 1.1em;
+}
+
+/* Headers */
+@utility text-h1 {
+  font-size: 30px;
+  line-height: 1.2em;
+}
+
+/* Subheaders */
+@utility text-h2 {
+  font-size: 25px;
+  line-height: 1.4em;
+}
+
+/* Subsubheaders */
+@utility text-h3 {
+  font-size: 20px;
+  line-height: 1.4em;
+}
+
+/* Normal Text */
+@utility text-body {
+  font-size: 18px;
+  line-height: 1.6em;
+}
+
+/* Small Summary body text */
+@utility text-body-small {
+  font-size: 14px;
+  line-height: 1.6em;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
