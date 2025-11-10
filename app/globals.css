@@ -1,27 +1,25 @@
 @import "tailwindcss";
 
-
 @theme {
   /* Button color*/
-  --color-btn-yellow:      #E1AA4C;
+  --color-btn-yellow: #e1aa4c;
 
   /* Widely used colors */
   --color-main-darkpurple: #514776; /* Used for footer and buttons */
-  --color-main-grey:       #575757; /* Used for most text */
-  --color-main-yellow:     #F5CA77; /* Used for footer */
+  --color-main-grey: #575757; /* Used for most text */
+  --color-main-yellow: #f5ca77; /* Used for footer */
 
   /* Text highlighting and headers */
-  --color-link-blue:       #2C03FC; /* Links */
-  --color-secondary-grey:  #505050; /* Some sub text */
-  --color-header-purple:   #60588E; /* Purple header text */
-  --color-header-teal:     #3D8A8A; /* Teal subheader text */
-  --color-footer-text:     #9791AD; /* Text used in the footer of the page */
+  --color-link-blue: #2c03fc; /* Links */
+  --color-secondary-grey: #505050; /* Some sub text */
+  --color-header-purple: #60588e; /* Purple header text */
+  --color-header-teal: #3d8a8a; /* Teal subheader text */
+  --color-footer-text: #9791ad; /* Text used in the footer of the page */
 }
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
-
 }
 
 @theme inline {
