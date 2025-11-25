@@ -1,6 +1,5 @@
-import Image from "next/image";
-import DonateBar from "../components/DonateBar";
+import Header from "@/components/header";
 
 export default function Home() {
-  return <DonateBar></DonateBar>;
+  return <Header></Header>;
 }

@@ -60,6 +60,7 @@
 
 html {
   font-family: var(--font-quicksand);
+  background-color: black;
 }
 
 :root {
