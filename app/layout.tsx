@@ -7,7 +7,6 @@ const quicksand = Quicksand({
   variable: "--font-quicksand",
 });
 
-
 export const metadata: Metadata = {
   title: "TRE - Next.js TypeScript Starter",
   description: "A modern Next.js starter with TypeScript and Tailwind CSS v4",
