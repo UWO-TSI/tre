@@ -1,5 +1,7 @@
 import Image from "next/image";
 import HeaderLink from "./headerLink";
+import Button from "../Button";
+import YellowAccentButton from "../accentButton/yellowAccentButton";
 
 function Header() {
   return (
@@ -11,7 +13,7 @@ function Header() {
         width={210}
         src={"/images/Childcan-Logo.png.webp"}
       ></Image>
-      <nav className="flex flex-row align-middle">
+      <nav className="flex flex-row items-center">
         <HeaderLink
           title="About"
           items={[
@@ -53,7 +55,7 @@ function Header() {
         <HeaderLink title="Star"></HeaderLink>
         <HeaderLink title="Hands of Hope"></HeaderLink>
         <HeaderLink title="Contact"></HeaderLink>
-        <HeaderLink title="ttDonatejjjjju"></HeaderLink>
+        <YellowAccentButton>Donate</YellowAccentButton>
       </nav>
     </div>
   );
