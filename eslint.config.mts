@@ -6,11 +6,11 @@ import { defineConfig, globalIgnores } from "eslint/config";
 
 export default defineConfig([
   globalIgnores([
-      "node_modules/**",
-      ".next/**",
-      "out/**",
-      "dist/**",
-      "public/**"
+    "node_modules/**",
+    ".next/**",
+    "out/**",
+    "dist/**",
+    "public/**",
   ]),
   {
     files: ["./**/*.{ts,tsx}"],
