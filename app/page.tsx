@@ -6,13 +6,13 @@ export default function Home() {
   return (
     <>
       <Header></Header>
-      <Footer></Footer>
       <HeroImage
         title="About Childcan"
         alt=""
         image="/images/boyImage.webp"
         imageVerticalPosition="67%"
       ></HeroImage>
+      <Footer></Footer>
     </>
   );
 }
