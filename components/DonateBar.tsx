@@ -2,11 +2,11 @@ import Button from "./Button";
 
 export default function DonateBar() {
   return (
-    <div className="flex items-center justify-around bg-main-yellow width-100% p-10">
-      <h1 className="text-h1 text-header-purple">
+    <div className="flex items-center justify-center gap-10 width-100% p-8 bg-main-yellow text-white">
+      <h1 className="text-h1 text-header-purple font-light">
         When you're funding hope, every dollar counts.
       </h1>
-      <Button>Donate</Button>
+      <Button attributes="bg-btn-purple" text="Donate" />
     </div>
   );
 }
