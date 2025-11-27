@@ -26,7 +26,7 @@ function HeroImage(props: HeroImageProps) {
       </div>
       <h1
         style={{ gridArea: "area" }}
-        className="text-white text-[40px] md:text-[70px] md:text-nowrap animate-hero-appear z-20 text-start mx-[20%] w-full mt-2"
+        className="text-white text-[40px] md:text-[70px] md:text-nowrap animate-hero-appear z-20 text-start mx-[20%] mt-2"
       >
         {props.title}
       </h1>
