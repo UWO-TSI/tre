@@ -109,8 +109,7 @@ html {
   }
 }
 @theme {
-  --animate-dropdown-text-appear: dropdownTextAppear 0.1s ease-in-out 0.2s both
-    1;
+  --animate-dropdown-text-appear: dropdownTextAppear 0.1s ease-in-out 0.2s both;
 
   @keyframes dropdownTextAppear {
     0% {

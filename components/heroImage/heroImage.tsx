@@ -5,6 +5,8 @@ interface HeroImageProps {
   image: string;
   alt: string;
   imageVerticalPosition?: string;
+  height?: string;
+  textVertialOffset?: string;
 }
 function HeroImage(props: HeroImageProps) {
   return (
@@ -12,7 +14,10 @@ function HeroImage(props: HeroImageProps) {
       style={{ gridTemplateAreas: '"area"' }}
       className="relavtive grid items-center"
     >
-      <div style={{ gridArea: "area" }} className="relative w-full h-110 ">
+      <div
+        style={{ height: props.height, gridArea: "area" }}
+        className="relative w-full h-110 "
+      >
         <Image
           className="animate-image-appear"
           layout="fill"
@@ -25,8 +30,11 @@ function HeroImage(props: HeroImageProps) {
         ></Image>
       </div>
       <h1
-        style={{ gridArea: "area" }}
-        className="text-white text-[40px] md:text-[70px] md:text-nowrap animate-hero-appear z-20 text-start mx-[20%] w-full mt-2"
+        style={{
+          marginTop: props.textVertialOffset,
+          gridArea: "area",
+        }}
+        className="text-white text-[40px] md:text-[70px] md:text-nowrap animate-hero-appear z-20 text-start mx-[20%]  mt-2"
       >
         {props.title}
       </h1>

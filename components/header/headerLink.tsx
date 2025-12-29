@@ -36,7 +36,7 @@ function HeaderLink(props: HeaderLinkProps) {
               <Link
                 key={item.link + item.label + " Drop down"}
                 href={item.link}
-                className={`text-nowrap ${hover ? "animate-dropdown-text-appear" : ""} opacity-0  text-main-grey font-semibold  text-[1em] py-1 hover:text-header-purple`}
+                className={`text-nowrap ${hover ? "animate-dropdown-text-appear" : ""}   text-main-grey font-semibold  text-[1em] py-1 hover:text-header-purple`}
               >
                 {item.label}
               </Link>
