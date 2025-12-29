@@ -1,6 +1,5 @@
 import Image from "next/image";
 import HeaderLink from "./headerLink";
-import Button from "../Button";
 import YellowAccentButton from "../accentButton/yellowAccentButton";
 
 function Header() {

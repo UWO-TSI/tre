@@ -11,6 +11,7 @@ export default defineConfig([
     "out/**",
     "dist/**",
     "public/**",
+    "next-env.d.ts",
   ]),
   {
     files: ["./**/*.{ts,tsx}"],
