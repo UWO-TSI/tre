@@ -5,7 +5,7 @@ interface QuoteBannerProps {
   imageSrc: string;
   altText: string;
   author: string;
-  imageVerticalPosition: string;
+  imageVerticalPosition?: string;
   height?: string;
 }
 
@@ -28,7 +28,7 @@ function QuoteBanner(props: QuoteBannerProps) {
       </div>
 
       <div
-        className="relative h-fill w-fit flex flex-col justify-center justify-self-center"
+        className="relative h-fill w-fit pl-10 pr-10 flex flex-col justify-center justify-self-center"
         style={{ gridArea: "area" }}
       >
         <h1 className="text-h1 text-white text-center font-bold mb-5">
