@@ -5,9 +5,10 @@
 
   /* Button color*/
   --color-btn-yellow: #e1aa4c;
+  --color-btn-purple: #514776; /* Used for buttons */
 
   /* Widely used colors */
-  --color-main-darkpurple: #514776; /* Used for footer and buttons */
+  --color-main-darkpurple: #514776; /* Used for footer */
   --color-main-grey: #575757; /* Used for most text */
   --color-main-yellow: #f5ca77; /* Used for footer */
 
@@ -16,7 +17,7 @@
   --color-secondary-grey: #505050; /* Some sub text */
   --color-header-purple: #60588e; /* Purple header text */
   --color-header-teal: #3d8a8a; /* Teal subheader text */
-  --color-footer-text: #9791ad; /* Text used in the footer of the page */
+  --color-footer-grey: #9791ad; /* Text used in the footer of the page */
 }
 
 /* ------------ TEXT SIZING ------------ */
@@ -57,6 +58,11 @@
   line-height: 1.6em;
 }
 
+html {
+  font-family: var(--font-quicksand);
+  background-color: black;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -73,17 +79,63 @@
     --foreground: #ededed;
   }
 }
+@theme {
+  --animate-image-appear: fadeIn 0.6s ease-in-out 1;
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family:
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    "Helvetica Neue",
-    Arial,
-    sans-serif;
+  @keyframes fadeIn {
+    0% {
+      opactiy: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+@theme {
+  --animate-dropdown-appear: dropdownAppear 0.14s ease-in-out both 1;
+
+  @keyframes dropdownAppear {
+    0% {
+      transform-origin: top center;
+      transform: scale(1, 0);
+    }
+    100% {
+      transform-origin: top center;
+      transform: scale(1, 1);
+    }
+  }
+}
+@theme {
+  --animate-dropdown-text-appear: dropdownTextAppear 0.1s ease-in-out 0.2s both;
+
+  @keyframes dropdownTextAppear {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+@theme {
+  --animate-hero-appear: heroAppear 0.75s ease-in-out both 1;
+
+  @keyframes heroAppear {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, 10px, 0);
+    }
+    70% {
+      opacity: 0;
+      transform: translate3d(0, 10px, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
 }
