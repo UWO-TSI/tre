@@ -53,23 +53,10 @@ export default function Home() {
 
       {/* Section descriptions and images */}
       <div className="flex flex-col w-full gap-4 p-10">
-        <SectionBox
-          title="For Families"
-          imgSrc="/images/.."
-          altText="family"
-        />
-        <SectionBox
-          title="For Donors"
-          imgSrc="/images/.."
-          altText="donors"
-        />
-        <SectionBox
-          title="For Parents"
-          imgSrc="/images/.."
-          altText="parents"
-        />
+        <SectionBox title="For Families" imgSrc="/images/.." altText="family" />
+        <SectionBox title="For Donors" imgSrc="/images/.." altText="donors" />
+        <SectionBox title="For Parents" imgSrc="/images/.." altText="parents" />
       </div>
-
 
       <QuoteBanner
         imageVerticalPosition="0%"
@@ -81,7 +68,9 @@ export default function Home() {
 
       {/* Upcoming events */}
       <div className="flex flex-col w-full gap-4 p-20 py-15">
-        <h1 className="text-h1 text-main-darkpurple text-center">Get Connected. <strong>Get Involved.</strong></h1>
+        <h1 className="text-h1 text-main-darkpurple text-center">
+          Get Connected. <strong>Get Involved.</strong>
+        </h1>
         <p className="text-body-small text-secondary-grey">Upcoming Events</p>
         <div className="flex justify-between gap-4">
           <Event
