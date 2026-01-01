@@ -7,7 +7,7 @@ export default function SearchBar() {
   return (
     <div className="bg-btn-yellow w-full h-15">
       <input
-        className="w-3/4 bg-white text-body-small p-2 pl-4 rounded-4xl text-[#272727]"
+        className="w-full h-full text-body p-2 pl-6 text-black font-bold outline-none"
         type="text"
         placeholder="Find what you're looking for..."
         value={query}
