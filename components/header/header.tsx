@@ -20,14 +20,14 @@ function Header() {
       scrollDebounce = setTimeout(() => {
         setShowHeader(true);
       }, 500);
-    }
+    };
   
     window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
       clearTimeout(scrollDebounce);
-    }
+    };
   }, []);
 
 
