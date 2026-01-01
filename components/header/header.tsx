@@ -8,14 +8,13 @@ function Header() {
   const [showHeader, setShowHeader] = useState<boolean>(true);
 
   useEffect(() => {
-    let scrollDebounce : NodeJS.Timeout | undefined;
+    let scrollDebounce: NodeJS.Timeout | undefined;
 
     const handleScroll = () => {
-
       // set scrolling boolean and clear timer
       setShowHeader(false);
       if (scrollDebounce) clearTimeout(scrollDebounce);
-      
+
       // user stopped scrolling for 500 milliseconds
       scrollDebounce = setTimeout(() => {
         setShowHeader(true);
@@ -30,9 +29,10 @@ function Header() {
     };
   }, []);
 
-
   return (
-    <div className={`bg-white sticky transition-transform duration-300 ${ showHeader ? "translate-y-0" : "-translate-y-full" } top-0 flex flex-row justify-between align-middle px-4 h-[88px] z-50`}>
+    <div
+      className={`bg-white sticky transition-transform duration-300 ${showHeader ? "translate-y-0" : "-translate-y-full"} top-0 flex flex-row justify-between align-middle px-4 h-[88px] z-50`}
+    >
       <Image
         className="pl-1 "
         alt={""}
