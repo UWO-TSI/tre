@@ -20,7 +20,7 @@ function Header() {
         setShowHeader(true);
       }, 500);
     };
-  
+
     window.addEventListener("scroll", handleScroll);
 
     return () => {
