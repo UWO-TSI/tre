@@ -60,7 +60,7 @@
 
 html {
   font-family: var(--font-quicksand);
-  background-color: white;
+  background-color: var(--color-main-darkpurple);
 }
 
 :root {
