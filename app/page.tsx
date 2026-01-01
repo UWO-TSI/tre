@@ -1,14 +1,16 @@
 import Header from "@/components/header/header";
-import Footer from "@/components/Footer";
+import Footer from "@/components/footer/Footer";
 import HeroImage from "@/components/heroImage/heroImage";
 import QuickNavSection from "./_components/quickNavSection";
 import ResponsiveSupport from "./_components/responsiveSupport";
 import QuoteBanner from "./_components/quoteBanner";
+import SearchBar from "@/components/header/SearchBar";
 
 export default function Home() {
   return (
     <>
       <Header></Header>
+      <SearchBar />
       <HeroImage
         title=""
         alt=""

@@ -1,4 +1,4 @@
-import Button from "./Button";
+import PurpleButton from "../accentButton/purpleAccentButton";
 
 export default function DonateBar() {
   return (
@@ -6,7 +6,7 @@ export default function DonateBar() {
       <h1 className="text-h1 text-header-purple font-light">
         When you're funding hope, every dollar counts.
       </h1>
-      <Button attributes="bg-btn-purple" text="Donate" />
+      <PurpleButton>Donate</PurpleButton>
     </div>
   );
 }
