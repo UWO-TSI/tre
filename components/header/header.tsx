@@ -54,10 +54,10 @@ function Header() {
         <HeaderLink title="Star"></HeaderLink>
         <HeaderLink title="Hands of Hope"></HeaderLink>
         <HeaderLink title="Contact"></HeaderLink>
-        <a 
-        href="https://form-renderer-app.donorperfect.io/give/childcan/2025-donation-form" 
-        target="_blank" 
-        rel="noreferrer"
+        <a
+          href="https://form-renderer-app.donorperfect.io/give/childcan/2025-donation-form"
+          target="_blank"
+          rel="noreferrer"
         >
           <YellowAccentButton>Donate</YellowAccentButton>
         </a>
