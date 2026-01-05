@@ -95,6 +95,21 @@ html {
   }
 }
 @theme {
+  --animate-header-appear: headerFade 1s ease-in-out 1;
+
+  @keyframes headerFade {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+@theme {
   --animate-dropdown-appear: dropdownAppear 0.14s ease-in-out both 1;
 
   @keyframes dropdownAppear {
