@@ -23,7 +23,7 @@
 /* ------------ TEXT SIZING ------------ */
 
 /* Highlighting */
-::selection{
+::selection {
   color: #ffffff;
   background: #000000;
 }
