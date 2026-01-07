@@ -22,6 +22,12 @@
 
 /* ------------ TEXT SIZING ------------ */
 
+/* Highlighting */
+::selection {
+  color: #ffffff;
+  background: #000000;
+}
+
 /* Titles */
 @utility text-title {
   font-size: 70px;
