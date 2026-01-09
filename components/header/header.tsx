@@ -5,33 +5,38 @@ import HeaderLink from "./headerLink";
 import YellowAccentButton from "../accentButton/yellowAccentButton";
 
 function Header() {
-  const [isVisible, setisVisible] = useState<boolean>(true);
-  const [isAtTop, setIsAtTop] = useState<boolean>(true);
+  const [isSticky, setIsSticky] = useState<boolean>(false);
+  // const [isAtTop, setIsAtTop] = useState<boolean>(true);
 
   useEffect(() => {
-    let scrollDebounce: NodeJS.Timeout | undefined; // debounce timer
+    // let scrollDebounce: NodeJS.Timeout | undefined; // debounce timer
 
     const handleScroll = () => {
       
-      // user is at the top of the screen
-      if(window.scrollY < 88) {
-        setIsAtTop(true); // at top of the screen
-        setisVisible(true); // header is always visible at the top of the screen (toggles transformation and translation)
-        if(scrollDebounce) clearTimeout(scrollDebounce); // clear the timeout
-        return;
-      }
+      if (window.scrollY > 500) {
+        setIsSticky(true);
+      } else setIsSticky(false);
 
-      // set not visible or at top otherwise 
-      setIsAtTop(false);
-      setisVisible(false);
-
-      // clear timeout as new scroll has begun
-      if (scrollDebounce) clearTimeout(scrollDebounce);
       
-      // timer to determine if user stopped scrolling for 500 milliseconds
-      scrollDebounce = setTimeout(() => {
-        setisVisible(true);
-      }, 500);
+      // // user is at the top of the screen
+      // if(window.scrollY < 88) {
+      //   setIsAtTop(true); // at top of the screen
+      //   setisVisible(true); // header is always visible at the top of the screen (toggles transformation and translation)
+      //   if(scrollDebounce) clearTimeout(scrollDebounce); // clear the timeout
+      //   return;
+      // }
+
+      // // set not visible or at top otherwise 
+      // setIsAtTop(false);
+      // setisVisible(false);
+
+      // // clear timeout as new scroll has begun
+      // if (scrollDebounce) clearTimeout(scrollDebounce);
+      
+      // // timer to determine if user stopped scrolling for 500 milliseconds
+      // scrollDebounce = setTimeout(() => {
+      //   setisVisible(true);
+      // }, 500);
     };
 
     // scroll listener
@@ -40,13 +45,12 @@ function Header() {
     // cleanup
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      clearTimeout(scrollDebounce);
     };
   }, []);
 
   return (
     <div
-      className={`bg-white sticky ${isAtTop && isVisible ? "" : "transition-transform duration-300" } ${isVisible || isAtTop ? "translate-y-0" : "-translate-y-full"} top-0 flex flex-row justify-between align-middle px-4 w-full h-[88px] z-50`}
+      className={`bg-white transition-transform duration-300 ${isSticky ? "sticky" : "none"} top-0 flex flex-row justify-between align-middle px-4 w-full h-[88px] z-50`}
     >
       <div className="w-full flex flex-row justify-between align-middle bg-white animate-header-appear">
         <Image
