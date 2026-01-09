@@ -87,24 +87,14 @@ html {
 }
 @theme {
   --animate-image-appear: fadeIn 0.6s ease-in-out 1;
+  --animate-dropdown-appear: dropdownAppear 0.14s ease-in-out both 1;
+  --animate-dropdown-text-appear: dropdownTextAppear 0.1s ease-in-out 0.2s both 1;
+  --animate-hero-appear: heroAppear 0.75s ease-in-out 1;
+  --animate-header-reveal: headerReveal 0.3s ease-out forwards;
+  --animate-header-hide: headerHide 0.3s ease-in forwards;
 
   @keyframes fadeIn {
     0% {
-      opactiy: 0;
-    }
-    50% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-}
-@theme {
-  --animate-header-appear: headerFade 1s ease-in-out 1;
-
-  @keyframes headerFade {
-    0% {
       opacity: 0;
     }
     50% {
@@ -114,9 +104,6 @@ html {
       opacity: 1;
     }
   }
-}
-@theme {
-  --animate-dropdown-appear: dropdownAppear 0.14s ease-in-out both 1;
 
   @keyframes dropdownAppear {
     0% {
@@ -128,9 +115,6 @@ html {
       transform: scale(1, 1);
     }
   }
-}
-@theme {
-  --animate-dropdown-text-appear: dropdownTextAppear 0.1s ease-in-out 0.2s both;
 
   @keyframes dropdownTextAppear {
     0% {
@@ -140,10 +124,6 @@ html {
       opacity: 1;
     }
   }
-}
-
-@theme {
-  --animate-hero-appear: heroAppear 0.75s ease-in-out both 1;
 
   @keyframes heroAppear {
     0% {
@@ -159,4 +139,15 @@ html {
       transform: translate3d(0, 0, 0);
     }
   }
+
+  @keyframes headerReveal {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(0); }
+  }
+
+  @keyframes headerHide {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100%); }
+  }
 }
+
