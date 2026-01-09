@@ -12,12 +12,10 @@ function Header() {
     // let scrollDebounce: NodeJS.Timeout | undefined; // debounce timer
 
     const handleScroll = () => {
-      
       if (window.scrollY > 500) {
         setIsSticky(true);
       } else setIsSticky(false);
 
-      
       // // user is at the top of the screen
       // if(window.scrollY < 88) {
       //   setIsAtTop(true); // at top of the screen
@@ -26,13 +24,13 @@ function Header() {
       //   return;
       // }
 
-      // // set not visible or at top otherwise 
+      // // set not visible or at top otherwise
       // setIsAtTop(false);
       // setisVisible(false);
 
       // // clear timeout as new scroll has begun
       // if (scrollDebounce) clearTimeout(scrollDebounce);
-      
+
       // // timer to determine if user stopped scrolling for 500 milliseconds
       // scrollDebounce = setTimeout(() => {
       //   setisVisible(true);
