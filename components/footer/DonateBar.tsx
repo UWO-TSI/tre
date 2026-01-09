@@ -6,7 +6,13 @@ export default function DonateBar() {
       <h1 className="text-h1 text-header-purple font-light">
         When you're funding hope, every dollar counts.
       </h1>
-      <PurpleButton>Donate</PurpleButton>
+      <a
+        href="https://form-renderer-app.donorperfect.io/give/childcan/2025-donation-form"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <PurpleButton>Donate</PurpleButton>
+      </a>
     </div>
   );
 }
