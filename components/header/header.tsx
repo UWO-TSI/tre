@@ -53,7 +53,7 @@ function Header() {
 
   return (
     <div
-      className={`bg-white transition-transform duration-300 top-0 flex flex-row justify-between align-middle px-4 w-full h-[88px] z-50  ${getHeaderAnimation()}`}
+      className={`bg-white transition-transform duration-300 top-0 flex flex-row justify-between align-middle px-4 w-full h-22 z-50  ${getHeaderAnimation()}`}
     >
       <div className="w-full flex flex-row justify-between align-middle bg-white animate-header-appear">
         <Image

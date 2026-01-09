@@ -1,13 +1,14 @@
+
 import HeroImage from "../../../components/heroImage/heroImage";
 import { eventList } from "../event";
 import EventMainImage from "./eventMainImage";
 
-export default function Page({
+export default async function Page({
   params,
 }: {
-  params: { events_template: string };
+  params: Promise<{ events_template: string }>;
 }) {
-  const { events_template } = params;
+  const { events_template } = await params;
 
   const event = eventList[events_template];
 

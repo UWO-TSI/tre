@@ -1,5 +1,3 @@
-import Header from "@/components/header/header";
-import Footer from "@/components/footer/Footer";
 import HeroImage from "@/components/heroImage/heroImage";
 import QuickNavSection from "./_components/quickNavSection";
 import ResponsiveSupport from "./_components/responsiveSupport";
@@ -11,7 +9,6 @@ import Event from "./_components/Event";
 export default function Home() {
   return (
     <>
-      <Header></Header>
       <SearchBar />
       <HeroImage
         title=""
@@ -91,7 +88,6 @@ export default function Home() {
         </div>
       </div>
 
-      <Footer></Footer>
     </>
   );
 }
