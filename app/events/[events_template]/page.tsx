@@ -3,6 +3,7 @@ import HeroImage from "../../../components/heroImage/heroImage";
 import { eventList } from "../event";
 import PurpleAccentButton from "@/components/accentButton/purpleAccentButton";
 import Image from "next/image";
+import OtherEvent from "./otherEvent";
 
 export default async function Page({
   params,
@@ -50,7 +51,8 @@ export default async function Page({
         height={"20em"}
         title=""
       ></HeroImage>
-      <div className="flex flex-col w-full items-start md:items-center pl-10 pr-10">
+      {/* main content container */}
+      <div className="flex flex-col w-full items-start md:items-center pl-10 pr-10 pb-20">
         {/*  back button */}
         <div className="max-w-250 gap-10 grid grid-cols-1 md:grid-cols-[1fr_2fr]">
           <Link
@@ -61,7 +63,7 @@ export default async function Page({
           </Link>
         </div>
 
-        <div className="max-w-250 gap-10 pb-20 grid grid-cols-1 md:grid-cols-[1fr_2fr]">
+        <div className="max-w-250 gap-10 grid grid-cols-1 md:grid-cols-[1fr_2fr]">
           {/* left column */}
           <div className="flex flex-col items-start md:items-end mr-15">
             <div className="flex flex-col align-start">
@@ -88,7 +90,7 @@ export default async function Page({
                 <div className="pl-2 pr-2 text-body ">·</div>
                 <a
                   className="text-secondary-grey text-body text-nowrap"
-                  href={event.googleCalenderLink}
+                  href={event.ICSCalenderLink}
                 >
                   ICS
                 </a>
@@ -134,6 +136,21 @@ export default async function Page({
               </a>
             </div>
           </div>
+        </div>
+        {/* next events section */}
+        <div className="max-w-250 w-full flex flex-row justify-between pt-20">
+          <OtherEvent
+            date={event.startDate}
+            order="BEFORE"
+            title="Other event title"
+            link=""
+          ></OtherEvent>
+          <OtherEvent
+            date={event.endDate}
+            order="AFTER"
+            title="Other event title"
+            link=""
+          ></OtherEvent>
         </div>
       </div>
     </div>
