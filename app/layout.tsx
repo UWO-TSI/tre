@@ -21,9 +21,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={quicksand.variable}>
-      <Header></Header>
-      <body className="antialiased">{children}</body>
-      <Footer></Footer>
+      <body className="antialiased">
+        <Header></Header>
+        {children}
+        <Footer></Footer>
+      </body>
     </html>
   );
 }
