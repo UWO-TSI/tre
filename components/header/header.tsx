@@ -12,21 +12,20 @@ function Header() {
     // let scrollDebounce: NodeJS.Timeout | undefined; // debounce timer
 
     const handleScroll = () => {
-
       // past threshhold for showing header, must animate to show
       if (window.scrollY > 1100) {
         setIsSticky(true);
         setWasSticky(true);
-      } 
-      
+      }
+
       // ALWAYS show header here with clear animations
       else if (window.scrollY <= 100) {
         setIsSticky(false);
         setWasSticky(false);
-      } 
+      }
 
       // between 100 and 1100, must animate to hide
-      else setIsSticky(false); 
+      else setIsSticky(false);
     };
 
     // scroll listener
@@ -39,7 +38,6 @@ function Header() {
   }, []);
 
   const getHeaderAnimation = () => {
-    
     // scrollY is below 100 (top of page)
     if (!isSticky && !wasSticky) return "relative";
 
@@ -48,7 +46,6 @@ function Header() {
 
     // scrolly is between 100 and 1100
     return "sticky animate-header-hide";
-
   };
 
   return (
