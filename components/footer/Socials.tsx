@@ -1,35 +1,49 @@
 export default function Socials() {
   return (
-    <div className="flex gap-2">
+    <div className="flex gap-3 items-center group">
       <a
         href="https://www.facebook.com/Childcan/"
         target="_blank"
         rel="noreferrer"
       >
-        <img
-          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAyklEQVR4nO3WPWoCQRiA4S1yAisb72IhYpnjWImtF0jrEXKAXMDCkBwgNmthpYJYBh7ZYMKAJLB/swbmhWmGZb5nly0my1KpewwTbDVXXpxZBpA3OPwHUQbwVcUPWP88/w2AB0yxxh4HvMYEPLltFwWAPj6DwWdssIoFGAfDj+jVOa8K4DEAvP/yTDTAWzQAnvFSvHUAOF33irVoG3D0d8uuAfO2AUOMMAuGflz3ijVoFdD5T/hdAkgA7QByHV/JJg0jyl1KU6ksYhecC9SyYjX01QAAAABJRU5ErkJggg=="
-          alt="facebook"
-        />
+        <svg
+          className="w-[20px] h-[36px] inline-block fill-white transition duration-[170ms] ease-in-out group-hover:opacity-30 hover:opacity-100"
+          aria-label="facebook"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 512 512"
+        >
+          <path d="M283.122,122.174c0,5.24,0,22.319,0,46.583h83.424l-9.045,74.367h-74.379 c0,114.688,0,268.375,0,268.375h-98.726c0,0,0-151.653,0-268.375h-51.443v-74.367h51.443c0-29.492,0-50.463,0-56.302 c0-27.82-2.096-41.02,9.725-62.578C205.948,28.32,239.308-0.174,297.007,0.512c57.713,0.711,82.04,6.263,82.04,6.263 l-12.501,79.257c0,0-36.853-9.731-54.942-6.263C293.539,83.238,283.122,94.366,283.122,122.174z" />
+        </svg>
       </a>
       <a
-        href="https://www.facebook.com/Childcan/"
+        href="https://www.linkedin.com/in/childcan/"
         target="_blank"
         rel="noreferrer"
       >
-        <img
-          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA+UlEQVR4nO2WP+5BQRCAn1CoFAqF5CdxAzWFRuUALqJwChdwCjp/ChKlzg00SnRs4ffJY8g+iWLXviWyX/KKmbyZ/XaKzURRIPCNABVgCijeR0mvionADPdMTASUFBUth6j3Kkqvk0nRFS0uAA0gbymR6GdUwO3wjaRWQNa3QIMkZd8Cebl5zAjIeBWIicduc3OXAj35uhKXtFwbqAJ9YAgMgLprgTtHiWuPDCyBHUnOQMuXwJ3dq4cnbYF/oCn5jpbf+hJYa//ltFdU+RJYPNUeXtWnJTB/qt0HAX5O4F1sBNSnF5Ip7hmbLqUTh0vpGPizHGIgEKXKBfvBbtULBc+0AAAAAElFTkSuQmCC"
-          alt="linkedin"
-        />
+        <svg
+          className="w-[16.25px] h-[16.25px] fill-white transition duration-[170ms] ease-in-out group-hover:opacity-30 hover:opacity-100"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="-271 283.9 256 235.1"
+          aria-label="linkedin"
+        >
+          <rect x="-264.4" y="359.3" width="49.9" height="159.7"></rect>
+          <path d="M-240.5,283.9c-18.4,0-30.5,11.9-30.5,27.7c0,15.5,11.7,27.7,29.8,27.7h0.4c18.8,0,30.5-12.3,30.4-27.7 C-210.8,295.8-222.1,283.9-240.5,283.9z"></path>
+          <path d="M-78.2,357.8c-28.6,0-46.5,15.6-49.8,26.6v-25.1h-56.1c0.7,13.3,0,159.7,0,159.7h56.1v-86.3c0-4.9-0.2-9.7,1.2-13.1 c3.8-9.6,12.1-19.6,27-19.6c19.5,0,28.3,14.8,28.3,36.4V519h56.6v-88.8C-14.9,380.8-42.7,357.8-78.2,357.8z" />
+        </svg>
       </a>
       <a
-        href="https://www.facebook.com/Childcan/"
+        href="https://www.instagram.com/childcan/"
         target="_blank"
         rel="noreferrer"
       >
-        <img
-          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAABo0lEQVR4nO2WTU4CQRSECSiuALfiBj2DuFG8AsgxBF0rcAp/kBOIXMNEwUSNG0X3ygFAd5jPtCnihAzj9OBEF1TSyeT1q3o1b3q6OxKZYYb/DmALaAE94IOfYXJexclNU3geaDA9To1WEAMNCQyAfSADRH3wosAKUAHepFEP0vZR8TVr9986WYeJTRtiS6SDgIWPgLKeq9Jq2gj0RMq4zC0Au0BHb2dG2xQE4sq5AA71vCqtFxsDQ5FiY/Fl4J7JuAPSY5yY5oY2Br7g8uaj4g9AHkhoFICu5m5HnfDSC2JgT+FHIOXCSTlMlMIwcK1w3oO3rZx2GAYGCic8eEnl9MMw0PdhIBWmgY7CBQ9eUTlXYRgoK9ydsAgXgWfl7IRhIK7/3OBJCy6pUXQUvxk/fIIYGE7YiNIOE24wxZd+YyPqeWzFphMl8531Z5hxadruduwG3YrPRar4Jk3WqknrzIaUE8kcNNkpiq8D79LasCXXHSaqumT4uZDE1Paao/hJEPdzDhPT4NhoWRsYwdxkzGXCLCLH3+GFoXKb1m2fYYbIH+AT1e8dKrTw7fgAAAAASUVORK5CYII="
-          alt="instagram-new"
-        />
+        <svg
+          className="w-[25px] h-[25px] fill-white transition duration-[170ms] ease-in-out group-hover:opacity-30 hover:opacity-100"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 24 24"
+          aria-label="instagram-new"
+        >
+          <path d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z" />
+        </svg>
       </a>
     </div>
   );
