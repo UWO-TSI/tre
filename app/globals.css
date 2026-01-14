@@ -160,3 +160,42 @@ html {
     }
   }
 }
+
+@layer components{
+  .listItem{
+    margin-top: 9px;
+    margin-bottom: 9px;
+  }
+
+  .bodyText{
+    @apply text-body;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    /* font-size: 18px;
+    line-height: 1.6em; */
+    color: var(--color-main-grey);
+    font-weight: 500;
+  }
+
+  .heading1{
+    @apply text-h1;
+    font-size: 32px;
+    /* line-height: 1.2em; */
+    color: var(--color-main-darkpurple);
+    font-weight: 600;
+    margin-bottom: 16px
+  }
+
+  .heading3{
+    @apply text-h3;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 650;
+    color: var(--color-main-darkpurple);
+  }
+
+  .listItem{
+    margin-top: 9px;
+    margin-bottom: 9px;
+  }
+}
