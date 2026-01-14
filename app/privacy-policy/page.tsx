@@ -27,7 +27,7 @@ export default function PrivacyPolicy() {
           <li className="listItem">
             {" "}
             profile information
-            <ul className= "list-disc pl-9">
+            <ul className="list-disc pl-9">
               {/* TODO: make this bullet an open circle */}
               <li className="listItem">first name</li>
               <li className="listItem">last name</li>
@@ -75,7 +75,9 @@ export default function PrivacyPolicy() {
           <li className="listItem">
             by direct contact:
             <ul className="text-body text-main-grey font-medium list-disc pl-9">
-              <li className="listItem">providing business contact information</li>
+              <li className="listItem">
+                providing business contact information
+              </li>
               <li className="listItem">
                 verbally requesting to be added to our database
               </li>
@@ -95,7 +97,9 @@ export default function PrivacyPolicy() {
         </p>
         <p className="bodyText">We may use your personal information to:</p>
         <ul className="text-body text-main-grey font-medium list-disc pl-10">
-          <li className="listItem">provide information related to our services</li>
+          <li className="listItem">
+            provide information related to our services
+          </li>
           <li className="listItem">provide general information</li>
           <li className="listItem">respond to inquiries or concerns</li>
           <li className="listItem">
