@@ -7,7 +7,7 @@ export default function Contact() {
       <div className="flex flex-col gap-8">
         <Socials />
         <a
-          href="https://childcan.com/privacy-policy"
+          href="/privacy-policy"
           className="text-footer-grey text-body underline"
         >
           Privacy Policy

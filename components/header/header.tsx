@@ -51,13 +51,15 @@ function Header() {
       className={`bg-white transition-transform duration-300 ${isSticky ? "sticky" : "none"} top-0 flex flex-row justify-between align-middle px-4 w-full h-[88px] z-50`}
     >
       <div className="w-full flex flex-row justify-between align-middle bg-white animate-header-appear">
-        <Image
-          className="pl-1 "
-          alt={""}
-          height={110}
-          width={210}
-          src={"/images/Childcan-Logo.png.webp"}
-        ></Image>
+        <a href="/">
+          <Image
+            className="pl-1 "
+            alt={""}
+            height={110}
+            width={210}
+            src={"/images/Childcan-Logo.png.webp"}
+          ></Image>
+        </a>
         <nav className="flex flex-row items-center">
           <HeaderLink
             title="About"
