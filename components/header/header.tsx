@@ -6,35 +6,26 @@ import YellowAccentButton from "../accentButton/yellowAccentButton";
 
 function Header() {
   const [isSticky, setIsSticky] = useState<boolean>(false);
-  // const [isAtTop, setIsAtTop] = useState<boolean>(true);
+  const [wasSticky, setWasSticky] = useState<boolean>(false);
 
   useEffect(() => {
     // let scrollDebounce: NodeJS.Timeout | undefined; // debounce timer
 
     const handleScroll = () => {
-      if (window.scrollY > 500) {
+      // past threshhold for showing header, must animate to show
+      if (window.scrollY > 1100) {
         setIsSticky(true);
-      } else setIsSticky(false);
+        setWasSticky(true);
+      }
 
-      // // user is at the top of the screen
-      // if(window.scrollY < 88) {
-      //   setIsAtTop(true); // at top of the screen
-      //   setisVisible(true); // header is always visible at the top of the screen (toggles transformation and translation)
-      //   if(scrollDebounce) clearTimeout(scrollDebounce); // clear the timeout
-      //   return;
-      // }
+      // ALWAYS show header here with clear animations
+      else if (window.scrollY <= 100) {
+        setIsSticky(false);
+        setWasSticky(false);
+      }
 
-      // // set not visible or at top otherwise
-      // setIsAtTop(false);
-      // setisVisible(false);
-
-      // // clear timeout as new scroll has begun
-      // if (scrollDebounce) clearTimeout(scrollDebounce);
-
-      // // timer to determine if user stopped scrolling for 500 milliseconds
-      // scrollDebounce = setTimeout(() => {
-      //   setisVisible(true);
-      // }, 500);
+      // between 100 and 1100, must animate to hide
+      else setIsSticky(false);
     };
 
     // scroll listener
@@ -46,9 +37,20 @@ function Header() {
     };
   }, []);
 
+  const getHeaderAnimation = () => {
+    // scrollY is below 100 (top of page)
+    if (!isSticky && !wasSticky) return "relative";
+
+    // scrollY is past 1100
+    if (isSticky) return "sticky animate-header-reveal";
+
+    // scrolly is between 100 and 1100
+    return "sticky animate-header-hide";
+  };
+
   return (
     <div
-      className={`bg-white transition-transform duration-300 ${isSticky ? "sticky" : "none"} top-0 flex flex-row justify-between align-middle px-4 w-full h-[88px] z-50`}
+      className={`bg-white transition-transform duration-300 top-0 flex flex-row justify-between align-middle px-4 w-full h-22 z-50  ${getHeaderAnimation()}`}
     >
       <div className="w-full flex flex-row justify-between align-middle bg-white animate-header-appear">
         <a href="/">
