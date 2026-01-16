@@ -1,10 +1,12 @@
+import ForFamilies from "./forFamilies";
+import { hereForYouPage } from "./pageLayout";
+
+
+
+
 function Page() {
   return (
-    <div>
-      {}
-      {"<span style={{ color: red }}>thing<span>"}
-      <div>not thing</div>
-    </div>
+    <ForFamilies pageLayout={hereForYouPage}></ForFamilies>
   );
 }
 
