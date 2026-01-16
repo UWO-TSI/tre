@@ -33,7 +33,6 @@ interface DoubleListElement {
   items: string[];
 }
 
-
 export type PageElement =
   | Header
   | Button
@@ -43,10 +42,7 @@ export type PageElement =
   | DoubleList
   | TertiaryHeader;
 
-export const pageLayout: PageElement[] = [
-
-];
-
+export const pageLayout: PageElement[] = [];
 
 export const hereForYouPage: PageElement[] = [
   {
@@ -55,14 +51,21 @@ export const hereForYouPage: PageElement[] = [
       <>
         Here For <strong>You</strong>
       </>
-    )
-  }, 
+    ),
+  },
   {
     type: "Paragraph",
     content: (
       <>
-      Hearing the words “your child has cancer” is life-changing. Childcan is here to help you rebalance and establish a new normal. We’re here to ask you what you need, what supports would make a difference for you, right now. And then to answer with programs that provide assistance in even more ways than you might expect. Our services have all been developed to respond to the families we’ve supported for the past 50 years, to address the needs they have identified and experienced. And to remind you that you are not alone.
+        Hearing the words “your child has cancer” is life-changing. Childcan is
+        here to help you rebalance and establish a new normal. We’re here to ask
+        you what you need, what supports would make a difference for you, right
+        now. And then to answer with programs that provide assistance in even
+        more ways than you might expect. Our services have all been developed to
+        respond to the families we’ve supported for the past 50 years, to
+        address the needs they have identified and experienced. And to remind
+        you that you are not alone.
       </>
-    )
-  }
+    ),
+  },
 ];
