@@ -12,7 +12,7 @@ function ForFamilies(props: ForFamiliesProps) {
           switch (element.type) {
             case "Header":
               return (
-                <h1 className="w-2/3 text-h1 text-header-purple">
+                <h1 className=" text-h1 text-header-purple">
                   {element.content}
                 </h1>
               );
@@ -28,7 +28,7 @@ function ForFamilies(props: ForFamiliesProps) {
               );
             case "Paragraph":
               return (
-                <p className="w-2/3 text-body text-secondary-grey font-light">
+                <p className="text-body text-secondary-grey">
                   {element.content}
                 </p>
               );
