@@ -301,12 +301,14 @@ const waysToGivePage: PageElement[] = [
     type: "Paragraph",
     content: (
       <>
-        <strong>Your generosity offers hope to a family in their darkest time. The needs are urgent, immediate and ongoing.</strong>
+        <strong>
+          Your generosity offers hope to a family in their darkest time. The
+          needs are urgent, immediate and ongoing.
+        </strong>
       </>
     ),
   },
 ];
-
 
 const PJDayPage: PageElement[] = [];
 const goldPage: PageElement[] = [];
@@ -315,8 +317,6 @@ const marketplacePage: PageElement[] = [];
 const merchandisePage: PageElement[] = [];
 const volunteerPage: PageElement[] = [];
 const ourSupportersPage: PageElement[] = [];
-
-
 
 export const pageLayouts: Record<string, PageElement[]> = {
   // FOR FAMILIES PAGES
@@ -331,10 +331,10 @@ export const pageLayouts: Record<string, PageElement[]> = {
   // HOW TO HELP PAGES
   "Ways to Give": waysToGivePage,
   "PJ Day": PJDayPage,
-  "Gold": goldPage,
+  Gold: goldPage,
   "Host an Event": hostAnEventPage,
-  "Marketplace": marketplacePage,
-  "Merchandise": merchandisePage,
-  "Volunteer": volunteerPage,
-  "Our Supporters": ourSupportersPage
+  Marketplace: marketplacePage,
+  Merchandise: merchandisePage,
+  Volunteer: volunteerPage,
+  "Our Supporters": ourSupportersPage,
 };

@@ -4,12 +4,12 @@ import { pageLayouts } from "@/app/for-families/pageLayout";
 import HeroImage from "@/components/heroImage/heroImage";
 
 interface PageLayoutProps {
-  pages: string[],
-  selectedPage: string,
-  onPageChange: (newPage: string) => void
-  pageTitle: string,
-  bannerHref: string,
-  bannerAlt: string,
+  pages: string[];
+  selectedPage: string;
+  onPageChange: (newPage: string) => void;
+  pageTitle: string;
+  bannerHref: string;
+  bannerAlt: string;
 }
 
 export default function PageLayout(props: PageLayoutProps) {
@@ -28,7 +28,9 @@ export default function PageLayout(props: PageLayoutProps) {
           title={props.pageTitle}
           items={props.pages}
         ></Sidebar>
-        <ForFamilies pageLayout={pageLayouts[props.selectedPage] ?? props.pages[0]}></ForFamilies>
+        <ForFamilies
+          pageLayout={pageLayouts[props.selectedPage] ?? props.pages[0]}
+        ></ForFamilies>
       </div>
     </div>
   );
