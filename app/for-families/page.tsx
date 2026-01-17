@@ -1,27 +1,34 @@
 "use client";
 import Sidebar from "@/components/sidebar/sidebar";
 import ForFamilies from "./forFamilies";
-import { hereForYouPage } from "./pageLayout";
+import { pageLayouts } from "./pageLayout";
 import HeroImage from "@/components/heroImage/heroImage";
-import { useState } from "react";
-import { useParams } from "next/navigation";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 
 function Page() {
-  const { page } = useParams();
-  const [selectedPage, setSelectedPage] = useState(
-    page?.toString() ?? "Here for You",
-  );
+  const searchParams = useSearchParams();
+  const [selectedPage, setSelectedPage] = useState(searchParams.get("page") ?? "Here for You");
   const pages = [
     "Here for You",
     "Financial Support",
-    "Emotional Suport",
-    "Soical Support",
+    "Emotional Support",
+    "Social Support",
     "Research Support",
     "Upcoming Family Events",
     "Q&A",
   ];
+
+  // for handling URL changes to link to page
+  useEffect(() => {
+    const page = searchParams.get("page"); // gets page query
+    if (page && pages.includes(page)) {
+      setSelectedPage(page);
+    }
+  }, [searchParams]);
+
   const onPageChange = (newPage: string) => {
-    window.history.pushState({}, "", `/for-familes?page=${newPage}`);
+    window.history.pushState({}, "", `/for-families?page=${newPage}`);
     setSelectedPage(newPage);
   };
   return (
@@ -39,7 +46,7 @@ function Page() {
           title="For Families"
           items={pages}
         ></Sidebar>
-        <ForFamilies pageLayout={hereForYouPage}></ForFamilies>
+        <ForFamilies pageLayout={pageLayouts[selectedPage]}></ForFamilies>
       </div>
     </div>
   );

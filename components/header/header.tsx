@@ -74,19 +74,19 @@ function Header() {
               { link: "", label: "Careers" },
             ]}
           ></HeaderLink>
-          <HeaderLink
-            title="Need Support?"
+          <HeaderLink title="Need Support?"></HeaderLink>
+          <HeaderLink 
+            title="For Families"
             items={[
-              { link: "", label: "Here for You" },
-              { link: "", label: "Financial Support" },
-              { link: "", label: "Emotional Support" },
-              { link: "", label: "Social Support" },
-              { link: "", label: "Research Support" },
-              { link: "", label: "Upcoming Family Events" },
-              { link: "", label: "Q&A" },
-            ]}
+                { link: "for-families?page=Here for You", label: "Here for You" },
+                { link: "for-families?page=Financial Support", label: "Financial Support" },
+                { link: "for-families?page=Emotional Support", label: "Emotional Support" },
+                { link: "for-families?page=Social Support", label: "Social Support" },
+                { link: "for-families?page=Research Support", label: "Research Support" },
+                { link: "for-families?page=Upcoming Family Events", label: "Upcoming Family Events" },
+                { link: `for-families?page=${encodeURIComponent("Q&A")}`, label: "Q&A" },
+              ]}
           ></HeaderLink>
-          <HeaderLink title="For Families"></HeaderLink>
           <HeaderLink
             title="How to Help"
             items={[

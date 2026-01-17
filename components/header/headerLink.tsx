@@ -24,7 +24,7 @@ function HeaderLink(props: HeaderLinkProps) {
         setHover(false);
       }}
     >
-      <div className="cursor-pointer text-body text-main-grey font-semibold mx-4 my-auto text-[18px] hover:text-header-purple transition-colors">
+      <div className="cursor-pointer text-body text-[16px] text-main-grey font-semibold mx-4 my-auto hover:text-header-purple transition-colors">
         {props.title}
       </div>
       {props.items != undefined ? (

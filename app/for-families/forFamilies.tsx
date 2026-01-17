@@ -12,7 +12,7 @@ function ForFamilies(props: ForFamiliesProps) {
           switch (element.type) {
             case "Header":
               return (
-                <h1 className=" text-h1 text-header-purple">
+                <h1 className="text-h1 text-header-purple">
                   {element.content}
                 </h1>
               );
@@ -28,19 +28,19 @@ function ForFamilies(props: ForFamiliesProps) {
               );
             case "Paragraph":
               return (
-                <p className="text-body text-secondary-grey">
+                <p className="text-body text-secondary-grey font-light">
                   {element.content}
                 </p>
               );
             case "Button":
               return (
-                <PurpleAccentButton onClick={() => window.open(element.href)}>
+                <PurpleAccentButton className="w-1/3 m-auto" onClick={() => window.open(element.href)}>
                   {element.text}
                 </PurpleAccentButton>
               );
             case "List":
               return (
-                <ul className="text-body text-secondary-grey">
+                <ul className="list-disc text-body text-secondary-grey font-light">
                   {element.items.map((item) => {
                     return <li key={item}>{item}</li>;
                   })}
@@ -48,10 +48,10 @@ function ForFamilies(props: ForFamiliesProps) {
               );
             case "DoubleList":
               return (
-                <ul>
+                <ul className="list-disc text-body text-secondary-grey font-light">
                   <li>
                     {element.list.title}
-                    <ul>
+                    <ul className="list-[circle] list-inside text-body text-secondary-grey font-light">
                       {element.list.items.map((item) => {
                         return <li key={item}>{item}</li>;
                       })}
