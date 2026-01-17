@@ -108,14 +108,14 @@ function Header() {
           <HeaderLink
             title="How to Help"
             items={[
-              { link: "", label: "Ways to Give" },
-              { link: "", label: "PJ Day" },
-              { link: "", label: "Gold" },
-              { link: "", label: "Host an Event" },
-              { link: "", label: "Marketplace" },
-              { link: "", label: "Merchandise" },
-              { link: "", label: "Volunteer" },
-              { link: "", label: "Our Supporters" },
+              { link: "/how-to-help?page=Ways to Give", label: "Ways to Give" },
+              { link: "/how-to-help?page=PJ Day", label: "PJ Day" },
+              { link: "/how-to-help?page=Gold", label: "Gold" },
+              { link: "/how-to-help?page=Host an Event", label: "Host an Event" },
+              { link: "/how-to-help?page=Marketplace", label: "Marketplace" },
+              { link: "/how-to-help?page=Merchandise", label: "Merchandise" },
+              { link: "/how-to-help?page=Volunteer", label: "Volunteer" },
+              { link: "/how-to-help?page=Our Supporters", label: "Our Supporters" },
             ]}
           ></HeaderLink>
           <HeaderLink title="Events"></HeaderLink>

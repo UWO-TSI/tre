@@ -85,14 +85,14 @@ const financialSupportPage: PageElement[] = [
         treatment at Children’s Hospital, London Health Sciences Centre or
         Windsor Regional Hospital’s Paediatric Oncology Satellite Clinic, and
         you would like to access any of these supports, please contact our
-        office at{" "}
+        office at
         <a href="tel:519-685-3500" className="text-link-blue">
           519-685-3500
-        </a>{" "}
-        or{" "}
+        </a>
+        or
         <a href="mailto:info@childcan.com" className="text-link-blue">
           info@childcan.com
-        </a>{" "}
+        </a>
         or
         <a
           href="https://forms.office.com/Pages/ResponsePage.aspx?id=GJ_2kAOFsEqmtRcUIF577HxhnHPJybtPjITj_N2TfJhUQzhESzRBOFIyU0FRV1ZFRVMwSlQ1RlRWOS4u"
@@ -123,14 +123,14 @@ const emotionalSupportPage: PageElement[] = [
         journey. If your child has been diagnosed or is receiving treatment at
         Children’s Hospital, London Health Sciences Centre or Windsor Regional
         Hospital’s Paediatric Oncology Satellite Clinic, and you would like to
-        access any of these supports, please contact our office at{" "}
+        access any of these supports, please contact our office at
         <a href="tel:519-685-3500" className="text-link-blue">
           519-685-3500
-        </a>{" "}
-        or{" "}
+        </a>
+        or
         <a href="mailto:info@childcan.com" className="text-link-blue">
           info@childcan.com
-        </a>{" "}
+        </a>
         or
         <a
           href="https://forms.office.com/Pages/ResponsePage.aspx?id=GJ_2kAOFsEqmtRcUIF577HxhnHPJybtPjITj_N2TfJhUQzhESzRBOFIyU0FRV1ZFRVMwSlQ1RlRWOS4u"
@@ -160,14 +160,14 @@ const socialSupportPage: PageElement[] = [
         receiving treatment at Children’s Hospital, London Health Sciences
         Centre or Windsor Regional Hospital’s Paediatric Oncology Satellite
         Clinic, and you would like to access any of these supports, please
-        contact our office at{" "}
+        contact our office at
         <a href="tel:519-685-3500" className="text-link-blue">
           519-685-3500
-        </a>{" "}
-        or{" "}
+        </a>
+        or
         <a href="mailto:info@childcan.com" className="text-link-blue">
           info@childcan.com
-        </a>{" "}
+        </a>
         or
         <a
           href="https://forms.office.com/Pages/ResponsePage.aspx?id=GJ_2kAOFsEqmtRcUIF577HxhnHPJybtPjITj_N2TfJhUQzhESzRBOFIyU0FRV1ZFRVMwSlQ1RlRWOS4u"
@@ -228,7 +228,7 @@ const upcomingEventsPage: PageElement[] = [
     content: (
       <>
         Childcan families will be notified of upcoming events via email so
-        please{" "}
+        please
         <a href="#footer" className="text-link-blue">
           ensure you are on our mailing list
         </a>
@@ -292,7 +292,34 @@ const qaPage: PageElement[] = [
   },
 ];
 
+const waysToGivePage: PageElement[] = [
+  {
+    type: "Header",
+    content: <>Ways to Give</>,
+  },
+  {
+    type: "Paragraph",
+    content: (
+      <>
+        <strong>Your generosity offers hope to a family in their darkest time. The needs are urgent, immediate and ongoing.</strong>
+      </>
+    ),
+  },
+];
+
+
+const PJDayPage: PageElement[] = [];
+const goldPage: PageElement[] = [];
+const hostAnEventPage: PageElement[] = [];
+const marketplacePage: PageElement[] = [];
+const merchandisePage: PageElement[] = [];
+const volunteerPage: PageElement[] = [];
+const ourSupportersPage: PageElement[] = [];
+
+
+
 export const pageLayouts: Record<string, PageElement[]> = {
+  // FOR FAMILIES PAGES
   "Here for You": hereForYouPage,
   "Financial Support": financialSupportPage,
   "Emotional Support": emotionalSupportPage,
@@ -300,4 +327,14 @@ export const pageLayouts: Record<string, PageElement[]> = {
   "Research Support": researchSupportPage,
   "Upcoming Family Events": upcomingEventsPage,
   "Q&A": qaPage,
+
+  // HOW TO HELP PAGES
+  "Ways to Give": waysToGivePage,
+  "PJ Day": PJDayPage,
+  "Gold": goldPage,
+  "Host an Event": hostAnEventPage,
+  "Marketplace": marketplacePage,
+  "Merchandise": merchandisePage,
+  "Volunteer": volunteerPage,
+  "Our Supporters": ourSupportersPage
 };

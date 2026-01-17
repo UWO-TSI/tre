@@ -1,10 +1,10 @@
 import PurpleAccentButton from "@/components/accentButton/purpleAccentButton";
-import { PageElement } from "./pageLayout";
-interface ForFamiliesProps {
+import { PageElement } from "../../app/for-families/pageLayout";
+interface PageElementProps {
   pageLayout: PageElement[];
 }
 
-function ForFamilies(props: ForFamiliesProps) {
+export default function Element(props: PageElementProps) {
   return (
     <div className="flex flex-col gap-4 bg-white">
       {props.pageLayout &&
@@ -67,5 +67,3 @@ function ForFamilies(props: ForFamiliesProps) {
     </div>
   );
 }
-
-export default ForFamilies;
