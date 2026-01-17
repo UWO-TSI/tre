@@ -34,7 +34,10 @@ function ForFamilies(props: ForFamiliesProps) {
               );
             case "Button":
               return (
-                <PurpleAccentButton className="w-1/3 m-auto" onClick={() => window.open(element.href)}>
+                <PurpleAccentButton
+                  className="w-1/3 m-auto"
+                  onClick={() => window.open(element.href)}
+                >
                   {element.text}
                 </PurpleAccentButton>
               );

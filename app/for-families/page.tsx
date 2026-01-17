@@ -8,7 +8,9 @@ import { useSearchParams } from "next/navigation";
 
 function Page() {
   const searchParams = useSearchParams();
-  const [selectedPage, setSelectedPage] = useState(searchParams.get("page") ?? "Here for You");
+  const [selectedPage, setSelectedPage] = useState(
+    searchParams.get("page") ?? "Here for You",
+  );
   const pages = [
     "Here for You",
     "Financial Support",
