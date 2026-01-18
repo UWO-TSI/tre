@@ -35,7 +35,7 @@ export default function Element(props: PageElementProps) {
             case "Button":
               return (
                 <PurpleAccentButton
-                  className="w-1/3 m-auto"
+                  className="m-auto"
                   onClick={() => window.open(element.href)}
                 >
                   {element.text}
