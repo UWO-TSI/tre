@@ -103,7 +103,9 @@ function Header() {
           <HeaderLink title="Events"></HeaderLink>
           <HeaderLink title="Star"></HeaderLink>
           <HeaderLink title="Hands of Hope"></HeaderLink>
-          <HeaderLink title="Contact"></HeaderLink>
+          <a href="/contact">
+            <HeaderLink title="Contact"></HeaderLink>
+          </a>
           <YellowAccentButton>Donate</YellowAccentButton>
         </nav>
       </div>
