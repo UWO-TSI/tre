@@ -39,7 +39,7 @@ export default function Contact() {
           <div className="col-span-2 row-span-2">
             <div className="self-start">
               <MyMap></MyMap>
-              {/* no top margin */}
+              {/* there's a way to make this black and white in the google cloud console - TODO*/}
             </div>
           </div>
           <div>

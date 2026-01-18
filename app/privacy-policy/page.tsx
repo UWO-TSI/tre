@@ -1,5 +1,4 @@
 export default function PrivacyPolicy() {
-  // TODO: UPDATE CONTACT US PAGE LINK
 
   return (
     <div className="bg-white">
@@ -123,7 +122,7 @@ export default function PrivacyPolicy() {
           Users may request their personal information be removed from our
           database at any time by unsubscribing from our newsletters or by{" "}
           <a
-            href="https://childcan.com/contact"
+            href="/contact"
             target="_blank"
             rel="noreferrer"
             className="text-link-blue"
@@ -186,7 +185,7 @@ export default function PrivacyPolicy() {
           If you encounter any issues or questions regarding this privacy
           policy, please{" "}
           <a
-            href="https://childcan.com/contact"
+            href="/contact"
             target="_blank"
             rel="noreferrer"
             className="text-link-blue"
