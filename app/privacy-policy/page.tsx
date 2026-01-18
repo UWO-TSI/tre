@@ -1,5 +1,4 @@
 export default function PrivacyPolicy() {
-
   return (
     <div className="bg-white">
       <div className="place-self-center max-w-[1020px] mx-[130px] px-[32px] py-[96px] ">
