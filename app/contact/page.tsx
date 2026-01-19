@@ -3,22 +3,20 @@ import SocialIcons from "../_components/socialIcons";
 import MyMap from "../_components/Map";
 
 export default function Contact() {
-  // TODO: UPDATE CONTACT US PAGE LINK
-
   return (
     <div className="bg-white">
+        {/* TODO: change image */}
       <HeroImage
-        title=""
+        title="Contact Us"
         alt=""
-        height="40em"
-        textVertialOffset="5em"
-        image="/images/family.jpg"
-        imageVerticalPosition="20%"
+        height="[440px]"
+        textVertialOffset="20px"
+        image="/images/contact-us-pic.jpg"
+        imageVerticalPosition="40%"
       ></HeroImage>
       <div className="place-self-center max-w-[1020px] mx-[168px] px-[32px] py-[96px] bg-white ">
         <div>
-          {/* add space */}
-          <p className="bodyText mt-[38.3px]">
+          <p className="bodyText mt-[38.3px]"> 
             Are you interested in getting involved with Childcan? Or are you a
             local family in need of some of the supportive programs and services
             we provide? We are here to help in ways you might not expect.{" "}
