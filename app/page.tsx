@@ -50,9 +50,21 @@ export default function Home() {
 
       {/* Section descriptions and images */}
       <div className="flex flex-col w-full gap-4 p-10 bg-white">
-        <SectionBox title="For Families" imgSrc="/images/.." altText="family" />
-        <SectionBox title="For Donors" imgSrc="/images/.." altText="donors" />
-        <SectionBox title="For Parents" imgSrc="/images/.." altText="parents" />
+        <SectionBox
+          title="For Families"
+          imgSrc="/images/ChildcanWalk2023-304.jpg"
+          altText="family"
+        />
+        <SectionBox
+          title="For Donors"
+          imgSrc="/images/ChildcanWalk2023-108.jpg"
+          altText="donors"
+        />
+        <SectionBox
+          title="For Parents"
+          imgSrc="/images/ChildcanWalk2023-12.jpg"
+          altText="parents"
+        />
       </div>
 
       <QuoteBanner
