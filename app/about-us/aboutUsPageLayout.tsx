@@ -1,4 +1,4 @@
-import { PageElement } from "@/components/familiesAndHelp/pageLayout";
+import { PageElement } from "@/components/pageLayout/PageElement";
 
 export const aboutUs: PageElement[] = [
   { type: "Header", content: <>About Us</> },

@@ -1,11 +1,11 @@
 import PurpleAccentButton from "@/components/accentButton/purpleAccentButton";
-import { PageElement } from "./pageLayout";
+import { PageElement } from "./PageElement";
 import Image from "next/image";
 interface PageElementProps {
   pageLayout: PageElement[];
 }
 
-export default function Element(props: PageElementProps) {
+export default function PageContent(props: PageElementProps) {
   return (
     <div className="flex flex-col gap-4 bg-white">
       {props.pageLayout &&
@@ -90,9 +90,8 @@ export default function Element(props: PageElementProps) {
 
             case "Image":
               return (
-                <div className={`relative cover ${element.className}`}>
+                <div key={element.type + index} className={`relative cover ${element.className}`}>
                   <Image
-                    key={element.type + index}
                     fill
                     src={element.src}
                     alt={element.alt}

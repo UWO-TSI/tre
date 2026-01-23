@@ -1,5 +1,5 @@
-import { PageElement } from "@/components/familiesAndHelp/pageLayout";
-import Element from "@/components/familiesAndHelp/PageElement";
+import { PageElement } from "@/components/pageLayout/PageElement";
+import PageContent from "@/components/pageLayout/PageContent";
 
 export const waysToGivePage: PageElement[] = [
   {
@@ -392,7 +392,7 @@ export const PJDayPage: PageElement[] = [
       <div className="flex gap-8">
         <div className="flex flex-col w-1/2 gap-4">
           {
-            <Element
+            <PageContent
               pageLayout={[
                 {
                   type: "Header",
@@ -459,11 +459,11 @@ export const PJDayPage: PageElement[] = [
                   text: "Let us know you're participating in PJ Day",
                 },
               ]}
-            ></Element>
+            ></PageContent>
           }
         </div>
         <div className="flex flex-col w-1/2 relative">
-          <Element
+          <PageContent
             pageLayout={[
               {
                 type: "Image",
@@ -478,7 +478,7 @@ export const PJDayPage: PageElement[] = [
                 className: "aspect-square",
               },
             ]}
-          ></Element>
+          ></PageContent>
         </div>
       </div>
     ),

@@ -1,7 +1,7 @@
 "use client";
 import Sidebar from "@/components/sidebar/sidebar";
-import ForFamilies from "@/components/familiesAndHelp/PageElement";
-import { PageElement } from "@/components/familiesAndHelp/pageLayout";
+import PageContent from "@/components/pageLayout/PageContent";
+import { PageElement } from "@/components/pageLayout/PageElement";
 import HeroImage from "@/components/heroImage/heroImage";
 import usePageState from "@/hooks/usePageState";
 
@@ -34,7 +34,7 @@ export default function PageLayout(props: PageLayoutProps) {
           title={props.pageTitle}
           items={props.pages}
         ></Sidebar>
-        <ForFamilies pageLayout={props.pageLayout[selectedPage]}></ForFamilies>
+        <PageContent pageLayout={props.pageLayout[selectedPage]}></PageContent>
       </div>
     </div>
   );

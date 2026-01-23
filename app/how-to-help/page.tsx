@@ -1,4 +1,4 @@
-import PageLayout from "@/components/familiesAndHelp/familiesAndHelp";
+import PageLayout from "@/components/pageLayout/PageLayout";
 import { howToHelpLayout } from "./howToHelpPageLayout";
 
 export default function Page() {
