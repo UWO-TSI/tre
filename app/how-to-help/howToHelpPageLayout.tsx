@@ -485,7 +485,6 @@ export const PJDayPage: PageElement[] = [
   },
 ];
 
-
 export const goldPage: PageElement[] = [];
 export const hostAnEventPage: PageElement[] = [
   {
@@ -581,7 +580,6 @@ export const ourSupportersPage: PageElement[] = [];
 // external
 export const marketplacePage: PageElement[] = [];
 export const merchandisePage: PageElement[] = [];
-
 
 export const howToHelpLayout: Record<string, PageElement[]> = {
   "Ways to Give": waysToGivePage,

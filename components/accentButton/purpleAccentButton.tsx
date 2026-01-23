@@ -5,22 +5,19 @@ interface PurpleAccentButonProps {
   children?: React.ReactNode;
   className?: string;
   onClick?: () => void;
-  href?: string
+  href?: string;
 }
 
 function PurpleAccentButton(props: PurpleAccentButonProps) {
-
   const router = useRouter();
 
   const handleClick = () => {
     if (props.href != undefined) router.push(props.href);
     else if (props.onClick != undefined) {
       props.onClick();
+    } else {
+      // redirect to 404
     }
-    else {
-      ; // redirect to 404
-    }
-
   };
 
   return (
