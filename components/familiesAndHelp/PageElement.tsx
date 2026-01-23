@@ -78,7 +78,7 @@ export default function Element(props: PageElementProps) {
 
             case "Image":
               return (
-                <div className={`relative aspect-auto cover ${element.className}`}>
+                <div className={`relative cover ${element.className}`}>
                   <Image
                     key={element.type + index}
                     fill
