@@ -5,6 +5,7 @@ import QuoteBanner from "./_components/quoteBanner";
 import SearchBar from "@/components/header/SearchBar";
 import SectionBox from "./_components/sectionBox";
 import Event from "./_components/Event";
+import YellowAccentButton from "@/othername";
 
 export default function Home() {
   return (
@@ -26,19 +27,24 @@ export default function Home() {
           title={"Newly Diagnosed?"}
           buttonText="Find Support Here"
         ></QuickNavSection>
+
         <QuickNavSection
           title={"Existing ChildCan Family?"}
           buttonText="For Families"
         ></QuickNavSection>
 
+        <div className="flex flex-col items-center pb-20 pt-5">
+          <h3 className="text-h3 pb-5 font-semibold">Looking to support?</h3>
+          <YellowAccentButton>Ways to Give</YellowAccentButton>
+        </div>
+        {/* <QuickNavSection
+          title={"Looking to support?"}
+          buttonText="Ways to Give"
+        ></QuickNavSection> */}
+
         <QuickNavSection
           title={"Looking to Help?"}
           buttonText="Volunteering"
-        ></QuickNavSection>
-
-        <QuickNavSection
-          title={"Donors?"}
-          buttonText="How to Help"
         ></QuickNavSection>
 
         <QuickNavSection
