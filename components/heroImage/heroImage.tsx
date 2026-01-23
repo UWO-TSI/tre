@@ -30,8 +30,9 @@ function HeroImage(props: HeroImageProps) {
           alt={props.alt}
           src={props.image}
         ></Image>
-        {props.overlay && <div className="absolute inset-0 bg-linear-to-r from-[#575757]/90 to-[#575757]/10"></div>}
-
+        {props.overlay && (
+          <div className="absolute inset-0 bg-linear-to-r from-[#575757]/90 to-[#575757]/10"></div>
+        )}
       </div>
       <h1
         style={{

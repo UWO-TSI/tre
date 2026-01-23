@@ -74,7 +74,7 @@ export default function Contact() {
         </div>
 
         <div className="py-[17px]">
-            {/* fix the flex box here on hover */}
+          {/* fix the flex box here on hover */}
           <div className="inline-flex gap-2 items-center group">
             <SocialIcons
               name="facebook"
