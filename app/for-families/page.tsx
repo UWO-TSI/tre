@@ -1,6 +1,4 @@
-"use client";
 import PageLayout from "@/components/familiesAndHelp/familiesAndHelp";
-import usePageState from "@/hooks/usePageState";
 
 function Page() {
   const pages = [
@@ -13,13 +11,9 @@ function Page() {
     "Q&A",
   ];
 
-  const { selectedPage, onPageChange } = usePageState(pages, "Here for You");
-
   return (
     <PageLayout
       pages={pages}
-      selectedPage={selectedPage}
-      onPageChange={onPageChange}
       pageTitle="For Families"
       bannerHref="/images/child-and-family.webp"
       bannerAlt="image of family"

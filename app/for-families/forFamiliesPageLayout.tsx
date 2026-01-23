@@ -1,4 +1,4 @@
-import { PageElement } from "./pageLayout";
+import { PageElement } from "@/components/familiesAndHelp/pageLayout";
 
 export const hereForYouPage: PageElement[] = [
   {

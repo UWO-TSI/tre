@@ -3,7 +3,7 @@ import ContactForm from "./ContactForm";
 
 export default function Contact() {
   return (
-    <div className="flex justify-between gap-12 p-10">
+    <div className="flex justify-between gap-12">
       <div className="flex flex-col gap-8">
         <Socials />
         <a
