@@ -904,3 +904,12 @@ export const qaPage: PageElement[] = [
     },
   },
 ];
+export const forFamilesPageLayout: Record<string, PageElement[]> = {
+  "Here for You": hereForYouPage,
+  "Financial Support": financialSupportPage,
+  "Emotional Support": emotionalSupportPage,
+  "Social Support": socialSupportPage,
+  "Research Support": researchSupportPage,
+  "Upcoming Family Events": upcomingEventsPage,
+  "Q&A": qaPage,
+};

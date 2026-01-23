@@ -49,7 +49,7 @@ export default function Element(props: PageElementProps) {
               return (
                 <PurpleAccentButton
                   key={element.type + index}
-                  className={`${element.alignment === "center" ? "m-auto" : ""}`}
+                  className={`${element.alignment === "center" ? "m-auto" : "mr-auto"}`}
                   onClick={() => window.open(element.href)}
                 >
                   {element.text}

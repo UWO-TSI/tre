@@ -155,6 +155,18 @@ export const ourFamilies: PageElement[] = [
     ),
   },
 ];
+export const ourNews: PageElement[] = [
+  { type: "Header", content: <>Our News</> },
+  {
+    type: "Paragraph",
+    content: (
+      <>
+        If you have missed any of our news within the last year, click on the
+        image to learn more:
+      </>
+    ),
+  },
+];
 export const ourTeam: PageElement[] = [
   { type: "Header", content: <>Our Team</> },
   {
@@ -380,3 +392,10 @@ export const careers: PageElement[] = [
     ),
   },
 ];
+export const aboutUsPageLayout: Record<string, PageElement[]> = {
+  "About Us": aboutUs,
+  "Our Families": ourFamilies,
+  "Our News": ourNews,
+  "Our Team": ourTeam,
+  Careers: careers,
+};
