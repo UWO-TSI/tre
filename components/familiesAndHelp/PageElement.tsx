@@ -1,5 +1,5 @@
 import PurpleAccentButton from "@/components/accentButton/purpleAccentButton";
-import { PageElement } from "../../app/for-families/pageLayout";
+import { PageElement } from "./pageLayout";
 interface PageElementProps {
   pageLayout: PageElement[];
 }
@@ -35,7 +35,7 @@ export default function Element(props: PageElementProps) {
             case "Button":
               return (
                 <PurpleAccentButton
-                  className="m-auto"
+                  className={`${element.alignment === "center" ? "m-auto" : ""}`}
                   onClick={() => window.open(element.href)}
                 >
                   {element.text}
@@ -62,6 +62,9 @@ export default function Element(props: PageElementProps) {
                   </li>
                 </ul>
               );
+
+            case "Divider":
+              return <hr className="py-4"></hr>;
           }
         })}
     </div>

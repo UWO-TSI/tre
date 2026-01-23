@@ -1,0 +1,393 @@
+import { PageElement } from "@/components/familiesAndHelp/pageLayout";
+
+export const waysToGivePage: PageElement[] = [
+  {
+    type: "Header",
+    content: <>Ways to Give</>,
+  },
+  {
+    type: "Paragraph",
+    content: (
+      <>
+        <strong>
+          Your generosity offers hope to a family in their darkest time. The
+          needs are urgent, immediate and ongoing.
+        </strong>
+      </>
+    ),
+  },
+  {
+    type: "Paragraph",
+    content: (
+      <>
+        Receiving a diagnosis of childhood cancer is devastating – emotionally
+        and financially. Support from our community immediately improves a
+        Childcan family’s ability to remain emotionally and financially stable
+        in the face of childhood cancer.
+      </>
+    ),
+  },
+  {
+    type: "Paragraph",
+    content: (
+      <>
+        When you give, you support Childcan’s direct-to-family donation
+        philosophy ensuring immediate help in the hands of families who need it
+        most. Your gift enables families to regain control in a time of utter
+        chaos, and shows them they are not alone – support that is very much
+        needed to face childhood cancer.
+      </>
+    ),
+  },
+  {
+    type: "Paragraph",
+    content: <>Your generosity truly makes a difference.</>,
+  },
+  {
+    type: "Button",
+    text: "Donate",
+    href: "https://form-renderer-app.donorperfect.io/give/childcan/2025-donation-form",
+  },
+  {
+    type: "Paragraph",
+    content: (
+      <>
+        <strong>
+          There are many ways you can donate to have a meaningful impact on the
+          lives of Childcan families.
+        </strong>
+      </>
+    ),
+  },
+  {
+    type: "Subheader",
+    content: <>Online</>,
+  },
+  {
+    type: "Paragraph",
+    content: (
+      <>
+        The easiest and most efficient way you can give is online. Your gift is
+        received immediately and will be put right to work to help families
+        living with their child’s cancer. Your tax receipt is also automatically
+        sent to you.
+      </>
+    ),
+  },
+  {
+    type: "Button",
+    text: "Donate Now",
+    href: "https://form-renderer-app.donorperfect.io/give/childcan/2025-donation-form",
+  },
+  {
+    type: "Subheader",
+    content: <>Monthly Gifts</>,
+  },
+  {
+    type: "Paragraph",
+    content: (
+      <>
+        When you take a moment to see if your employer offers donation matching,
+        you open the door for your compassion to stretch even further bringing
+        double the care, double the comfort, and double the hope to kids and
+        families who need it now.
+      </>
+    ),
+  },
+  {
+    type: "Button",
+    text: "See if your employer doubles donations",
+    href: "https://childcan.com/double-your-donation",
+  },
+  {
+    type: "Subheader",
+    content: <>Donate Securities</>,
+  },
+  {
+    type: "Paragraph",
+    content: (
+      <>
+        When you take a moment to see if your employer offers donation matching,
+        you open the door for your compassion to stretch even further bringing
+        double the care, double the comfort, and double the hope to kids and
+        families who need it now.
+      </>
+    ),
+  },
+  {
+    type: "Paragraph",
+    content: (
+      <>
+        To donate securities, please use our{" "}
+        <a
+          href="https://childcan.com/s/Gift-of-Securities-mn3l.pdf"
+          className="font-semibold text-link-blue"
+        >
+          Gift of Securities Donation Form.
+        </a>
+      </>
+    ),
+  },
+  {
+    type: "Paragraph",
+    content: (
+      <>
+        You can also donate online through{" "}
+        <a
+          href="https://www.canadahelps.org/en/dn/s/49268/donate"
+          className="text-link-blue"
+        >
+          Canada Helps
+        </a>
+        , or via{" "}
+        <a
+          className="text-link-blue"
+          href="https://static1.squarespace.com/static/5e4d4094b1c56247a63ecb72/t/5ecec602539e8f12017b2ff9/1590609410570/Share%2BTransfer%2BForm%2B-%2BNov%2B2019%2BUpdate.pdf"
+        >
+          London Community Foundation
+        </a>
+        , but we recommend using our form for direct donations.
+      </>
+    ),
+  },
+  {
+    type: "Paragraph",
+    content: (
+      <>
+        If you have any questions about the process or need assistance, please
+        don’t hesitate to <strong>contact us</strong>.
+      </>
+    ),
+  },
+  {
+    type: "Button",
+    text: "Gift of Securities Donation Form",
+    href: "https://childcan.com/s/Gift-of-Securities-mn3l.pdf",
+  },
+  {
+    type: "Subheader",
+    content: <>Legacy Giving</>,
+  },
+  {
+    type: "Paragraph",
+    content: (
+      <>
+        A planned gift becomes part of your life story. Childcan can offer a
+        special opportunity for you to create a legacy.{" "}
+        <a className="text-link-blue" href="https://childcan.com/legacy"></a>
+        Learn more about how your love can leave an incredible legacy for brave
+        futures.
+      </>
+    ),
+  },
+  {
+    type: "Button",
+    text: "Learn more about Legacy Giving",
+    href: "https://childcan.com/legacy",
+  },
+  {
+    type: "Subheader",
+    content: <>By Mail</>,
+  },
+  {
+    type: "Paragraph",
+    content: (
+      <>
+        If you prefer to mail your donation, please send your cheque, bank draft
+        or money order, payable to Childcan, to:
+      </>
+    ),
+  },
+  {
+    type: "Paragraph",
+    content: (
+      <>
+        <strong>
+          Childcan
+          <br />
+          792 Commissioners Road W.
+          <br />
+          London, Ontario, Canada
+          <br />
+          N6K 1C2
+          <br />
+        </strong>
+      </>
+    ),
+  },
+  {
+    type: "Subheader",
+    content: <>Call Us</>,
+  },
+  {
+    type: "Paragraph",
+    content: (
+      <>
+        You can call us directly to make your donation at{" "}
+        <a href="tel:519-685-3500" className="text-link-blue">
+          519-685-3500
+        </a>{" "}
+        in London and area, or toll-free at{" "}
+        <a href="tel:1-800-966-0631" className="text-link-blue">
+          1-800-966-0631
+        </a>
+        .
+      </>
+    ),
+  },
+  {
+    type: "Subheader",
+    content: <>Partner with Us</>,
+  },
+  {
+    type: "Paragraph",
+    content: (
+      <>
+        Does your business or organization share our community values and goal
+        of helping families in crisis? Some organizations elect Childcan as
+        their charity of choice for annual or monthly giving programs as part of
+        their Corporate Social Responsibility endeavours. Others will choose to
+        sponsor one of our events as part of their marketing plans. Some even
+        organize fundraising events and activities to involve their network and
+        have an even larger impact. We would be delighted to discuss any of
+        these options or others that fit your organization’s strategic giving
+        plans. Please get in touch at{" "}
+        <a href="tel:519-685-3500" className="text-link-blue">
+          519-685-3500
+        </a>{" "}
+        or{" "}
+        <a href="mailto:info@childcan.com" className="text-link-blue">
+          info@childcan.com
+        </a>
+        .
+      </>
+    ),
+  },
+
+  {
+    type: "Subheader",
+    content: <>Donate a Car</>,
+  },
+
+  {
+    type: "Paragraph",
+    content: (
+      <>
+        Donate a Car Canada accepts{" "}
+        <a
+          href="https://donatecar.ca/org/donate.php?charitypage=Childcan"
+          className="text-link-blue"
+        ></a>
+        Vehicle Donations for Childcan. Free towing is provided in most areas
+        across Canada, or you can drop off your vehicle to maximize your
+        donation. When you donate your car, truck, RV, boat, or motorcycle to
+        Childcan through Donate a Car Canada, it will either be recycled or sold
+        at auction (depending on its condition, age and location). Donate a Car
+        Canada will look after all the details to make it easy for Childcan to
+        benefit. After your vehicle donation is complete, we will send you a tax
+        receipt and your donation will be put to good use, supporting our
+        children and families.
+      </>
+    ),
+  },
+  {
+    type: "Button",
+    text: "Donate a vehicle",
+    href: "https://donatecar.ca/org/donate.php?charitypage=Childcan",
+  },
+
+  {
+    type: "Subheader",
+    content: <>Merchandise</>,
+  },
+  {
+    type: "Paragraph",
+    content: (
+      <>
+        Support us by purchasing merchandise such as bracelets, hats, hoodies,
+        and t-shirts that will also raise awareness. We are grateful to Collins
+        Clothiers for hosting our merchandise store.
+      </>
+    ),
+  },
+
+  {
+    type: "Button",
+    text: "Purchase Merchandise",
+    href: "https://www.collinsclothiers.com/childcan",
+  },
+  {
+    type: "Divider",
+  },
+  {
+    type: "Paragraph",
+    content: (
+      <>
+        On behalf of our staff and board, and most importantly, our Childcan
+        families, thank you!
+      </>
+    ),
+  },
+  {
+    type: "Paragraph",
+    content: (
+      <>
+        We rely on the generosity of our community through individual, corporate
+        and foundation donations and sponsorships. We appreciate every dollar
+        donated and put it to good use in providing our direct-to-family{" "}
+        <a href="https://childcan.com/here-for-you" className="text-link-blue">
+          programs and services
+        </a>
+        .
+      </>
+    ),
+  },
+  {
+    type: "Paragraph",
+    content: (
+      <>
+        On behalf of our staff and board, and most importantly, our Childcan
+        families, thank you!
+      </>
+    ),
+  },
+  {
+    type: "Divider",
+  },
+  {
+    type: "Subheader",
+    content: <>Tax Receipts</>,
+  },
+
+  {
+    type: "Paragraph",
+    content: (
+      <>
+        Please note that because of the administrative and mailing costs
+        associated with issuing paper receipts for offline donations, we issue
+        printed tax receipts for every offline donation of $20 or more. Online
+        donations provide the option for the donor to cover the administrative
+        costs and ensure that the total amount of the donation is going to
+        support children and families coping with childhood cancer, as the donor
+        intended. As there is less administration involved, receipts are issued
+        for each donation made through the online donation links above. Should
+        you have any concerns or questions regarding this policy, please don’t
+        hesitate to{" "}
+        <a href="https://childcan.com/contact" className="text-link-blue">
+          contact us
+        </a>
+        . We very much appreciate your generosity and support, and strive to
+        meet the needs of our donors, as well as the children and families we
+        serve. Thank you!
+      </>
+    ),
+  },
+];
+
+export const PJDayPage: PageElement[] = [];
+export const goldPage: PageElement[] = [];
+export const hostAnEventPage: PageElement[] = [];
+export const marketplacePage: PageElement[] = [];
+export const merchandisePage: PageElement[] = [];
+export const volunteerPage: PageElement[] = [];
+export const ourSupportersPage: PageElement[] = [];

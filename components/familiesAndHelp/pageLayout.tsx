@@ -6,7 +6,18 @@ import {
   researchSupportPage,
   socialSupportPage,
   upcomingEventsPage,
-} from "./forFamiliesPageLayout";
+} from "@/app/for-families/forFamiliesPageLayout";
+
+import {
+  waysToGivePage,
+  PJDayPage,
+  goldPage,
+  hostAnEventPage,
+  marketplacePage,
+  merchandisePage,
+  volunteerPage,
+  ourSupportersPage,
+} from "@/app/how-to-help/howToHelpPageLayout";
 
 interface Header {
   type: "Header";
@@ -28,6 +39,7 @@ interface Button {
   type: "Button";
   text: string;
   href: string;
+  alignment?: "left" | "center";
 }
 interface List {
   type: "List";
@@ -42,6 +54,9 @@ interface DoubleListElement {
   title: string;
   items: string[];
 }
+interface Divider {
+  type: "Divider";
+}
 
 export type PageElement =
   | Header
@@ -50,33 +65,8 @@ export type PageElement =
   | Subheader
   | List
   | DoubleList
-  | TertiaryHeader;
-
-const waysToGivePage: PageElement[] = [
-  {
-    type: "Header",
-    content: <>Ways to Give</>,
-  },
-  {
-    type: "Paragraph",
-    content: (
-      <>
-        <strong>
-          Your generosity offers hope to a family in their darkest time. The
-          needs are urgent, immediate and ongoing.
-        </strong>
-      </>
-    ),
-  },
-];
-
-const PJDayPage: PageElement[] = [];
-const goldPage: PageElement[] = [];
-const hostAnEventPage: PageElement[] = [];
-const marketplacePage: PageElement[] = [];
-const merchandisePage: PageElement[] = [];
-const volunteerPage: PageElement[] = [];
-const ourSupportersPage: PageElement[] = [];
+  | TertiaryHeader
+  | Divider;
 
 export const pageLayouts: Record<string, PageElement[]> = {
   // FOR FAMILIES PAGES
