@@ -90,11 +90,13 @@ export default function Element(props: PageElementProps) {
 
             case "Image":
               return (
-                <div
-                  key={element.type + index}
-                  className={`relative cover ${element.className}`}
-                >
-                  <Image fill src={element.src} alt={element.alt}></Image>
+                <div className={`relative cover ${element.className}`}>
+                  <Image
+                    key={element.type + index}
+                    fill
+                    src={element.src}
+                    alt={element.alt}
+                  ></Image>
                 </div>
               );
           }
