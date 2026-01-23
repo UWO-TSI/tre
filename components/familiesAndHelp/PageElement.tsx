@@ -50,7 +50,7 @@ export default function Element(props: PageElementProps) {
                 <PurpleAccentButton
                   key={element.type + index}
                   className={`${element.alignment === "center" ? "m-auto" : "mr-auto"}`}
-                  onClick={() => window.open(element.href)}
+                  href={element.href}
                 >
                   {element.text}
                 </PurpleAccentButton>
@@ -90,9 +90,8 @@ export default function Element(props: PageElementProps) {
 
             case "Image":
               return (
-                <div className={`relative cover ${element.className}`}>
+                <div key={element.type + index} className={`relative cover ${element.className}`}>
                   <Image
-                    key={element.type + index}
                     fill
                     src={element.src}
                     alt={element.alt}
