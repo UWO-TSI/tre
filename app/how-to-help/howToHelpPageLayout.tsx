@@ -386,182 +386,184 @@ export const waysToGivePage: PageElement[] = [
 ];
 
 export const PJDayPage: PageElement[] = [
-
   {
     type: "MiscElement",
     content: (
       <div className="flex gap-8">
         <div className="flex flex-col w-1/2 gap-4">
           {
-            <Element pageLayout={[
-              {
-                type: "Header",
-                content: (
-                  <>
-                    PJ Day for Childcan.
-                  </>
-                )
-              },
-              {
-                type: "Subheader",
-                content: (
-                  <>
-                    Did you know, kids fighting cancer wear their PJs every day?
-                  </>
-                )
-              },
-              {
-                type: "TertiaryHeader",
-                content: (
-                  <>
-                    Show you support them on PJ Day! Rock your PJs!
-                  </>
-                )
-              },
-              {
-                type: "Paragraph",
-                content: (
-                  <>
-                    Children fighting cancer spend a lot of time in 
-                    their pajamas. Show your support by wearing your 
-                    PJs on February 15, International Childhood Cancer 
-                    Awareness Day. 
-                  </>
-                )
-              },
-              {
-                type: "Paragraph",
-                content: (
-                  <>
-                    As February 15, 2026, falls on a Sunday, encourage 
-                    your school or business to show kids affected by 
-                    cancer some love on February 13, or any day in February. 
-                  </>
-                )
-              },
-              {
-                type: "Paragraph",
-                content: (
-                  <>
-                    Donate to participate and help kids and their families 
-                    affected by childhood cancer. 
-                  </>
-                )
-              },
-              {
-                type: "Paragraph",
-                content: (
-                  <>
-                    Your involvement in PJ Day for Childcan will not only help 
-                    to fund our direct-to-family assistance programs, it will 
-                    also show these children and families that our community 
-                    stands with them. Choose any day in February that works for 
-                    your organization and let us know that you’re participating 
-                    by completing this form:
-                  </>
-                )
-              },
-              {
-                type: "Button",
-                href: "https://forms.office.com/r/q6yrrxUhDt",
-                text: "Let us know you're participating in PJ Day"
-              }
-            ]}></Element>
+            <Element
+              pageLayout={[
+                {
+                  type: "Header",
+                  content: <>PJ Day for Childcan.</>,
+                },
+                {
+                  type: "Subheader",
+                  content: (
+                    <>
+                      Did you know, kids fighting cancer wear their PJs every
+                      day?
+                    </>
+                  ),
+                },
+                {
+                  type: "TertiaryHeader",
+                  content: <>Show you support them on PJ Day! Rock your PJs!</>,
+                },
+                {
+                  type: "Paragraph",
+                  content: (
+                    <>
+                      Children fighting cancer spend a lot of time in their
+                      pajamas. Show your support by wearing your PJs on February
+                      15, International Childhood Cancer Awareness Day.
+                    </>
+                  ),
+                },
+                {
+                  type: "Paragraph",
+                  content: (
+                    <>
+                      As February 15, 2026, falls on a Sunday, encourage your
+                      school or business to show kids affected by cancer some
+                      love on February 13, or any day in February.
+                    </>
+                  ),
+                },
+                {
+                  type: "Paragraph",
+                  content: (
+                    <>
+                      Donate to participate and help kids and their families
+                      affected by childhood cancer.
+                    </>
+                  ),
+                },
+                {
+                  type: "Paragraph",
+                  content: (
+                    <>
+                      Your involvement in PJ Day for Childcan will not only help
+                      to fund our direct-to-family assistance programs, it will
+                      also show these children and families that our community
+                      stands with them. Choose any day in February that works
+                      for your organization and let us know that you’re
+                      participating by completing this form:
+                    </>
+                  ),
+                },
+                {
+                  type: "Button",
+                  href: "https://forms.office.com/r/q6yrrxUhDt",
+                  text: "Let us know you're participating in PJ Day",
+                },
+              ]}
+            ></Element>
           }
         </div>
         <div className="flex flex-col w-1/2 relative">
-          <Element pageLayout={[
-            {
-              type: "Image",
-              src: "/images/PJDaySideBanner.webp",
-              alt: "PJ Day kid",
-              className: "h-150"
-            }
-          ]}></Element>
+          <Element
+            pageLayout={[
+              {
+                type: "Image",
+                src: "/images/PJDaySideBanner.webp",
+                alt: "PJ Day kid",
+                className: "h-150",
+              },
+            ]}
+          ></Element>
         </div>
       </div>
-    )
+    ),
   },
 ];
 export const goldPage: PageElement[] = [];
 export const hostAnEventPage: PageElement[] = [
   {
     type: "Header",
-    content: (
-      <>
-        Host an Event
-      </>
-    )
+    content: <>Host an Event</>,
   },
   {
     type: "Paragraph",
     content: (
       <>
-        What better way to show support for those affected by childhood 
-        cancer than to bring a community together, at a gala, a sports 
-        tournament, a silent auction, a bake sale, or any of an almost 
-        infinite number of possible activities. Whatever your passion or 
-        hobby, a fundraising event can take your interests and turn them 
-        into a life-changing gift for a family living with childhood cancer.
+        What better way to show support for those affected by childhood cancer
+        than to bring a community together, at a gala, a sports tournament, a
+        silent auction, a bake sale, or any of an almost infinite number of
+        possible activities. Whatever your passion or hobby, a fundraising event
+        can take your interests and turn them into a life-changing gift for a
+        family living with childhood cancer.
       </>
-    )
+    ),
+  },
+  {
+    type: "Paragraph",
+    content: <>Got your idea ready to go?</>,
   },
   {
     type: "Paragraph",
     content: (
       <>
-        Got your idea ready to go? 
+        You can get started now with a fundraising page of your own using Hands
+        of Hope.
       </>
-    )
-  },
-  {
-    type: "Paragraph",
-    content: (
-      <>
-        You can get started now with a fundraising page of your own using Hands of Hope. 
-      </>
-    )
+    ),
   },
   {
     type: "Button",
     href: "https://childcan.akaraisin.com/ui/handsofhope",
-    text: "Get Started!"
+    text: "Get Started!",
   },
   {
     type: "Paragraph",
     content: (
       <>
-        We are here to help. Have questions? Please contact us 
-        at <a href="mailto:info@childcan.com" className="text-link-blue">info@childcan.com</a>,
-        call <a href="tel:519-685-3500">519-685-3500</a>, or check out our Event Kit.
+        We are here to help. Have questions? Please contact us at{" "}
+        <a href="mailto:info@childcan.com" className="text-link-blue">
+          info@childcan.com
+        </a>
+        , call <a href="tel:519-685-3500">519-685-3500</a>, or check out our
+        Event Kit.
       </>
-    )
+    ),
   },
   {
     type: "Button",
     href: "https://childcan.com/s/Community-Events-Toolkit.pdf",
-    text: "Event Kit (pdf)"
+    text: "Event Kit (pdf)",
   },
   {
     type: "Paragraph",
     content: (
       <>
-        You can also complete this short 
-        online <a className="text-link-blue" href="https://forms.gle/7fJsziDi4unHBzuz7">Fundraising Event Form</a> or 
-        the downloadable <a className="text-link-blue" href="https://childcan.com/s/Community-Event-fundraiser-for-Childcan-Form.pdf">pdf</a> and 
-        return it to us at your convenience. 
+        You can also complete this short online{" "}
+        <a
+          className="text-link-blue"
+          href="https://forms.gle/7fJsziDi4unHBzuz7"
+        >
+          Fundraising Event Form
+        </a>{" "}
+        or the downloadable{" "}
+        <a
+          className="text-link-blue"
+          href="https://childcan.com/s/Community-Event-fundraiser-for-Childcan-Form.pdf"
+        >
+          pdf
+        </a>{" "}
+        and return it to us at your convenience.
       </>
-    )
+    ),
   },
   {
     type: "Button",
     href: "https://forms.gle/7fJsziDi4unHBzuz7",
-    text: "Fundraising Event Form (online)"
+    text: "Fundraising Event Form (online)",
   },
   {
     type: "Button",
     href: "https://childcan.com/s/Community-Event-fundraiser-for-Childcan-Form.pdf",
-    text: "Fundraising Event Form (pdf)"
+    text: "Fundraising Event Form (pdf)",
   },
 ];
 
@@ -571,6 +573,3 @@ export const ourSupportersPage: PageElement[] = [];
 // external
 export const marketplacePage: PageElement[] = [];
 export const merchandisePage: PageElement[] = [];
-
-
-

@@ -58,14 +58,14 @@ export interface Divider {
   type: "Divider";
 }
 export interface MiscElement {
-  type: "MiscElement",
-  content: React.ReactNode
+  type: "MiscElement";
+  content: React.ReactNode;
 }
 export interface Image {
-  type: "Image",
-  src: string,
-  alt: string
-  className?: string
+  type: "Image";
+  src: string;
+  alt: string;
+  className?: string;
 }
 
 export type PageElement =

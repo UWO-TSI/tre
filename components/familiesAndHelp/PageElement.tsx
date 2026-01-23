@@ -13,23 +13,35 @@ export default function Element(props: PageElementProps) {
           switch (element.type) {
             case "Header":
               return (
-                <h1 key={element.type + index} className="text-h1 text-header-purple">
+                <h1
+                  key={element.type + index}
+                  className="text-h1 text-header-purple"
+                >
                   {element.content}
                 </h1>
               );
             case "Subheader":
               return (
-                <h2 key={element.type + index} className="text-h2 text-header-teal font-light">
+                <h2
+                  key={element.type + index}
+                  className="text-h2 text-header-teal font-light"
+                >
                   {element.content}
                 </h2>
               );
             case "TertiaryHeader":
               return (
-                <h3 key={element.type + index} className="text-h3 text-header-purple font-medium"></h3>
+                <h3
+                  key={element.type + index}
+                  className="text-h3 text-header-purple font-medium"
+                ></h3>
               );
             case "Paragraph":
               return (
-                <p key={element.type + index} className="text-body text-secondary-grey font-light">
+                <p
+                  key={element.type + index}
+                  className="text-body text-secondary-grey font-light"
+                >
                   {element.content}
                 </p>
               );
@@ -45,7 +57,10 @@ export default function Element(props: PageElementProps) {
               );
             case "List":
               return (
-                <ul key={element.type + index} className="list-disc text-body text-secondary-grey font-light">
+                <ul
+                  key={element.type + index}
+                  className="list-disc text-body text-secondary-grey font-light"
+                >
                   {element.items.map((item) => {
                     return <li key={item}>{item}</li>;
                   })}
@@ -53,7 +68,10 @@ export default function Element(props: PageElementProps) {
               );
             case "DoubleList":
               return (
-                <ul key={element.type + index} className="list-disc text-body text-secondary-grey font-light">
+                <ul
+                  key={element.type + index}
+                  className="list-disc text-body text-secondary-grey font-light"
+                >
                   <li>
                     {element.list.title}
                     <ul className="list-[circle] list-inside text-body text-secondary-grey font-light">
@@ -66,19 +84,15 @@ export default function Element(props: PageElementProps) {
               );
 
             case "Divider":
-              return (
-                <hr key={element.type + index} className="py-4"></hr>
-              );
+              return <hr key={element.type + index} className="py-4"></hr>;
             case "MiscElement":
-              return (
-                <div key={element.type + index}>
-                  {element.content}
-                </div>
-              );
+              return <div key={element.type + index}>{element.content}</div>;
 
             case "Image":
               return (
-                <div className={`relative aspect-auto cover ${element.className}`}>
+                <div
+                  className={`relative aspect-auto cover ${element.className}`}
+                >
                   <Image
                     key={element.type + index}
                     fill

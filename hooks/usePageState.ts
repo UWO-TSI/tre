@@ -22,11 +22,7 @@ export default function usePageState(pages: string[], defaultPage?: string) {
   }, [searchParams, pages]);
 
   const onPageChange = (newPage: string) => {
-    window.history.pushState(
-      {},
-      "",
-      `?page=${encodeURIComponent(newPage)}`,
-    );
+    window.history.pushState({}, "", `?page=${encodeURIComponent(newPage)}`);
     setSelectedPage(newPage);
   };
 
