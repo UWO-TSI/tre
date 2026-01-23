@@ -19,43 +19,53 @@ import {
   ourSupportersPage,
 } from "@/app/how-to-help/howToHelpPageLayout";
 
-interface Header {
+export interface Header {
   type: "Header";
   content: React.ReactNode;
 }
-interface Subheader {
+export interface Subheader {
   type: "Subheader";
   content: React.ReactNode;
 }
-interface TertiaryHeader {
+export interface TertiaryHeader {
   type: "TertiaryHeader";
   content: React.ReactNode;
 }
-interface Paragraph {
+export interface Paragraph {
   type: "Paragraph";
   content: React.ReactNode;
 }
-interface Button {
+export interface Button {
   type: "Button";
   text: string;
   href: string;
   alignment?: "left" | "center";
 }
-interface List {
+export interface List {
   type: "List";
   items: string[];
 }
-interface DoubleList {
+export interface DoubleList {
   type: "DoubleList";
   list: DoubleListElement;
 }
-interface DoubleListElement {
+export interface DoubleListElement {
   type: "DoubleListElement";
   title: string;
   items: string[];
 }
-interface Divider {
+export interface Divider {
   type: "Divider";
+}
+export interface MiscElement {
+  type: "MiscElement",
+  content: React.ReactNode
+}
+export interface Image {
+  type: "Image",
+  src: string,
+  alt: string
+  className?: string
 }
 
 export type PageElement =
@@ -66,7 +76,9 @@ export type PageElement =
   | List
   | DoubleList
   | TertiaryHeader
-  | Divider;
+  | Divider
+  | MiscElement
+  | Image;
 
 export const pageLayouts: Record<string, PageElement[]> = {
   // FOR FAMILIES PAGES

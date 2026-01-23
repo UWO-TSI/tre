@@ -25,7 +25,7 @@ export default function usePageState(pages: string[], defaultPage?: string) {
     window.history.pushState(
       {},
       "",
-      `/for-families?page=${encodeURIComponent(newPage)}`,
+      `?page=${encodeURIComponent(newPage)}`,
     );
     setSelectedPage(newPage);
   };
