@@ -13,6 +13,7 @@ export default function Contact() {
         textVertialOffset="20px"
         image="/images/contact-us-pic.jpg"
         imageVerticalPosition="40%"
+        overlay={true}
       ></HeroImage>
       <div className="place-self-center max-w-[1020px] mx-[168px] px-[32px] py-[96px] bg-white ">
         <div>
@@ -73,7 +74,8 @@ export default function Contact() {
         </div>
 
         <div className="py-[17px]">
-          <div className="flex gap-2 items-center group">
+            {/* fix the flex box here on hover */}
+          <div className="inline-flex gap-2 items-center group">
             <SocialIcons
               name="facebook"
               link="https://www.facebook.com/Childcan/"

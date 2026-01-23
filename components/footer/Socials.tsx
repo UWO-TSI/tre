@@ -2,7 +2,7 @@ import SocialIcons from "@/app/_components/socialIcons";
 
 export default function Socials() {
   return (
-    <div className="flex gap-3 items-center group">
+    <div className="inline-flex gap-3 items-center group">
       <SocialIcons
         name="facebook"
         link="https://www.facebook.com/Childcan/"
