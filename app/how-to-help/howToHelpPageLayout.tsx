@@ -463,20 +463,22 @@ export const PJDayPage: PageElement[] = [
           }
         </div>
         <div className="flex flex-col w-1/2 relative">
-          <Element pageLayout={[
-            {
-              type: "Image",
-              src: "/images/PJDaySideBanner.webp",
-              alt: "PJ Day kid",
-              className: "h-150"
-            },
-            {
-              type: "Image",
-              src: "/images/PJDayButton.webp",
-              alt: "PJ Day Button",
-              className: "aspect-square"
-            }
-          ]}></Element>
+          <Element
+            pageLayout={[
+              {
+                type: "Image",
+                src: "/images/PJDaySideBanner.webp",
+                alt: "PJ Day kid",
+                className: "h-150",
+              },
+              {
+                type: "Image",
+                src: "/images/PJDayButton.webp",
+                alt: "PJ Day Button",
+                className: "aspect-square",
+              },
+            ]}
+          ></Element>
         </div>
       </div>
     ),
