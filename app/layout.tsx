@@ -7,6 +7,7 @@ import Footer from "../components/footer/Footer";
 const quicksand = Quicksand({
   subsets: ["latin"],
   variable: "--font-quicksand",
+  weight: "500",
 });
 
 export const metadata: Metadata = {
