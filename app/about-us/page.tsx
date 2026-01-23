@@ -1,4 +1,5 @@
 import PageLayout from "@/components/familiesAndHelp/familiesAndHelp";
+import { aboutUsPageLayout } from "./aboutUsPageLayout";
 
 function Page() {
   const pages = [
@@ -12,6 +13,7 @@ function Page() {
 
   return (
     <PageLayout
+      pageLayout={aboutUsPageLayout}
       pages={pages}
       pageTitle="About"
       bannerHref="/images/boyImage.webp"

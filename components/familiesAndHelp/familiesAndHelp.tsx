@@ -1,7 +1,7 @@
 "use client";
 import Sidebar from "@/components/sidebar/sidebar";
 import ForFamilies from "@/components/familiesAndHelp/PageElement";
-import { pageLayouts } from "@/components/familiesAndHelp/pageLayout";
+import { PageElement } from "@/components/familiesAndHelp/pageLayout";
 import HeroImage from "@/components/heroImage/heroImage";
 import usePageState from "@/hooks/usePageState";
 
@@ -10,6 +10,7 @@ interface PageLayoutProps {
   pageTitle: string;
   bannerHref: string;
   bannerAlt: string;
+  pageLayout: Record<string, PageElement[]>;
 }
 
 export default function PageLayout(props: PageLayoutProps) {
@@ -33,9 +34,7 @@ export default function PageLayout(props: PageLayoutProps) {
           title={props.pageTitle}
           items={props.pages}
         ></Sidebar>
-        <ForFamilies
-          pageLayout={pageLayouts[selectedPage] ?? props.pages[0]}
-        ></ForFamilies>
+        <ForFamilies pageLayout={props.pageLayout[selectedPage]}></ForFamilies>
       </div>
     </div>
   );
