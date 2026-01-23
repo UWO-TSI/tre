@@ -16,7 +16,7 @@ import {
   marketplacePage,
   merchandisePage,
   volunteerPage,
-  ourSupportersPage
+  ourSupportersPage,
 } from "@/app/how-to-help/howToHelpPageLayout";
 
 interface Header {
@@ -55,7 +55,7 @@ interface DoubleListElement {
   items: string[];
 }
 interface Divider {
-  type: "Divider"
+  type: "Divider";
 }
 
 export type PageElement =

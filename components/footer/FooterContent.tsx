@@ -7,7 +7,8 @@ export default function FooterContent() {
         <Contact />
         <p className="text-body-small text-footer-grey w-2/3 font-semibold">
           Copyright © 2026 Childcan, The Childhood Cancer Research Association,
-          All Rights Reserved.<br/>
+          All Rights Reserved.
+          <br />
           Charitable Registration #11885 1930 RR0001
         </p>
       </div>

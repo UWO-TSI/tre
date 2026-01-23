@@ -63,10 +63,8 @@ export default function Element(props: PageElementProps) {
                 </ul>
               );
 
-            case "Divider": 
-              return (
-                <hr className="py-4"></hr>
-              );
+            case "Divider":
+              return <hr className="py-4"></hr>;
           }
         })}
     </div>

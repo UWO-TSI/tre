@@ -5,7 +5,6 @@ import { pageLayouts } from "@/components/familiesAndHelp/pageLayout";
 import HeroImage from "@/components/heroImage/heroImage";
 import usePageState from "@/hooks/usePageState";
 
-
 interface PageLayoutProps {
   pages: string[];
   pageTitle: string;
@@ -14,9 +13,11 @@ interface PageLayoutProps {
 }
 
 export default function PageLayout(props: PageLayoutProps) {
+  const { selectedPage, onPageChange } = usePageState(
+    props.pages,
+    props.pages[0],
+  );
 
-  const { selectedPage, onPageChange } = usePageState(props.pages, props.pages[0]);
-  
   return (
     <div className="flex flex-col items-center w-full bg-white ">
       <HeroImage
