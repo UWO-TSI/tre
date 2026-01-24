@@ -1,12 +1,6 @@
-import Header from "@/components/header/header";
-import Footer from "@/components/footer/Footer";
-
 export default function PrivacyPolicy() {
-  // TODO: UPDATE CONTACT US PAGE LINK
-
   return (
     <div className="bg-white">
-      <Header></Header>
       <div className="place-self-center max-w-[1020px] mx-[130px] px-[32px] py-[96px] ">
         <h1 className="heading1">Childcan Privacy Policy</h1>
         <p className="bodyText">
@@ -127,7 +121,7 @@ export default function PrivacyPolicy() {
           Users may request their personal information be removed from our
           database at any time by unsubscribing from our newsletters or by{" "}
           <a
-            href="https://childcan.com/contact"
+            href="/contact"
             target="_blank"
             rel="noreferrer"
             className="text-link-blue"
@@ -190,7 +184,7 @@ export default function PrivacyPolicy() {
           If you encounter any issues or questions regarding this privacy
           policy, please{" "}
           <a
-            href="https://childcan.com/contact"
+            href="/contact"
             target="_blank"
             rel="noreferrer"
             className="text-link-blue"
@@ -225,7 +219,6 @@ export default function PrivacyPolicy() {
           and we’ll be happy to assist you.
         </p>
       </div>
-      <Footer></Footer>
     </div>
   );
 }
