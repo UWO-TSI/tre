@@ -9,7 +9,7 @@ function Page() {
     "Our News",
     "Our Team",
     "Report of Hope",
-    "Career",
+    "Careers",
   ];
 
   return (

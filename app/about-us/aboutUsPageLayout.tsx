@@ -1,6 +1,8 @@
 import { PageElement } from "@/components/pageLayout/PageElement";
 import NewsBlerb, { newsItems } from "./newsBlerb";
 import OurFamiliesSection, { ourFamiliesFamily } from "./ourFamiliesSection";
+import Image from "next/image";
+import ReportOfHopeDocs, { reportOfHopeDocsList } from "./reportOfHopeDocs";
 
 export const aboutUs: PageElement[] = [
   { type: "Header", content: <>About Us</> },
@@ -219,7 +221,15 @@ export const ourTeam: PageElement[] = [
     type: "Image",
     src: "/images/Team+hearts+pic+w+Amy+RoH.webp",
     alt: "",
-    className: "w-full,",
+    className: "w-full aspect-video mt-6",
+  },
+  {
+    type: "MiscElement",
+    content: (
+      <div className="ml-[7%] text-main-grey text-body-small mb-6">
+        From left to right: Suzanne, Lorraine, Barb, Sarah, Todd, Amy
+      </div>
+    ),
   },
   { type: "Subheader", content: <>Staff</> },
   {
@@ -256,9 +266,10 @@ export const ourTeam: PageElement[] = [
     type: "Paragraph",
     content: (
       <>
-        To contact any of our team, please email <a>info@childcan.com</a>. This
-        email is monitored during business hours. Or you can call{" "}
-        <a>519-685-3500</a>.
+        To contact any of our team, please email{" "}
+        <a className="text-link-blue">info@childcan.com</a>. This email is
+        monitored during business hours. Or you can call{" "}
+        <a className="text-link-blue">519-685-3500</a>.
       </>
     ),
   },
@@ -273,12 +284,13 @@ export const ourTeam: PageElement[] = [
     type: "Paragraph",
     content: (
       <>
-        Should you wish to join our Board of Directors, please <a>learn more</a>
-        .
+        Should you wish to join our Board of Directors, please{" "}
+        <a className="text-link-blue">learn more</a>.
       </>
     ),
   },
 ];
+
 export const reportOfHope: PageElement[] = [
   { type: "Header", content: <>Report of Hope</> },
   {
@@ -297,6 +309,40 @@ export const reportOfHope: PageElement[] = [
       <>
         Please flip through the report, using the square icon to make the report
         full screen:
+      </>
+    ),
+  },
+  {
+    type: "MiscElement",
+    content: (
+      <>
+        <div className="grid grid-cols-2 w-full">
+          <div>
+            {reportOfHopeDocsList.map((report, index) => {
+              return (
+                <ReportOfHopeDocs
+                  key={index + report.title + "docs list"}
+                  {...report}
+                ></ReportOfHopeDocs>
+              );
+            })}
+          </div>
+          <div>
+            <Image
+              alt=""
+              height={792}
+              width={612}
+              src="/images/2023+Report+of+Hope.webp"
+              className="mb-5 mt-20"
+            ></Image>
+            <Image
+              alt=""
+              height={792}
+              width={612}
+              src="/images/Report+of+Hope+p1.webp"
+            ></Image>
+          </div>
+        </div>
       </>
     ),
   },
@@ -392,8 +438,9 @@ export const careers: PageElement[] = [
         Please forward your resume, together with a cover letter explaining your
         key attributes and interest in serving on Childcan’s Board of Directors,
         to the attention of Susan Marshall, Board Chair at{" "}
-        <a>info@childcan.com</a>. Any questions can be directed to Suzanne
-        Fratschko Elliott at <a>info@childcan.com</a>.{" "}
+        <a className="text-link-blue cursor-pointer">info@childcan.com</a>. Any
+        questions can be directed to Suzanne Fratschko Elliott at{" "}
+        <a className="text-link-blue cursor-pointer">info@childcan.com</a>.{" "}
       </>
     ),
   },
@@ -406,7 +453,7 @@ export const careers: PageElement[] = [
     content: (
       <>
         Should you be interested in volunteering, please contact{" "}
-        <a>info@childcan.com</a>.{" "}
+        <a className="cursor-pointer text-link-blue">info@childcan.com</a>.{" "}
       </>
     ),
   },
@@ -426,7 +473,9 @@ export const careers: PageElement[] = [
     content: (
       <>
         Learn more about{" "}
-        <a>Childcan, our Vision, Mission, and Core Values here.</a>
+        <a className="cursor-pointer text-link-blue">
+          Childcan, our Vision, Mission, and Core Values here.
+        </a>
       </>
     ),
   },
@@ -436,5 +485,6 @@ export const aboutUsPageLayout: Record<string, PageElement[]> = {
   "Our Families": ourFamilies,
   "Our News": ourNews,
   "Our Team": ourTeam,
-  Careers: careers,
+  "Report of Hope": reportOfHope,
+  "Careers": careers,
 };
