@@ -29,7 +29,7 @@ export default function PageLayout(props: PageLayoutProps) {
           alt={props.bannerAlt}
           imageVerticalPosition="15%"
         ></HeroImage>
-        <div className=" pl-6 pr-6 max-w-250 grid grid-rows-1 grid-cols-[1fr_3fr] gap-8 pt-25 pb-25">
+        <div className=" pl-6 pr-6 max-w-260 grid grid-rows-1 grid-cols-[1fr_3fr] gap-8 pt-25 pb-25">
           <Sidebar
             onItemChange={onPageChange}
             selectedItem={selectedPage}

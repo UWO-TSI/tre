@@ -1,5 +1,6 @@
 import { PageElement } from "@/components/pageLayout/PageElement";
-import NewsBlerb, { newsItems } from "./newBlerb";
+import NewsBlerb, { newsItems } from "./newsBlerb";
+import OurFamiliesSection, { ourFamiliesFamily } from "./ourFamiliesSection";
 
 export const aboutUs: PageElement[] = [
   { type: "Header", content: <>About Us</> },
@@ -152,6 +153,23 @@ export const ourFamilies: PageElement[] = [
         inspiration, the reason why we give our all to raising funds and
         providing programs and services that will make a difference. We’d like
         to introduce you to a few of them.
+      </>
+    ),
+  },
+  {
+    type: "MiscElement",
+    content: (
+      <>
+        <div className="flex flex-col">
+          {ourFamiliesFamily.map((family, index) => {
+            return (
+              <OurFamiliesSection
+                key={index + "family list"}
+                {...family}
+              ></OurFamiliesSection>
+            );
+          })}
+        </div>
       </>
     ),
   },
