@@ -1,5 +1,6 @@
 import PageLayout from "@/components/pageLayout/PageLayout";
 import { forFamilesPageLayout } from "./forFamiliesPageLayout";
+import { Suspense } from "react";
 
 function Page() {
   const pages = [
@@ -13,13 +14,15 @@ function Page() {
   ];
 
   return (
-    <PageLayout
-      pageLayout={forFamilesPageLayout}
-      pages={pages}
-      pageTitle="For Families"
-      bannerHref="/images/child-and-family.webp"
-      bannerAlt="image of family"
-    ></PageLayout>
+    <Suspense>
+      <PageLayout
+        pageLayout={forFamilesPageLayout}
+        pages={pages}
+        pageTitle="For Families"
+        bannerHref="/images/child-and-family.webp"
+        bannerAlt="image of family"
+      ></PageLayout>
+    </Suspense>
   );
 }
 
