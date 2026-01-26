@@ -486,5 +486,5 @@ export const aboutUsPageLayout: Record<string, PageElement[]> = {
   "Our News": ourNews,
   "Our Team": ourTeam,
   "Report of Hope": reportOfHope,
-  "Careers": careers,
+  Careers: careers,
 };
