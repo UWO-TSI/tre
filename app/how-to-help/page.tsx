@@ -1,5 +1,6 @@
 import PageLayout from "@/components/pageLayout/PageLayout";
 import { howToHelpLayout } from "./howToHelpPageLayout";
+import { Suspense } from "react";
 
 export default function Page() {
   const pages = [
@@ -14,12 +15,14 @@ export default function Page() {
   ];
 
   return (
-    <PageLayout
-      pageLayout={howToHelpLayout}
-      pages={pages}
-      pageTitle="How to Help"
-      bannerHref="/images/child-and-family.webp"
-      bannerAlt="image of family"
-    ></PageLayout>
+    <Suspense>
+      <PageLayout
+        pageLayout={howToHelpLayout}
+        pages={pages}
+        pageTitle="How to Help"
+        bannerHref="/images/child-and-family.webp"
+        bannerAlt="image of family"
+      ></PageLayout>
+    </Suspense>
   );
 }
