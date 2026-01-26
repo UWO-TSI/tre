@@ -489,81 +489,90 @@ export const PJDayPage: PageElement[] = [
     content: (
       <div className="flex gap-8">
         <div className="flex flex-col w-1/2 gap-4">
-          <PageContent pageLayout={[
-            {
-              type: "Button",
-              href: "https://forms.office.com/r/q6yrrxUhDt",
-              text: "Let us know you're participating in PJ Day",
-            }
-          ]}></PageContent>
+          <PageContent
+            pageLayout={[
+              {
+                type: "Button",
+                href: "https://forms.office.com/r/q6yrrxUhDt",
+                text: "Let us know you're participating in PJ Day",
+              },
+            ]}
+          ></PageContent>
         </div>
         <div className="flex flex-col w-1/2 gap-4">
-          <PageContent pageLayout={[
-            {
-              type: "Button",
-              href: "https://brandedbycollins.com/childcan/shop/home",
-              text: "Buy a T-Shirt or Hoodie for PJ Day 2026",
-            }
-          ]}></PageContent>
+          <PageContent
+            pageLayout={[
+              {
+                type: "Button",
+                href: "https://brandedbycollins.com/childcan/shop/home",
+                text: "Buy a T-Shirt or Hoodie for PJ Day 2026",
+              },
+            ]}
+          ></PageContent>
         </div>
       </div>
-    )
+    ),
   },
   {
     type: "Paragraph",
     content: (
       <>
-        If you need a letter to ask your club/organization/school to get 
-        involved, you can download this one (Word document) 
-        or <a href="" className="text-link-blue">contact us</a>.
+        If you need a letter to ask your club/organization/school to get
+        involved, you can download this one (Word document) or{" "}
+        <a href="" className="text-link-blue">
+          contact us
+        </a>
+        .
       </>
-    )
+    ),
   },
   {
     type: "MiscElement",
     content: (
       <div className="flex gap-8">
         <div className="flex flex-col w-1/2 gap-4">
-          <PageContent pageLayout={[
-            {
-              type: "Button",
-              href: "https://childcan.com/s/2026-PJ-Day-Request-Letter.docx",
-              text: "Download a PJ Day Letter",
-            }
-          ]}></PageContent>
+          <PageContent
+            pageLayout={[
+              {
+                type: "Button",
+                href: "https://childcan.com/s/2026-PJ-Day-Request-Letter.docx",
+                text: "Download a PJ Day Letter",
+              },
+            ]}
+          ></PageContent>
         </div>
         <div className="flex flex-col w-1/2 gap-4">
-          <PageContent pageLayout={[
-            {
-              type: "Button",
-              href: "",
-              text: "Contact Us",
-            }
-          ]}></PageContent>
+          <PageContent
+            pageLayout={[
+              {
+                type: "Button",
+                href: "",
+                text: "Contact Us",
+              },
+            ]}
+          ></PageContent>
         </div>
       </div>
-    )
+    ),
   },
   {
     type: "Paragraph",
     content: (
       <>
-        Tell people you are taking part on social media 
-        by using the hashtag #ChildcanPJs and tagging 
-        @childcan. We can’t wait to see your PJ Day pics!
+        Tell people you are taking part on social media by using the hashtag
+        #ChildcanPJs and tagging @childcan. We can’t wait to see your PJ Day
+        pics!
       </>
-    )
+    ),
   },
   {
     type: "Button",
     href: "https://form-renderer-app.donorperfect.io/give/childcan/2026-pj-day",
-    text: "Donate now to show your support for PJ Day"
+    text: "Donate now to show your support for PJ Day",
   },
   {
     type: "Paragraph",
-    content: (
-      <strong>Thank you!</strong>
-    )
+    content: <strong>Thank you!</strong>,
   },
   {
     type: "MiscElement",
@@ -577,9 +586,9 @@ export const PJDayPage: PageElement[] = [
                   type: "Paragraph",
                   content: (
                     <>
-                      We are also grateful to Giant 101.3 and Country 107.3 from 
-                      My Broadcasting Corporation for their support of Childcan’s 
-                      Pajama Day!
+                      We are also grateful to Giant 101.3 and Country 107.3 from
+                      My Broadcasting Corporation for their support of
+                      Childcan’s Pajama Day!
                     </>
                   ),
                 },
@@ -587,25 +596,21 @@ export const PJDayPage: PageElement[] = [
                   type: "Paragraph",
                   content: (
                     <>
-                      Listen out for their radio ads starting in January 2026 and 
-                      look out for photos of the announcers wearing their PJs in 
-                      support! 
+                      Listen out for their radio ads starting in January 2026
+                      and look out for photos of the announcers wearing their
+                      PJs in support!
                     </>
                   ),
                 },
                 {
                   type: "Paragraph",
-                  content: (
-                    <>
-                      Here’s last year’s radio announcement:
-                    </>
-                  ),
+                  content: <>Here’s last year’s radio announcement:</>,
                 },
                 {
                   type: "FBEmbed",
                   url: "https://www.facebook.com/Childcan/videos/1960829787731365/?t=0",
                   width: 200,
-                }
+                },
               ]}
             ></PageContent>
           }
@@ -618,7 +623,7 @@ export const PJDayPage: PageElement[] = [
                 src: "/images/MBCLogos.webp",
                 alt: "MBC Logos",
                 className: "h-80 aspect-square",
-                href: "https://www.mybroadcastingcorp.com/"
+                href: "https://www.mybroadcastingcorp.com/",
               },
             ]}
           ></PageContent>
@@ -631,55 +636,58 @@ export const PJDayPage: PageElement[] = [
 export const goldPage: PageElement[] = [
   {
     type: "Header",
-    content: (
-      <>
-        September is Childhood Cancer Awareness Month
-      </>
-    )
+    content: <>September is Childhood Cancer Awareness Month</>,
   },
   {
     type: "Paragraph",
     content: (
       <>
-        September is coming! If you would like to have your municipality 
-        fly a flag, light up a landmark, or proclaim September as Childhood 
-        Cancer Awareness Month (depending on the options available for your 
-        municipality), please <a href="" className="text-link-blue">contact us</a> today! 
+        September is coming! If you would like to have your municipality fly a
+        flag, light up a landmark, or proclaim September as Childhood Cancer
+        Awareness Month (depending on the options available for your
+        municipality), please{" "}
+        <a href="" className="text-link-blue">
+          contact us
+        </a>{" "}
+        today!
       </>
-    )
+    ),
   },
   {
     type: "Paragraph",
     content: (
       <div className="text-center font-semibold">
-        Childhood Cancer is the number one cause of death by disease of Canadian children (i) 
+        Childhood Cancer is the number one cause of death by disease of Canadian
+        children (i)
       </div>
-    )
+    ),
   },
   {
     type: "Paragraph",
     content: (
       <div className="text-center font-semibold">
-        The incidence rate of childhood cancer in Ontario is increasing by approximately 1% per year (1986-2018) (ii)
+        The incidence rate of childhood cancer in Ontario is increasing by
+        approximately 1% per year (1986-2018) (ii)
       </div>
-    )
+    ),
   },
   {
     type: "Paragraph",
     content: (
       <div className="text-center font-semibold">
-        Childcan serves 25% of all children diagnosed with childhood cancer across Ontario.
+        Childcan serves 25% of all children diagnosed with childhood cancer
+        across Ontario.
       </div>
-    )
+    ),
   },
   {
     type: "Paragraph",
     content: (
       <>
-        There are so many reasons why Childhood Cancer Awareness Month is 
-        important. September, Childhood Cancer Awareness Month is:  
+        There are so many reasons why Childhood Cancer Awareness Month is
+        important. September, Childhood Cancer Awareness Month is:
       </>
-    )
+    ),
   },
   {
     type: "List",
@@ -687,28 +695,34 @@ export const goldPage: PageElement[] = [
       "A time to acknowledge the thousands of children and their families who are dealing with a cancer diagnosis.",
       "A time to take notice and raise awareness about the reality of childhood cancer, and to emphasize the importance of research.",
       "A time when you can show your support by glowing GOLD! Here’s how:",
-    ]
+    ],
   },
   {
     type: "Image",
     src: "/images/LawnSign.webp",
     alt: "Childcan Lawn Sign",
-    className: "w-full h-120"
+    className: "w-full h-120",
   },
   {
     type: "Paragraph",
     content: (
       <>
-        Purchase a lawn sign like this one from 
-        our <a href="https://www.collinsclothiers.com/childcan" className="text-link-blue">online store</a>.
+        Purchase a lawn sign like this one from our{" "}
+        <a
+          href="https://www.collinsclothiers.com/childcan"
+          className="text-link-blue"
+        >
+          online store
+        </a>
+        .
       </>
-    )
+    ),
   },
   {
     type: "List",
     items: [
       "Purchase a LAWN SIGN and show your support proudly. Take a photo of your sign and share it with us with the name of the town where it’s located. Be sure to tag @Childcan and use the hashtag #ChildcanGold so we can share your support with our families.",
-    ]
+    ],
   },
   {
     type: "DoubleList",
@@ -721,9 +735,9 @@ export const goldPage: PageElement[] = [
         "LaSalle on Sunday, September 21, 2025 10-1pm",
         "Owen Sound on Sunday, September 21, 2025 11-2pm",
         "Brights Grove on Sunday, September 21, 2025 1-4pm",
-        "or walk near you."
-      ]
-    }
+        "or walk near you.",
+      ],
+    },
   },
   {
     type: "List",
@@ -732,16 +746,17 @@ export const goldPage: PageElement[] = [
       "Show your support by purchasing Childcan merchandise or some of our signature gold ribbon items.  Get your gold on by visiting the online store!",
       "Leave your porch light on to glow gold. Take a photo and share it with #ChildcanGold and tag @Childcan so that we are amplify your show of support.",
       "Join us at one of the flag raising ceremonies listed below. More details can be found on our events page too.",
-      "Donate to show your support to other families."
-    ]
+      "Donate to show your support to other families.",
+    ],
   },
   {
     type: "Paragraph",
     content: (
       <>
-        These local municipalities have already pledged their support for Childhood Cancer Awareness Month in 2025:
+        These local municipalities have already pledged their support for
+        Childhood Cancer Awareness Month in 2025:
       </>
-    )
+    ),
   },
   {
     type: "List",
@@ -763,97 +778,102 @@ export const goldPage: PageElement[] = [
       "Elgin County will light up their building and host a flag raising ceremony on Sept 9, 2025 at 10am at 450 Sunset Dr, St. Thomas. Join us!",
       "St Marys will host a flag raising ceremony on Sept 15, 2025 at 9:30am at St Marys Town Hall.",
       "Tecumseh will fly a flag and illuminate their Town Hall building from Sept 9-16, 2025.",
-      "St Thomas will host a flag raising ceremony on Sept 22, 2025 at 10:30am at St Thomas City Hall."
-    ]
+      "St Thomas will host a flag raising ceremony on Sept 22, 2025 at 10:30am at St Thomas City Hall.",
+    ],
   },
   {
     type: "Paragraph",
     content: (
       <>
-        On September 17, 2025, Andrew Lawton rose in the House to acknowledge Childhood Cancer Awareness Month.
+        On September 17, 2025, Andrew Lawton rose in the House to acknowledge
+        Childhood Cancer Awareness Month.
       </>
-    )
+    ),
   },
   {
     type: "FBEmbed",
     url: "https://www.facebook.com/AndrewLawtonMedia/videos/1013715037461034/?t=0",
-    width: 500
+    width: 500,
   },
   {
     type: "Paragraph",
     content: (
       <>
-        On October 1, 2025, Senator Rob Black rose in the Senate to say: “September has come 
-        to a close marking the end of another Childhood Cancer Awareness Month, but pediatric 
-        cancer does not stop with the end of the month. We must continue raising awareness for 
-        this disease, to promote more investment in research, in order to reduce the number of 
-        children lost - far too soon - to childhood cancer”. Listen to his entire speech: 
+        On October 1, 2025, Senator Rob Black rose in the Senate to say:
+        “September has come to a close marking the end of another Childhood
+        Cancer Awareness Month, but pediatric cancer does not stop with the end
+        of the month. We must continue raising awareness for this disease, to
+        promote more investment in research, in order to reduce the number of
+        children lost - far too soon - to childhood cancer”. Listen to his
+        entire speech:
       </>
-    )
+    ),
   },
   {
     type: "YTEmbed",
-    url: "https://youtu.be/eRah4KZRGjY"
+    url: "https://youtu.be/eRah4KZRGjY",
   },
   {
     type: "Paragraph",
     content: (
       <>
-        Thank you Senator Black for highlighting September as Childhood Cancer Awareness Month.
+        Thank you Senator Black for highlighting September as Childhood Cancer
+        Awareness Month.
       </>
-    )
+    ),
   },
   {
     type: "Image",
     src: "/images/EssexProclamation.webp",
     alt: "Essex Proclamation",
-    className: "w-full h-200"
+    className: "w-full h-200",
   },
   {
     type: "Image",
     src: "/images/FlagRaising.webp",
     alt: "Childcan Flag",
-    className: "w-full h-120"
+    className: "w-full h-120",
+  },
+  {
+    type: "Paragraph",
+    content: <>Where will you see the gold ribbon flag this September?</>,
   },
   {
     type: "Paragraph",
     content: (
       <>
-        Where will you see the gold ribbon flag this September?
+        If you are aware of more areas that can proclaim, fly flags, or light
+        up, and want to help, please contact us at{" "}
+        <a href="mailto:info@childcan.com" className="text-link-blue">
+          info@childcan.com
+        </a>
+        .
       </>
-    )
+    ),
+  },
+  {
+    type: "Divider",
   },
   {
     type: "Paragraph",
     content: (
       <>
-        If you are aware of more areas that can proclaim, fly flags, 
-        or light up, and want to help, please contact us 
-        at <a href="mailto:info@childcan.com" className="text-link-blue">info@childcan.com</a>. 
+        [i]
+        https://www.childhoodcancer.ca/Your-Impact/Childhood-Cancer-Statistics-Resources
+        or, Statistics Canada, or Facts about Childhood Cancer In Ontario, July
+        2024 (pdf).
       </>
-    )
-  },
-  {
-    type: "Divider"
-  },
-  {
-    type: "Paragraph",
-    content: (
-      <>
-        [i] https://www.childhoodcancer.ca/Your-Impact/Childhood-Cancer-Statistics-Resources or, 
-        Statistics Canada, or Facts about Childhood Cancer In Ontario, July 2024 (pdf).
-      </>
-    )
+    ),
   },
   {
     type: "Paragraph",
     content: (
       <>
-        [ii] Incidence rate statistic provided by Pediatric Oncology Group of Ontario. Childhood 
-        Cancer in Ontario: The 2020 POGO Surveillance Report. Toronto: Pediatric Oncology Group of 
-        Ontario; 2020.
+        [ii] Incidence rate statistic provided by Pediatric Oncology Group of
+        Ontario. Childhood Cancer in Ontario: The 2020 POGO Surveillance Report.
+        Toronto: Pediatric Oncology Group of Ontario; 2020.
       </>
-    )
+    ),
   },
 ];
 export const hostAnEventPage: PageElement[] = [
@@ -937,176 +957,172 @@ export const hostAnEventPage: PageElement[] = [
     content: (
       <div className="flex">
         <div className="w-1/2">
-          <PageContent pageLayout={[
-            {
-              type: "Button",
-              href: "https://forms.gle/7fJsziDi4unHBzuz7",
-              text: "Fundraising Event Form (online)",
-            },
-          ]}></PageContent>
+          <PageContent
+            pageLayout={[
+              {
+                type: "Button",
+                href: "https://forms.gle/7fJsziDi4unHBzuz7",
+                text: "Fundraising Event Form (online)",
+              },
+            ]}
+          ></PageContent>
         </div>
         <div className="w-1/2">
-          <PageContent pageLayout={[
-            {
-              type: "Button",
-              href: "https://childcan.com/s/Community-Event-fundraiser-for-Childcan-Form.pdf",
-              text: "Fundraising Event Form (pdf)",
-            },
-          ]}></PageContent>
+          <PageContent
+            pageLayout={[
+              {
+                type: "Button",
+                href: "https://childcan.com/s/Community-Event-fundraiser-for-Childcan-Form.pdf",
+                text: "Fundraising Event Form (pdf)",
+              },
+            ]}
+          ></PageContent>
         </div>
       </div>
-    )
+    ),
   },
   {
     type: "Paragraph",
     content: (
       <div className="font-semibold">
-        Thank you so much for your support! We can’t wait to hear from you and look 
-        forward to helping you bring your event to life!
+        Thank you so much for your support! We can’t wait to hear from you and
+        look forward to helping you bring your event to life!
       </div>
-    )
-  }
+    ),
+  },
 ];
 
 export const volunteerPage: PageElement[] = [
   {
     type: "Header",
-    content: (
-      <>Volunteer</>
-    )
+    content: <>Volunteer</>,
   },
   {
     type: "Paragraph",
     content: (
       <>
-        Volunteers make an incredible difference to what we can achieve 
-        for our families and children. Thank you for considering applying 
-        your passion in a way that will have a powerful impact. 
+        Volunteers make an incredible difference to what we can achieve for our
+        families and children. Thank you for considering applying your passion
+        in a way that will have a powerful impact.
       </>
-    )
+    ),
   },
   {
     type: "Paragraph",
     content: (
       <>
-        Whether you’re interested in helping at an event, with administrative 
-        tasks, are a qualified educator looking to help tutor, or there is 
-        another area where your talents and interest lie, we’d be happy to hear 
-        from you. Please complete one of the forms below, either online or download, 
-        complete and return the Volunteer Form pdf. We’ll be in touch and, together, 
-        find a way for you to get involved!
+        Whether you’re interested in helping at an event, with administrative
+        tasks, are a qualified educator looking to help tutor, or there is
+        another area where your talents and interest lie, we’d be happy to hear
+        from you. Please complete one of the forms below, either online or
+        download, complete and return the Volunteer Form pdf. We’ll be in touch
+        and, together, find a way for you to get involved!
       </>
-    )
+    ),
   },
   {
     type: "TertiaryHeader",
-    content: (
-      <>
-        To volunteer:
-      </>
-    )
+    content: <>To volunteer:</>,
   },
   {
     type: "MiscElement",
     content: (
       <div className="flex">
         <div className="w-1/2">
-          <PageContent pageLayout={[
-            {
-              type: "Button",
-              href: "https://forms.gle/bmLaZ7YBfjdip3FT8",
-              text: "Complete the online form",
-            },
-          ]}></PageContent>
+          <PageContent
+            pageLayout={[
+              {
+                type: "Button",
+                href: "https://forms.gle/bmLaZ7YBfjdip3FT8",
+                text: "Complete the online form",
+              },
+            ]}
+          ></PageContent>
         </div>
         <div className="w-1/2">
-          <PageContent pageLayout={[
-            {
-              type: "Button",
-              href: "https://childcan.com/s/Childcan-Volunteer-Application-Form-2024.pdf",
-              text: "Download the PDF From",
-            },
-          ]}></PageContent>
+          <PageContent
+            pageLayout={[
+              {
+                type: "Button",
+                href: "https://childcan.com/s/Childcan-Volunteer-Application-Form-2024.pdf",
+                text: "Download the PDF From",
+              },
+            ]}
+          ></PageContent>
         </div>
       </div>
-    )
+    ),
   },
   {
     type: "Paragraph",
     content: (
       <div className="text-main-darkpurple text-h3">
-        <span className="font-semibold">For educators</span> wishing 
-        to volunteer for our <span className="font-semibold">Volunteer Tutoring Program</span>, 
+        <span className="font-semibold">For educators</span> wishing to
+        volunteer for our{" "}
+        <span className="font-semibold">Volunteer Tutoring Program</span>,
         please complete one of these forms:
       </div>
-    )
+    ),
   },
   {
     type: "Paragraph",
-    content: (
-      <>
-        We have multiple current needs in:
-      </>
-    )
+    content: <>We have multiple current needs in:</>,
   },
   {
     type: "List",
-    items: [
-      "London"
-    ]
+    items: ["London"],
   },
   {
     type: "MiscElement",
     content: (
       <div className="flex">
         <div className="w-1/2">
-          <PageContent pageLayout={[
-            {
-              type: "Button",
-              href: "https://forms.gle/FfD5W64mT9J5RH3t7",
-              text: "Complete the VTP Online Form",
-            },
-          ]}></PageContent>
+          <PageContent
+            pageLayout={[
+              {
+                type: "Button",
+                href: "https://forms.gle/FfD5W64mT9J5RH3t7",
+                text: "Complete the VTP Online Form",
+              },
+            ]}
+          ></PageContent>
         </div>
         <div className="w-1/2">
-          <PageContent pageLayout={[
-            {
-              type: "Button",
-              href: "https://childcan.com/s/Volunteer-Tutoring-Program-Application-Form-6hg4.pdf",
-              text: "Download the VTP PDF Form",
-            },
-          ]}></PageContent>
+          <PageContent
+            pageLayout={[
+              {
+                type: "Button",
+                href: "https://childcan.com/s/Volunteer-Tutoring-Program-Application-Form-6hg4.pdf",
+                text: "Download the VTP PDF Form",
+              },
+            ]}
+          ></PageContent>
         </div>
       </div>
-    )
+    ),
   },
   {
-    type: "Divider"
+    type: "Divider",
   },
   {
     type: "MiscElement",
-    content: (
-      <VolunteerNewsForm></VolunteerNewsForm>
-    )
+    content: <VolunteerNewsForm></VolunteerNewsForm>,
   },
   {
-    type: "Divider"
+    type: "Divider",
   },
   {
     type: "Subheader",
-    content: (
-      <>
-        National Volunteer Week - April 27 - May 3, 2025
-      </>
-    )
+    content: <>National Volunteer Week - April 27 - May 3, 2025</>,
   },
   {
     type: "Paragraph",
     content: (
       <>
-        National Volunteer Week celebrates the incredible achievements of volunteers! 
+        National Volunteer Week celebrates the incredible achievements of
+        volunteers!
       </>
-    )
+    ),
   },
   {
     type: "Paragraph",
@@ -1114,202 +1130,234 @@ export const volunteerPage: PageElement[] = [
       <div className="font-semibold">
         The theme for 2025 is: Volunteers Make Waves.
       </div>
-    )
+    ),
   },
   {
     type: "Paragraph",
     content: (
       <>
-        Our volunteers are in constant motion, always flowing, shifting, and 
-        transforming with every powerful wave or quiet ripple. Building on 
-        the tides sent out before us, waves swell with each generation of volunteers.
+        Our volunteers are in constant motion, always flowing, shifting, and
+        transforming with every powerful wave or quiet ripple. Building on the
+        tides sent out before us, waves swell with each generation of
+        volunteers.
       </>
-    )
+    ),
   },
   {
     type: "Paragraph",
     content: (
       <>
-        We are so very grateful to all our volunteers, not just in National 
+        We are so very grateful to all our volunteers, not just in National
         Volunteer Week, but every week of the year!
       </>
-    )
+    ),
   },
   {
     type: "Paragraph",
     content: (
       <>
-        #NVW2025 #VolunteersMakeWaves #ChildcanVolunteers #FacingChildhoodCancerTogether 💛🎗💛 
+        #NVW2025 #VolunteersMakeWaves #ChildcanVolunteers
+        #FacingChildhoodCancerTogether 💛🎗💛
       </>
-    )
+    ),
   },
-  
 ];
 export const ourSupportersPage: PageElement[] = [
   {
     type: "Header",
-    content: (
-      <>
-        Our Supporters
-      </>
-    )
+    content: <>Our Supporters</>,
   },
   {
     type: "Paragraph",
     content: (
       <>
-        We couldn’t provide the programs and services that we do without the generosity 
-        of our community partners and allies, and we appreciate and celebrate the real 
-        difference that they make in the daily lives of the families we serve. 
+        We couldn’t provide the programs and services that we do without the
+        generosity of our community partners and allies, and we appreciate and
+        celebrate the real difference that they make in the daily lives of the
+        families we serve.
       </>
-    )
+    ),
   },
   {
     type: "Paragraph",
     content: (
       <>
-        Childcan’s personalized approach supports families beyond hospital walls. This is 
-        only possible because our partners also go beyond – above and beyond – to help us
-        fund specific programs, to provide us with the opportunity to meet individual and 
-        collective needs, and even to make the families’ stays within those hospital walls 
-        more bearable. 
+        Childcan’s personalized approach supports families beyond hospital
+        walls. This is only possible because our partners also go beyond – above
+        and beyond – to help us fund specific programs, to provide us with the
+        opportunity to meet individual and collective needs, and even to make
+        the families’ stays within those hospital walls more bearable.
       </>
-    )
+    ),
   },
   {
     type: "Paragraph",
     content: (
       <>
-        Childcan’s network of support is strengthened and defined by the ongoing generosity 
-        of these past and present contributors. 
+        Childcan’s network of support is strengthened and defined by the ongoing
+        generosity of these past and present contributors.
       </>
-    )
+    ),
   },
   {
     type: "MiscElement",
     content: (
       <div className="flex justify-center flex-wrap gap-4">
-        <PageContent pageLayout={[
-          {
-            type: "Image",
-            src: "/images/BrucePower.webp",
-            alt: "Bruce Power",
-            className: "w-50 h-25",
-            href: "https://www.brucepower.com/"
-        }]}></PageContent>
-        <PageContent pageLayout={[
-          {
-            type: "Image",
-            src: "/images/CIBC.webp",
-            alt: "CIBC",
-            className: "w-50 aspect-[2/1]",
-            href: "https://www.cibc.com/"
-        }]}></PageContent>
-        <PageContent pageLayout={[
-          {
-            type: "Image",
-            src: "/images/GOC.webp",
-            alt: "Government of Canada",
-            className: "w-50 aspect-[2/1]",
-        }]}></PageContent>
-        <PageContent pageLayout={[
-          {
-            type: "Image",
-            src: "/images/Catalent.webp",
-            alt: "Catalent Cares",
-            className: "w-50 aspect-[2/1]",
-            href: "https://www.catalent.com/"
-        }]}></PageContent>
-        <PageContent pageLayout={[
-          {
-            type: "Image",
-            src: "/images/FactoryShoe.webp",
-            alt: "Factory Shoe",
-            className: "w-50 aspect-[2/1]",
-            href: "https://www.factoryshoe.ca/_store/"
-        }]}></PageContent>
-        <PageContent pageLayout={[
-          {
-            type: "Image",
-            src: "/images/Lutheran.webp",
-            alt: "Lutheran Social Services",
-            className: "w-50 aspect-[2/1]",
-            href: "https://lutheransocialserviceslondon.ca/"
-        }]}></PageContent>
-        <PageContent pageLayout={[
-          {
-            type: "Image",
-            src: "/images/MMM.webp",
-            alt: "Miracle Max Minions",
-            className: "w-50 aspect-[2/1]",
-            href: "https://www.facebook.com/profile.php?id=100067820967084"
-          },
-        ]}></PageContent>
-        <PageContent pageLayout={[
-          {
-            type: "Image",
-            src: "/images/PetroCanada.webp",
-            alt: "Petro-Canada CareMakers Foundation",
-            className: "w-50 aspect-[2/1]",
-            href: "https://caremakers.ca/"
-          },
-        ]}></PageContent>
-        <PageContent pageLayout={[
-          {
-            type: "Image",
-            src: "/images/PreferredInsurance.webp",
-            alt: "Preferred Insurance",
-            className: "w-50 aspect-[2/1]",
-          },
-        ]}></PageContent>
-        <PageContent pageLayout={[
-          {
-            type: "Image",
-            src: "/images/Solcz.webp",
-            alt: "Solcz Family Foundation",
-            className: "w-50 aspect-[2/1]",
-            href: "https://www.solczfamilyfoundation.com/"
-          },
-        ]}></PageContent>
-        <PageContent pageLayout={[
-          {
-            type: "Image",
-            src: "/images/MayCourt.webp",
-            alt: "The Flag Court Clubs of Canada",
-            className: "w-50 aspect-[2/1]",
-            href: "http://windsormaycourt.com/"
-          },
-        ]}></PageContent>
-        <PageContent pageLayout={[
-          {
-            type: "Image",
-            src: "/images/UCDA.webp",
-            alt: "UCDA",
-            className: "w-50 aspect-[2/1]",
-            href: "https://www.ucda.org/"
-          },
-        ]}></PageContent>
-        <PageContent pageLayout={[
-          {
-            type: "Image",
-            src: "/images/Wawanesa.webp",
-            alt: "Wawanesa Insurance",
-            className: "w-50 aspect-[2/1]",
-            href: "https://www.wawanesa.com/canada/"
-          },
-        ]}></PageContent>
-        <PageContent pageLayout={[
-          {
-            type: "Image",
-            src: "/images/WestministerCollege.webp",
-            alt: "Westminister College Foundation",
-            className: "w-50 aspect-[2/1]",
-            href: "http://www.wcfoundation.ca/"
-          },
-        ]}></PageContent>
+        <PageContent
+          pageLayout={[
+            {
+              type: "Image",
+              src: "/images/BrucePower.webp",
+              alt: "Bruce Power",
+              className: "w-50 h-25",
+              href: "https://www.brucepower.com/",
+            },
+          ]}
+        ></PageContent>
+        <PageContent
+          pageLayout={[
+            {
+              type: "Image",
+              src: "/images/CIBC.webp",
+              alt: "CIBC",
+              className: "w-50 aspect-[2/1]",
+              href: "https://www.cibc.com/",
+            },
+          ]}
+        ></PageContent>
+        <PageContent
+          pageLayout={[
+            {
+              type: "Image",
+              src: "/images/GOC.webp",
+              alt: "Government of Canada",
+              className: "w-50 aspect-[2/1]",
+            },
+          ]}
+        ></PageContent>
+        <PageContent
+          pageLayout={[
+            {
+              type: "Image",
+              src: "/images/Catalent.webp",
+              alt: "Catalent Cares",
+              className: "w-50 aspect-[2/1]",
+              href: "https://www.catalent.com/",
+            },
+          ]}
+        ></PageContent>
+        <PageContent
+          pageLayout={[
+            {
+              type: "Image",
+              src: "/images/FactoryShoe.webp",
+              alt: "Factory Shoe",
+              className: "w-50 aspect-[2/1]",
+              href: "https://www.factoryshoe.ca/_store/",
+            },
+          ]}
+        ></PageContent>
+        <PageContent
+          pageLayout={[
+            {
+              type: "Image",
+              src: "/images/Lutheran.webp",
+              alt: "Lutheran Social Services",
+              className: "w-50 aspect-[2/1]",
+              href: "https://lutheransocialserviceslondon.ca/",
+            },
+          ]}
+        ></PageContent>
+        <PageContent
+          pageLayout={[
+            {
+              type: "Image",
+              src: "/images/MMM.webp",
+              alt: "Miracle Max Minions",
+              className: "w-50 aspect-[2/1]",
+              href: "https://www.facebook.com/profile.php?id=100067820967084",
+            },
+          ]}
+        ></PageContent>
+        <PageContent
+          pageLayout={[
+            {
+              type: "Image",
+              src: "/images/PetroCanada.webp",
+              alt: "Petro-Canada CareMakers Foundation",
+              className: "w-50 aspect-[2/1]",
+              href: "https://caremakers.ca/",
+            },
+          ]}
+        ></PageContent>
+        <PageContent
+          pageLayout={[
+            {
+              type: "Image",
+              src: "/images/PreferredInsurance.webp",
+              alt: "Preferred Insurance",
+              className: "w-50 aspect-[2/1]",
+            },
+          ]}
+        ></PageContent>
+        <PageContent
+          pageLayout={[
+            {
+              type: "Image",
+              src: "/images/Solcz.webp",
+              alt: "Solcz Family Foundation",
+              className: "w-50 aspect-[2/1]",
+              href: "https://www.solczfamilyfoundation.com/",
+            },
+          ]}
+        ></PageContent>
+        <PageContent
+          pageLayout={[
+            {
+              type: "Image",
+              src: "/images/MayCourt.webp",
+              alt: "The Flag Court Clubs of Canada",
+              className: "w-50 aspect-[2/1]",
+              href: "http://windsormaycourt.com/",
+            },
+          ]}
+        ></PageContent>
+        <PageContent
+          pageLayout={[
+            {
+              type: "Image",
+              src: "/images/UCDA.webp",
+              alt: "UCDA",
+              className: "w-50 aspect-[2/1]",
+              href: "https://www.ucda.org/",
+            },
+          ]}
+        ></PageContent>
+        <PageContent
+          pageLayout={[
+            {
+              type: "Image",
+              src: "/images/Wawanesa.webp",
+              alt: "Wawanesa Insurance",
+              className: "w-50 aspect-[2/1]",
+              href: "https://www.wawanesa.com/canada/",
+            },
+          ]}
+        ></PageContent>
+        <PageContent
+          pageLayout={[
+            {
+              type: "Image",
+              src: "/images/WestministerCollege.webp",
+              alt: "Westminister College Foundation",
+              className: "w-50 aspect-[2/1]",
+              href: "http://www.wcfoundation.ca/",
+            },
+          ]}
+        ></PageContent>
       </div>
-    )
-  }
+    ),
+  },
 ];
 
 // external

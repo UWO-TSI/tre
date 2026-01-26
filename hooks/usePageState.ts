@@ -23,16 +23,16 @@ export default function usePageState(pages: string[], defaultPage?: string) {
 
   const onPageChange = (newPage: string) => {
     if (newPage == "Marketplace") {
-      window.open("https://childcan.akaraisin.com/ui/handsofhope/marketplace", "_blank");
-    } 
-    else if (newPage == "Merchandise") {
+      window.open(
+        "https://childcan.akaraisin.com/ui/handsofhope/marketplace",
+        "_blank",
+      );
+    } else if (newPage == "Merchandise") {
       window.open("https://brandedbycollins.com/childcan/shop/home", "_blank");
-    }
-    else {
+    } else {
       window.history.pushState({}, "", `?page=${encodeURIComponent(newPage)}`);
       setSelectedPage(newPage);
     }
-    
   };
 
   return { selectedPage, onPageChange };

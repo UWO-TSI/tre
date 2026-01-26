@@ -80,7 +80,11 @@ export default function PageContent(props: PageContentProps) {
                     {element.list.title}
                     <ul className="list-[circle] pl-12 text-body text-secondary-grey font-light">
                       {element.list.items.map((item) => {
-                        return <li className="py-0.5" key={item}>{item}</li>;
+                        return (
+                          <li className="py-0.5" key={item}>
+                            {item}
+                          </li>
+                        );
                       })}
                     </ul>
                   </li>
@@ -98,12 +102,11 @@ export default function PageContent(props: PageContentProps) {
                   key={element.type + index}
                   className={`relative ${element.className}`}
                 >
-
                   <a href={element.href} target="_blank" rel="noreferrer">
-                    <Image 
-                      fill 
+                    <Image
+                      fill
                       className="object-contain"
-                      src={element.src} 
+                      src={element.src}
                       alt={element.alt}
                     ></Image>
                   </a>
@@ -112,12 +115,19 @@ export default function PageContent(props: PageContentProps) {
 
             case "YTEmbed":
               return (
-                <YoutubeEmbed key={element.url} url={element.url}></YoutubeEmbed>
+                <YoutubeEmbed
+                  key={element.url}
+                  url={element.url}
+                ></YoutubeEmbed>
               );
 
             case "FBEmbed":
               return (
-                <FacebookEmbed key={element.url} url={element.url} width={element.width}></FacebookEmbed>
+                <FacebookEmbed
+                  key={element.url}
+                  url={element.url}
+                  width={element.width}
+                ></FacebookEmbed>
               );
           }
         })}
