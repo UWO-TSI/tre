@@ -36,7 +36,9 @@ export default function PageLayout(props: PageLayoutProps) {
             title={props.pageTitle}
             items={props.pages}
           ></Sidebar>
-          <PageContent pageLayout={props.pageLayout[selectedPage]}></PageContent>
+          <PageContent
+            pageLayout={props.pageLayout[selectedPage]}
+          ></PageContent>
         </div>
       </div>
     </Suspense>
