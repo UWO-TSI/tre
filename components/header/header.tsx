@@ -66,12 +66,12 @@ function Header() {
           <HeaderLink
             title="About"
             items={[
-              { link: "", label: "About Us" },
-              { link: "", label: "Our Families" },
-              { link: "", label: "Our News" },
-              { link: "", label: "Our Team" },
-              { link: "", label: "Report of Hope" },
-              { link: "", label: "Careers" },
+              { link: "about-us?page=About Us", label: "About Us" },
+              { link: "about-us?page=Our Families", label: "Our Families" },
+              { link: "about-us?page=Our News", label: "Our News" },
+              { link: "about-us?page=Our Team", label: "Our Team" },
+              { link: "about-us?page=Report of hope", label: "Report of Hope" },
+              { link: "about-us?page=Careers", label: "Careers" },
             ]}
           ></HeaderLink>
           <HeaderLink title="Need Support?"></HeaderLink>

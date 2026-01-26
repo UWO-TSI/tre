@@ -1,4 +1,5 @@
 import { PageElement } from "@/components/pageLayout/PageElement";
+import NewsBlerb, { newsItems } from "./newBlerb";
 
 export const aboutUs: PageElement[] = [
   { type: "Header", content: <>About Us</> },
@@ -166,6 +167,20 @@ export const ourNews: PageElement[] = [
       </>
     ),
   },
+  {
+    type: "MiscElement",
+    content: (
+      <>
+        <div className="flex flex-col gap-12">
+          {newsItems.map((item, index) => {
+            return (
+              <NewsBlerb key={"MiscElement" + index} {...item}></NewsBlerb>
+            );
+          })}
+        </div>
+      </>
+    ),
+  },
 ];
 export const ourTeam: PageElement[] = [
   { type: "Header", content: <>Our Team</> },
@@ -181,6 +196,12 @@ export const ourTeam: PageElement[] = [
         looking to make a real difference when it’s needed most.
       </>
     ),
+  },
+  {
+    type: "Image",
+    src: "/images/Team+hearts+pic+w+Amy+RoH.webp",
+    alt: "",
+    className: "w-full,",
   },
   { type: "Subheader", content: <>Staff</> },
   {
