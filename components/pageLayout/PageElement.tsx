@@ -1,50 +1,60 @@
-export interface Header {
+interface Header {
   type: "Header";
   content: React.ReactNode;
 }
-export interface Subheader {
+interface Subheader {
   type: "Subheader";
   content: React.ReactNode;
 }
-export interface TertiaryHeader {
+interface TertiaryHeader {
   type: "TertiaryHeader";
   content: React.ReactNode;
 }
-export interface Paragraph {
+interface Paragraph {
   type: "Paragraph";
   content: React.ReactNode;
 }
-export interface Button {
+interface Button {
   type: "Button";
   text: string;
   href: string;
   alignment?: "left" | "center";
 }
-export interface List {
+interface List {
   type: "List";
   items: string[];
 }
-export interface DoubleList {
+interface DoubleList {
   type: "DoubleList";
   list: DoubleListElement;
 }
-export interface DoubleListElement {
+interface DoubleListElement {
   type: "DoubleListElement";
   title: string;
   items: string[];
 }
-export interface Divider {
+interface Divider {
   type: "Divider";
 }
-export interface MiscElement {
+interface MiscElement {
   type: "MiscElement";
   content: React.ReactNode;
 }
-export interface Image {
+interface Image {
   type: "Image";
   src: string;
   alt: string;
   className?: string;
+  href?: string;
+}
+interface YTEmbed {
+  type: "YTEmbed";
+  url: string;
+}
+interface FBEmbed {
+  type: "FBEmbed";
+  url: string;
+  width: number;
 }
 
 export type PageElement =
@@ -57,4 +67,6 @@ export type PageElement =
   | TertiaryHeader
   | Divider
   | MiscElement
-  | Image;
+  | Image
+  | YTEmbed
+  | FBEmbed;

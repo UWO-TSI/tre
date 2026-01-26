@@ -1,11 +1,13 @@
 import PurpleAccentButton from "@/components/accentButton/purpleAccentButton";
 import { PageElement } from "./PageElement";
 import Image from "next/image";
-interface PageElementProps {
+import YoutubeEmbed from "../embeds/YoutubeEmbed";
+import FacebookEmbed from "../embeds/FacebookEmbed";
+interface PageContentProps {
   pageLayout: PageElement[];
 }
 
-export default function PageContent(props: PageElementProps) {
+export default function PageContent(props: PageContentProps) {
   return (
     <div className="flex flex-col gap-4 bg-white">
       {props.pageLayout &&
@@ -33,17 +35,19 @@ export default function PageContent(props: PageElementProps) {
               return (
                 <h3
                   key={element.type + index}
-                  className="text-h3 text-header-purple font-medium"
-                ></h3>
+                  className="text-h3 text-header-purple font-semibold"
+                >
+                  {element.content}
+                </h3>
               );
             case "Paragraph":
               return (
-                <p
+                <div
                   key={element.type + index}
                   className="text-body text-secondary-grey font-light"
                 >
                   {element.content}
-                </p>
+                </div>
               );
             case "Button":
               return (
@@ -59,7 +63,7 @@ export default function PageContent(props: PageElementProps) {
               return (
                 <ul
                   key={element.type + index}
-                  className="list-disc text-body text-secondary-grey font-light"
+                  className="list-disc text-body pl-8 text-secondary-grey font-light"
                 >
                   {element.items.map((item) => {
                     return <li key={item}>{item}</li>;
@@ -70,13 +74,13 @@ export default function PageContent(props: PageElementProps) {
               return (
                 <ul
                   key={element.type + index}
-                  className="list-disc text-body text-secondary-grey font-light"
+                  className="list-disc pl-8 text-body text-secondary-grey font-light"
                 >
                   <li>
                     {element.list.title}
-                    <ul className="list-[circle] list-inside text-body text-secondary-grey font-light">
+                    <ul className="list-[circle] pl-12 text-body text-secondary-grey font-light">
                       {element.list.items.map((item) => {
-                        return <li key={item}>{item}</li>;
+                        return <li className="py-0.5" key={item}>{item}</li>;
                       })}
                     </ul>
                   </li>
@@ -84,7 +88,7 @@ export default function PageContent(props: PageElementProps) {
               );
 
             case "Divider":
-              return <hr key={element.type + index} className="py-4"></hr>;
+              return <hr key={element.type + index} className="my-4"></hr>;
             case "MiscElement":
               return <div key={element.type + index}>{element.content}</div>;
 
@@ -92,10 +96,28 @@ export default function PageContent(props: PageElementProps) {
               return (
                 <div
                   key={element.type + index}
-                  className={`relative cover ${element.className}`}
+                  className={`relative ${element.className}`}
                 >
-                  <Image fill src={element.src} alt={element.alt}></Image>
+
+                  <a href={element.href} target="_blank" rel="noreferrer">
+                    <Image 
+                      fill 
+                      className="object-contain"
+                      src={element.src} 
+                      alt={element.alt}
+                    ></Image>
+                  </a>
                 </div>
+              );
+
+            case "YTEmbed":
+              return (
+                <YoutubeEmbed key={element.url} url={element.url}></YoutubeEmbed>
+              );
+
+            case "FBEmbed":
+              return (
+                <FacebookEmbed key={element.url} url={element.url} width={element.width}></FacebookEmbed>
               );
           }
         })}
