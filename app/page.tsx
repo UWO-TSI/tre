@@ -1,4 +1,3 @@
-import HeroImage from "@/components/heroImage/heroImage";
 import QuickNavSection from "./_components/quickNavSection";
 import ResponsiveSupport from "./_components/responsiveSupport";
 import QuoteBanner from "./_components/quoteBanner";
@@ -6,19 +5,13 @@ import SearchBar from "@/components/header/SearchBar";
 import SectionBox from "./_components/sectionBox";
 import Event from "./_components/Event";
 import YellowAccentButton from "@/othername";
+import ImageCarousel from "./_components/imageCarousel";
 
 export default function Home() {
   return (
     <>
       <SearchBar />
-      <HeroImage
-        title=""
-        alt=""
-        height="40em"
-        textVertialOffset="5em"
-        image="/images/family.jpg"
-        imageVerticalPosition="20%"
-      ></HeroImage>
+      <ImageCarousel></ImageCarousel>
       {/* The quick links title section */}
       <h1 className="text-h1 text-center p-10 bg-white">Quick Links</h1>
       {/* The menu section */}
@@ -37,10 +30,6 @@ export default function Home() {
           <h3 className="text-h3 pb-5 font-semibold">Looking to support?</h3>
           <YellowAccentButton>Ways to Give</YellowAccentButton>
         </div>
-        {/* <QuickNavSection
-          title={"Looking to support?"}
-          buttonText="Ways to Give"
-        ></QuickNavSection> */}
 
         <QuickNavSection
           title={"Looking to Help?"}
