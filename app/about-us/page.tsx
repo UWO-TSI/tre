@@ -17,8 +17,9 @@ function Page() {
       <PageLayout
         pageLayout={aboutUsPageLayout}
         pages={pages}
-        pageTitle="About"
+        pageTitle="About Childcan"
         bannerHref="/images/boyImage.webp"
+        bannerVertialPosition="70%"
         bannerAlt="image of family"
       ></PageLayout>
     </Suspense>

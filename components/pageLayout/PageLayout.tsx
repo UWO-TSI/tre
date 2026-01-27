@@ -10,6 +10,7 @@ interface PageLayoutProps {
   pages: string[];
   pageTitle: string;
   bannerHref: string;
+  bannerVertialPosition?: string;
   bannerAlt: string;
   pageLayout: Record<string, PageElement[]>;
 }
@@ -27,7 +28,7 @@ export default function PageLayout(props: PageLayoutProps) {
           image={props.bannerHref}
           title={props.pageTitle}
           alt={props.bannerAlt}
-          imageVerticalPosition="15%"
+          imageVerticalPosition={props.bannerVertialPosition ?? "15%"}
         ></HeroImage>
         <div className=" pl-6 pr-6 max-w-260 grid grid-rows-1 grid-cols-[1fr_3fr] gap-8 pt-25 pb-25">
           <Sidebar

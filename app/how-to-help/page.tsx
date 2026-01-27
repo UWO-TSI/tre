@@ -20,7 +20,8 @@ export default function Page() {
         pageLayout={howToHelpLayout}
         pages={pages}
         pageTitle="How to Help"
-        bannerHref="/images/child-and-family.webp"
+        bannerHref="/images/how+to+help+hero.webp"
+        bannerVertialPosition="50%"
         bannerAlt="image of family"
       ></PageLayout>
     </Suspense>

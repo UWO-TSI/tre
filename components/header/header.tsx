@@ -65,6 +65,7 @@ function Header() {
         <nav className="flex flex-row items-center">
           <HeaderLink
             title="About"
+            link="/about-us"
             items={[
               { link: "about-us?page=About Us", label: "About Us" },
               { link: "about-us?page=Our Families", label: "Our Families" },
@@ -74,8 +75,9 @@ function Header() {
               { link: "about-us?page=Careers", label: "Careers" },
             ]}
           ></HeaderLink>
-          <HeaderLink title="Need Support?"></HeaderLink>
+          <HeaderLink link="" title="Need Support?"></HeaderLink>
           <HeaderLink
+            link="/for-families"
             title="For Families"
             items={[
               { link: "for-families?page=Here for You", label: "Here for You" },
@@ -107,6 +109,7 @@ function Header() {
           ></HeaderLink>
           <HeaderLink
             title="How to Help"
+            link="how-to-help"
             items={[
               { link: "/how-to-help?page=Ways to Give", label: "Ways to Give" },
               { link: "/how-to-help?page=PJ Day", label: "PJ Day" },
@@ -124,10 +127,10 @@ function Header() {
               },
             ]}
           ></HeaderLink>
-          <HeaderLink title="Events"></HeaderLink>
-          <HeaderLink title="Star"></HeaderLink>
-          <HeaderLink title="Hands of Hope"></HeaderLink>
-          <HeaderLink title="Contact"></HeaderLink>
+          <HeaderLink link="" title="Events"></HeaderLink>
+          <HeaderLink link="" title="Star"></HeaderLink>
+          <HeaderLink link="" title="Hands of Hope"></HeaderLink>
+          <HeaderLink link="" title="Contact"></HeaderLink>
           <YellowAccentButton>Donate</YellowAccentButton>
         </nav>
       </div>
