@@ -4,7 +4,7 @@ import QuoteBanner from "./_components/quoteBanner";
 import SearchBar from "@/components/header/SearchBar";
 import SectionBox from "./_components/sectionBox";
 import Event from "./_components/Event";
-import YellowAccentButton from "@/othername";
+// import YellowAccentButton from "@/othername";
 import ImageCarousel from "./_components/imageCarousel";
 
 export default function Home() {
@@ -30,7 +30,7 @@ export default function Home() {
           <h3 className="text-h3 pb-5 font-semibold">Looking to support?</h3>
           <YellowAccentButton>Ways to Give</YellowAccentButton>
         </div> */}
-        
+
         <QuickNavSection
           title={"Looking to support?"}
           buttonText="Ways to Give"
