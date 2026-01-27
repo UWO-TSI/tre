@@ -19,7 +19,7 @@ function HeroImage(props: HeroImageProps) {
         className="relative w-full h-110 "
       >
         <Image
-          className= "animate-image-appear"
+          className="animate-image-appear"
           layout="fill"
           style={{
             objectPosition: `center ${props.imageVerticalPosition ?? "center"}`,
@@ -28,7 +28,6 @@ function HeroImage(props: HeroImageProps) {
           alt={props.alt}
           src={props.image}
         ></Image>
-        
       </div>
       <h1
         style={{
