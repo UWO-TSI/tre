@@ -30,7 +30,7 @@ export default function Home() {
           <h3 className="text-h3 pb-5 font-semibold">Looking to support?</h3>
           <YellowAccentButton>Ways to Give</YellowAccentButton>
         </div> */}
-        
+
         <QuickNavSection
           title={"Looking to support?"}
           buttonText="Ways to Give"
