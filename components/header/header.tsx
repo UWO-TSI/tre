@@ -65,47 +65,72 @@ function Header() {
         <nav className="flex flex-row items-center">
           <HeaderLink
             title="About"
+            link="/about-us"
             items={[
-              { link: "", label: "About Us" },
-              { link: "", label: "Our Families" },
-              { link: "", label: "Our News" },
-              { link: "", label: "Our Team" },
-              { link: "", label: "Report of Hope" },
-              { link: "", label: "Careers" },
+              { link: "about-us?page=About Us", label: "About Us" },
+              { link: "about-us?page=Our Families", label: "Our Families" },
+              { link: "about-us?page=Our News", label: "Our News" },
+              { link: "about-us?page=Our Team", label: "Our Team" },
+              { link: "about-us?page=Report of hope", label: "Report of Hope" },
+              { link: "about-us?page=Careers", label: "Careers" },
             ]}
           ></HeaderLink>
+          <HeaderLink link="" title="Need Support?"></HeaderLink>
           <HeaderLink
-            title="Need Support?"
+            link="/for-families"
+            title="For Families"
             items={[
-              { link: "", label: "Here for You" },
-              { link: "", label: "Financial Support" },
-              { link: "", label: "Emotional Support" },
-              { link: "", label: "Social Support" },
-              { link: "", label: "Research Support" },
-              { link: "", label: "Upcoming Family Events" },
-              { link: "", label: "Q&A" },
+              { link: "for-families?page=Here for You", label: "Here for You" },
+              {
+                link: "for-families?page=Financial Support",
+                label: "Financial Support",
+              },
+              {
+                link: "for-families?page=Emotional Support",
+                label: "Emotional Support",
+              },
+              {
+                link: "for-families?page=Social Support",
+                label: "Social Support",
+              },
+              {
+                link: "for-families?page=Research Support",
+                label: "Research Support",
+              },
+              {
+                link: "for-families?page=Upcoming Family Events",
+                label: "Upcoming Family Events",
+              },
+              {
+                link: `for-families?page=${encodeURIComponent("Q&A")}`,
+                label: "Q&A",
+              },
             ]}
           ></HeaderLink>
-          <HeaderLink title="For Families"></HeaderLink>
           <HeaderLink
             title="How to Help"
+            link="how-to-help"
             items={[
-              { link: "", label: "Ways to Give" },
-              { link: "", label: "PJ Day" },
-              { link: "", label: "Gold" },
-              { link: "", label: "Host an Event" },
-              { link: "", label: "Marketplace" },
-              { link: "", label: "Merchandise" },
-              { link: "", label: "Volunteer" },
-              { link: "", label: "Our Supporters" },
+              { link: "/how-to-help?page=Ways to Give", label: "Ways to Give" },
+              { link: "/how-to-help?page=PJ Day", label: "PJ Day" },
+              { link: "/how-to-help?page=Gold", label: "Gold" },
+              {
+                link: "/how-to-help?page=Host an Event",
+                label: "Host an Event",
+              },
+              { link: "/how-to-help?page=Marketplace", label: "Marketplace" },
+              { link: "/how-to-help?page=Merchandise", label: "Merchandise" },
+              { link: "/how-to-help?page=Volunteer", label: "Volunteer" },
+              {
+                link: "/how-to-help?page=Our Supporters",
+                label: "Our Supporters",
+              },
             ]}
           ></HeaderLink>
-          <HeaderLink title="Events"></HeaderLink>
-          <HeaderLink title="Star"></HeaderLink>
-          <HeaderLink title="Hands of Hope"></HeaderLink>
-          <a href="/contact">
-            <HeaderLink title="Contact"></HeaderLink>
-          </a>
+          <HeaderLink link="" title="Events"></HeaderLink>
+          <HeaderLink link="" title="Star"></HeaderLink>
+          <HeaderLink link="" title="Hands of Hope"></HeaderLink>
+          <HeaderLink link="\contact" title="Contact"></HeaderLink>
           <YellowAccentButton>Donate</YellowAccentButton>
         </nav>
       </div>

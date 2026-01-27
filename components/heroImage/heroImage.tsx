@@ -14,7 +14,7 @@ function HeroImage(props: HeroImageProps) {
   return (
     <div
       style={{ gridTemplateAreas: '"area"' }}
-      className="relavtive grid items-center"
+      className="relative grid items-center w-full"
     >
       <div
         style={{ height: props.height, gridArea: "area" }}
