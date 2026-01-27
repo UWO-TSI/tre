@@ -22,14 +22,18 @@ export default function Home() {
         ></QuickNavSection>
 
         <QuickNavSection
-          title={"Existing ChildCan Family?"}
+          title={"Existing Childcan Family?"}
           buttonText="For Families"
         ></QuickNavSection>
 
-        <div className="flex flex-col items-center pb-20 pt-5">
+        {/* <div className="flex flex-col items-center pb-20 pt-5">
           <h3 className="text-h3 pb-5 font-semibold">Looking to support?</h3>
           <YellowAccentButton>Ways to Give</YellowAccentButton>
-        </div>
+        </div> */}
+        <QuickNavSection
+          title={"Looking to support?"}
+          buttonText="Ways to Give"
+        ></QuickNavSection>
 
         <QuickNavSection
           title={"Looking to Help?"}
