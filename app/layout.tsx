@@ -10,8 +10,8 @@ const quicksand = Quicksand({
 });
 
 export const metadata: Metadata = {
-  title: "TRE - Next.js TypeScript Starter",
-  description: "A modern Next.js starter with TypeScript and Tailwind CSS v4",
+  title: "ChildCan",
+  description: "childcan.com",
 };
 
 export default function RootLayout({
