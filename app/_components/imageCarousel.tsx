@@ -58,7 +58,7 @@ export default function ImageCarousel() {
   return (
     <div className="relative group">
       <button
-        className="nav-button left-0 absolute z-20 self-center top-[50%] translate-y-[-50%] p-[10px]"
+        className="nav-button left-0 absolute z-20 self-center top-[50%] translate-y-[-50%] p-[10px] cursor-pointer"
         onClick={handlePrevClick}
       >
         <svg
@@ -75,7 +75,7 @@ export default function ImageCarousel() {
         </svg>
       </button>
       <button
-        className="nav-button right-0 absolute z-99 self-center top-[50%] translate-y-[-50%] p-[10px]"
+        className="nav-button right-0 absolute z-99 self-center top-[50%] translate-y-[-50%] p-[10px] cursor-pointer"
         onClick={handleNextClick}
       >
         <svg
