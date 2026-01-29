@@ -38,7 +38,7 @@ export default function Support() {
           </a>
         </div>
         <div className="py-[17px]">
-          <video>
+          <video width="956" height="537.75" controls>
             <source src="/support-video.mp4" type="video/mp4"></source>
           </video>
         </div>
