@@ -4,13 +4,19 @@ import { howToHelpLayout } from "@/app/how-to-help/howToHelpPageLayout";
 import { PageElement } from "@/components/pageLayout/PageElement";
 import { Id, Index } from "flexsearch";
 import React, { useEffect, useRef } from "react";
+
+export type SearchResult = {
+  route: string;
+  element: PageElement;
+  layout: PageElement[];
+};
 function useSearch() {
   const searchObjects: Record<string, PageElement[]>[] = [
     aboutUsPageLayout,
     forFamilesPageLayout,
     howToHelpLayout,
   ];
-  const masterList = useRef<PageElement[]>(null);
+  const masterList = useRef<SearchResult[]>(null);
 
   const searchRef = useRef<Index>(null);
   const extractText = (node: React.ReactNode): string => {
@@ -35,23 +41,29 @@ function useSearch() {
     });
 
     // add everything to an indexable master list
-    const header_list: PageElement[] = [];
+    const header_list: SearchResult[] = [];
     searchObjects.forEach((pageLayout) => {
-      Object.values(pageLayout).forEach((pageElementList) => {
-        pageElementList.forEach((ele) => {
+      const list = Object.entries(pageLayout);
+      list.forEach(([route, element]) => {
+        element.forEach((ele) => {
           if (
             ele.type == "Header" ||
             ele.type == "Subheader" ||
             ele.type == "TertiaryHeader"
           ) {
-            header_list.push(ele);
+            header_list.push({
+              route: route,
+              element: ele,
+              layout: element,
+            });
           }
         });
       });
     });
 
     // add the master list to index
-    header_list.forEach((ele, index) => {
+    header_list.forEach((result, index) => {
+      const ele = result.element;
       if (
         ele.type == "Header" ||
         ele.type == "Subheader" ||
@@ -68,7 +80,7 @@ function useSearch() {
   const searchFunction = (
     query: string,
     fuzzy: boolean = true,
-  ): PageElement[] => {
+  ): SearchResult[] => {
     const res = searchRef.current?.search({ query: query, suggest: fuzzy });
     if (res != undefined) {
       return res
