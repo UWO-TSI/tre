@@ -83,10 +83,10 @@ function useSearch() {
   const searchFunction = (
     query: string,
     fuzzy: boolean = true,
-  ): SearchResult[] | null => {
+  ): SearchResult[] => {
     const res = searchRef.current?.search({ query: query, suggest: fuzzy });
     if (res != undefined) {
-      const filtered = res
+      return res
         .map((id: Id) => {
           if (typeof id === "number") {
             return masterList.current![id];
@@ -95,10 +95,6 @@ function useSearch() {
         .filter((ele) => {
           return ele != undefined;
         });
-      if (filtered.length == 0) {
-        return null;
-      }
-      return filtered;
     }
     return [];
   };
