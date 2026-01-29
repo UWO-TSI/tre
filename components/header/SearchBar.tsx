@@ -11,12 +11,11 @@ export default function SearchBar() {
   const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
   const searchTimeout = useRef<NodeJS.Timeout>(null);
 
-
   useEffect(() => {
     const executeSearch = () => {
       setSearchResults(search.search(query));
     };
-    if(searchTimeout.current != null) {
+    if (searchTimeout.current != null) {
       clearTimeout(searchTimeout.current);
     }
     searchTimeout.current = setTimeout(executeSearch, 500);
@@ -36,6 +35,6 @@ export default function SearchBar() {
         />
       </div>
       <SearchResultsMenu searchResults={searchResults}></SearchResultsMenu>
-  </div>
+    </div>
   );
 }
