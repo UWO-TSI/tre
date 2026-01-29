@@ -316,6 +316,24 @@ export const reportOfHope: PageElement[] = [
     type: "MiscElement",
     content: (
       <>
+        <iframe
+          allowFullScreen
+          allow="clipboard-write"
+          className="fp-iframe"
+          src="https://heyzine.com/flip-book/1c7cff81d8.html"
+          style={{
+            border: "1px solid lightgray",
+            width: "100%",
+            height: "400px",
+          }}
+        ></iframe>
+      </>
+    ),
+  },
+  {
+    type: "MiscElement",
+    content: (
+      <>
         <div className="grid grid-cols-2 w-full">
           <div>
             {reportOfHopeDocsList.map((report, index) => {
