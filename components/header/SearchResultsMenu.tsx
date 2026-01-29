@@ -5,16 +5,17 @@ export default function SearchResultsMenu(props: {
   searchResults: SearchResult[];
 }) {
   return (
-    <div className="flex flex-col  animate-dropdown-appear w-full bg-white">
+    
+    <div className={`flex flex-col static z-10 transition-transform ${props.searchResults.length != 0 ? "animate-dropdown-appear scale-100 duration-75" : "scale-y-0"} w-full bg-white`}>
       {props.searchResults
         .filter((e, index) => {
-          if (index <= 3) {
+          if (index < 3) {
             return e;
           }
         })
-        .map((e) => {
+        .map((e, index) => {
           return (
-            <div key={e.route} className="flex flex-col border-b p-4">
+            <div key={e.route+index} className="flex flex-col border-b p-4">
               <h1 className="text-h2 text-header-purple">
                 <PageContent pageLayout={[e.element]}></PageContent>
               </h1>
