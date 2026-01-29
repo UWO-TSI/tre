@@ -33,7 +33,7 @@ function HeaderLink(props: HeaderLinkProps) {
       </Link>
       {props.items != undefined ? (
         <div
-          className={`${hover ? "animate-dropdown-appear" : ""} transform-[scale(1,0)] absolute flex flex-col items-start bg-white py-3 px-6 left-[-0.5em] top-10`}
+          className={`${hover ? "animate-dropdown-appear" : ""} transform-[scale(1,0)] absolute flex flex-col items-start bg-white py-3 px-6 left-[-0.5em] pt-10 z-0`}
         >
           {props.items.map((item: HeaderLinkDropdownItem) => {
             return (
