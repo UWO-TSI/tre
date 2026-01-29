@@ -7,12 +7,14 @@ interface HeroImageProps {
   imageVerticalPosition?: string;
   height?: string;
   textVertialOffset?: string;
+  overlay?: boolean;
 }
+
 function HeroImage(props: HeroImageProps) {
   return (
     <div
       style={{ gridTemplateAreas: '"area"' }}
-      className="relavtive grid items-center"
+      className="relative grid items-center w-full"
     >
       <div
         style={{ height: props.height, gridArea: "area" }}
@@ -28,6 +30,9 @@ function HeroImage(props: HeroImageProps) {
           alt={props.alt}
           src={props.image}
         ></Image>
+        {props.overlay && (
+          <div className="absolute inset-0 bg-linear-to-r from-[#575757]/90 to-[#575757]/10"></div>
+        )}
       </div>
       <h1
         style={{

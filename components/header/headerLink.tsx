@@ -9,6 +9,7 @@ interface HeaderLinkDropdownItem {
 
 interface HeaderLinkProps {
   title: string;
+  link: string;
   items?: HeaderLinkDropdownItem[];
 }
 
@@ -24,9 +25,12 @@ function HeaderLink(props: HeaderLinkProps) {
         setHover(false);
       }}
     >
-      <div className="cursor-pointer text-body text-main-grey font-semibold mx-4 my-auto text-[18px] hover:text-header-purple transition-colors z-10">
+      <Link
+        href={props.link}
+        className="cursor-pointer text-body text-[16px] text-main-grey font-semibold mx-4 my-auto hover:text-header-purple transition-colors"
+      >
         {props.title}
-      </div>
+      </Link>
       {props.items != undefined ? (
         <div
           className={`${hover ? "animate-dropdown-appear" : ""} transform-[scale(1,0)] absolute flex flex-col items-start bg-white py-3 px-6 left-[-0.5em] pt-10 z-0`}

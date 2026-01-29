@@ -4,7 +4,7 @@ import ContactForm from "./ContactForm";
 export default function Contact() {
   return (
     <div className="flex justify-between gap-12 p-10">
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-8 items-start">
         <Socials />
         <a
           href="/privacy-policy"

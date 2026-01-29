@@ -1,44 +1,45 @@
-import HeroImage from "@/components/heroImage/heroImage";
 import QuickNavSection from "./_components/quickNavSection";
 import ResponsiveSupport from "./_components/responsiveSupport";
 import QuoteBanner from "./_components/quoteBanner";
 import SearchBar from "@/components/header/SearchBar";
 import SectionBox from "./_components/sectionBox";
 import Event from "./_components/Event";
+// import YellowAccentButton from "@/othername";
+import ImageCarousel from "./_components/imageCarousel";
 
 export default function Home() {
   return (
     <>
       <SearchBar />
-      <HeroImage
-        title=""
-        alt=""
-        height="40em"
-        textVertialOffset="5em"
-        image="/images/family.jpg"
-        imageVerticalPosition="20%"
-      ></HeroImage>
+      <ImageCarousel></ImageCarousel>
       {/* The quick links title section */}
       <h1 className="text-h1 text-center p-10 bg-white">Quick Links</h1>
+
       {/* The menu section */}
       <div className="grid md:grid-rows-2 md:grid-cols-3 xl:grid-cols-5 xl:grid-rows-1 grid-rows-1  bg-white">
         <QuickNavSection
           title={"Newly Diagnosed?"}
           buttonText="Find Support Here"
         ></QuickNavSection>
+
         <QuickNavSection
-          title={"Existing ChildCan Family?"}
+          title={"Existing Childcan Family?"}
           buttonText="For Families"
+        ></QuickNavSection>
+
+        {/* <div className="flex flex-col items-center pb-20 pt-5">
+          <h3 className="text-h3 pb-5 font-semibold">Looking to support?</h3>
+          <YellowAccentButton>Ways to Give</YellowAccentButton>
+        </div> */}
+
+        <QuickNavSection
+          title={"Looking to support?"}
+          buttonText="Ways to Give"
         ></QuickNavSection>
 
         <QuickNavSection
           title={"Looking to Help?"}
           buttonText="Volunteering"
-        ></QuickNavSection>
-
-        <QuickNavSection
-          title={"Donors?"}
-          buttonText="How to Help"
         ></QuickNavSection>
 
         <QuickNavSection
@@ -50,9 +51,21 @@ export default function Home() {
 
       {/* Section descriptions and images */}
       <div className="flex flex-col w-full gap-4 p-10 bg-white">
-        <SectionBox title="For Families" imgSrc="/images/.." altText="family" />
-        <SectionBox title="For Donors" imgSrc="/images/.." altText="donors" />
-        <SectionBox title="For Parents" imgSrc="/images/.." altText="parents" />
+        <SectionBox
+          title="For Families"
+          imgSrc="/images/ChildcanWalk2023-304.jpg"
+          altText="family"
+        />
+        <SectionBox
+          title="For Donors"
+          imgSrc="/images/ChildcanWalk2023-108.jpg"
+          altText="donors"
+        />
+        <SectionBox
+          title="For Parents"
+          imgSrc="/images/ChildcanWalk2023-12.jpg"
+          altText="parents"
+        />
       </div>
 
       <QuoteBanner
