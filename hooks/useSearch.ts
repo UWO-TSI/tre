@@ -11,11 +11,12 @@ export type SearchResult = {
   layout: PageElement[];
 };
 function useSearch() {
-  const searchObjects: Record<string, PageElement[]>[] = [
-    aboutUsPageLayout,
-    forFamilesPageLayout,
-    howToHelpLayout,
-  ];
+  const searchObjects: Record<string, Record<string, PageElement[]>> = {
+    "about-us": aboutUsPageLayout,
+    "for-familes": forFamilesPageLayout,
+    "how-to-help": howToHelpLayout,
+  };
+
   const masterList = useRef<SearchResult[]>(null);
 
   const searchRef = useRef<Index>(null);
@@ -26,6 +27,7 @@ function useSearch() {
       if (typeof child === "string" || typeof child === "number") {
         result += child;
       } else if (React.isValidElement(child)) {
+        // @ts-expect-error TS 18046
         result += extractText(child.props.children);
       }
     });
@@ -41,24 +43,26 @@ function useSearch() {
 
     // add everything to an indexable master list
     const header_list: SearchResult[] = [];
-    searchObjects.forEach((pageLayout) => {
-      const list = Object.entries(pageLayout);
-      list.forEach(([route, element]) => {
-        element.forEach((ele) => {
-          if (
-            ele.type == "Header" ||
-            ele.type == "Subheader" ||
-            ele.type == "TertiaryHeader"
-          ) {
-            header_list.push({
-              route: route,
-              element: ele,
-              layout: element,
-            });
-          }
+    Object.entries(searchObjects).forEach(
+      ([page, pageLayout]: [string, Record<string, PageElement[]>]) => {
+        const list = Object.entries(pageLayout);
+        list.forEach(([route, element]) => {
+          element.forEach((ele) => {
+            if (
+              ele.type == "Header" ||
+              ele.type == "Subheader" ||
+              ele.type == "TertiaryHeader"
+            ) {
+              header_list.push({
+                route: "/" + page + "?page=" + route,
+                element: ele,
+                layout: element,
+              });
+            }
+          });
         });
-      });
-    });
+      },
+    );
 
     // add the master list to index
     header_list.forEach((result, index) => {

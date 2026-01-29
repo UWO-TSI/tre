@@ -1,3 +1,4 @@
+"use client";
 import QuickNavSection from "./_components/quickNavSection";
 import ResponsiveSupport from "./_components/responsiveSupport";
 import QuoteBanner from "./_components/quoteBanner";

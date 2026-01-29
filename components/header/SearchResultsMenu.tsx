@@ -1,7 +1,7 @@
-import { SearchResults } from "@/hooks/useSearch";
+import { SearchResult } from "@/hooks/useSearch";
 
 export default function SearchResultsMenu(props: {
-  searchResults: SearchResults;
+  searchResults: SearchResult;
 }) {
   return (
     <div className="flex flex-col sticky animate-dropdown-appear z-10 top-34 w-full bg-white">

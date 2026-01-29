@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import MagnifyingGlass from "../magnifyingGlass";
-import SearchResultsMenu from "./SearchResultsMenu";
 
 export default function SearchBar() {
   const [query, setQuery] = useState<string>("");
