@@ -71,7 +71,7 @@ function Header() {
               { link: "about-us?page=Our Families", label: "Our Families" },
               { link: "about-us?page=Our News", label: "Our News" },
               { link: "about-us?page=Our Team", label: "Our Team" },
-              { link: "about-us?page=Report of hope", label: "Report of Hope" },
+              { link: "about-us?page=Report of Hope", label: "Report of Hope" },
               { link: "about-us?page=Careers", label: "Careers" },
             ]}
           ></HeaderLink>
