@@ -20,6 +20,7 @@ function useSearch() {
       if (typeof child === "string" || typeof child === "number") {
         result += child;
       } else if (React.isValidElement(child)) {
+        // @ts-expect-error TS18046: value is of type 'unknown'
         result += extractText(child.props.children);
       }
     });
