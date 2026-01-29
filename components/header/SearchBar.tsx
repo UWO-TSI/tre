@@ -17,9 +17,9 @@ export default function SearchBar() {
     };
     if (searchTimeout.current != null) {
       clearTimeout(searchTimeout.current);
+      setSearchResults([]);
     }
     searchTimeout.current = setTimeout(executeSearch, 500);
-    console.log(query);
   }, [query]);
 
   return (
@@ -34,7 +34,9 @@ export default function SearchBar() {
           onChange={(e) => setQuery(e.target.value)}
         />
       </div>
-      <SearchResultsMenu searchResults={searchResults}></SearchResultsMenu>
+        <SearchResultsMenu searchResults={searchResults}></SearchResultsMenu>
+      
+      
     </div>
   );
 }
