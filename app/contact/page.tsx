@@ -9,7 +9,7 @@ export default function Contact() {
       <HeroImage
         title="Contact Us"
         alt=""
-        height="[440px]"
+        height="440px"
         textVertialOffset="20px"
         image="/images/contact-us-pic.jpg"
         imageVerticalPosition="40%"
@@ -74,7 +74,6 @@ export default function Contact() {
         </div>
 
         <div className="py-[17px]">
-          {/* fix the flex box here on hover */}
           <div className="inline-flex gap-2 items-center group">
             <SocialIcons
               name="facebook"

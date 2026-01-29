@@ -18,7 +18,7 @@ function HeroImage(props: HeroImageProps) {
     >
       <div
         style={{ height: props.height, gridArea: "area" }}
-        className="relative w-full h-110 "
+        className="relative w-full h-110"
       >
         <Image
           className="animate-image-appear"
