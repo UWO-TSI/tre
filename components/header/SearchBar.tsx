@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import SearchResults from "./SearchResults";
+import SearchResultsMenu from "./SearchResultsMenu";
 
 export default function SearchBar() {
   const [query, setQuery] = useState<string>("");
@@ -16,7 +16,7 @@ export default function SearchBar() {
           onChange={(e) => setQuery(e.target.value)}
         />
       </div>
-      <SearchResults></SearchResults>
+      <SearchResultsMenu searchResults={}></SearchResultsMenu>
     </div>
   );
 }
