@@ -26,7 +26,7 @@ function useSearch() {
       if (typeof child === "string" || typeof child === "number") {
         result += child;
       } else if (React.isValidElement(child)) {
-        // @ts-expect-error TS18046:
+        // @ts-expect-error TS18046
         result += extractText(child.props.children);
       }
     });
