@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@vis.gl/react-google-maps": "^1.7.1",
+    "flexsearch": "^0.8.212",
     "next": "^16.1.1",
     "prettier": "^3.6.2",
     "react": "^19.2.3",

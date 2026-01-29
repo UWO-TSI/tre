@@ -1,19 +1,53 @@
+"use client";
 import QuickNavSection from "./_components/quickNavSection";
 import ResponsiveSupport from "./_components/responsiveSupport";
 import QuoteBanner from "./_components/quoteBanner";
 import SearchBar from "@/components/header/SearchBar";
 import SectionBox from "./_components/sectionBox";
 import Event from "./_components/Event";
-// import YellowAccentButton from "@/othername";
 import ImageCarousel from "./_components/imageCarousel";
+import useSearch from "@/hooks/useSearch";
+import { useState } from "react";
+import { PageElement } from "@/components/pageLayout/PageElement";
+import PageContent from "@/components/pageLayout/PageContent";
 
 export default function Home() {
+  const search = useSearch();
+  const [query, setQuery] = useState("");
+  const [res, setRes] = useState<PageElement[]>([]);
   return (
     <>
       <SearchBar />
       <ImageCarousel></ImageCarousel>
       {/* The quick links title section */}
       <h1 className="text-h1 text-center p-10 bg-white">Quick Links</h1>
+
+      <div
+        style={{
+          backgroundColor: "white",
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
+        <button
+          onClick={() => {
+            const res = search.search(query);
+            setRes(res);
+            console.log(res);
+          }}
+          style={{ cursor: "pointer" }}
+        >
+          Click to submit
+        </button>
+        <input
+          placeholder="type here"
+          value={query}
+          onChange={(e) => {
+            setQuery(e.target.value);
+          }}
+        />
+        <PageContent pageLayout={res}></PageContent>
+      </div>
 
       {/* The menu section */}
       <div className="grid md:grid-rows-2 md:grid-cols-3 xl:grid-cols-5 xl:grid-rows-1 grid-rows-1  bg-white">
