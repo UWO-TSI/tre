@@ -10,7 +10,7 @@ const quicksand = Quicksand({
 });
 
 export const metadata: Metadata = {
-  title: "ChildCan",
+  title: "Childcan",
   description: "childcan.com",
 };
 
