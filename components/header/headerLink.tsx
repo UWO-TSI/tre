@@ -24,12 +24,12 @@ function HeaderLink(props: HeaderLinkProps) {
         setHover(false);
       }}
     >
-      <div className="cursor-pointer text-body text-main-grey font-semibold mx-4 my-auto text-[18px] hover:text-header-purple transition-colors">
+      <div className="cursor-pointer text-body text-main-grey font-semibold mx-4 my-auto text-[18px] hover:text-header-purple transition-colors z-10">
         {props.title}
       </div>
       {props.items != undefined ? (
         <div
-          className={`${hover ? "animate-dropdown-appear" : ""} transform-[scale(1,0)] absolute flex flex-col items-start bg-white py-3 px-6 left-[-0.5em] top-10`}
+          className={`${hover ? "animate-dropdown-appear" : ""} transform-[scale(1,0)] absolute flex flex-col items-start bg-white py-3 px-6 left-[-0.5em] pt-10 z-0`}
         >
           {props.items.map((item: HeaderLinkDropdownItem) => {
             return (
