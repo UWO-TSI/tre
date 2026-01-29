@@ -34,9 +34,7 @@ export default function SearchBar() {
           onChange={(e) => setQuery(e.target.value)}
         />
       </div>
-        <SearchResultsMenu searchResults={searchResults}></SearchResultsMenu>
-      
-      
+      <SearchResultsMenu searchResults={searchResults}></SearchResultsMenu>
     </div>
   );
 }
