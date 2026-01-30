@@ -23,7 +23,7 @@ export default function SearchBar() {
   }, [query]);
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col relative">
       <div className="bg-btn-yellow w-full h-15 flex flex-row items-center pl-5">
         <MagnifyingGlass></MagnifyingGlass>
         <input

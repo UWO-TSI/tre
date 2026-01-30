@@ -13,7 +13,7 @@ export type SearchResult = {
 function useSearch() {
   const searchObjects: Record<string, Record<string, PageElement[]>> = {
     "about-us": aboutUsPageLayout,
-    "for-familes": forFamilesPageLayout,
+    "for-families": forFamilesPageLayout,
     "how-to-help": howToHelpLayout,
   };
 
