@@ -18,7 +18,7 @@ export default function PageContent(props: PageContentProps) {
                 <h1
                   key={element.type + index}
                   id={element.type + index} 
-                  className="text-h1 text-header-purple"
+                  className="text-h1 text-header-purple anchor"
                 >
                   {element.content}
                 </h1>
@@ -28,7 +28,7 @@ export default function PageContent(props: PageContentProps) {
                 <h2
                   key={element.type + index}
                   id={element.type + index} 
-                  className="text-h2 text-header-teal font-light"
+                  className="text-h2 text-header-teal font-light anchor"
                 >
                   {element.content}
                 </h2>
@@ -38,7 +38,7 @@ export default function PageContent(props: PageContentProps) {
                 <h3
                   key={element.type + index}
                   id={element.type + index} 
-                  className="text-h3 text-header-purple font-semibold"
+                  className="text-h3 text-header-purple font-semibold anchor"
                 >
                   {element.content}
                 </h3>

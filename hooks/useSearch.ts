@@ -46,8 +46,8 @@ function useSearch() {
     Object.entries(searchObjects).forEach(
       ([page, pageLayout]: [string, Record<string, PageElement[]>]) => {
         const list = Object.entries(pageLayout);
-        list.forEach(([route, element], index) => {
-          element.forEach((ele) => {
+        list.forEach(([route, element]) => {
+          element.forEach((ele, index) => {
             if (
               ele.type == "Header" ||
               ele.type == "Subheader" ||
