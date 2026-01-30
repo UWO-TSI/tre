@@ -46,7 +46,7 @@ function useSearch() {
     Object.entries(searchObjects).forEach(
       ([page, pageLayout]: [string, Record<string, PageElement[]>]) => {
         const list = Object.entries(pageLayout);
-        list.forEach(([route, element]) => {
+        list.forEach(([route, element], index) => {
           element.forEach((ele) => {
             if (
               ele.type == "Header" ||
@@ -54,7 +54,7 @@ function useSearch() {
               ele.type == "TertiaryHeader"
             ) {
               header_list.push({
-                route: "/" + page + "?page=" + route,
+                route: "/" + page + "?page=" + route + "#" + ele.type + index,
                 element: ele,
                 layout: element,
               });
