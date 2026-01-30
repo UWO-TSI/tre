@@ -392,7 +392,6 @@ export const PJDayPage: PageElement[] = [
     content: (
       <div className="flex gap-8">
         <div className="flex flex-col w-1/2 gap-4">
-          
           <PageContent
             pageLayout={[
               {
@@ -403,8 +402,7 @@ export const PJDayPage: PageElement[] = [
                 type: "Subheader",
                 content: (
                   <>
-                    Did you know, kids fighting cancer wear their PJs every
-                    day?
+                    Did you know, kids fighting cancer wear their PJs every day?
                   </>
                 ),
               },
@@ -427,8 +425,8 @@ export const PJDayPage: PageElement[] = [
                 content: (
                   <>
                     As February 15, 2026, falls on a Sunday, encourage your
-                    school or business to show kids affected by cancer some
-                    love on February 13, or any day in February.
+                    school or business to show kids affected by cancer some love
+                    on February 13, or any day in February.
                   </>
                 ),
               },
@@ -453,15 +451,14 @@ export const PJDayPage: PageElement[] = [
                     Your involvement in PJ Day for Childcan will not only help
                     to fund our direct-to-family assistance programs, it will
                     also show these children and families that our community
-                    stands with them. Choose any day in February that works
-                    for your organization and let us know that you’re
-                    participating by completing this form:
+                    stands with them. Choose any day in February that works for
+                    your organization and let us know that you’re participating
+                    by completing this form:
                   </>
                 ),
               },
             ]}
           ></PageContent>
-          
         </div>
         <div className="flex flex-col w-1/2 relative">
           <PageContent
