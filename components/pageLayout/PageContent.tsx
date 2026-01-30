@@ -17,7 +17,7 @@ export default function PageContent(props: PageContentProps) {
               return (
                 <h1
                   key={element.type + index}
-                  id={element.type + index} 
+                  id={element.type + index}
                   className="text-h1 text-header-purple"
                 >
                   {element.content}
@@ -27,7 +27,7 @@ export default function PageContent(props: PageContentProps) {
               return (
                 <h2
                   key={element.type + index}
-                  id={element.type + index} 
+                  id={element.type + index}
                   className="text-h2 text-header-teal font-light"
                 >
                   {element.content}
@@ -37,7 +37,7 @@ export default function PageContent(props: PageContentProps) {
               return (
                 <h3
                   key={element.type + index}
-                  id={element.type + index} 
+                  id={element.type + index}
                   className="text-h3 text-header-purple font-semibold"
                 >
                   {element.content}
@@ -47,7 +47,7 @@ export default function PageContent(props: PageContentProps) {
               return (
                 <div
                   key={element.type + index}
-                  id={element.type + index} 
+                  id={element.type + index}
                   className="text-body text-secondary-grey font-light"
                 >
                   {element.content}
@@ -67,7 +67,7 @@ export default function PageContent(props: PageContentProps) {
               return (
                 <ul
                   key={element.type + index}
-                  id={element.type + index} 
+                  id={element.type + index}
                   className="list-disc text-body pl-8 text-secondary-grey font-light"
                 >
                   {element.items.map((item) => {
@@ -99,13 +99,17 @@ export default function PageContent(props: PageContentProps) {
             case "Divider":
               return <hr key={element.type + index} className="my-4"></hr>;
             case "MiscElement":
-              return <div key={element.type + index} id={element.type + index} >{element.content}</div>;
+              return (
+                <div key={element.type + index} id={element.type + index}>
+                  {element.content}
+                </div>
+              );
 
             case "Image":
               return (
                 <div
                   key={element.type + index}
-                  id={element.type + index} 
+                  id={element.type + index}
                   className={`relative ${element.className}`}
                 >
                   <a href={element.href} target="_blank" rel="noreferrer">
