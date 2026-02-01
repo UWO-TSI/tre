@@ -1,3 +1,5 @@
+import React from "react";
+
 interface Header {
   type: "Header";
   content: React.ReactNode;
@@ -40,6 +42,11 @@ interface MiscElement {
   type: "MiscElement";
   content: React.ReactNode;
 }
+interface VerticalSplit {
+  type: "VerticalSplit",
+  left: PageElement[],
+  right: PageElement[]
+}
 interface Image {
   type: "Image";
   src: string;
@@ -67,6 +74,7 @@ export type PageElement =
   | TertiaryHeader
   | Divider
   | MiscElement
+  | VerticalSplit
   | Image
   | YTEmbed
   | FBEmbed;

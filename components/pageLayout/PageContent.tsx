@@ -139,6 +139,19 @@ export default function PageContent(props: PageContentProps) {
                   width={element.width}
                 ></FacebookEmbed>
               );
+
+            case "VerticalSplit":
+              return (
+                <div className="flex gap-8">
+                  <div className="flex flex-col w-1/2 relative">
+                    <PageContent pageLayout={element.left}></PageContent>
+                  </div>
+                  <div className="flex flex-col w-1/2 relative">
+                    <PageContent pageLayout={element.right}></PageContent>
+                  </div>
+                </div>
+              );
+              
           }
         })}
     </div>
