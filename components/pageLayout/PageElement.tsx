@@ -43,9 +43,9 @@ interface MiscElement {
   content: React.ReactNode;
 }
 interface VerticalSplit {
-  type: "VerticalSplit",
-  left: PageElement[],
-  right: PageElement[]
+  type: "VerticalSplit";
+  left: PageElement[];
+  right: PageElement[];
 }
 interface Image {
   type: "Image";

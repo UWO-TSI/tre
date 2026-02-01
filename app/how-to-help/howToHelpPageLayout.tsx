@@ -390,85 +390,81 @@ export const PJDayPage: PageElement[] = [
   {
     type: "VerticalSplit",
     left: [
-          {
-            type: "Header",
-            content: <>PJ Day for Childcan.</>,
-          },
-          {
-            type: "Subheader",
-            content: (
-              <>
-                Did you know, kids fighting cancer wear their PJs every day?
-              </>
-            ),
-          },
-          {
-            type: "TertiaryHeader",
-            content: <>Show you support them on PJ Day! Rock your PJs!</>,
-          },
-          {
-            type: "Paragraph",
-            content: (
-              <>
-                Children fighting cancer spend a lot of time in their
-                pajamas. Show your support by wearing your PJs on February
-                15, International Childhood Cancer Awareness Day.
-              </>
-            ),
-          },
-          {
-            type: "Paragraph",
-            content: (
-              <>
-                As February 15, 2026, falls on a Sunday, encourage your
-                school or business to show kids affected by cancer some love
-                on February 13, or any day in February.
-              </>
-            ),
-          },
-          {
-            type: "Button",
-            href: "https://childcan.com/s/PJ-Day-Poster-g922.pdf",
-            text: "Download a Poster",
-          },
-          {
-            type: "Paragraph",
-            content: (
-              <>
-                Donate to participate and help kids and their families
-                affected by childhood cancer.
-              </>
-            ),
-          },
-          {
-            type: "Paragraph",
-            content: (
-              <>
-                Your involvement in PJ Day for Childcan will not only help
-                to fund our direct-to-family assistance programs, it will
-                also show these children and families that our community
-                stands with them. Choose any day in February that works for
-                your organization and let us know that you’re participating
-                by completing this form:
-              </>
-            ),
-          },
-        ],
+      {
+        type: "Header",
+        content: <>PJ Day for Childcan.</>,
+      },
+      {
+        type: "Subheader",
+        content: (
+          <>Did you know, kids fighting cancer wear their PJs every day?</>
+        ),
+      },
+      {
+        type: "TertiaryHeader",
+        content: <>Show you support them on PJ Day! Rock your PJs!</>,
+      },
+      {
+        type: "Paragraph",
+        content: (
+          <>
+            Children fighting cancer spend a lot of time in their pajamas. Show
+            your support by wearing your PJs on February 15, International
+            Childhood Cancer Awareness Day.
+          </>
+        ),
+      },
+      {
+        type: "Paragraph",
+        content: (
+          <>
+            As February 15, 2026, falls on a Sunday, encourage your school or
+            business to show kids affected by cancer some love on February 13,
+            or any day in February.
+          </>
+        ),
+      },
+      {
+        type: "Button",
+        href: "https://childcan.com/s/PJ-Day-Poster-g922.pdf",
+        text: "Download a Poster",
+      },
+      {
+        type: "Paragraph",
+        content: (
+          <>
+            Donate to participate and help kids and their families affected by
+            childhood cancer.
+          </>
+        ),
+      },
+      {
+        type: "Paragraph",
+        content: (
+          <>
+            Your involvement in PJ Day for Childcan will not only help to fund
+            our direct-to-family assistance programs, it will also show these
+            children and families that our community stands with them. Choose
+            any day in February that works for your organization and let us know
+            that you’re participating by completing this form:
+          </>
+        ),
+      },
+    ],
     right: [
-          {
-            type: "Image",
-            src: "/images/PJDaySideBanner.webp",
-            alt: "PJ Day kid",
-            className: "h-150",
-          },
-          {
-            type: "Image",
-            src: "/images/PJDayButton.webp",
-            alt: "PJ Day Button",
-            className: "aspect-square",
-          },
-        ]
-
+      {
+        type: "Image",
+        src: "/images/PJDaySideBanner.webp",
+        alt: "PJ Day kid",
+        className: "h-150",
+      },
+      {
+        type: "Image",
+        src: "/images/PJDayButton.webp",
+        alt: "PJ Day Button",
+        className: "aspect-square",
+      },
+    ],
   },
   {
     type: "MiscElement",

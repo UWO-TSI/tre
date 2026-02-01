@@ -151,7 +151,6 @@ export default function PageContent(props: PageContentProps) {
                   </div>
                 </div>
               );
-              
           }
         })}
     </div>
