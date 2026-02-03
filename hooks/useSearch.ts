@@ -20,6 +20,38 @@ function useSearch() {
   const masterList = useRef<SearchResult[]>(null);
 
   const searchRef = useRef<Index>(null);
+  const searchPage = (
+    page: string,
+    section: string,
+    list: PageElement[],
+  ): SearchResult[] => {
+    let header_list: SearchResult[] = [];
+    list.forEach((ele, index) => {
+      switch (ele.type) {
+        case "Header":
+        case "Subheader":
+        case "TertiaryHeader": {
+          header_list.push({
+            route: "/" + page + "?page=" + section + "#" + ele.type + index,
+            element: ele,
+            layout: list,
+          });
+          break;
+        }
+        case "VerticalSplit": {
+          const right = searchPage(page, section, ele.right);
+          const left = searchPage(page, section, ele.left);
+
+          header_list = header_list.concat(right);
+          header_list = header_list.concat(left);
+
+          break;
+        }
+      }
+    });
+    return header_list;
+  };
+
   const extractText = (node: React.ReactNode): string => {
     let result = "";
 
@@ -42,27 +74,17 @@ function useSearch() {
     });
 
     // add everything to an indexable master list
-    const header_list: SearchResult[] = [];
+    let header_list: SearchResult[] = [];
     Object.entries(searchObjects).forEach(
       ([page, pageLayout]: [string, Record<string, PageElement[]>]) => {
         const list = Object.entries(pageLayout);
-        list.forEach(([route, element]) => {
-          element.forEach((ele, index) => {
-            if (
-              ele.type == "Header" ||
-              ele.type == "Subheader" ||
-              ele.type == "TertiaryHeader"
-            ) {
-              header_list.push({
-                route: "/" + page + "?page=" + route + "#" + ele.type + index,
-                element: ele,
-                layout: element,
-              });
-            }
-          });
+        list.forEach(([route, ele_list]) => {
+          const found_headers = searchPage(page, route, ele_list);
+          header_list = header_list.concat(found_headers);
         });
       },
     );
+    console.log(header_list.length);
 
     // add the master list to index
     header_list.forEach((result, index) => {
@@ -95,6 +117,8 @@ function useSearch() {
         .filter((ele) => {
           return ele != undefined;
         });
+    } else {
+      console.log("searchRef.current is undefined");
     }
     return [];
   };
