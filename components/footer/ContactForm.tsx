@@ -3,7 +3,6 @@
 export default function ContactForm() {
   return (
     <div className="flex flex-col gap-3 w-[412.5px]">
-
       {/* <!-- Begin Constant Contact Active Forms --> */}
       <script> var _ctct_m = "81c2c1f7429278ac820f725c7f44d52a"; </script>
       <script
