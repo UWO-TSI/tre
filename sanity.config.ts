@@ -16,8 +16,8 @@ import { structure } from "./sanity/structure";
 export default defineConfig({
   basePath: "/sanity",
 
-  name: 'default',
-  title: 'Childcan CMS',
+  name: "default",
+  title: "Childcan CMS",
   projectId: projectId,
   dataset: dataset,
   // Add and edit the content schema in the './sanity/schemaTypes' folder
