@@ -1,4 +1,4 @@
-import { defineType, defineField } from 'sanity'
+import { defineType, defineField } from 'sanity';
 
 export const guide = defineType({
   name: 'guide',
@@ -30,4 +30,4 @@ export const guide = defineType({
       of: [{ type: 'block' }]
     })
   ]
-})
+});

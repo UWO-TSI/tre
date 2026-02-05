@@ -1,4 +1,4 @@
-import { structureTool } from 'sanity/structure'
+import { structureTool } from 'sanity/structure';
 
 export const deskStructure = structureTool({
   structure: (S) =>
@@ -8,4 +8,4 @@ export const deskStructure = structureTool({
         S.documentTypeListItem('event').title('Manage Events'),
         S.documentTypeListItem('guide').title('Help & Guides')
       ])
-})
+});

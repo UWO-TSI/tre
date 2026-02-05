@@ -1,4 +1,4 @@
-import type {StructureResolver} from 'sanity/structure'
+import type {StructureResolver} from 'sanity/structure';
 
 // https://www.sanity.io/docs/structure-builder-cheat-sheet
 export const structure: StructureResolver = (S) =>
@@ -7,4 +7,4 @@ export const structure: StructureResolver = (S) =>
     .items([
       S.documentTypeListItem('event').title('Manage Events'),
       S.documentTypeListItem('guide').title('Help & Guides'),
-    ])
+    ]);

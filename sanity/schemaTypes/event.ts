@@ -1,4 +1,4 @@
-import { defineType, defineField } from 'sanity'
+import { defineType, defineField } from 'sanity';
 
 export const event = defineType({
   name: 'event',
@@ -33,4 +33,4 @@ export const event = defineType({
       initialValue: false
     })
   ]
-})
+});
