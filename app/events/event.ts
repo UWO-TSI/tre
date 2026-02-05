@@ -46,9 +46,10 @@ export const eventList: Record<string, Event> = {
     ],
     previewImage: {
       imageUrl: "/images/child.webp",
-      alt: ""
+      alt: "",
     },
-    shortSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non sem in ipsum dignissim cursus. Cras vel odio vestibulum, vehicula libero at, pulvinar"
+    shortSummary:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non sem in ipsum dignissim cursus. Cras vel odio vestibulum, vehicula libero at, pulvinar",
   },
   "pj-day-2026": {
     source: "some childcan link",
@@ -67,9 +68,10 @@ export const eventList: Record<string, Event> = {
     images: [],
     previewImage: {
       imageUrl: "/images/PJDay.webp",
-      alt: ""
+      alt: "",
     },
-    shortSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non sem in ipsum dignissim cursus. Cras vel odio vestibulum, vehicula libero at, pulvinar"
+    shortSummary:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non sem in ipsum dignissim cursus. Cras vel odio vestibulum, vehicula libero at, pulvinar",
   },
   "dip-2026-thomas": {
     source: "some childcan link",
@@ -88,9 +90,10 @@ export const eventList: Record<string, Event> = {
     images: [],
     previewImage: {
       imageUrl: "/images/PJDay.webp",
-      alt: ""
+      alt: "",
     },
-    shortSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non sem in ipsum dignissim cursus. Cras vel odio vestibulum, vehicula libero at, pulvinar"
+    shortSummary:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non sem in ipsum dignissim cursus. Cras vel odio vestibulum, vehicula libero at, pulvinar",
   },
   "dip-2026-kingsville": {
     source: "some childcan link",
@@ -111,8 +114,9 @@ export const eventList: Record<string, Event> = {
     images: [],
     previewImage: {
       imageUrl: "/images/PJDay.webp",
-      alt: ""
+      alt: "",
     },
-    shortSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non sem in ipsum dignissim cursus. Cras vel odio vestibulum, vehicula libero at, pulvinar"
+    shortSummary:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non sem in ipsum dignissim cursus. Cras vel odio vestibulum, vehicula libero at, pulvinar",
   },
 };
