@@ -4,7 +4,5 @@ import { event } from './event'
 import { guide } from './guide'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [],
+  types: [event, guide],
 }
-
-export const schemaTypes = [event, guide]
