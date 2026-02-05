@@ -56,8 +56,12 @@ export default function SearchResultsMenu(props: {
           })
       ) : (
         <div className="flex flex-col p-4">
-          <div className="text-secondary-grey text-body">No matching search results...</div>
-          <div className="text-footer-grey text-body-small">Try adjusting your query to find what you're looking for.</div>
+          <div className="text-secondary-grey text-body">
+            No matching search results...
+          </div>
+          <div className="text-footer-grey text-body-small">
+            Try adjusting your query to find what you're looking for.
+          </div>
         </div>
       )}
     </div>
