@@ -15,7 +15,8 @@ export default function ContactForm() {
     // Load the Constant Contact script
     const script = document.createElement("script");
     script.id = "signupScript";
-    script.src = "//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js";
+    script.src =
+      "//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js";
     script.async = true;
     script.defer = true;
     document.body.appendChild(script);

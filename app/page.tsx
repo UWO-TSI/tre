@@ -13,7 +13,9 @@ export default function Home() {
       <SearchBar />
       <ImageCarousel></ImageCarousel>
       {/* The quick links title section */}
-      <h1 className="text-h1 text-center p-10 bg-white hidden md:block">Quick Links</h1>
+      <h1 className="text-h1 text-center p-10 bg-white hidden md:block">
+        Quick Links
+      </h1>
 
       {/* The menu section */}
       <div className="grid grid-cols-1 md:grid-rows-2 md:grid-cols-3 xl:grid-cols-5 xl:grid-rows-1 bg-white">

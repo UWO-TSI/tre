@@ -21,7 +21,11 @@ export default function SectionBox(props: SectionBoxProps) {
         </p>
       </div>
 
-      <img src={props.imgSrc} alt={props.altText} className="w-full md:w-1/3 border-2 object-cover max-w-full" />
+      <img
+        src={props.imgSrc}
+        alt={props.altText}
+        className="w-full md:w-1/3 border-2 object-cover max-w-full"
+      />
     </div>
   );
 }

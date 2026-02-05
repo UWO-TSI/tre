@@ -8,7 +8,9 @@ function Header() {
   const [isSticky, setIsSticky] = useState<boolean>(false);
   const [wasSticky, setWasSticky] = useState<boolean>(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
-  const [expandedSections, setExpandedSections] = useState<{[key: string]: boolean}>({});
+  const [expandedSections, setExpandedSections] = useState<{
+    [key: string]: boolean;
+  }>({});
 
   useEffect(() => {
     // let scrollDebounce: NodeJS.Timeout | undefined; // debounce timer
@@ -42,16 +44,16 @@ function Header() {
   // Add class to body when mobile menu is open for slide effect
   useEffect(() => {
     if (isMobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
-      document.body.classList.add('mobile-menu-open');
+      document.body.style.overflow = "hidden";
+      document.body.classList.add("mobile-menu-open");
     } else {
-      document.body.style.overflow = '';
-      document.body.classList.remove('mobile-menu-open');
+      document.body.style.overflow = "";
+      document.body.classList.remove("mobile-menu-open");
     }
 
     return () => {
-      document.body.style.overflow = '';
-      document.body.classList.remove('mobile-menu-open');
+      document.body.style.overflow = "";
+      document.body.classList.remove("mobile-menu-open");
     };
   }, [isMobileMenuOpen]);
 
@@ -118,7 +120,10 @@ function Header() {
                 { link: "about-us?page=Our Families", label: "Our Families" },
                 { link: "about-us?page=Our News", label: "Our News" },
                 { link: "about-us?page=Our Team", label: "Our Team" },
-                { link: "about-us?page=Report of hope", label: "Report of Hope" },
+                {
+                  link: "about-us?page=Report of hope",
+                  label: "Report of Hope",
+                },
                 { link: "about-us?page=Careers", label: "Careers" },
               ]}
             ></HeaderLink>
@@ -127,7 +132,10 @@ function Header() {
               link="/for-families"
               title="For Families"
               items={[
-                { link: "for-families?page=Here for You", label: "Here for You" },
+                {
+                  link: "for-families?page=Here for You",
+                  label: "Here for You",
+                },
                 {
                   link: "for-families?page=Financial Support",
                   label: "Financial Support",
@@ -158,7 +166,10 @@ function Header() {
               title="How to Help"
               link="how-to-help"
               items={[
-                { link: "/how-to-help?page=Ways to Give", label: "Ways to Give" },
+                {
+                  link: "/how-to-help?page=Ways to Give",
+                  label: "Ways to Give",
+                },
                 { link: "/how-to-help?page=PJ Day", label: "PJ Day" },
                 { link: "/how-to-help?page=Gold", label: "Gold" },
                 {
@@ -184,16 +195,19 @@ function Header() {
       </div>
 
       {/* Mobile menu drawer */}
-      <div
-        className="absolute top-0 right-0 h-screen w-4/5 max-w-sm bg-white shadow-2xl z-50 md:hidden translate-x-full"
-      >
+      <div className="absolute top-0 right-0 h-screen w-4/5 max-w-sm bg-white shadow-2xl z-50 md:hidden translate-x-full">
         <div className="flex flex-col h-full overflow-y-auto items-center pt-20">
           {/* Mobile navigation links */}
           <nav className="flex flex-col w-full px-12 pb-6 space-y-1 items-center">
             {/* About - expandable */}
             <div className="w-full">
               <button
-                onClick={() => setExpandedSections({...expandedSections, about: !expandedSections.about})}
+                onClick={() =>
+                  setExpandedSections({
+                    ...expandedSections,
+                    about: !expandedSections.about,
+                  })
+                }
                 className="flex items-center justify-start w-full text-left text-h3 text-header-purple py-3 font-normal"
               >
                 <span className="mr-2 text-base">+</span>
@@ -201,12 +215,48 @@ function Header() {
               </button>
               {expandedSections.about && (
                 <div className="pl-8 space-y-1 pb-2">
-                  <a href="/about-us?page=About Us" className="block text-body text-secondary-grey py-2" onClick={() => setIsMobileMenuOpen(false)}>About Us</a>
-                  <a href="/about-us?page=Our Families" className="block text-body text-secondary-grey py-2" onClick={() => setIsMobileMenuOpen(false)}>Our Families</a>
-                  <a href="/about-us?page=Our News" className="block text-body text-secondary-grey py-2" onClick={() => setIsMobileMenuOpen(false)}>Our News</a>
-                  <a href="/about-us?page=Our Team" className="block text-body text-secondary-grey py-2" onClick={() => setIsMobileMenuOpen(false)}>Our Team</a>
-                  <a href="/about-us?page=Report of hope" className="block text-body text-secondary-grey py-2" onClick={() => setIsMobileMenuOpen(false)}>Report of Hope</a>
-                  <a href="/about-us?page=Careers" className="block text-body text-secondary-grey py-2" onClick={() => setIsMobileMenuOpen(false)}>Careers</a>
+                  <a
+                    href="/about-us?page=About Us"
+                    className="block text-body text-secondary-grey py-2"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    About Us
+                  </a>
+                  <a
+                    href="/about-us?page=Our Families"
+                    className="block text-body text-secondary-grey py-2"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Our Families
+                  </a>
+                  <a
+                    href="/about-us?page=Our News"
+                    className="block text-body text-secondary-grey py-2"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Our News
+                  </a>
+                  <a
+                    href="/about-us?page=Our Team"
+                    className="block text-body text-secondary-grey py-2"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Our Team
+                  </a>
+                  <a
+                    href="/about-us?page=Report of hope"
+                    className="block text-body text-secondary-grey py-2"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Report of Hope
+                  </a>
+                  <a
+                    href="/about-us?page=Careers"
+                    className="block text-body text-secondary-grey py-2"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Careers
+                  </a>
                 </div>
               )}
             </div>
@@ -223,7 +273,12 @@ function Header() {
             {/* For Families - expandable */}
             <div className="w-full">
               <button
-                onClick={() => setExpandedSections({...expandedSections, families: !expandedSections.families})}
+                onClick={() =>
+                  setExpandedSections({
+                    ...expandedSections,
+                    families: !expandedSections.families,
+                  })
+                }
                 className="flex items-center justify-start w-full text-left text-h3 text-header-purple py-3 font-normal"
               >
                 <span className="mr-2 text-base">+</span>
@@ -231,13 +286,55 @@ function Header() {
               </button>
               {expandedSections.families && (
                 <div className="pl-8 space-y-1 pb-2">
-                  <a href="/for-families?page=Here for You" className="block text-body text-secondary-grey py-2" onClick={() => setIsMobileMenuOpen(false)}>Here for You</a>
-                  <a href="/for-families?page=Financial Support" className="block text-body text-secondary-grey py-2" onClick={() => setIsMobileMenuOpen(false)}>Financial Support</a>
-                  <a href="/for-families?page=Emotional Support" className="block text-body text-secondary-grey py-2" onClick={() => setIsMobileMenuOpen(false)}>Emotional Support</a>
-                  <a href="/for-families?page=Social Support" className="block text-body text-secondary-grey py-2" onClick={() => setIsMobileMenuOpen(false)}>Social Support</a>
-                  <a href="/for-families?page=Research Support" className="block text-body text-secondary-grey py-2" onClick={() => setIsMobileMenuOpen(false)}>Research Support</a>
-                  <a href="/for-families?page=Upcoming Family Events" className="block text-body text-secondary-grey py-2" onClick={() => setIsMobileMenuOpen(false)}>Upcoming Family Events</a>
-                  <a href={`/for-families?page=${encodeURIComponent("Q&A")}`} className="block text-body text-secondary-grey py-2" onClick={() => setIsMobileMenuOpen(false)}>Q&A</a>
+                  <a
+                    href="/for-families?page=Here for You"
+                    className="block text-body text-secondary-grey py-2"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Here for You
+                  </a>
+                  <a
+                    href="/for-families?page=Financial Support"
+                    className="block text-body text-secondary-grey py-2"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Financial Support
+                  </a>
+                  <a
+                    href="/for-families?page=Emotional Support"
+                    className="block text-body text-secondary-grey py-2"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Emotional Support
+                  </a>
+                  <a
+                    href="/for-families?page=Social Support"
+                    className="block text-body text-secondary-grey py-2"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Social Support
+                  </a>
+                  <a
+                    href="/for-families?page=Research Support"
+                    className="block text-body text-secondary-grey py-2"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Research Support
+                  </a>
+                  <a
+                    href="/for-families?page=Upcoming Family Events"
+                    className="block text-body text-secondary-grey py-2"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Upcoming Family Events
+                  </a>
+                  <a
+                    href={`/for-families?page=${encodeURIComponent("Q&A")}`}
+                    className="block text-body text-secondary-grey py-2"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Q&A
+                  </a>
                 </div>
               )}
             </div>
@@ -245,7 +342,12 @@ function Header() {
             {/* How to Help - expandable */}
             <div className="w-full">
               <button
-                onClick={() => setExpandedSections({...expandedSections, help: !expandedSections.help})}
+                onClick={() =>
+                  setExpandedSections({
+                    ...expandedSections,
+                    help: !expandedSections.help,
+                  })
+                }
                 className="flex items-center justify-start w-full text-left text-h3 text-header-purple py-3 font-normal"
               >
                 <span className="mr-2 text-base">+</span>
@@ -253,23 +355,95 @@ function Header() {
               </button>
               {expandedSections.help && (
                 <div className="pl-8 space-y-1 pb-2">
-                  <a href="/how-to-help?page=Ways to Give" className="block text-body text-secondary-grey py-2" onClick={() => setIsMobileMenuOpen(false)}>Ways to Give</a>
-                  <a href="/how-to-help?page=PJ Day" className="block text-body text-secondary-grey py-2" onClick={() => setIsMobileMenuOpen(false)}>PJ Day</a>
-                  <a href="/how-to-help?page=Gold" className="block text-body text-secondary-grey py-2" onClick={() => setIsMobileMenuOpen(false)}>Gold</a>
-                  <a href="/how-to-help?page=Host an Event" className="block text-body text-secondary-grey py-2" onClick={() => setIsMobileMenuOpen(false)}>Host an Event</a>
-                  <a href="/how-to-help?page=Marketplace" className="block text-body text-secondary-grey py-2" onClick={() => setIsMobileMenuOpen(false)}>Marketplace</a>
-                  <a href="/how-to-help?page=Merchandise" className="block text-body text-secondary-grey py-2" onClick={() => setIsMobileMenuOpen(false)}>Merchandise</a>
-                  <a href="/how-to-help?page=Volunteer" className="block text-body text-secondary-grey py-2" onClick={() => setIsMobileMenuOpen(false)}>Volunteer</a>
-                  <a href="/how-to-help?page=Our Supporters" className="block text-body text-secondary-grey py-2" onClick={() => setIsMobileMenuOpen(false)}>Our Supporters</a>
+                  <a
+                    href="/how-to-help?page=Ways to Give"
+                    className="block text-body text-secondary-grey py-2"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Ways to Give
+                  </a>
+                  <a
+                    href="/how-to-help?page=PJ Day"
+                    className="block text-body text-secondary-grey py-2"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    PJ Day
+                  </a>
+                  <a
+                    href="/how-to-help?page=Gold"
+                    className="block text-body text-secondary-grey py-2"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Gold
+                  </a>
+                  <a
+                    href="/how-to-help?page=Host an Event"
+                    className="block text-body text-secondary-grey py-2"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Host an Event
+                  </a>
+                  <a
+                    href="/how-to-help?page=Marketplace"
+                    className="block text-body text-secondary-grey py-2"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Marketplace
+                  </a>
+                  <a
+                    href="/how-to-help?page=Merchandise"
+                    className="block text-body text-secondary-grey py-2"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Merchandise
+                  </a>
+                  <a
+                    href="/how-to-help?page=Volunteer"
+                    className="block text-body text-secondary-grey py-2"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Volunteer
+                  </a>
+                  <a
+                    href="/how-to-help?page=Our Supporters"
+                    className="block text-body text-secondary-grey py-2"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Our Supporters
+                  </a>
                 </div>
               )}
             </div>
 
             {/* Simple links */}
-            <a href="/events" className="block w-full text-h3 text-header-purple py-3 font-normal" onClick={() => setIsMobileMenuOpen(false)}>Events</a>
-            <a href="/dip" className="block w-full text-h3 text-header-purple py-3 font-normal" onClick={() => setIsMobileMenuOpen(false)}>Dip</a>
-            <a href="/hands-of-hope" className="block w-full text-h3 text-header-purple py-3 font-normal" onClick={() => setIsMobileMenuOpen(false)}>Hands of Hope</a>
-            <a href="/contact" className="block w-full text-h3 text-header-purple py-3 font-normal" onClick={() => setIsMobileMenuOpen(false)}>Contact</a>
+            <a
+              href="/events"
+              className="block w-full text-h3 text-header-purple py-3 font-normal"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Events
+            </a>
+            <a
+              href="/dip"
+              className="block w-full text-h3 text-header-purple py-3 font-normal"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Dip
+            </a>
+            <a
+              href="/hands-of-hope"
+              className="block w-full text-h3 text-header-purple py-3 font-normal"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Hands of Hope
+            </a>
+            <a
+              href="/contact"
+              className="block w-full text-h3 text-header-purple py-3 font-normal"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Contact
+            </a>
 
             {/* Donate button */}
             <div className="pt-10 pb-4 w-full flex justify-center">
