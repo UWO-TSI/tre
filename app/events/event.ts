@@ -11,6 +11,8 @@ export type Event = {
   mainHeroImage: string;
   images: EventImage[];
   source: string;
+  previewImage: EventImage;
+  shortSummary: string;
 };
 
 export type EventImage = {
@@ -42,6 +44,11 @@ export const eventList: Record<string, Event> = {
         alt: "children running",
       },
     ],
+    previewImage: {
+      imageUrl: "/images/child.webp",
+      alt: ""
+    },
+    shortSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non sem in ipsum dignissim cursus. Cras vel odio vestibulum, vehicula libero at, pulvinar"
   },
   "pj-day-2026": {
     source: "some childcan link",
@@ -58,6 +65,11 @@ export const eventList: Record<string, Event> = {
     buttonTitle: "Learn more about PJ Day and see the toolkit",
     buttonLink: "https://childcan.com/pj-day",
     images: [],
+    previewImage: {
+      imageUrl: "/images/PJDay.webp",
+      alt: ""
+    },
+    shortSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non sem in ipsum dignissim cursus. Cras vel odio vestibulum, vehicula libero at, pulvinar"
   },
   "dip-2026-thomas": {
     source: "some childcan link",
@@ -74,6 +86,11 @@ export const eventList: Record<string, Event> = {
     buttonTitle: "Register now!",
     buttonLink: "https://childcan.akaraisin.com/ui/ChildcanPolarBearDip2026",
     images: [],
+    previewImage: {
+      imageUrl: "/images/PJDay.webp",
+      alt: ""
+    },
+    shortSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non sem in ipsum dignissim cursus. Cras vel odio vestibulum, vehicula libero at, pulvinar"
   },
   "dip-2026-kingsville": {
     source: "some childcan link",
@@ -92,5 +109,10 @@ export const eventList: Record<string, Event> = {
     buttonTitle: "Registration opens January 23, 2026",
     buttonLink: "",
     images: [],
+    previewImage: {
+      imageUrl: "/images/PJDay.webp",
+      alt: ""
+    },
+    shortSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non sem in ipsum dignissim cursus. Cras vel odio vestibulum, vehicula libero at, pulvinar"
   },
 };

@@ -127,10 +127,10 @@ function Header() {
               },
             ]}
           ></HeaderLink>
-          <HeaderLink link="" title="Events"></HeaderLink>
+          <HeaderLink link="/events" title="Events"></HeaderLink>
           <HeaderLink link="" title="Star"></HeaderLink>
           <HeaderLink link="" title="Hands of Hope"></HeaderLink>
-          <HeaderLink link="\contact" title="Contact"></HeaderLink>
+          <HeaderLink link="/contact" title="Contact"></HeaderLink>
           <YellowAccentButton>Donate</YellowAccentButton>
         </nav>
       </div>
