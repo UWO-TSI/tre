@@ -1,6 +1,6 @@
 import { PageElement } from "@/components/pageLayout/PageElement";
-import PageContent from "@/components/pageLayout/PageContent";
-import VolunteerNewsForm from "@/components/pageLayout/VolunteerNewsForm";
+import VolunteerNewsForm from "./VolunteerNewsForm";
+import SponsorsCollage from "./SponsorsCollage";
 
 export const waysToGivePage: PageElement[] = [
   {
@@ -386,6 +386,7 @@ export const waysToGivePage: PageElement[] = [
   },
 ];
 
+
 export const PJDayPage: PageElement[] = [
   {
     type: "VerticalSplit",
@@ -467,33 +468,21 @@ export const PJDayPage: PageElement[] = [
     ],
   },
   {
-    type: "MiscElement",
-    content: (
-      <div className="flex gap-8">
-        <div className="flex flex-col w-1/2 gap-4">
-          <PageContent
-            pageLayout={[
-              {
-                type: "Button",
-                href: "https://forms.office.com/r/q6yrrxUhDt",
-                text: "Let us know you're participating in PJ Day",
-              },
-            ]}
-          ></PageContent>
-        </div>
-        <div className="flex flex-col w-1/2 gap-4">
-          <PageContent
-            pageLayout={[
-              {
-                type: "Button",
-                href: "https://brandedbycollins.com/childcan/shop/home",
-                text: "Buy a T-Shirt or Hoodie for PJ Day 2026",
-              },
-            ]}
-          ></PageContent>
-        </div>
-      </div>
-    ),
+    type: "VerticalSplit",
+    left: [
+        {
+          type: "Button",
+          href: "https://forms.office.com/r/q6yrrxUhDt",
+          text: "Let us know you're participating in PJ Day",
+        },
+    ],
+    right: [
+      {
+        type: "Button",
+        href: "https://brandedbycollins.com/childcan/shop/home",
+        text: "Buy a T-Shirt or Hoodie for PJ Day 2026",
+      },
+    ]
   },
   {
     type: "Paragraph",
@@ -509,33 +498,21 @@ export const PJDayPage: PageElement[] = [
     ),
   },
   {
-    type: "MiscElement",
-    content: (
-      <div className="flex gap-8">
-        <div className="flex flex-col w-1/2 gap-4">
-          <PageContent
-            pageLayout={[
-              {
-                type: "Button",
-                href: "https://childcan.com/s/2026-PJ-Day-Request-Letter.docx",
-                text: "Download a PJ Day Letter",
-              },
-            ]}
-          ></PageContent>
-        </div>
-        <div className="flex flex-col w-1/2 gap-4">
-          <PageContent
-            pageLayout={[
-              {
-                type: "Button",
-                href: "",
-                text: "Contact Us",
-              },
-            ]}
-          ></PageContent>
-        </div>
-      </div>
-    ),
+    type: "VerticalSplit",
+    left: [
+      {
+        type: "Button",
+        href: "https://childcan.com/s/2026-PJ-Day-Request-Letter.docx",
+        text: "Download a PJ Day Letter",
+      },
+    ],
+    right: [
+      {
+        type: "Button",
+        href: "",
+        text: "Contact Us",
+      },
+    ]
   },
   {
     type: "Paragraph",
@@ -557,63 +534,50 @@ export const PJDayPage: PageElement[] = [
     content: <strong>Thank you!</strong>,
   },
   {
-    type: "MiscElement",
-    content: (
-      <div className="flex gap-8">
-        <div className="flex flex-col w-1/2 gap-4">
-          {
-            <PageContent
-              pageLayout={[
-                {
-                  type: "Paragraph",
-                  content: (
-                    <>
-                      We are also grateful to Giant 101.3 and Country 107.3 from
-                      My Broadcasting Corporation for their support of
-                      Childcan’s Pajama Day!
-                    </>
-                  ),
-                },
-                {
-                  type: "Paragraph",
-                  content: (
-                    <>
-                      Listen out for their radio ads starting in January 2026
-                      and look out for photos of the announcers wearing their
-                      PJs in support!
-                    </>
-                  ),
-                },
-                {
-                  type: "Paragraph",
-                  content: <>Here’s last year’s radio announcement:</>,
-                },
-                {
-                  type: "FBEmbed",
-                  url: "https://www.facebook.com/Childcan/videos/1960829787731365/?t=0",
-                  width: 200,
-                },
-              ]}
-            ></PageContent>
-          }
-        </div>
-        <div className="flex flex-col w-1/2 relative">
-          <PageContent
-            pageLayout={[
-              {
-                type: "Image",
-                src: "/images/MBCLogos.webp",
-                alt: "MBC Logos",
-                className: "h-80 aspect-square",
-                href: "https://www.mybroadcastingcorp.com/",
-              },
-            ]}
-          ></PageContent>
-        </div>
-      </div>
-    ),
+    type: "VerticalSplit",
+    left: [
+      {
+        type: "Paragraph",
+        content: (
+          <>
+            We are also grateful to Giant 101.3 and Country 107.3 from
+            My Broadcasting Corporation for their support of
+            Childcan’s Pajama Day!
+          </>
+        ),
+      },
+      {
+        type: "Paragraph",
+        content: (
+          <>
+            Listen out for their radio ads starting in January 2026
+            and look out for photos of the announcers wearing their
+            PJs in support!
+          </>
+        ),
+      },
+      {
+        type: "Paragraph",
+        content: <>Here’s last year’s radio announcement:</>,
+      },
+      {
+        type: "FBEmbed",
+        url: "https://www.facebook.com/Childcan/videos/1960829787731365/?t=0",
+        width: 200,
+      },
+    ],
+    right: [
+      {
+        type: "Image",
+        src: "/images/MBCLogos.webp",
+        alt: "MBC Logos",
+        className: "h-80 aspect-square",
+        href: "https://www.mybroadcastingcorp.com/",
+      },
+    ]
   },
 ];
+
 
 export const goldPage: PageElement[] = [
   {
@@ -858,6 +822,8 @@ export const goldPage: PageElement[] = [
     ),
   },
 ];
+
+
 export const hostAnEventPage: PageElement[] = [
   {
     type: "Header",
@@ -935,33 +901,21 @@ export const hostAnEventPage: PageElement[] = [
     ),
   },
   {
-    type: "MiscElement",
-    content: (
-      <div className="flex">
-        <div className="w-1/2">
-          <PageContent
-            pageLayout={[
-              {
-                type: "Button",
-                href: "https://forms.gle/7fJsziDi4unHBzuz7",
-                text: "Fundraising Event Form (online)",
-              },
-            ]}
-          ></PageContent>
-        </div>
-        <div className="w-1/2">
-          <PageContent
-            pageLayout={[
-              {
-                type: "Button",
-                href: "https://childcan.com/s/Community-Event-fundraiser-for-Childcan-Form.pdf",
-                text: "Fundraising Event Form (pdf)",
-              },
-            ]}
-          ></PageContent>
-        </div>
-      </div>
-    ),
+    type: "VerticalSplit",
+    left: [
+      {
+        type: "Button",
+        href: "https://forms.gle/7fJsziDi4unHBzuz7",
+        text: "Fundraising Event Form (online)",
+      },
+    ],
+    right: [
+      {
+        type: "Button",
+        href: "https://childcan.com/s/Community-Event-fundraiser-for-Childcan-Form.pdf",
+        text: "Fundraising Event Form (pdf)",
+      },
+    ]
   },
   {
     type: "Paragraph",
@@ -973,6 +927,7 @@ export const hostAnEventPage: PageElement[] = [
     ),
   },
 ];
+
 
 export const volunteerPage: PageElement[] = [
   {
@@ -1007,33 +962,21 @@ export const volunteerPage: PageElement[] = [
     content: <>To volunteer:</>,
   },
   {
-    type: "MiscElement",
-    content: (
-      <div className="flex">
-        <div className="w-1/2">
-          <PageContent
-            pageLayout={[
-              {
-                type: "Button",
-                href: "https://forms.gle/bmLaZ7YBfjdip3FT8",
-                text: "Complete the online form",
-              },
-            ]}
-          ></PageContent>
-        </div>
-        <div className="w-1/2">
-          <PageContent
-            pageLayout={[
-              {
-                type: "Button",
-                href: "https://childcan.com/s/Childcan-Volunteer-Application-Form-2024.pdf",
-                text: "Download the PDF From",
-              },
-            ]}
-          ></PageContent>
-        </div>
-      </div>
-    ),
+    type: "VerticalSplit",
+    left: [
+      {
+        type: "Button",
+        href: "https://forms.gle/bmLaZ7YBfjdip3FT8",
+        text: "Complete the online form",
+      },
+    ],
+    right: [
+      {
+        type: "Button",
+        href: "https://childcan.com/s/Childcan-Volunteer-Application-Form-2024.pdf",
+        text: "Download the PDF From",
+      },
+    ]
   },
   {
     type: "Paragraph",
@@ -1055,33 +998,21 @@ export const volunteerPage: PageElement[] = [
     items: ["London"],
   },
   {
-    type: "MiscElement",
-    content: (
-      <div className="flex">
-        <div className="w-1/2">
-          <PageContent
-            pageLayout={[
-              {
-                type: "Button",
-                href: "https://forms.gle/FfD5W64mT9J5RH3t7",
-                text: "Complete the VTP Online Form",
-              },
-            ]}
-          ></PageContent>
-        </div>
-        <div className="w-1/2">
-          <PageContent
-            pageLayout={[
-              {
-                type: "Button",
-                href: "https://childcan.com/s/Volunteer-Tutoring-Program-Application-Form-6hg4.pdf",
-                text: "Download the VTP PDF Form",
-              },
-            ]}
-          ></PageContent>
-        </div>
-      </div>
-    ),
+    type: "VerticalSplit",
+    left: [
+      {
+        type: "Button",
+        href: "https://forms.gle/FfD5W64mT9J5RH3t7",
+        text: "Complete the VTP Online Form",
+      },
+    ],
+    right: [
+      {
+        type: "Button",
+        href: "https://childcan.com/s/Volunteer-Tutoring-Program-Application-Form-6hg4.pdf",
+        text: "Download the VTP PDF Form",
+      },
+    ]
   },
   {
     type: "Divider",
@@ -1144,6 +1075,8 @@ export const volunteerPage: PageElement[] = [
     ),
   },
 ];
+
+
 export const ourSupportersPage: PageElement[] = [
   {
     type: "Header",
@@ -1183,176 +1116,16 @@ export const ourSupportersPage: PageElement[] = [
   },
   {
     type: "MiscElement",
-    content: (
-      <div className="flex justify-center flex-wrap gap-4">
-        <PageContent
-          pageLayout={[
-            {
-              type: "Image",
-              src: "/images/BrucePower.webp",
-              alt: "Bruce Power",
-              className: "w-50 h-25",
-              href: "https://www.brucepower.com/",
-            },
-          ]}
-        ></PageContent>
-        <PageContent
-          pageLayout={[
-            {
-              type: "Image",
-              src: "/images/CIBC.webp",
-              alt: "CIBC",
-              className: "w-50 aspect-[2/1]",
-              href: "https://www.cibc.com/",
-            },
-          ]}
-        ></PageContent>
-        <PageContent
-          pageLayout={[
-            {
-              type: "Image",
-              src: "/images/GOC.webp",
-              alt: "Government of Canada",
-              className: "w-50 aspect-[2/1]",
-            },
-          ]}
-        ></PageContent>
-        <PageContent
-          pageLayout={[
-            {
-              type: "Image",
-              src: "/images/Catalent.webp",
-              alt: "Catalent Cares",
-              className: "w-50 aspect-[2/1]",
-              href: "https://www.catalent.com/",
-            },
-          ]}
-        ></PageContent>
-        <PageContent
-          pageLayout={[
-            {
-              type: "Image",
-              src: "/images/FactoryShoe.webp",
-              alt: "Factory Shoe",
-              className: "w-50 aspect-[2/1]",
-              href: "https://www.factoryshoe.ca/_store/",
-            },
-          ]}
-        ></PageContent>
-        <PageContent
-          pageLayout={[
-            {
-              type: "Image",
-              src: "/images/Lutheran.webp",
-              alt: "Lutheran Social Services",
-              className: "w-50 aspect-[2/1]",
-              href: "https://lutheransocialserviceslondon.ca/",
-            },
-          ]}
-        ></PageContent>
-        <PageContent
-          pageLayout={[
-            {
-              type: "Image",
-              src: "/images/MMM.webp",
-              alt: "Miracle Max Minions",
-              className: "w-50 aspect-[2/1]",
-              href: "https://www.facebook.com/profile.php?id=100067820967084",
-            },
-          ]}
-        ></PageContent>
-        <PageContent
-          pageLayout={[
-            {
-              type: "Image",
-              src: "/images/PetroCanada.webp",
-              alt: "Petro-Canada CareMakers Foundation",
-              className: "w-50 aspect-[2/1]",
-              href: "https://caremakers.ca/",
-            },
-          ]}
-        ></PageContent>
-        <PageContent
-          pageLayout={[
-            {
-              type: "Image",
-              src: "/images/PreferredInsurance.webp",
-              alt: "Preferred Insurance",
-              className: "w-50 aspect-[2/1]",
-            },
-          ]}
-        ></PageContent>
-        <PageContent
-          pageLayout={[
-            {
-              type: "Image",
-              src: "/images/Solcz.webp",
-              alt: "Solcz Family Foundation",
-              className: "w-50 aspect-[2/1]",
-              href: "https://www.solczfamilyfoundation.com/",
-            },
-          ]}
-        ></PageContent>
-        <PageContent
-          pageLayout={[
-            {
-              type: "Image",
-              src: "/images/MayCourt.webp",
-              alt: "The Flag Court Clubs of Canada",
-              className: "w-50 aspect-[2/1]",
-              href: "http://windsormaycourt.com/",
-            },
-          ]}
-        ></PageContent>
-        <PageContent
-          pageLayout={[
-            {
-              type: "Image",
-              src: "/images/UCDA.webp",
-              alt: "UCDA",
-              className: "w-50 aspect-[2/1]",
-              href: "https://www.ucda.org/",
-            },
-          ]}
-        ></PageContent>
-        <PageContent
-          pageLayout={[
-            {
-              type: "Image",
-              src: "/images/Wawanesa.webp",
-              alt: "Wawanesa Insurance",
-              className: "w-50 aspect-[2/1]",
-              href: "https://www.wawanesa.com/canada/",
-            },
-          ]}
-        ></PageContent>
-        <PageContent
-          pageLayout={[
-            {
-              type: "Image",
-              src: "/images/WestministerCollege.webp",
-              alt: "Westminister College Foundation",
-              className: "w-50 aspect-[2/1]",
-              href: "http://www.wcfoundation.ca/",
-            },
-          ]}
-        ></PageContent>
-      </div>
-    ),
+    content: <SponsorsCollage></SponsorsCollage>
   },
 ];
 
-// external
-export const marketplacePage: PageElement[] = [];
-export const merchandisePage: PageElement[] = [];
 
 export const howToHelpLayout: Record<string, PageElement[]> = {
   "Ways to Give": waysToGivePage,
   "PJ Day": PJDayPage,
   Gold: goldPage,
   "Host an Event": hostAnEventPage,
-  Marketplace: marketplacePage,
-  Merchandise: merchandisePage,
   Volunteer: volunteerPage,
   "Our Supporters": ourSupportersPage,
 };

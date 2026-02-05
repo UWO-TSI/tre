@@ -47,7 +47,7 @@ interface VerticalSplit {
   left: PageElement[];
   right: PageElement[];
 }
-interface Image {
+export interface Image {
   type: "Image";
   src: string;
   alt: string;
