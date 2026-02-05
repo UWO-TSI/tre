@@ -56,7 +56,7 @@ export default function ImageCarousel() {
   }, [currImgIndex]);
 
   return (
-    <div className="relative group">
+    <div className="relative group w-full max-w-full overflow-hidden">
       <button
         className="nav-button left-0 absolute z-20 self-center top-[50%] translate-y-[-50%] p-[10px] cursor-pointer"
         onClick={handlePrevClick}
@@ -90,7 +90,7 @@ export default function ImageCarousel() {
       </button>
 
       {images.map((img, index) => (
-        <div key={index} style={{ height: "110px" }}>
+        <div key={index} className="h-50 md:h-27.5">
           <Image
             key={index}
             alt=""
