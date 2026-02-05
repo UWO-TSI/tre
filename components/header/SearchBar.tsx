@@ -13,7 +13,6 @@ export default function SearchBar() {
   const searchTimeout = useRef<NodeJS.Timeout>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-
   const setResultsVisibility = () => {
     if (query != "") setDropdownVisible(true);
     else setDropdownVisible(false);
@@ -32,7 +31,6 @@ export default function SearchBar() {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
-
 
   // debounce for search results
   useEffect(() => {
@@ -59,7 +57,11 @@ export default function SearchBar() {
           onFocus={() => setResultsVisibility()}
         />
       </div>
-      <SearchResultsMenu dropdownRef={dropdownRef} isDropdownVisible={isDropdownVisible} searchResults={searchResults} />
+      <SearchResultsMenu
+        dropdownRef={dropdownRef}
+        isDropdownVisible={isDropdownVisible}
+        searchResults={searchResults}
+      />
     </div>
   );
 }
