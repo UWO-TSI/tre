@@ -386,7 +386,6 @@ export const waysToGivePage: PageElement[] = [
   },
 ];
 
-
 export const PJDayPage: PageElement[] = [
   {
     type: "VerticalSplit",
@@ -470,11 +469,11 @@ export const PJDayPage: PageElement[] = [
   {
     type: "VerticalSplit",
     left: [
-        {
-          type: "Button",
-          href: "https://forms.office.com/r/q6yrrxUhDt",
-          text: "Let us know you're participating in PJ Day",
-        },
+      {
+        type: "Button",
+        href: "https://forms.office.com/r/q6yrrxUhDt",
+        text: "Let us know you're participating in PJ Day",
+      },
     ],
     right: [
       {
@@ -482,7 +481,7 @@ export const PJDayPage: PageElement[] = [
         href: "https://brandedbycollins.com/childcan/shop/home",
         text: "Buy a T-Shirt or Hoodie for PJ Day 2026",
       },
-    ]
+    ],
   },
   {
     type: "Paragraph",
@@ -512,7 +511,7 @@ export const PJDayPage: PageElement[] = [
         href: "",
         text: "Contact Us",
       },
-    ]
+    ],
   },
   {
     type: "Paragraph",
@@ -540,9 +539,8 @@ export const PJDayPage: PageElement[] = [
         type: "Paragraph",
         content: (
           <>
-            We are also grateful to Giant 101.3 and Country 107.3 from
-            My Broadcasting Corporation for their support of
-            Childcan’s Pajama Day!
+            We are also grateful to Giant 101.3 and Country 107.3 from My
+            Broadcasting Corporation for their support of Childcan’s Pajama Day!
           </>
         ),
       },
@@ -550,9 +548,8 @@ export const PJDayPage: PageElement[] = [
         type: "Paragraph",
         content: (
           <>
-            Listen out for their radio ads starting in January 2026
-            and look out for photos of the announcers wearing their
-            PJs in support!
+            Listen out for their radio ads starting in January 2026 and look out
+            for photos of the announcers wearing their PJs in support!
           </>
         ),
       },
@@ -574,10 +571,9 @@ export const PJDayPage: PageElement[] = [
         className: "h-80 aspect-square",
         href: "https://www.mybroadcastingcorp.com/",
       },
-    ]
+    ],
   },
 ];
-
 
 export const goldPage: PageElement[] = [
   {
@@ -823,7 +819,6 @@ export const goldPage: PageElement[] = [
   },
 ];
 
-
 export const hostAnEventPage: PageElement[] = [
   {
     type: "Header",
@@ -915,7 +910,7 @@ export const hostAnEventPage: PageElement[] = [
         href: "https://childcan.com/s/Community-Event-fundraiser-for-Childcan-Form.pdf",
         text: "Fundraising Event Form (pdf)",
       },
-    ]
+    ],
   },
   {
     type: "Paragraph",
@@ -927,7 +922,6 @@ export const hostAnEventPage: PageElement[] = [
     ),
   },
 ];
-
 
 export const volunteerPage: PageElement[] = [
   {
@@ -976,7 +970,7 @@ export const volunteerPage: PageElement[] = [
         href: "https://childcan.com/s/Childcan-Volunteer-Application-Form-2024.pdf",
         text: "Download the PDF From",
       },
-    ]
+    ],
   },
   {
     type: "Paragraph",
@@ -1012,7 +1006,7 @@ export const volunteerPage: PageElement[] = [
         href: "https://childcan.com/s/Volunteer-Tutoring-Program-Application-Form-6hg4.pdf",
         text: "Download the VTP PDF Form",
       },
-    ]
+    ],
   },
   {
     type: "Divider",
@@ -1076,7 +1070,6 @@ export const volunteerPage: PageElement[] = [
   },
 ];
 
-
 export const ourSupportersPage: PageElement[] = [
   {
     type: "Header",
@@ -1116,10 +1109,9 @@ export const ourSupportersPage: PageElement[] = [
   },
   {
     type: "MiscElement",
-    content: <SponsorsCollage></SponsorsCollage>
+    content: <SponsorsCollage></SponsorsCollage>,
   },
 ];
-
 
 export const howToHelpLayout: Record<string, PageElement[]> = {
   "Ways to Give": waysToGivePage,
