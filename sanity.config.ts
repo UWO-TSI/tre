@@ -18,8 +18,8 @@ export default defineConfig({
 
   name: "default",
   title: "Childcan CMS",
-  projectId: projectId,
-  dataset: dataset,
+  projectId,
+  dataset,
   // Add and edit the content schema in the './sanity/schemaTypes' folder
   schema: {
     types: schema.types,
