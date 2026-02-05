@@ -1,36 +1,36 @@
-import { defineType, defineField } from 'sanity';
+import { defineType, defineField } from "sanity";
 
 export const event = defineType({
-  name: 'event',
-  title: 'Events',
-  type: 'document',
+  name: "event",
+  title: "Events",
+  type: "document",
   fields: [
     defineField({
-      name: 'title',
-      title: 'Event Title',
-      type: 'string',
-      validation: Rule => Rule.required()
+      name: "title",
+      title: "Event Title",
+      type: "string",
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'date',
-      title: 'Event Date',
-      type: 'datetime'
+      name: "date",
+      title: "Event Date",
+      type: "datetime",
     }),
     defineField({
-      name: 'location',
-      title: 'Location',
-      type: 'string'
+      name: "location",
+      title: "Location",
+      type: "string",
     }),
     defineField({
-      name: 'description',
-      title: 'Description',
-      type: 'text'
+      name: "description",
+      title: "Description",
+      type: "text",
     }),
     defineField({
-      name: 'featured',
-      title: 'Featured Event',
-      type: 'boolean',
-      initialValue: false
-    })
-  ]
+      name: "featured",
+      title: "Featured Event",
+      type: "boolean",
+      initialValue: false,
+    }),
+  ],
 });
