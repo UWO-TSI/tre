@@ -5,6 +5,18 @@ export const structure: StructureResolver = (S) =>
   S.list()
     .title("Admin")
     .items([
+      // Events section - fully editable
       S.documentTypeListItem("event").title("Manage Events"),
-      S.documentTypeListItem("guide").title("Help & Guides"),
+
+      // Guides section - with informational note
+      S.listItem()
+        .title("Help & Guides")
+        .child(
+          S.documentList()
+            .title("Help & Guides")
+            .filter('_type == "guide"')
+            .child((documentId) =>
+              S.document().documentId(documentId).schemaType("guide")
+            )
+        ),
     ]);
