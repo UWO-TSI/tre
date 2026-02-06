@@ -7,6 +7,7 @@ interface HeroImageProps {
   imageVerticalPosition?: string;
   height?: string;
   textVertialOffset?: string;
+  textAlignment?: React.CSSProperties["textAlign"];
   overlay?: boolean;
 }
 
@@ -38,6 +39,7 @@ function HeroImage(props: HeroImageProps) {
         style={{
           marginTop: props.textVertialOffset,
           gridArea: "area",
+          textAlign: props.textAlignment,
         }}
         className="text-white text-[40px] md:text-[70px] md:text-nowrap animate-hero-appear z-20 text-start mx-[20%]  mt-2"
       >
