@@ -1,10 +1,10 @@
+"use client";
 import QuickNavSection from "./_components/quickNavSection";
 import ResponsiveSupport from "./_components/responsiveSupport";
 import QuoteBanner from "./_components/quoteBanner";
 import SearchBar from "@/components/header/SearchBar";
 import SectionBox from "./_components/sectionBox";
 import Event from "./_components/Event";
-// import YellowAccentButton from "@/othername";
 import ImageCarousel from "./_components/imageCarousel";
 
 export default function Home() {
@@ -50,7 +50,7 @@ export default function Home() {
       <ResponsiveSupport></ResponsiveSupport>
 
       {/* Section descriptions and images */}
-      <div className="flex flex-col w-full gap-4 p-10 bg-white">
+      <div className="flex flex-col w-full gap-4 p-10 bg-white" id="test">
         <SectionBox
           title="For Families"
           imgSrc="/images/ChildcanWalk2023-304.jpg"

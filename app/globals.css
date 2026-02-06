@@ -67,6 +67,11 @@
 html {
   font-family: var(--font-quicksand);
   background-color: var(--color-main-darkpurple);
+  scroll-behavior: smooth;
+}
+
+.anchor {
+  scroll-margin-top: 40vh;
 }
 
 :root {
