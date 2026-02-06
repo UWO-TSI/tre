@@ -36,10 +36,10 @@ export interface SanityImageWithAlt extends SanityImage {
 }
 
 export interface SanityGuide {
-    _id: string;
-    title: string;
-    category?: "events" | "images" | "general";
-    content: string; // Portable Text blocks
+  _id: string;
+  title: string;
+  category?: "events" | "images" | "general";
+  content: string; // Portable Text blocks
 }
 
 export interface AdjacentEvents {
