@@ -1,4 +1,4 @@
-import PurpleAccentButton from "../accentButton/purpleAccentButton";
+import PurpleAccentButton from "@/components/accentButton/purpleAccentButton";
 
 export default function VolunteerNewsForm() {
   return (
