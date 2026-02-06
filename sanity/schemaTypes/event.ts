@@ -21,7 +21,8 @@ export const event = defineType({
         maxLength: 96,
       },
       validation: (Rule) => Rule.required(),
-      description: "Click 'Generate' to create a URL-friendly version of the title",
+      description:
+        "Click 'Generate' to create a URL-friendly version of the title",
     }),
     defineField({
       name: "date",
@@ -86,7 +87,8 @@ export const event = defineType({
       name: "buttonTitle",
       title: "Button Title",
       type: "string",
-      description: "Text for the call-to-action button (e.g., 'Register Now', 'Learn More')",
+      description:
+        "Text for the call-to-action button (e.g., 'Register Now', 'Learn More')",
     }),
     defineField({
       name: "buttonLink",
