@@ -39,7 +39,7 @@ export interface SanityGuide {
     _id: string;
     title: string;
     category?: "events" | "images" | "general";
-    content: any[]; // Portable Text blocks
+    content: string; // Portable Text blocks
 }
 
 export interface AdjacentEvents {
