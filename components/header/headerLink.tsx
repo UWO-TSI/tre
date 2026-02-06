@@ -27,7 +27,7 @@ function HeaderLink(props: HeaderLinkProps) {
     >
       <Link
         href={props.link}
-        className="cursor-pointer text-body text-[16px] text-main-grey font-semibold mx-4 my-auto hover:text-header-purple transition-colors"
+        className="cursor-pointer text-body text-[16px] text-main-grey font-semibold mx-4 my-auto hover:text-header-purple transition-colors z-10"
       >
         {props.title}
       </Link>

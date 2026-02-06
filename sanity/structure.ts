@@ -16,7 +16,7 @@ export const structure: StructureResolver = (S) =>
             .title("Help & Guides")
             .filter('_type == "guide"')
             .child((documentId) =>
-              S.document().documentId(documentId).schemaType("guide")
-            )
+              S.document().documentId(documentId).schemaType("guide"),
+            ),
         ),
     ]);
