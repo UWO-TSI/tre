@@ -30,6 +30,11 @@ export const familyStories: Record<string, FamilyStory> = {
         alt: "",
         align: "right",
       },
+      {
+        src: "/images/Tara+family+pic.webp",
+        alt: "",
+        align: "left",
+      },
     ],
   },
 };
