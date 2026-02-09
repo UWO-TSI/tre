@@ -1,5 +1,5 @@
 "use client";
-import FacebookVideoEmbed from "@/components/embeds/FacebookVideoEmbed";
+import FacebookEmbed from "@/components/embeds/FacebookEmbed";
 import HeroImage from "@/components/heroImage/heroImage";
 import BeholdWidget from "@behold/react";
 
@@ -20,10 +20,10 @@ export default function Page() {
 
             <div className="flex justify-center border bg-white py-24 px-9">
                 <div className="">
-                    <FacebookVideoEmbed
+                    <FacebookEmbed
                         url="https://www.facebook.com/Childcan"
                         type="page"
-                    ></FacebookVideoEmbed>
+                    ></FacebookEmbed>
                 </div>
                 <div className="flex items-center w-1/2">
                     <BeholdWidget feedId="HLZUhXWim7bSX8uQvac1"></BeholdWidget>

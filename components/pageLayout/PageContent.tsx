@@ -2,7 +2,7 @@ import PurpleAccentButton from "@/components/accentButton/purpleAccentButton";
 import { PageElement } from "./PageElement";
 import Image from "next/image";
 import YoutubeEmbed from "../embeds/YoutubeEmbed";
-import FacebookVideoEmbed from "../embeds/FacebookVideoEmbed";
+import FacebookEmbed from "../embeds/FacebookEmbed";
 interface PageContentProps {
   pageLayout: PageElement[];
 }
@@ -133,11 +133,11 @@ export default function PageContent(props: PageContentProps) {
 
             case "FBEmbed":
               return (
-                <FacebookVideoEmbed
+                <FacebookEmbed
                   key={element.url}
                   url={element.url}
                   type="video"
-                ></FacebookVideoEmbed>
+                ></FacebookEmbed>
               );
 
             case "VerticalSplit":
