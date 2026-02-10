@@ -420,8 +420,8 @@ export const careers: PageElement[] = [
           "Governance expertise",
           "Past/present affiliation in healthcare sector",
           "Experience with childhood cancer",
-        ]
-      }
+        ],
+      },
     ],
   },
   {

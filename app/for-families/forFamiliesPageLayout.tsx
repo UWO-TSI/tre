@@ -857,7 +857,7 @@ export const qaPage: PageElement[] = [
           "Can you explain my child’s pathology report to me?",
           "What do my children need to prepare physically and mentally for this diagnosis?",
           "What stage is cancer? What is the prognosis?",
-        ]
+        ],
       },
       "Phase II: treatment options/selection",
       {
@@ -870,7 +870,7 @@ export const qaPage: PageElement[] = [
           "How will the treatment affect my child’s life? Can they still go to school or require special activities?",
           "How to cooperate with the healthcare team to finish the treatment? ",
           "What support services are available to my child and my family? ",
-        ]
+        ],
       },
       "Phase III: treatment preparation",
       {
@@ -882,7 +882,7 @@ export const qaPage: PageElement[] = [
           "Will my children receive the treatment at a hospital, clinic, or at home? And what’s the difference? ",
           "How to communicate with my children effectively and notice any side effects in time? ",
           "What can I do to relieve the side effects? ",
-        ]
+        ],
       },
       "Phase IV: aftercare",
       {
@@ -892,10 +892,10 @@ export const qaPage: PageElement[] = [
           "After receiving treatment, how long the side effects will last?",
           "What follow-up tests will my children need, and how often?",
           "How do I get a treatment summary and survivorship care plan to keep in my personal records?",
-        ]
+        ],
       },
-    ]
-  }
+    ],
+  },
 ];
 export const forFamilesPageLayout: Record<string, PageElement[]> = {
   "Here for You": hereForYouPage,

@@ -63,7 +63,7 @@ export default function PageContent(props: PageContentProps) {
                   {element.text}
                 </PurpleAccentButton>
               );
-            case "List": 
+            case "List":
               return (
                 <ul
                   key={element.type + index1}
@@ -74,14 +74,20 @@ export default function PageContent(props: PageContentProps) {
                     if (item && typeof item === "object" && "items" in item) {
                       // double list item -> return inner items
                       return item.items.map((innerItem, index3) => (
-                        <li className="list-[circle] py-0.5 ml-16" key={index2 + index3}>
+                        <li
+                          className="list-[circle] py-0.5 ml-16"
+                          key={index2 + index3}
+                        >
                           {innerItem}
                         </li>
                       ));
                     } else {
                       // String || number || ReactNode
                       return (
-                        <li className="list-disc py-1 ml-8" key={index1 + index2}>
+                        <li
+                          className="list-disc py-1 ml-8"
+                          key={index1 + index2}
+                        >
                           {item}
                         </li>
                       );

@@ -27,7 +27,7 @@ interface List {
   items: (React.ReactNode | InnerList)[];
 }
 interface InnerList {
-  type: "InnerList",
+  type: "InnerList";
   items: React.ReactNode[];
 }
 interface Divider {
