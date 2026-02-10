@@ -409,26 +409,21 @@ export const careers: PageElement[] = [
       "Ideally located in Essex County and/or Grey County",
       "Able to leverage social capital within regions",
       "Able to give a minimum commitment of one 3-year term, 4 hours/month",
+      "Experience in any or all the following to complement the current board structure:",
+      {
+        type: "InnerList",
+        items: [
+          "Prior non-profit/Governance Board experience",
+          "Leadership/Project Management attributes",
+          "Financial/Accounting expertise (CPA)",
+          "Fundraising/Development experience",
+          "Governance expertise",
+          "Past/present affiliation in healthcare sector",
+          "Experience with childhood cancer",
+        ]
+      }
     ],
   },
-  {
-    type: "DoubleList",
-    list: {
-      type: "DoubleListElement",
-      title:
-        "Experience in any or all the following to complement the current board structure:",
-      items: [
-        "Prior non-profit/Governance Board experience",
-        "Leadership/Project Management attributes",
-        "Financial/Accounting expertise (CPA)",
-        "Fundraising/Development experience",
-        "Governance expertise",
-        "Past/present affiliation in healthcare sector",
-        "Experience with childhood cancer",
-      ],
-    },
-  },
-
   {
     type: "Paragraph",
     content: (

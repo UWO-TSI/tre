@@ -664,26 +664,19 @@ export const goldPage: PageElement[] = [
     type: "List",
     items: [
       "Purchase a LAWN SIGN and show your support proudly. Take a photo of your sign and share it with us with the name of the town where it’s located. Be sure to tag @Childcan and use the hashtag #ChildcanGold so we can share your support with our families.",
-    ],
-  },
-  {
-    type: "DoubleList",
-    list: {
-      type: "DoubleListElement",
-      title: "Register now to join us for the Childcan Pyjama Walk in",
-      items: [
-        "Mitchell on Saturday, September 13, 2025 4-7pm",
-        "London on Saturday, September 20, 2025 4-7pm",
-        "LaSalle on Sunday, September 21, 2025 10-1pm",
-        "Owen Sound on Sunday, September 21, 2025 11-2pm",
-        "Brights Grove on Sunday, September 21, 2025 1-4pm",
-        "or walk near you.",
-      ],
-    },
-  },
-  {
-    type: "List",
-    items: [
+      "Register now to join us for the Childcan Pyjama Walk in",
+      {
+        type: "InnerList",
+        items: [
+          "Mitchell on Saturday, September 13, 2025 4-7pm",
+          "London on Saturday, September 20, 2025 4-7pm",
+          "LaSalle on Sunday, September 21, 2025 10-1pm",
+          "Owen Sound on Sunday, September 21, 2025 11-2pm",
+          "Brights Grove on Sunday, September 21, 2025 1-4pm",
+          "or walk near you.",
+          
+        ]
+      },
       "Create your own fundraiser on our Hands of Hope website and fundraise with your own creative flair.",
       "Show your support by purchasing Childcan merchandise or some of our signature gold ribbon items.  Get your gold on by visiting the online store!",
       "Leave your porch light on to glow gold. Take a photo and share it with #ChildcanGold and tag @Childcan so that we are amplify your show of support.",

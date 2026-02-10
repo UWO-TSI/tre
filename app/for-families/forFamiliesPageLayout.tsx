@@ -848,61 +848,54 @@ export const qaPage: PageElement[] = [
     ),
   },
   {
-    type: "DoubleList",
-    list: {
-      type: "DoubleListElement",
-      title: "Phase I: after diagnosis",
-      items: [
-        "Can you explain my child’s pathology report to me?",
-        "What do my children need to prepare physically and mentally for this diagnosis?",
-        "What stage is cancer? What is the prognosis?",
-      ],
-    },
-  },
-  {
-    type: "DoubleList",
-    list: {
-      type: "DoubleListElement",
-      title: "Phase II: treatment options/selection",
-      items: [
-        "Pros and cons of different treatments",
-        "What is the goal of the treatment? What are the success rate and relapse rate? ",
-        "What are the possible side effects of each treatment (short and long-term)? ",
-        "Will the treatment affect my child’s normal growth and development?",
-        "How will the treatment affect my child’s life? Can they still go to school or require special activities?",
-        "How to cooperate with the healthcare team to finish the treatment? ",
-        "What support services are available to my child and my family? ",
-      ],
-    },
-  },
-  {
-    type: "DoubleList",
-    list: {
-      type: "DoubleListElement",
-      title: "Phase III: treatment preparation",
-      items: [
-        "Can you describe my children’s recovery from the surgery?",
-        "Potential side effects of different treatments, preparation, and minimize influence? ",
-        "How long will the surgery take and how long will my children be in the hospital? ",
-        "Will my children receive the treatment at a hospital, clinic, or at home? And what’s the difference? ",
-        "How to communicate with my children effectively and notice any side effects in time? ",
-        "What can I do to relieve the side effects? ",
-      ],
-    },
-  },
-  {
-    type: "DoubleList",
-    list: {
-      type: "DoubleListElement",
-      title: "Phase IV: aftercare",
-      items: [
-        "What is the cancer relapse rate? How should I observe for any special signs or symptoms? ",
-        "After receiving treatment, how long the side effects will last?",
-        "What follow-up tests will my children need, and how often?",
-        "How do I get a treatment summary and survivorship care plan to keep in my personal records?",
-      ],
-    },
-  },
+    type: "List",
+    items: [
+      "Phase I: after diagnosis",
+      {
+        type: "InnerList",
+        items: [
+          "Can you explain my child’s pathology report to me?",
+          "What do my children need to prepare physically and mentally for this diagnosis?",
+          "What stage is cancer? What is the prognosis?",
+        ]
+      },
+      "Phase II: treatment options/selection",
+      {
+        type: "InnerList",
+        items: [
+          "Pros and cons of different treatments",
+          "What is the goal of the treatment? What are the success rate and relapse rate? ",
+          "What are the possible side effects of each treatment (short and long-term)? ",
+          "Will the treatment affect my child’s normal growth and development?",
+          "How will the treatment affect my child’s life? Can they still go to school or require special activities?",
+          "How to cooperate with the healthcare team to finish the treatment? ",
+          "What support services are available to my child and my family? ",
+        ]
+      },
+      "Phase III: treatment preparation",
+      {
+        type: "InnerList",
+        items: [
+          "Can you describe my children’s recovery from the surgery?",
+          "Potential side effects of different treatments, preparation, and minimize influence? ",
+          "How long will the surgery take and how long will my children be in the hospital? ",
+          "Will my children receive the treatment at a hospital, clinic, or at home? And what’s the difference? ",
+          "How to communicate with my children effectively and notice any side effects in time? ",
+          "What can I do to relieve the side effects? ",
+        ]
+      },
+      "Phase IV: aftercare",
+      {
+        type: "InnerList",
+        items: [
+          "What is the cancer relapse rate? How should I observe for any special signs or symptoms? ",
+          "After receiving treatment, how long the side effects will last?",
+          "What follow-up tests will my children need, and how often?",
+          "How do I get a treatment summary and survivorship care plan to keep in my personal records?",
+        ]
+      },
+    ]
+  }
 ];
 export const forFamilesPageLayout: Record<string, PageElement[]> = {
   "Here for You": hereForYouPage,

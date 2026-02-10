@@ -24,16 +24,11 @@ interface Button {
 }
 interface List {
   type: "List";
-  items: string[];
+  items: (React.ReactNode | InnerList)[];
 }
-interface DoubleList {
-  type: "DoubleList";
-  list: DoubleListElement;
-}
-interface DoubleListElement {
-  type: "DoubleListElement";
-  title: string;
-  items: string[];
+interface InnerList {
+  type: "InnerList",
+  items: React.ReactNode[];
 }
 interface Divider {
   type: "Divider";
@@ -70,7 +65,7 @@ export type PageElement =
   | Paragraph
   | Subheader
   | List
-  | DoubleList
+  | InnerList
   | TertiaryHeader
   | Divider
   | MiscElement
