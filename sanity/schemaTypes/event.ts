@@ -25,17 +25,18 @@ export const event = defineType({
         "Click 'Generate' to create a URL-friendly version of the title",
     }),
     defineField({
-      name: "date",
-      title: "Event Date",
+      name: "startDate",
+      title: "Start Date",
       type: "datetime",
       validation: (Rule) => Rule.required(),
       description: "When does the event start?",
     }),
     defineField({
       name: "endDate",
-      title: "Event End Date/Time",
+      title: "End Date",
       type: "datetime",
-      description: "When does the event end? (Optional if same as start date)",
+      validation: (Rule) => Rule.required(),
+      description: "When does the event end?",
     }),
     defineField({
       name: "location",
@@ -52,7 +53,14 @@ export const event = defineType({
       description: "Detailed information about the event",
     }),
     defineField({
-      name: "mainImage",
+      name: "shortSummary",
+      title: "Short Summary",
+      type: "text",
+      rows: 3,
+      description: "A brief summary for previews",
+    }),
+    defineField({
+      name: "mainHeroImage",
       title: "Main Hero Image",
       type: "image",
       options: {
@@ -62,7 +70,16 @@ export const event = defineType({
       description: "The main banner image for the event",
     }),
     defineField({
-      name: "imageGallery",
+      name: "previewImage",
+      title: "Preview Image",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+      description: "Image used for event cards/previews",
+    }),
+    defineField({
+      name: "images",
       title: "Image Gallery",
       type: "array",
       of: [
@@ -129,8 +146,8 @@ export const event = defineType({
   preview: {
     select: {
       title: "title",
-      date: "date",
-      media: "mainImage",
+      date: "startDate",
+      media: "mainHeroImage",
       featured: "featured",
     },
     prepare(selection) {
