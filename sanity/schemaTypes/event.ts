@@ -160,7 +160,11 @@ export const event = defineType({
       title: "Featured Event",
       type: "boolean",
       initialValue: false,
-      description: "Toggle ON to highlight this event on the homepage",
+      hidden: true,
+      readOnly: true,
+      deprecated: {
+        reason: "Featured events are now managed in the Homepage configuration.",
+      },
     }),
   ],
   preview: {
