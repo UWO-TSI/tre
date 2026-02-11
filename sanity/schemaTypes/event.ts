@@ -25,6 +25,26 @@ export const event = defineType({
         "Click 'Generate' to create a URL-friendly version of the title",
     }),
     defineField({
+      name: "date",
+      title: "Legacy Date",
+      type: "datetime",
+      hidden: true,
+      readOnly: true,
+      deprecated: {
+        reason: "Use startDate instead",
+      },
+    }),
+    defineField({
+      name: "mainImage",
+      title: "Legacy Main Image",
+      type: "image",
+      hidden: true,
+      readOnly: true,
+      deprecated: {
+        reason: "Use mainHeroImage instead",
+      },
+    }),
+    defineField({
       name: "startDate",
       title: "Start Date",
       type: "datetime",
