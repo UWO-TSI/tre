@@ -163,7 +163,8 @@ export const event = defineType({
       hidden: true,
       readOnly: true,
       deprecated: {
-        reason: "Featured events are now managed in the Homepage configuration.",
+        reason:
+          "Featured events are now managed in the Homepage configuration.",
       },
     }),
   ],
