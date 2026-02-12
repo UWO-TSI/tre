@@ -56,7 +56,7 @@ export default function ImageCarousel() {
   }, [currImgIndex]);
 
   return (
-    <div className="relative group w-full max-w-full overflow-hidden">
+    <div className="relative group w-full max-w-full overflow-hidden h-[600px]">
       <button
         className="nav-button left-0 absolute z-20 self-center top-[50%] translate-y-[-50%] p-[10px] cursor-pointer"
         onClick={handlePrevClick}
