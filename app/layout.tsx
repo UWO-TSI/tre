@@ -21,11 +21,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={quicksand.variable}>
-      <body className="antialiased">
-        <Header></Header>
-        {children}
-        <Footer></Footer>
+    <html lang="en" className={`${quicksand.variable} overflow-x-hidden`}>
+      <body className="antialiased overflow-x-hidden">
+        <div id="page-wrapper" className="min-h-screen">
+          <Header></Header>
+          {children}
+          <Footer></Footer>
+        </div>
       </body>
     </html>
   );
