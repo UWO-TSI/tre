@@ -1,4 +1,5 @@
 import { PageElement } from "@/components/pageLayout/PageElement";
+import Link from "next/link";
 
 export const hereForYouPage: PageElement[] = [
   {
@@ -44,11 +45,11 @@ export const hereForYouPage: PageElement[] = [
         Hospital, London Health Sciences Centre or Windsor Regional Hospital’s
         Paediatric Oncology Satellite Clinic, and you would like to access any
         of these supports, please contact our office at{" "}
-        <a className="text-link-blue" href="tel:15196853500">
+        <a className="text-link-blue" href="tel:+15196853500">
           519-685-3500
         </a>{" "}
         or{" "}
-        <a className="text-link-blue" href="info@childcan.com">
+        <a className="text-link-blue" href="mailto:info@childcan.com">
           info@childcan.com
         </a>
         . Our family support team is here for you.
@@ -94,7 +95,7 @@ export const financialSupportPage: PageElement[] = [
         Windsor Regional Hospital’s Paediatric Oncology Satellite Clinic, and
         you would like to access any of these supports, please contact our
         office at{" "}
-        <a href="tel:519-685-3500" className="text-link-blue">
+        <a href="tel:+15196853500" className="text-link-blue">
           519-685-3500
         </a>{" "}
         or{" "}
@@ -105,6 +106,8 @@ export const financialSupportPage: PageElement[] = [
         <a
           href="https://forms.office.com/Pages/ResponsePage.aspx?id=GJ_2kAOFsEqmtRcUIF577HxhnHPJybtPjITj_N2TfJhUQzhESzRBOFIyU0FRV1ZFRVMwSlQ1RlRWOS4u"
           className="text-link-blue"
+          target="_blank"
+          rel="noreferrer"
         >
           apply for support
         </a>
@@ -171,7 +174,7 @@ export const financialSupportPage: PageElement[] = [
     content: (
       <>
         We are extremely grateful to all involved with{" "}
-        <a className="text-link-blue" href="https://miraclemaxsminions.ca/">
+        <a className="text-link-blue" href="https://miraclemaxsminions.ca/" target="_blank" rel="noreferrer">
           Miracle Max’s Minions
         </a>{" "}
         for their support of our Max’s Passes parking passes.
@@ -204,7 +207,7 @@ export const financialSupportPage: PageElement[] = [
     content: (
       <>
         Thank you to{" "}
-        <a className="text-link-blue" href="http://preferred-ins.com/">
+        <a className="text-link-blue" href="http://preferred-ins.com/" target="_blank" rel="noreferrer">
           Preferred Insurance
         </a>
         , who ensure that every family is covered through this meal program.
@@ -341,7 +344,7 @@ export const emotionalSupportPage: PageElement[] = [
         Children’s Hospital, London Health Sciences Centre or Windsor Regional
         Hospital’s Paediatric Oncology Satellite Clinic, and you would like to
         access any of these supports, please contact our office at{" "}
-        <a href="tel:519-685-3500" className="text-link-blue">
+        <a href="tel:+15156853500" className="text-link-blue">
           519-685-3500
         </a>{" "}
         or{" "}
@@ -352,6 +355,8 @@ export const emotionalSupportPage: PageElement[] = [
         <a
           href="https://forms.office.com/Pages/ResponsePage.aspx?id=GJ_2kAOFsEqmtRcUIF577HxhnHPJybtPjITj_N2TfJhUQzhESzRBOFIyU0FRV1ZFRVMwSlQ1RlRWOS4u"
           className="text-link-blue"
+          target="_blank"
+          rel="noreferrer"
         >
           apply for support
         </a>
@@ -458,7 +463,7 @@ export const socialSupportPage: PageElement[] = [
         Centre or Windsor Regional Hospital’s Paediatric Oncology Satellite
         Clinic, and you would like to access any of these supports, please
         contact our office at{" "}
-        <a href="tel:519-685-3500" className="text-link-blue">
+        <a href="tel:+15196853500" className="text-link-blue">
           519-685-3500
         </a>{" "}
         or{" "}
@@ -469,6 +474,8 @@ export const socialSupportPage: PageElement[] = [
         <a
           href="https://forms.office.com/Pages/ResponsePage.aspx?id=GJ_2kAOFsEqmtRcUIF577HxhnHPJybtPjITj_N2TfJhUQzhESzRBOFIyU0FRV1ZFRVMwSlQ1RlRWOS4u"
           className="text-link-blue"
+          target="_blank"
+          rel="noreferrer"
         >
           apply for support
         </a>
@@ -566,21 +573,21 @@ export const socialSupportPage: PageElement[] = [
       <>
         To provide at-home assistance, Occupational Therapy students from
         Western University have helped us to put together a series of{" "}
-        <a
+        <Link
           className="text-link-blue"
-          href="https://childcan.com/video-resources"
+          href="/video-resources"          
         >
           School Skills Videos
-        </a>{" "}
+        </Link>{" "}
         which help early learners to improve their handwriting, memory,
         attention and other skills. These helpful videos offer tips to help
         parents work with their children, and can be viewed on our{" "}
-        <a
+        <Link
           className="text-link-blue"
-          href="https://childcan.com/video-resources"
+          href="/video-resources"
         >
           Video Resources page
-        </a>
+        </Link>
         .
       </>
     ),
@@ -594,8 +601,15 @@ export const socialSupportPage: PageElement[] = [
         and off-treatment children will receive a book each month, delivered
         directly to their door, until they reach the age of five. The learning
         opportunities from these storybooks can be maximized using the
-        guidelines and suggestions our dedicated volunteer educators have
-        developed.{" "}
+        {" "}
+        <Link 
+          href="/enhancing-early-literacy"
+          className="text-link-blue"
+        >
+          guidelines and suggestions
+        </Link>{" "}
+        our dedicated volunteer educators have
+        developed.
       </>
     ),
   },
@@ -623,8 +637,14 @@ export const socialSupportPage: PageElement[] = [
     type: "Paragraph",
     content: (
       <>
-        As plans are announced, events and activities will be listed on our
-        website and shared through our social media channels, email and
+        As plans are announced, events and activities will be{" "}
+        <Link 
+          href="/for-families?page=Upcoming Family Events#"
+          className="text-link-blue"
+        >
+          listed on our website
+        </Link>{" "}
+        and shared through our social media channels, email and
         e-newsletters. ,
       </>
     ),
@@ -663,7 +683,16 @@ export const socialSupportPage: PageElement[] = [
     type: "Paragraph",
     content: (
       <>
-        Through our online store, we have different ways to show support
+        Through our {" "}
+        <a
+          href="https://brandedbycollins.com/childcan/shop/home"
+          className="text-link-blue"
+          target="_blank"
+          rel="noreferrer"
+        >
+          online store
+        </a>
+        , we have different ways to show support
         including gold ribbon magnets and pins, gold ribbon and branded
         clothing, and other items. All proceeds help us to provide our programs
         and services.{" "}
@@ -749,12 +778,12 @@ export const researchSupportPage: PageElement[] = [
     content: (
       <>
         If you are interested in other newly published paediatric research, see{" "}
-        <a
+        <Link
           className="text-link-blue"
-          href="https://childcan.com/pediatric-research"
+          href="/pediatric-research"
         >
           this page
-        </a>
+        </Link>
         .{" "}
       </>
     ),
@@ -764,12 +793,12 @@ export const researchSupportPage: PageElement[] = [
     content: (
       <>
         Looking for research that YOU can participate in? See{" "}
-        <a
+        <Link
           className="text-link-blue"
-          href="https://childcan.com/research-opportunities"
+          href="/research-opportunities"
         >
           this page
-        </a>
+        </Link>
         .
       </>
     ),
