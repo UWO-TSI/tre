@@ -1,7 +1,6 @@
 import { PageElement } from "@/components/pageLayout/PageElement";
 import NewsBlerb, { newsItems } from "./newsBlerb";
 import OurFamiliesSection, { ourFamiliesFamily } from "./ourFamiliesSection";
-import Image from "next/image";
 import ReportOfHopeDocs, { reportOfHopeDocsList } from "./reportOfHopeDocs";
 
 export const aboutUs: PageElement[] = [
@@ -144,6 +143,7 @@ export const aboutUs: PageElement[] = [
     ),
   },
 ];
+
 export const ourFamilies: PageElement[] = [
   { type: "Header", content: <>Our Families</> },
   {
@@ -176,6 +176,7 @@ export const ourFamilies: PageElement[] = [
     ),
   },
 ];
+
 export const ourNews: PageElement[] = [
   { type: "Header", content: <>Our News</> },
   {
@@ -202,6 +203,7 @@ export const ourNews: PageElement[] = [
     ),
   },
 ];
+
 export const ourTeam: PageElement[] = [
   { type: "Header", content: <>Our Team</> },
   {
@@ -316,37 +318,52 @@ export const reportOfHope: PageElement[] = [
     type: "MiscElement",
     content: (
       <>
-        <div className="grid grid-cols-2 w-full">
-          <div>
-            {reportOfHopeDocsList.map((report, index) => {
-              return (
-                <ReportOfHopeDocs
-                  key={index + report.title + "docs list"}
-                  {...report}
-                ></ReportOfHopeDocs>
-              );
-            })}
-          </div>
-          <div>
-            <Image
-              alt=""
-              height={792}
-              width={612}
-              src="/images/2023+Report+of+Hope.webp"
-              className="mb-5 mt-20"
-            ></Image>
-            <Image
-              alt=""
-              height={792}
-              width={612}
-              src="/images/Report+of+Hope+p1.webp"
-            ></Image>
-          </div>
-        </div>
+        <iframe
+          allowFullScreen
+          allow="clipboard-write"
+          className="fp-iframe"
+          src="https://heyzine.com/flip-book/1c7cff81d8.html"
+          style={{
+            border: "1px solid lightgray",
+            width: "100%",
+            height: "400px",
+          }}
+        ></iframe>
       </>
     ),
   },
+  {
+    type: "VerticalSplit",
+    left: [
+      {
+        type: "MiscElement",
+        content: reportOfHopeDocsList.map((report, index) => {
+          return (
+            <ReportOfHopeDocs
+              key={index + report.title + "docs list"}
+              {...report}
+            ></ReportOfHopeDocs>
+          );
+        }),
+      },
+    ],
+    right: [
+      {
+        type: "Image",
+        src: "/images/2023+Report+of+Hope.webp",
+        alt: "2023 Report of Hope",
+        className: "h-100 mb-5 mt-20",
+      },
+      {
+        type: "Image",
+        src: "/images/Report+of+Hope+p1.webp",
+        alt: "report of hope",
+        className: "h-100 mb-5 mt-20",
+      },
+    ],
+  },
 ];
+
 export const careers: PageElement[] = [
   { type: "Header", content: <>Careers</> },
   { type: "TertiaryHeader", content: <>Childcan’s Board of Directors</> },
@@ -480,6 +497,7 @@ export const careers: PageElement[] = [
     ),
   },
 ];
+
 export const aboutUsPageLayout: Record<string, PageElement[]> = {
   "About Us": aboutUs,
   "Our Families": ourFamilies,

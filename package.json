@@ -10,11 +10,17 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@sanity/image-url": "^1.2.0",
+    "@sanity/vision": "^4.22.0",
     "@vis.gl/react-google-maps": "^1.7.1",
+    "flexsearch": "^0.8.212",
     "next": "^16.1.1",
+    "next-sanity": "^11.6.12",
     "prettier": "^3.6.2",
     "react": "^19.2.3",
-    "react-dom": "^19.2.3"
+    "react-dom": "^19.2.3",
+    "sanity": "^4.22.0",
+    "styled-components": "^6.3.8"
   },
   "devDependencies": {
     "@eslint/js": "^9.38.0",

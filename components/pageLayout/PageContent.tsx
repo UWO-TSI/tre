@@ -17,7 +17,8 @@ export default function PageContent(props: PageContentProps) {
               return (
                 <h1
                   key={element.type + index}
-                  className="text-h1 text-header-purple"
+                  id={element.type + index}
+                  className="text-h1 text-header-purple anchor"
                 >
                   {element.content}
                 </h1>
@@ -26,7 +27,8 @@ export default function PageContent(props: PageContentProps) {
               return (
                 <h2
                   key={element.type + index}
-                  className="text-h2 text-header-teal font-light"
+                  id={element.type + index}
+                  className="text-h2 text-header-teal font-light anchor"
                 >
                   {element.content}
                 </h2>
@@ -35,7 +37,8 @@ export default function PageContent(props: PageContentProps) {
               return (
                 <h3
                   key={element.type + index}
-                  className="text-h3 text-header-purple font-semibold"
+                  id={element.type + index}
+                  className="text-h3 text-header-purple font-semibold anchor"
                 >
                   {element.content}
                 </h3>
@@ -44,6 +47,7 @@ export default function PageContent(props: PageContentProps) {
               return (
                 <div
                   key={element.type + index}
+                  id={element.type + index}
                   className="text-body text-secondary-grey font-light"
                 >
                   {element.content}
@@ -63,6 +67,7 @@ export default function PageContent(props: PageContentProps) {
               return (
                 <ul
                   key={element.type + index}
+                  id={element.type + index}
                   className="list-disc text-body pl-8 text-secondary-grey font-light"
                 >
                   {element.items.map((item) => {
@@ -94,12 +99,17 @@ export default function PageContent(props: PageContentProps) {
             case "Divider":
               return <hr key={element.type + index} className="my-4"></hr>;
             case "MiscElement":
-              return <div key={element.type + index}>{element.content}</div>;
+              return (
+                <div key={element.type + index} id={element.type + index}>
+                  {element.content}
+                </div>
+              );
 
             case "Image":
               return (
                 <div
                   key={element.type + index}
+                  id={element.type + index}
                   className={`relative ${element.className}`}
                 >
                   <a href={element.href} target="_blank" rel="noreferrer">
@@ -128,6 +138,18 @@ export default function PageContent(props: PageContentProps) {
                   url={element.url}
                   width={element.width}
                 ></FacebookEmbed>
+              );
+
+            case "VerticalSplit":
+              return (
+                <div key={element.type + index} className="flex gap-8">
+                  <div className="flex flex-col w-1/2 relative">
+                    <PageContent pageLayout={element.left}></PageContent>
+                  </div>
+                  <div className="flex flex-col w-1/2 relative">
+                    <PageContent pageLayout={element.right}></PageContent>
+                  </div>
+                </div>
               );
           }
         })}
