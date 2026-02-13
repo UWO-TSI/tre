@@ -1,6 +1,7 @@
 import { PageElement } from "@/components/pageLayout/PageElement";
 import VolunteerNewsForm from "./VolunteerNewsForm";
 import SponsorsCollage from "./SponsorsCollage";
+import Link from "next/link";
 
 export const waysToGivePage: PageElement[] = [
   {
@@ -48,7 +49,7 @@ export const waysToGivePage: PageElement[] = [
   {
     type: "Button",
     text: "Donate",
-    href: "https://form-renderer-app.donorperfect.io/give/childcan/2025-donation-form",
+    href: "https://form-renderer-app.donorperfect.io/give/childcan/2026-donation-form",
   },
   {
     type: "Paragraph",
@@ -69,21 +70,53 @@ export const waysToGivePage: PageElement[] = [
     type: "Paragraph",
     content: (
       <>
-        The easiest and most efficient way you can give is online. Your gift is
-        received immediately and will be put right to work to help families
-        living with their child’s cancer. Your tax receipt is also automatically
-        sent to you.
+        The easiest and most efficient way you can give is{" "}
+        <a
+          href="https://form-renderer-app.donorperfect.io/give/childcan/2026-donation-form"
+          className="text-link-blue"
+          target="_blank"
+          rel="noreferrer"
+        >
+          online
+        </a>
+        . Your gift is received immediately and will be put right to work to
+        help families living with their child’s cancer. Your tax receipt is also
+        automatically sent to you.
       </>
     ),
   },
   {
     type: "Button",
     text: "Donate Now",
-    href: "https://form-renderer-app.donorperfect.io/give/childcan/2025-donation-form",
+    href: "https://form-renderer-app.donorperfect.io/give/childcan/2026-donation-form",
   },
   {
     type: "Subheader",
     content: <>Monthly Gifts</>,
+  },
+  {
+    type: "Paragraph",
+    content: (
+      <>
+        You can become a Childcan Champion with a monthly donation. Your small,
+        consistent gift can add up to a big impact, providing a steady source of
+        income and ensuring we can provide unwavering support to our Childcan
+        families. It’s easy and affordable with smaller, more frequent gifts
+        coming right off your credit card every month. You’ll receive one tax
+        receipt at the end of the year for your total monthly contributions,
+        and, of course, you can change or stop your donation at any time. It’s
+        easy to set up a monthly donation online.
+      </>
+    ),
+  },
+  {
+    type: "Button",
+    text: "Set up a monthly donation",
+    href: "https://form-renderer-app.donorperfect.io/give/childcan/2026-donation-form",
+  },
+  {
+    type: "Subheader",
+    content: <>Double Your Donation</>,
   },
   {
     type: "Paragraph",
@@ -124,6 +157,8 @@ export const waysToGivePage: PageElement[] = [
         <a
           href="https://childcan.com/s/Gift-of-Securities-mn3l.pdf"
           className="font-semibold text-link-blue"
+          target="_blank"
+          rel="noreferrer"
         >
           Gift of Securities Donation Form.
         </a>
@@ -138,13 +173,17 @@ export const waysToGivePage: PageElement[] = [
         <a
           href="https://www.canadahelps.org/en/dn/s/49268/donate"
           className="text-link-blue"
+          target="_blank"
+          rel="noreferrer"
         >
           Canada Helps
         </a>
         , or via{" "}
         <a
           className="text-link-blue"
-          href="https://static1.squarespace.com/static/5e4d4094b1c56247a63ecb72/t/5ecec602539e8f12017b2ff9/1590609410570/Share%2BTransfer%2BForm%2B-%2BNov%2B2019%2BUpdate.pdf"
+          href="/pdfs/ShareTransferForm.pdf"
+          target="_blank"
+          rel="noreferrer"
         >
           London Community Foundation
         </a>
@@ -176,9 +215,10 @@ export const waysToGivePage: PageElement[] = [
       <>
         A planned gift becomes part of your life story. Childcan can offer a
         special opportunity for you to create a legacy.{" "}
-        <a className="text-link-blue" href="https://childcan.com/legacy"></a>
-        Learn more about how your love can leave an incredible legacy for brave
-        futures.
+        <Link className="text-link-blue" href="/legacy">
+          Learn more
+        </Link>{" "}
+        about how your love can leave an incredible legacy for brave futures.
       </>
     ),
   },
@@ -226,11 +266,11 @@ export const waysToGivePage: PageElement[] = [
     content: (
       <>
         You can call us directly to make your donation at{" "}
-        <a href="tel:519-685-3500" className="text-link-blue">
+        <a href="tel:+15196853500" className="text-link-blue">
           519-685-3500
         </a>{" "}
         in London and area, or toll-free at{" "}
-        <a href="tel:1-800-966-0631" className="text-link-blue">
+        <a href="tel:+18009660631" className="text-link-blue">
           1-800-966-0631
         </a>
         .
@@ -254,7 +294,7 @@ export const waysToGivePage: PageElement[] = [
         have an even larger impact. We would be delighted to discuss any of
         these options or others that fit your organization’s strategic giving
         plans. Please get in touch at{" "}
-        <a href="tel:519-685-3500" className="text-link-blue">
+        <a href="tel:+15196853500" className="text-link-blue">
           519-685-3500
         </a>{" "}
         or{" "}
@@ -279,16 +319,19 @@ export const waysToGivePage: PageElement[] = [
         <a
           href="https://donatecar.ca/org/donate.php?charitypage=Childcan"
           className="text-link-blue"
-        ></a>
-        Vehicle Donations for Childcan. Free towing is provided in most areas
-        across Canada, or you can drop off your vehicle to maximize your
-        donation. When you donate your car, truck, RV, boat, or motorcycle to
-        Childcan through Donate a Car Canada, it will either be recycled or sold
-        at auction (depending on its condition, age and location). Donate a Car
-        Canada will look after all the details to make it easy for Childcan to
-        benefit. After your vehicle donation is complete, we will send you a tax
-        receipt and your donation will be put to good use, supporting our
-        children and families.
+          target="_blank"
+          rel="noreferrer"
+        >
+          Vehicle Donations
+        </a>{" "}
+        for Childcan. Free towing is provided in most areas across Canada, or
+        you can drop off your vehicle to maximize your donation. When you donate
+        your car, truck, RV, boat, or motorcycle to Childcan through Donate a
+        Car Canada, it will either be recycled or sold at auction (depending on
+        its condition, age and location). Donate a Car Canada will look after
+        all the details to make it easy for Childcan to benefit. After your
+        vehicle donation is complete, we will send you a tax receipt and your
+        donation will be put to good use, supporting our children and families.
       </>
     ),
   },
@@ -306,9 +349,18 @@ export const waysToGivePage: PageElement[] = [
     type: "Paragraph",
     content: (
       <>
-        Support us by purchasing merchandise such as bracelets, hats, hoodies,
-        and t-shirts that will also raise awareness. We are grateful to Collins
-        Clothiers for hosting our merchandise store.
+        Support us by{" "}
+        <Link
+          href="https://www.collinsclothiers.com/childcan"
+          className="text-link-blue"
+          target="_blank"
+          rel="noreferrer"
+        >
+          purchasing merchandise
+        </Link>{" "}
+        such as bracelets, hats, hoodies, and t-shirts that will also raise
+        awareness. We are grateful to Collins Clothiers for hosting our
+        merchandise store.
       </>
     ),
   },
@@ -337,9 +389,9 @@ export const waysToGivePage: PageElement[] = [
         We rely on the generosity of our community through individual, corporate
         and foundation donations and sponsorships. We appreciate every dollar
         donated and put it to good use in providing our direct-to-family{" "}
-        <a href="https://childcan.com/here-for-you" className="text-link-blue">
+        <Link href="/for-families?page=Here For You" className="text-link-blue">
           programs and services
-        </a>
+        </Link>
         .
       </>
     ),
@@ -375,9 +427,9 @@ export const waysToGivePage: PageElement[] = [
         for each donation made through the online donation links above. Should
         you have any concerns or questions regarding this policy, please don’t
         hesitate to{" "}
-        <a href="https://childcan.com/contact" className="text-link-blue">
+        <Link href="/contact" className="text-link-blue">
           contact us
-        </a>
+        </Link>
         . We very much appreciate your generosity and support, and strive to
         meet the needs of our donors, as well as the children and families we
         serve. Thank you!
@@ -472,14 +524,16 @@ export const PJDayPage: PageElement[] = [
       {
         type: "Button",
         href: "https://forms.office.com/r/q6yrrxUhDt",
-        text: "Let us know you're participating in PJ Day",
+        text: "Participate in PJ Day",
+        alignment: "center",
       },
     ],
     right: [
       {
         type: "Button",
-        href: "https://brandedbycollins.com/childcan/shop/home",
-        text: "Buy a T-Shirt or Hoodie for PJ Day 2026",
+        href: "",
+        text: "Contact Us",
+        alignment: "center",
       },
     ],
   },
@@ -489,9 +543,9 @@ export const PJDayPage: PageElement[] = [
       <>
         If you need a letter to ask your club/organization/school to get
         involved, you can download this one (Word document) or{" "}
-        <a href="" className="text-link-blue">
+        <Link href="/contact" className="text-link-blue">
           contact us
-        </a>
+        </Link>
         .
       </>
     ),
@@ -503,13 +557,15 @@ export const PJDayPage: PageElement[] = [
         type: "Button",
         href: "https://childcan.com/s/2026-PJ-Day-Request-Letter.docx",
         text: "Download a PJ Day Letter",
+        alignment: "center",
       },
     ],
     right: [
       {
         type: "Button",
-        href: "",
-        text: "Contact Us",
+        href: "https://brandedbycollins.com/childcan/shop/home",
+        text: "Buy a T-Shirt or Hoodie",
+        alignment: "center",
       },
     ],
   },
@@ -588,9 +644,9 @@ export const goldPage: PageElement[] = [
         flag, light up a landmark, or proclaim September as Childhood Cancer
         Awareness Month (depending on the options available for your
         municipality), please{" "}
-        <a href="" className="text-link-blue">
+        <Link href="/contact" className="text-link-blue">
           contact us
-        </a>{" "}
+        </Link>{" "}
         today!
       </>
     ),
@@ -663,29 +719,46 @@ export const goldPage: PageElement[] = [
   {
     type: "List",
     items: [
-      "Purchase a LAWN SIGN and show your support proudly. Take a photo of your sign and share it with us with the name of the town where it’s located. Be sure to tag @Childcan and use the hashtag #ChildcanGold so we can share your support with our families.",
-    ],
-  },
-  {
-    type: "DoubleList",
-    list: {
-      type: "DoubleListElement",
-      title: "Register now to join us for the Childcan Pyjama Walk in",
-      items: [
-        "Mitchell on Saturday, September 13, 2025 4-7pm",
-        "London on Saturday, September 20, 2025 4-7pm",
-        "LaSalle on Sunday, September 21, 2025 10-1pm",
-        "Owen Sound on Sunday, September 21, 2025 11-2pm",
-        "Brights Grove on Sunday, September 21, 2025 1-4pm",
-        "or walk near you.",
-      ],
-    },
-  },
-  {
-    type: "List",
-    items: [
+      <>
+        Purchase a{" "}
+        <a
+          href="https://www.collinsclothiers.com/childcan"
+          className="text-link-blue"
+          target="_blank"
+          rel="noreferrer"
+        >
+          LAWN SIGN
+        </a>{" "}
+        and show your support proudly. Take a photo of your sign and share it
+        with us with the name of the town where it’s located. Be sure to tag
+        @Childcan and use the hashtag #ChildcanGold so we can share your support
+        with our families.
+      </>,
+      <>
+        Register now to join us for the{" "}
+        <a
+          href="https://childcan.akaraisin.com/ui/ChildcanPJWalk2025"
+          className="text-link-blue"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Childcan Pyjama Walk
+        </a>{" "}
+        in
+      </>,
+      {
+        type: "InnerList",
+        items: [
+          "Mitchell on Saturday, September 13, 2025 4-7pm",
+          "London on Saturday, September 20, 2025 4-7pm",
+          "LaSalle on Sunday, September 21, 2025 10-1pm",
+          "Owen Sound on Sunday, September 21, 2025 11-2pm",
+          "Brights Grove on Sunday, September 21, 2025 1-4pm",
+          "or walk near you.",
+        ],
+      },
       "Create your own fundraiser on our Hands of Hope website and fundraise with your own creative flair.",
-      "Show your support by purchasing Childcan merchandise or some of our signature gold ribbon items.  Get your gold on by visiting the online store!",
+      "Show your support by purchasing Childcan merchandise or some of our signature gold ribbon items. Get your gold on by visiting the online store!",
       "Leave your porch light on to glow gold. Take a photo and share it with #ChildcanGold and tag @Childcan so that we are amplify your show of support.",
       "Join us at one of the flag raising ceremonies listed below. More details can be found on our events page too.",
       "Donate to show your support to other families.",

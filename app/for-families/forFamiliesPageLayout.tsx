@@ -1,4 +1,5 @@
 import { PageElement } from "@/components/pageLayout/PageElement";
+import Link from "next/link";
 
 export const hereForYouPage: PageElement[] = [
   {
@@ -44,11 +45,11 @@ export const hereForYouPage: PageElement[] = [
         Hospital, London Health Sciences Centre or Windsor Regional Hospital’s
         Paediatric Oncology Satellite Clinic, and you would like to access any
         of these supports, please contact our office at{" "}
-        <a className="text-link-blue" href="tel:15196853500">
+        <a className="text-link-blue" href="tel:+15196853500">
           519-685-3500
         </a>{" "}
         or{" "}
-        <a className="text-link-blue" href="info@childcan.com">
+        <a className="text-link-blue" href="mailto:info@childcan.com">
           info@childcan.com
         </a>
         . Our family support team is here for you.
@@ -94,7 +95,7 @@ export const financialSupportPage: PageElement[] = [
         Windsor Regional Hospital’s Paediatric Oncology Satellite Clinic, and
         you would like to access any of these supports, please contact our
         office at{" "}
-        <a href="tel:519-685-3500" className="text-link-blue">
+        <a href="tel:+15196853500" className="text-link-blue">
           519-685-3500
         </a>{" "}
         or{" "}
@@ -105,6 +106,8 @@ export const financialSupportPage: PageElement[] = [
         <a
           href="https://forms.office.com/Pages/ResponsePage.aspx?id=GJ_2kAOFsEqmtRcUIF577HxhnHPJybtPjITj_N2TfJhUQzhESzRBOFIyU0FRV1ZFRVMwSlQ1RlRWOS4u"
           className="text-link-blue"
+          target="_blank"
+          rel="noreferrer"
         >
           apply for support
         </a>
@@ -171,7 +174,12 @@ export const financialSupportPage: PageElement[] = [
     content: (
       <>
         We are extremely grateful to all involved with{" "}
-        <a className="text-link-blue" href="https://miraclemaxsminions.ca/">
+        <a
+          className="text-link-blue"
+          href="https://miraclemaxsminions.ca/"
+          target="_blank"
+          rel="noreferrer"
+        >
           Miracle Max’s Minions
         </a>{" "}
         for their support of our Max’s Passes parking passes.
@@ -204,7 +212,12 @@ export const financialSupportPage: PageElement[] = [
     content: (
       <>
         Thank you to{" "}
-        <a className="text-link-blue" href="http://preferred-ins.com/">
+        <a
+          className="text-link-blue"
+          href="http://preferred-ins.com/"
+          target="_blank"
+          rel="noreferrer"
+        >
           Preferred Insurance
         </a>
         , who ensure that every family is covered through this meal program.
@@ -341,7 +354,7 @@ export const emotionalSupportPage: PageElement[] = [
         Children’s Hospital, London Health Sciences Centre or Windsor Regional
         Hospital’s Paediatric Oncology Satellite Clinic, and you would like to
         access any of these supports, please contact our office at{" "}
-        <a href="tel:519-685-3500" className="text-link-blue">
+        <a href="tel:+15156853500" className="text-link-blue">
           519-685-3500
         </a>{" "}
         or{" "}
@@ -352,6 +365,8 @@ export const emotionalSupportPage: PageElement[] = [
         <a
           href="https://forms.office.com/Pages/ResponsePage.aspx?id=GJ_2kAOFsEqmtRcUIF577HxhnHPJybtPjITj_N2TfJhUQzhESzRBOFIyU0FRV1ZFRVMwSlQ1RlRWOS4u"
           className="text-link-blue"
+          target="_blank"
+          rel="noreferrer"
         >
           apply for support
         </a>
@@ -458,7 +473,7 @@ export const socialSupportPage: PageElement[] = [
         Centre or Windsor Regional Hospital’s Paediatric Oncology Satellite
         Clinic, and you would like to access any of these supports, please
         contact our office at{" "}
-        <a href="tel:519-685-3500" className="text-link-blue">
+        <a href="tel:+15196853500" className="text-link-blue">
           519-685-3500
         </a>{" "}
         or{" "}
@@ -469,6 +484,8 @@ export const socialSupportPage: PageElement[] = [
         <a
           href="https://forms.office.com/Pages/ResponsePage.aspx?id=GJ_2kAOFsEqmtRcUIF577HxhnHPJybtPjITj_N2TfJhUQzhESzRBOFIyU0FRV1ZFRVMwSlQ1RlRWOS4u"
           className="text-link-blue"
+          target="_blank"
+          rel="noreferrer"
         >
           apply for support
         </a>
@@ -566,21 +583,15 @@ export const socialSupportPage: PageElement[] = [
       <>
         To provide at-home assistance, Occupational Therapy students from
         Western University have helped us to put together a series of{" "}
-        <a
-          className="text-link-blue"
-          href="https://childcan.com/video-resources"
-        >
+        <Link className="text-link-blue" href="/video-resources">
           School Skills Videos
-        </a>{" "}
+        </Link>{" "}
         which help early learners to improve their handwriting, memory,
         attention and other skills. These helpful videos offer tips to help
         parents work with their children, and can be viewed on our{" "}
-        <a
-          className="text-link-blue"
-          href="https://childcan.com/video-resources"
-        >
+        <Link className="text-link-blue" href="/video-resources">
           Video Resources page
-        </a>
+        </Link>
         .
       </>
     ),
@@ -593,9 +604,11 @@ export const socialSupportPage: PageElement[] = [
         In partnership with the Dolly Parton Imagination Library, all of our on-
         and off-treatment children will receive a book each month, delivered
         directly to their door, until they reach the age of five. The learning
-        opportunities from these storybooks can be maximized using the
-        guidelines and suggestions our dedicated volunteer educators have
-        developed.{" "}
+        opportunities from these storybooks can be maximized using the{" "}
+        <Link href="/enhancing-early-literacy" className="text-link-blue">
+          guidelines and suggestions
+        </Link>{" "}
+        our dedicated volunteer educators have developed.
       </>
     ),
   },
@@ -623,9 +636,14 @@ export const socialSupportPage: PageElement[] = [
     type: "Paragraph",
     content: (
       <>
-        As plans are announced, events and activities will be listed on our
-        website and shared through our social media channels, email and
-        e-newsletters. ,
+        As plans are announced, events and activities will be{" "}
+        <Link
+          href="/for-families?page=Upcoming Family Events#"
+          className="text-link-blue"
+        >
+          listed on our website
+        </Link>{" "}
+        and shared through our social media channels, email and e-newsletters. ,
       </>
     ),
   },
@@ -663,10 +681,18 @@ export const socialSupportPage: PageElement[] = [
     type: "Paragraph",
     content: (
       <>
-        Through our online store, we have different ways to show support
-        including gold ribbon magnets and pins, gold ribbon and branded
-        clothing, and other items. All proceeds help us to provide our programs
-        and services.{" "}
+        Through our{" "}
+        <a
+          href="https://brandedbycollins.com/childcan/shop/home"
+          className="text-link-blue"
+          target="_blank"
+          rel="noreferrer"
+        >
+          online store
+        </a>
+        , we have different ways to show support including gold ribbon magnets
+        and pins, gold ribbon and branded clothing, and other items. All
+        proceeds help us to provide our programs and services.{" "}
       </>
     ),
   },
@@ -749,12 +775,9 @@ export const researchSupportPage: PageElement[] = [
     content: (
       <>
         If you are interested in other newly published paediatric research, see{" "}
-        <a
-          className="text-link-blue"
-          href="https://childcan.com/pediatric-research"
-        >
+        <Link className="text-link-blue" href="/pediatric-research">
           this page
-        </a>
+        </Link>
         .{" "}
       </>
     ),
@@ -764,12 +787,9 @@ export const researchSupportPage: PageElement[] = [
     content: (
       <>
         Looking for research that YOU can participate in? See{" "}
-        <a
-          className="text-link-blue"
-          href="https://childcan.com/research-opportunities"
-        >
+        <Link className="text-link-blue" href="/research-opportunities">
           this page
-        </a>
+        </Link>
         .
       </>
     ),
@@ -848,60 +868,53 @@ export const qaPage: PageElement[] = [
     ),
   },
   {
-    type: "DoubleList",
-    list: {
-      type: "DoubleListElement",
-      title: "Phase I: after diagnosis",
-      items: [
-        "Can you explain my child’s pathology report to me?",
-        "What do my children need to prepare physically and mentally for this diagnosis?",
-        "What stage is cancer? What is the prognosis?",
-      ],
-    },
-  },
-  {
-    type: "DoubleList",
-    list: {
-      type: "DoubleListElement",
-      title: "Phase II: treatment options/selection",
-      items: [
-        "Pros and cons of different treatments",
-        "What is the goal of the treatment? What are the success rate and relapse rate? ",
-        "What are the possible side effects of each treatment (short and long-term)? ",
-        "Will the treatment affect my child’s normal growth and development?",
-        "How will the treatment affect my child’s life? Can they still go to school or require special activities?",
-        "How to cooperate with the healthcare team to finish the treatment? ",
-        "What support services are available to my child and my family? ",
-      ],
-    },
-  },
-  {
-    type: "DoubleList",
-    list: {
-      type: "DoubleListElement",
-      title: "Phase III: treatment preparation",
-      items: [
-        "Can you describe my children’s recovery from the surgery?",
-        "Potential side effects of different treatments, preparation, and minimize influence? ",
-        "How long will the surgery take and how long will my children be in the hospital? ",
-        "Will my children receive the treatment at a hospital, clinic, or at home? And what’s the difference? ",
-        "How to communicate with my children effectively and notice any side effects in time? ",
-        "What can I do to relieve the side effects? ",
-      ],
-    },
-  },
-  {
-    type: "DoubleList",
-    list: {
-      type: "DoubleListElement",
-      title: "Phase IV: aftercare",
-      items: [
-        "What is the cancer relapse rate? How should I observe for any special signs or symptoms? ",
-        "After receiving treatment, how long the side effects will last?",
-        "What follow-up tests will my children need, and how often?",
-        "How do I get a treatment summary and survivorship care plan to keep in my personal records?",
-      ],
-    },
+    type: "List",
+    items: [
+      "Phase I: after diagnosis",
+      {
+        type: "InnerList",
+        items: [
+          "Can you explain my child’s pathology report to me?",
+          "What do my children need to prepare physically and mentally for this diagnosis?",
+          "What stage is cancer? What is the prognosis?",
+        ],
+      },
+      "Phase II: treatment options/selection",
+      {
+        type: "InnerList",
+        items: [
+          "Pros and cons of different treatments",
+          "What is the goal of the treatment? What are the success rate and relapse rate? ",
+          "What are the possible side effects of each treatment (short and long-term)? ",
+          "Will the treatment affect my child’s normal growth and development?",
+          "How will the treatment affect my child’s life? Can they still go to school or require special activities?",
+          "How to cooperate with the healthcare team to finish the treatment? ",
+          "What support services are available to my child and my family? ",
+        ],
+      },
+      "Phase III: treatment preparation",
+      {
+        type: "InnerList",
+        items: [
+          "Can you describe my children’s recovery from the surgery?",
+          "Potential side effects of different treatments, preparation, and minimize influence? ",
+          "How long will the surgery take and how long will my children be in the hospital? ",
+          "Will my children receive the treatment at a hospital, clinic, or at home? And what’s the difference? ",
+          "How to communicate with my children effectively and notice any side effects in time? ",
+          "What can I do to relieve the side effects? ",
+        ],
+      },
+      "Phase IV: aftercare",
+      {
+        type: "InnerList",
+        items: [
+          "What is the cancer relapse rate? How should I observe for any special signs or symptoms? ",
+          "After receiving treatment, how long the side effects will last?",
+          "What follow-up tests will my children need, and how often?",
+          "How do I get a treatment summary and survivorship care plan to keep in my personal records?",
+        ],
+      },
+    ],
   },
 ];
 export const forFamilesPageLayout: Record<string, PageElement[]> = {

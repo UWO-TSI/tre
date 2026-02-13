@@ -11,13 +11,13 @@ export default function PageContent(props: PageContentProps) {
   return (
     <div className="flex flex-col gap-4 bg-white">
       {props.pageLayout &&
-        props.pageLayout.map((element: PageElement, index) => {
+        props.pageLayout.map((element: PageElement, index1) => {
           switch (element.type) {
             case "Header":
               return (
                 <h1
-                  key={element.type + index}
-                  id={element.type + index}
+                  key={element.type + index1}
+                  id={element.type + index1}
                   className="text-h1 text-header-purple anchor"
                 >
                   {element.content}
@@ -26,8 +26,8 @@ export default function PageContent(props: PageContentProps) {
             case "Subheader":
               return (
                 <h2
-                  key={element.type + index}
-                  id={element.type + index}
+                  key={element.type + index1}
+                  id={element.type + index1}
                   className="text-h2 text-header-teal font-light anchor"
                 >
                   {element.content}
@@ -36,8 +36,8 @@ export default function PageContent(props: PageContentProps) {
             case "TertiaryHeader":
               return (
                 <h3
-                  key={element.type + index}
-                  id={element.type + index}
+                  key={element.type + index1}
+                  id={element.type + index1}
                   className="text-h3 text-header-purple font-semibold anchor"
                 >
                   {element.content}
@@ -46,8 +46,8 @@ export default function PageContent(props: PageContentProps) {
             case "Paragraph":
               return (
                 <div
-                  key={element.type + index}
-                  id={element.type + index}
+                  key={element.type + index1}
+                  id={element.type + index1}
                   className="text-body text-secondary-grey font-light"
                 >
                   {element.content}
@@ -56,51 +56,51 @@ export default function PageContent(props: PageContentProps) {
             case "Button":
               return (
                 <PurpleAccentButton
-                  key={element.type + index}
+                  key={element.type + index1}
                   className={`${element.alignment === "center" ? "m-auto" : "mr-auto"}`}
                   href={element.href}
                 >
                   {element.text}
                 </PurpleAccentButton>
               );
-            case "List":
+            case "List": {
+              const listElements = element.items.map((item, index2) => {
+                if (item && typeof item === "object" && "items" in item) {
+                  // double list item -> return inner items
+                  return item.items.map((innerItem, index3) => (
+                    <li
+                      className="list-[circle] py-0.5 ml-16"
+                      key={index2 + index3}
+                    >
+                      {innerItem}
+                    </li>
+                  ));
+                } else {
+                  // String || number || ReactNode
+                  return (
+                    <li className="list-disc py-1 ml-8" key={index1 + index2}>
+                      {item}
+                    </li>
+                  );
+                }
+              });
+
               return (
                 <ul
-                  key={element.type + index}
-                  id={element.type + index}
-                  className="list-disc text-body pl-8 text-secondary-grey font-light"
+                  key={element.type + index1}
+                  id={element.type + index1}
+                  className="list-disc text-body text-secondary-grey font-light"
                 >
-                  {element.items.map((item) => {
-                    return <li key={item}>{item}</li>;
-                  })}
+                  {listElements.flat()}
                 </ul>
               );
-            case "DoubleList":
-              return (
-                <ul
-                  key={element.type + index}
-                  className="list-disc pl-8 text-body text-secondary-grey font-light"
-                >
-                  <li>
-                    {element.list.title}
-                    <ul className="list-[circle] pl-12 text-body text-secondary-grey font-light">
-                      {element.list.items.map((item) => {
-                        return (
-                          <li className="py-0.5" key={item}>
-                            {item}
-                          </li>
-                        );
-                      })}
-                    </ul>
-                  </li>
-                </ul>
-              );
+            }
 
             case "Divider":
-              return <hr key={element.type + index} className="my-4"></hr>;
+              return <hr key={element.type + index1} className="my-4"></hr>;
             case "MiscElement":
               return (
-                <div key={element.type + index} id={element.type + index}>
+                <div key={element.type + index1} id={element.type + index1}>
                   {element.content}
                 </div>
               );
@@ -108,8 +108,8 @@ export default function PageContent(props: PageContentProps) {
             case "Image":
               return (
                 <div
-                  key={element.type + index}
-                  id={element.type + index}
+                  key={element.type + index1}
+                  id={element.type + index1}
                   className={`relative ${element.className}`}
                 >
                   <a href={element.href} target="_blank" rel="noreferrer">
@@ -136,13 +136,13 @@ export default function PageContent(props: PageContentProps) {
                 <FacebookEmbed
                   key={element.url}
                   url={element.url}
-                  width={element.width}
+                  type="video"
                 ></FacebookEmbed>
               );
 
             case "VerticalSplit":
               return (
-                <div key={element.type + index} className="flex gap-8">
+                <div key={element.type + index1} className="flex gap-8">
                   <div className="flex flex-col w-1/2 relative">
                     <PageContent pageLayout={element.left}></PageContent>
                   </div>

@@ -10,6 +10,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@behold/react": "^0.1.11",
     "@sanity/image-url": "^1.2.0",
     "@sanity/vision": "^4.22.0",
     "@vis.gl/react-google-maps": "^1.7.1",
