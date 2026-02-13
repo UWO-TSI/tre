@@ -1,9 +1,10 @@
 import Link from "next/link";
 import HeroImage from "../../../components/heroImage/heroImage";
-import { eventList } from "../event";
 import PurpleAccentButton from "@/components/accentButton/purpleAccentButton";
 import Image from "next/image";
 import OtherEvent from "./otherEvent";
+import { client, urlForImage } from "@/sanity/lib/client";
+import { Event } from "../event";
 
 export default async function Page({
   params,
@@ -12,12 +13,16 @@ export default async function Page({
 }) {
   const { events_template } = await params;
 
-  const event = eventList[events_template];
+  console.log(events_template);
+  const event: Event = await client.fetch(
+    `*[_type == "event" && slug.current == "${events_template}"][0]`,
+  );
 
   if (event == undefined) {
     // have a 404 page appear here
     return <div>event does not exist</div>;
   }
+  console.log(event);
 
   const eventDate = (): string => {
     const options: Intl.DateTimeFormatOptions = {
@@ -27,7 +32,7 @@ export default async function Page({
       day: "numeric",
     };
 
-    const date = event.startDate;
+    const date = new Date(event.startDate);
 
     return date.toLocaleDateString("en-US", options);
   };
@@ -37,8 +42,14 @@ export default async function Page({
       hour: "2-digit",
       minute: "2-digit",
     };
-    const startTime = event.startDate.toLocaleTimeString("en-US", options);
-    const endTime = event.endDate.toLocaleTimeString("en-US", options);
+    const startTime = new Date(event.startDate).toLocaleTimeString(
+      "en-US",
+      options,
+    );
+    const endTime = new Date(event.endDate).toLocaleTimeString(
+      "en-US",
+      options,
+    );
     return `${startTime} - ${endTime}`;
   };
 
@@ -82,14 +93,14 @@ export default async function Page({
               {/* calendar */}
               <div className="flex flex-row flex-nowrap">
                 <a
-                  className="text-secondary-grey text-body text-nowrap"
+                  className="text-secondary-grey text-body text-nowrap cursor-pointer"
                   href={event.googleCalenderLink}
                 >
                   Google Calendar
                 </a>
                 <div className="pl-2 pr-2 text-body ">·</div>
                 <a
-                  className="text-secondary-grey text-body text-nowrap"
+                  className="text-secondary-grey text-body text-nowrap cursor-pointer"
                   href={event.ICSCalenderLink}
                 >
                   ICS
@@ -100,33 +111,46 @@ export default async function Page({
           {/* right column */}
           <div className="flex flex-col items-start">
             {/* description */}
-            <div className="text-body text-main-grey">{event.description}</div>
+            <div className="text-body text-main-grey">
+              {event.description.split("\n").map((content, index) => {
+                return (
+                  <p
+                    className="text-body text-main-grey pb-2"
+                    key={index + "content"}
+                  >
+                    {content}
+                  </p>
+                );
+              })}
+            </div>
             {/* button */}
             <PurpleAccentButton className="ml-auto mr-auto pt-5 pb-5 mt-8 mb-8 text-[20px]">
               {event.buttonTitle}
             </PurpleAccentButton>
 
             {/* Images */}
-            {event.images.map((image, index) => {
-              /* Images container */
-              return (
-                <div
-                  key={index + image.imageUrl}
-                  className="relative w-full mb-8"
-                >
-                  <Image
-                    width={1200}
-                    height={800}
-                    style={{
-                      width: "100%",
-                      height: "auto",
-                    }}
-                    src={image.imageUrl}
-                    alt={image.alt}
-                  ></Image>
-                </div>
-              );
-            })}
+            {event.images != undefined
+              ? event.images.map((image, index) => {
+                  /* Images container */
+                  return (
+                    <div
+                      key={index + "images"}
+                      className="relative w-full mb-8"
+                    >
+                      <Image
+                        width={1200}
+                        height={800}
+                        style={{
+                          width: "100%",
+                          height: "auto",
+                        }}
+                        src={urlForImage(image).url()}
+                        alt={""}
+                      ></Image>
+                    </div>
+                  );
+                })
+              : ""}
 
             {/* Source */}
             <div className="flex flex-row gap-2">
@@ -140,13 +164,13 @@ export default async function Page({
         {/* next events section */}
         <div className="max-w-250 w-full flex flex-row justify-between pt-20">
           <OtherEvent
-            date={event.startDate}
+            date={new Date(event.startDate)}
             order="BEFORE"
             title="Other event title"
             link=""
           ></OtherEvent>
           <OtherEvent
-            date={event.endDate}
+            date={new Date(event.endDate)}
             order="AFTER"
             title="Other event title"
             link=""

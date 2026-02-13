@@ -1,8 +1,12 @@
 import HeroImage from "@/components/heroImage/heroImage";
-import { eventList } from "./event";
+import { Event } from "./event";
 import EventCard from "./EventCard";
+import { client } from "@/sanity/lib/client";
 
-export default function Page() {
+export default async function Page() {
+  const events: Event[] = await client.fetch('*[_type == "event"]');
+  console.log(events);
+
   return (
     <div className="flex flex-col">
       <HeroImage
@@ -12,12 +16,12 @@ export default function Page() {
         overlay={true}
       />
       <div className="flex flex-col bg-white py-24 px-8 gap-20">
-        {Object.entries(eventList).map((event) => {
+        {events.map((event) => {
           return (
             <EventCard
-              key={event[0]}
-              name={event[0]}
-              event={event[1]}
+              key={event.title}
+              name={event.slug.current}
+              event={event}
             ></EventCard>
           );
         })}

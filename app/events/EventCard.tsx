@@ -2,6 +2,7 @@ import PageContent from "@/components/pageLayout/PageContent";
 import { Event } from "./event";
 import Image from "next/image";
 import Link from "next/link";
+import { urlForImage } from "@/sanity/lib/client";
 
 export default function EventCard(props: { name: string; event: Event }) {
   return (
@@ -11,17 +12,17 @@ export default function EventCard(props: { name: string; event: Event }) {
           <Image
             fill
             className="object-cover"
-            src={props.event.previewImage.imageUrl}
-            alt={props.event.previewImage.alt}
+            src={urlForImage(props.event.mainHeroImage).url()}
+            alt={""}
           ></Image>
           <div className="flex flex-col absolute w-17 aspect-square pt-1 bg-white top-2 right-2 text-secondary-grey">
             <p className="text-center text-body-small">
-              {props.event.startDate
+              {new Date(props.event.startDate)
                 .toLocaleString("default", { month: "short" })
                 .toUpperCase()}
             </p>
             <p className="text-center text-h2">
-              {props.event.startDate.getDate()}
+              {new Date(props.event.startDate).getDate()}
             </p>
           </div>
         </Link>
@@ -39,7 +40,7 @@ export default function EventCard(props: { name: string; event: Event }) {
               type: "Paragraph",
               content: (
                 <>
-                  {props.event.startDate.toDateString()}
+                  {new Date(props.event.startDate).toDateString()}
                   <br />
                   {props.event.location}
                 </>
