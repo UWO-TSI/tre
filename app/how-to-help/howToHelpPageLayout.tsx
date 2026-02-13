@@ -758,8 +758,7 @@ export const goldPage: PageElement[] = [
           "Owen Sound on Sunday, September 21, 2025 11-2pm",
           "Brights Grove on Sunday, September 21, 2025 1-4pm",
           "or walk near you.",
-          
-        ]
+        ],
       },
       "Create your own fundraiser on our Hands of Hope website and fundraise with your own creative flair.",
       "Show your support by purchasing Childcan merchandise or some of our signature gold ribbon items. Get your gold on by visiting the online store!",
