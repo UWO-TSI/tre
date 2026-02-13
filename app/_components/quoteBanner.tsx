@@ -27,7 +27,8 @@ function QuoteBanner(props: QuoteBannerProps) {
           alt={props.altText}
           src={props.imageSrc}
           fill
-        ></Image>
+          sizes="100vw"
+        />
       </div>
 
       <div

@@ -22,14 +22,16 @@ function HeroImage(props: HeroImageProps) {
       >
         <Image
           className="animate-image-appear"
-          layout="fill"
+          fill
           style={{
             objectPosition: `center ${props.imageVerticalPosition ?? "center"}`,
             objectFit: "cover",
           }}
           alt={props.alt}
           src={props.image}
-        ></Image>
+          priority
+          sizes="100vw"
+        />
         {props.overlay && (
           <div className="absolute inset-0 bg-linear-to-r from-[#575757]/90 to-[#575757]/10"></div>
         )}

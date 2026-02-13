@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface SectionBoxProps {
   title: string;
   imgSrc: string;
@@ -21,11 +23,15 @@ export default function SectionBox(props: SectionBoxProps) {
         </p>
       </div>
 
-      <img
-        src={props.imgSrc}
-        alt={props.altText}
-        className="w-full md:w-1/3 border-2 object-cover max-w-full"
-      />
+      <div className="relative w-full md:w-1/3 border-2 min-h-50">
+        <Image
+          src={props.imgSrc}
+          alt={props.altText}
+          fill
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, 33vw"
+        />
+      </div>
     </div>
   );
 }

@@ -13,7 +13,8 @@ export default function EventCard(props: { name: string; event: Event }) {
             className="object-cover"
             src={props.event.previewImage.imageUrl}
             alt={props.event.previewImage.alt}
-          ></Image>
+            sizes="(max-width: 768px) 100vw, 75vw"
+          />
           <div className="flex flex-col absolute w-17 aspect-square pt-1 bg-white top-2 right-2 text-secondary-grey">
             <p className="text-center text-body-small">
               {props.event.startDate
