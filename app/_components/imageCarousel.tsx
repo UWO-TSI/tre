@@ -22,7 +22,12 @@ const images = [
     text: "my button text 3",
     offset: "20%",
   },
-  { id: 4, url: "/images/family.webp", text: "my button text 4", offset: "20%" },
+  {
+    id: 4,
+    url: "/images/family.webp",
+    text: "my button text 4",
+    offset: "20%",
+  },
   {
     id: 5,
     url: "/images/_DSC5337.JPG",
