@@ -64,25 +64,26 @@ export default function PageContent(props: PageContentProps) {
                 </PurpleAccentButton>
               );
             case "List": {
-              const listElements = (
-                element.items.map((item, index2) => {
-                  if (item && typeof item === "object" && "items" in item) {
-                    // double list item -> return inner items
-                    return item.items.map((innerItem, index3) => (
-                      <li className="list-[circle] py-0.5 ml-16" key={index2 + index3}>
-                        {innerItem}
-                      </li>
-                    ));
-                  } else {
-                    // String || number || ReactNode
-                    return (
-                      <li className="list-disc py-1 ml-8" key={index1 + index2}>
-                        {item}
-                      </li>
-                    );
-                  }
-                })
-              );
+              const listElements = element.items.map((item, index2) => {
+                if (item && typeof item === "object" && "items" in item) {
+                  // double list item -> return inner items
+                  return item.items.map((innerItem, index3) => (
+                    <li
+                      className="list-[circle] py-0.5 ml-16"
+                      key={index2 + index3}
+                    >
+                      {innerItem}
+                    </li>
+                  ));
+                } else {
+                  // String || number || ReactNode
+                  return (
+                    <li className="list-disc py-1 ml-8" key={index1 + index2}>
+                      {item}
+                    </li>
+                  );
+                }
+              });
 
               return (
                 <ul
@@ -93,9 +94,8 @@ export default function PageContent(props: PageContentProps) {
                   {listElements.flat()}
                 </ul>
               );
-
             }
-              
+
             case "Divider":
               return <hr key={element.type + index1} className="my-4"></hr>;
             case "MiscElement":

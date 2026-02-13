@@ -270,9 +270,14 @@ export const ourTeam: PageElement[] = [
     content: (
       <>
         To contact any of our team, please email{" "}
-        <a href="mailto:info@childcan.com" className="text-link-blue">info@childcan.com</a>. This email is
-        monitored during business hours. Or you can call{" "}
-        <a href="tel:+15196853500" className="text-link-blue">519-685-3500</a>.
+        <a href="mailto:info@childcan.com" className="text-link-blue">
+          info@childcan.com
+        </a>
+        . This email is monitored during business hours. Or you can call{" "}
+        <a href="tel:+15196853500" className="text-link-blue">
+          519-685-3500
+        </a>
+        .
       </>
     ),
   },
@@ -288,7 +293,10 @@ export const ourTeam: PageElement[] = [
     content: (
       <>
         Should you wish to join our Board of Directors, please{" "}
-        <Link href="/about-us?page=Careers" className="text-link-blue">learn more</Link>.
+        <Link href="/about-us?page=Careers" className="text-link-blue">
+          learn more
+        </Link>
+        .
       </>
     ),
   },
@@ -451,9 +459,20 @@ export const careers: PageElement[] = [
         Please forward your resume, together with a cover letter explaining your
         key attributes and interest in serving on Childcan’s Board of Directors,
         to the attention of Susan Marshall, Board Chair at{" "}
-        <a href="mailto:info@childcan.com" className="text-link-blue cursor-pointer">info@childcan.com</a>. Any
-        questions can be directed to Suzanne Fratschko Elliott at{" "}
-        <a href="mailto:info@childcan.com" className="text-link-blue cursor-pointer">info@childcan.com</a>.{" "}
+        <a
+          href="mailto:info@childcan.com"
+          className="text-link-blue cursor-pointer"
+        >
+          info@childcan.com
+        </a>
+        . Any questions can be directed to Suzanne Fratschko Elliott at{" "}
+        <a
+          href="mailto:info@childcan.com"
+          className="text-link-blue cursor-pointer"
+        >
+          info@childcan.com
+        </a>
+        .{" "}
       </>
     ),
   },
@@ -466,7 +485,13 @@ export const careers: PageElement[] = [
     content: (
       <>
         Should you be interested in volunteering, please contact{" "}
-        <a href="mailto:info@childcan.com" className="cursor-pointer text-link-blue">info@childcan.com</a>.{" "}
+        <a
+          href="mailto:info@childcan.com"
+          className="cursor-pointer text-link-blue"
+        >
+          info@childcan.com
+        </a>
+        .{" "}
       </>
     ),
   },
@@ -486,7 +511,10 @@ export const careers: PageElement[] = [
     content: (
       <>
         Learn more about{" "}
-        <Link href="/about-us?page=About Us" className="cursor-pointer text-link-blue">
+        <Link
+          href="/about-us?page=About Us"
+          className="cursor-pointer text-link-blue"
+        >
           Childcan, our Vision, Mission, and Core Values here.
         </Link>
       </>

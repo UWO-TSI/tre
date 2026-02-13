@@ -174,7 +174,12 @@ export const financialSupportPage: PageElement[] = [
     content: (
       <>
         We are extremely grateful to all involved with{" "}
-        <a className="text-link-blue" href="https://miraclemaxsminions.ca/" target="_blank" rel="noreferrer">
+        <a
+          className="text-link-blue"
+          href="https://miraclemaxsminions.ca/"
+          target="_blank"
+          rel="noreferrer"
+        >
           Miracle Max’s Minions
         </a>{" "}
         for their support of our Max’s Passes parking passes.
@@ -207,7 +212,12 @@ export const financialSupportPage: PageElement[] = [
     content: (
       <>
         Thank you to{" "}
-        <a className="text-link-blue" href="http://preferred-ins.com/" target="_blank" rel="noreferrer">
+        <a
+          className="text-link-blue"
+          href="http://preferred-ins.com/"
+          target="_blank"
+          rel="noreferrer"
+        >
           Preferred Insurance
         </a>
         , who ensure that every family is covered through this meal program.
@@ -573,19 +583,13 @@ export const socialSupportPage: PageElement[] = [
       <>
         To provide at-home assistance, Occupational Therapy students from
         Western University have helped us to put together a series of{" "}
-        <Link
-          className="text-link-blue"
-          href="/video-resources"          
-        >
+        <Link className="text-link-blue" href="/video-resources">
           School Skills Videos
         </Link>{" "}
         which help early learners to improve their handwriting, memory,
         attention and other skills. These helpful videos offer tips to help
         parents work with their children, and can be viewed on our{" "}
-        <Link
-          className="text-link-blue"
-          href="/video-resources"
-        >
+        <Link className="text-link-blue" href="/video-resources">
           Video Resources page
         </Link>
         .
@@ -600,16 +604,11 @@ export const socialSupportPage: PageElement[] = [
         In partnership with the Dolly Parton Imagination Library, all of our on-
         and off-treatment children will receive a book each month, delivered
         directly to their door, until they reach the age of five. The learning
-        opportunities from these storybooks can be maximized using the
-        {" "}
-        <Link 
-          href="/enhancing-early-literacy"
-          className="text-link-blue"
-        >
+        opportunities from these storybooks can be maximized using the{" "}
+        <Link href="/enhancing-early-literacy" className="text-link-blue">
           guidelines and suggestions
         </Link>{" "}
-        our dedicated volunteer educators have
-        developed.
+        our dedicated volunteer educators have developed.
       </>
     ),
   },
@@ -638,14 +637,13 @@ export const socialSupportPage: PageElement[] = [
     content: (
       <>
         As plans are announced, events and activities will be{" "}
-        <Link 
+        <Link
           href="/for-families?page=Upcoming Family Events#"
           className="text-link-blue"
         >
           listed on our website
         </Link>{" "}
-        and shared through our social media channels, email and
-        e-newsletters. ,
+        and shared through our social media channels, email and e-newsletters. ,
       </>
     ),
   },
@@ -683,7 +681,7 @@ export const socialSupportPage: PageElement[] = [
     type: "Paragraph",
     content: (
       <>
-        Through our {" "}
+        Through our{" "}
         <a
           href="https://brandedbycollins.com/childcan/shop/home"
           className="text-link-blue"
@@ -692,10 +690,9 @@ export const socialSupportPage: PageElement[] = [
         >
           online store
         </a>
-        , we have different ways to show support
-        including gold ribbon magnets and pins, gold ribbon and branded
-        clothing, and other items. All proceeds help us to provide our programs
-        and services.{" "}
+        , we have different ways to show support including gold ribbon magnets
+        and pins, gold ribbon and branded clothing, and other items. All
+        proceeds help us to provide our programs and services.{" "}
       </>
     ),
   },
@@ -778,10 +775,7 @@ export const researchSupportPage: PageElement[] = [
     content: (
       <>
         If you are interested in other newly published paediatric research, see{" "}
-        <Link
-          className="text-link-blue"
-          href="/pediatric-research"
-        >
+        <Link className="text-link-blue" href="/pediatric-research">
           this page
         </Link>
         .{" "}
@@ -793,10 +787,7 @@ export const researchSupportPage: PageElement[] = [
     content: (
       <>
         Looking for research that YOU can participate in? See{" "}
-        <Link
-          className="text-link-blue"
-          href="/research-opportunities"
-        >
+        <Link className="text-link-blue" href="/research-opportunities">
           this page
         </Link>
         .

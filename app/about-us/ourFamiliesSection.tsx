@@ -22,11 +22,16 @@ function OurFamiliesSection(props: OurFamiliesSectionProps) {
       </Link>
       {/* right side */}
       <div>
-        <Link href={props.link} className="mb-2 text-header-teal text-h3 hover:text-link-blue cursor-pointer">
+        <Link
+          href={props.link}
+          className="mb-2 text-header-teal text-h3 hover:text-link-blue cursor-pointer"
+        >
           {props.title}
         </Link>
         <div className="text-main-grey text-body-small">{props.content}</div>
-        <Link href={props.link} className="text-link-blue text-body-small mt-4">Read More →</Link>
+        <Link href={props.link} className="text-link-blue text-body-small mt-4">
+          Read More →
+        </Link>
       </div>
     </div>
   );
