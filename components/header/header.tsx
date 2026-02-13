@@ -56,10 +56,11 @@ function Header() {
         <a href="/">
           <Image
             className="pl-1 "
-            alt={""}
+            alt="Childcan Logo"
             height={110}
             width={210}
             src={"/images/Childcan-Logo.png.webp"}
+            priority
           ></Image>
         </a>
         <nav className="flex flex-row items-center">
