@@ -1,13 +1,29 @@
 import Image from "next/image";
+import Link from "next/link";
 
 interface OurFamiliesSectionProps {
   image: string;
   alt: string;
   title: string;
-  content: React.ReactNode | string;
+  content: string;
   link: string;
 }
 function OurFamiliesSection(props: OurFamiliesSectionProps) {
+  const content = () => {
+    const split = props.content.split("\n");
+
+    return split.map((para, index) => {
+      return (
+        <p
+          className="text-main-grey text-body-small pb-1"
+          key={index + props.title}
+        >
+          {para}
+        </p>
+      );
+    });
+  };
+  const route = "/our-families-stories/" + props.link;
   return (
     <div className="grid grid-cols-[1fr_2.3fr] gap-8 mt-5 mb-5">
       {/* left side */}
@@ -21,47 +37,23 @@ function OurFamiliesSection(props: OurFamiliesSectionProps) {
       </div>
       {/* right side */}
       <div>
-        <div className="mb-2 text-header-teal text-h3 hover:text-link-blue cursor-pointer">
+        {/* 11 lines */}
+        <Link
+          href={route}
+          className="mb-2 text-header-teal text-h3 hover:text-link-blue cursor-pointer"
+        >
           {props.title}
-        </div>
-        <div className="text-main-grey text-body-small">{props.content}</div>
-        <div className="text-link-blue text-body-small mt-4">Read More →</div>
+        </Link>
+        <div className="mb-4">{content()}</div>
+        <Link
+          href={route}
+          className="text-link-blue text-body-small cursor-pointer"
+        >
+          Read More →
+        </Link>
       </div>
     </div>
   );
 }
 
-export const ourFamiliesFamily: OurFamiliesSectionProps[] = [
-  {
-    image: "/images/Tara+family+pic.webp",
-    alt: "",
-    title: 'Tara "Boom"',
-    content: (
-      <>
-        <div className="mb-2">
-          Some stories are etched in your heart long after you hear them.
-          Stories of courage, love, and a kind of hope that refuses to fade,
-          even in the face of heartbreak. This is one of those stories where
-          sorrow is transformed into something extraordinary.
-        </div>
-        It’s the story of a little girl named Tara “Boom” Houston. A bright,
-        vibrant seven-year-old who adored her family, friends, and horses more
-        than anything else in the world. It’s a story that begins with laughter
-        and ends with lasting light and though we wish we could rewrite the
-        middle, what remains is a legacy that continues to bring hope to
-        countless others.
-      </>
-    ),
-
-    link: "",
-  },
-  {
-    image: "/images/Ethan+collage.webp",
-    alt: "",
-    title: "Ethan - part of the Childcan family",
-    content:
-      "It was the summer of 2020 and Ethan’s family was filled with excitement and, of course, mixed with a few nerves, as Ethan prepared to start Junior Kindergarten. But in mid-August, their world was turned upside down. At the age of 4, Ethan was diagnosed with Acute Lymphoblastic Leukemia. The carefree summer days they had imagined were suddenly replaced with hospital stays, appointments, and many procedures for Ethan.",
-    link: "",
-  },
-];
 export default OurFamiliesSection;

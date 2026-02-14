@@ -4,7 +4,8 @@ import { event } from "./event";
 import { guide } from "./guide";
 import { family } from "./family";
 import { homepage } from "./homepage";
+import { news } from "./news";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [event, guide, family, homepage],
+  types: [event, guide, family, homepage, news],
 };

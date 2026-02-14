@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 interface NewsBlrebProps {
   image: string;
@@ -19,33 +20,13 @@ function NewsBlerb(props: NewsBlrebProps) {
         ></Image>
       </div>
       <div className="flex flex-col items-start h-full justify-center">
-        <div className="text-header-teal text-h1 mb-4">{props.title}</div>
+        <Link href={props.link} className="text-header-teal text-h1 mb-4">
+          {props.title}
+        </Link>
         <div className="text-body text-main-grey">{props.subtext}</div>
       </div>
     </div>
   );
 }
-export const newsItems: NewsBlrebProps[] = [
-  {
-    image: "/images/Aubree+crop2.webp",
-    alt: "",
-    title: "Meet Aubree",
-    subtext: "Your January 2026 newsletter.",
-    link: "",
-  },
-  {
-    image: "/images/Todd+with+support+cards.webp",
-    alt: "",
-    title: "🌟 Christmas Wishes, stars, support, PJs, and more...",
-    subtext: "Your December newsletter.",
-    link: "",
-  },
-  {
-    image: "/images/Be+A+Star+Web+Banner.webp",
-    alt: "",
-    title: "🌟 Stars, warmth and sparkles, lights, and more...",
-    subtext: "Your November newsletter.",
-    link: "",
-  },
-];
+
 export default NewsBlerb;

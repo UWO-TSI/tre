@@ -29,6 +29,13 @@ export const family = defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: "shortSummary",
+      title: "Short Summary",
+      type: "text",
+      rows: 3,
+      description: "A brief summary for previews",
+    }),
+    defineField({
       name: "text",
       title: "Story Content",
       type: "text",

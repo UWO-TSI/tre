@@ -1,7 +1,8 @@
 import { PageElement } from "@/components/pageLayout/PageElement";
 import NewsBlerb, { newsItems } from "./newsBlerb";
-import OurFamiliesSection, { ourFamiliesFamily } from "./ourFamiliesSection";
 import ReportOfHopeDocs, { reportOfHopeDocsList } from "./reportOfHopeDocs";
+import FamiliesList from "./familiesList";
+import NewsList from "./newsList";
 
 export const aboutUs: PageElement[] = [
   { type: "Header", content: <>About Us</> },
@@ -163,14 +164,7 @@ export const ourFamilies: PageElement[] = [
     content: (
       <>
         <div className="flex flex-col">
-          {ourFamiliesFamily.map((family, index) => {
-            return (
-              <OurFamiliesSection
-                key={index + "family list"}
-                {...family}
-              ></OurFamiliesSection>
-            );
-          })}
+          <FamiliesList></FamiliesList>
         </div>
       </>
     ),
@@ -193,11 +187,7 @@ export const ourNews: PageElement[] = [
     content: (
       <>
         <div className="flex flex-col gap-12">
-          {newsItems.map((item, index) => {
-            return (
-              <NewsBlerb key={"MiscElement" + index} {...item}></NewsBlerb>
-            );
-          })}
+          <NewsList></NewsList>
         </div>
       </>
     ),

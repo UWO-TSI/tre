@@ -4,6 +4,7 @@ export type FamilyStory = {
   title: string;
   date: Date;
   text: string;
+  shortSummary: string;
   heroImage: Image;
   slug: Slug;
   images: Image[];

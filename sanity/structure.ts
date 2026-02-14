@@ -32,4 +32,5 @@ export const structure: StructureResolver = (S) =>
               S.document().documentId(documentId).schemaType("guide"),
             ),
         ),
+      S.documentTypeListItem("news").title("News"),
     ]);
