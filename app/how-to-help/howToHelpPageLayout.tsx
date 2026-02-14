@@ -757,11 +757,19 @@ export const goldPage: PageElement[] = [
           "or walk near you.",
         ],
       },
-      "Create your own fundraiser on our Hands of Hope website and fundraise with your own creative flair.",
-      "Show your support by purchasing Childcan merchandise or some of our signature gold ribbon items. Get your gold on by visiting the online store!",
+      <>
+        Create your own fundraiser on our <a href="https://childcan.akaraisin.com/ui/handsofhope" className="text-link-blue" target="_blank" rel="noreferrer">Hands of Hope</a> website and fundraise with your own creative flair.
+      </>,
+      <>
+        Show your support by purchasing Childcan <a href="https://brandedbycollins.com/childcan/shop/home" className="text-link-blue" target="_blank" rel="noreferrer">merchandise</a> or some of our signature gold ribbon items. Get your gold on by visiting the <a href="https://brandedbycollins.com/childcan/shop/home" className="text-link-blue" target="_blank" rel="noreferrer">online store</a>! 
+      </>,
       "Leave your porch light on to glow gold. Take a photo and share it with #ChildcanGold and tag @Childcan so that we are amplify your show of support.",
-      "Join us at one of the flag raising ceremonies listed below. More details can be found on our events page too.",
-      "Donate to show your support to other families.",
+      <>
+        Join us at one of the flag raising ceremonies listed below. More details can be found on our <Link href="/events" className="text-link-blue">events</Link> page too.
+      </>,
+      <>
+        <a href="https://form-renderer-app.donorperfect.io/give/childcan/2026-donation-form" className="text-link-blue" target="_blank" rel="noreferrer">Donate</a> to show your support to other families.
+      </>,
     ],
   },
   {
@@ -859,7 +867,7 @@ export const goldPage: PageElement[] = [
       <>
         If you are aware of more areas that can proclaim, fly flags, or light
         up, and want to help, please contact us at{" "}
-        <a href="mailto:info@childcan.com" className="text-link-blue">
+        <a href="mailto:info@childcan.com?subject=I want to help glow gold this summer" className="text-link-blue">
           info@childcan.com
         </a>
         .
@@ -874,9 +882,9 @@ export const goldPage: PageElement[] = [
     content: (
       <>
         [i]
-        https://www.childhoodcancer.ca/Your-Impact/Childhood-Cancer-Statistics-Resources
-        or, Statistics Canada, or Facts about Childhood Cancer In Ontario, July
-        2024 (pdf).
+        <a href="https://www.childhoodcancer.ca/Your-Impact/Childhood-Cancer-Statistics-Resources" className="text-link-blue" target="_blank" rel="noreferrer">https://www.childhoodcancer.ca/Your-Impact/Childhood-Cancer-Statistics-Resources</a> or, 
+        <a href="https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310039401&pickMembers%5B0%5D=2.21&pickMembers%5B1%5D=3.1&cubeTimeFrame.startYear=2018&cubeTimeFrame.endYear=2022&referencePeriods=20180101%2C20220101" className="text-link-blue" target="_blank" rel="noreferrer">Statistics Canada</a>, 
+        or <Link href="/pdfs/ChildhoodCancerFacts.pdf" className="text-link-blue" target="_blank" rel="noreferrer">Facts about Childhood Cancer In Ontario, July 2024 (pdf)</Link>.
       </>
     ),
   },
@@ -936,14 +944,14 @@ export const hostAnEventPage: PageElement[] = [
         <a href="mailto:info@childcan.com" className="text-link-blue">
           info@childcan.com
         </a>
-        , call <a href="tel:519-685-3500">519-685-3500</a>, or check out our
+        , call <a href="tel:+15196853500" className="text-link-blue">519-685-3500</a>, or check out our
         Event Kit.
       </>
     ),
   },
   {
     type: "Button",
-    href: "https://childcan.com/s/Community-Events-Toolkit.pdf",
+    href: "/pdfs/CommunityEventsToolkit.pdf",
     text: "Event Kit (pdf)",
   },
   {
@@ -954,16 +962,20 @@ export const hostAnEventPage: PageElement[] = [
         <a
           className="text-link-blue"
           href="https://forms.gle/7fJsziDi4unHBzuz7"
+          target="_blank"
+          rel="noreferrer"
         >
           Fundraising Event Form
         </a>{" "}
         or the downloadable{" "}
-        <a
+        <Link
           className="text-link-blue"
-          href="https://childcan.com/s/Community-Event-fundraiser-for-Childcan-Form.pdf"
+          href="/pdfs/CommunityEventFundraiserForm.pdf"
+          target="_blank"
+          rel="noreferrer"
         >
           pdf
-        </a>{" "}
+        </Link>{" "}
         and return it to us at your convenience.
       </>
     ),
@@ -980,7 +992,7 @@ export const hostAnEventPage: PageElement[] = [
     right: [
       {
         type: "Button",
-        href: "https://childcan.com/s/Community-Event-fundraiser-for-Childcan-Form.pdf",
+        href: "/pdfs/CommunityEventFundraiserForm.pdf",
         text: "Fundraising Event Form (pdf)",
       },
     ],

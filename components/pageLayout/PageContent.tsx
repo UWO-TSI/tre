@@ -91,7 +91,7 @@ export default function PageContent(props: PageContentProps) {
                   id={element.type + index1}
                   className="list-disc text-body text-secondary-grey font-light"
                 >
-                  {listElements.flat()}
+                  {listElements}
                 </ul>
               );
             }

@@ -73,7 +73,7 @@ export const hereForYouPage: PageElement[] = [
   {
     type: "Button",
     text: "Learn more about support available",
-    href: "https://childcan.com/financial-support",
+    href: "/for-families?page=Financial Support",
   },
 ];
 
@@ -319,7 +319,7 @@ export const financialSupportPage: PageElement[] = [
   {
     type: "Button",
     text: "Learn more about Childcan Bursaries",
-    href: "https://childcan.com/bursary",
+    href: "/bursary",
   },
   { type: "Subheader", content: <>Funeral Costs</> },
   {
@@ -388,7 +388,7 @@ export const emotionalSupportPage: PageElement[] = [
   {
     type: "Button",
     text: "Learn more",
-    href: "https://childcan.com/recreational-therapy",
+    href: "/recreational-therapy",
   },
   { type: "Subheader", content: <>Ongoing Family Support</> },
   {
@@ -434,7 +434,7 @@ export const emotionalSupportPage: PageElement[] = [
   {
     type: "Button",
     text: "Learn more about Super Star Sibs",
-    href: "https://childcan.com/superstarsibs",
+    href: "/superstarsibs",
   },
   { type: "Subheader", content: <>Healthy Mind, Body & Support</> },
   {
@@ -527,7 +527,7 @@ export const socialSupportPage: PageElement[] = [
   {
     type: "Button",
     text: "Video Resources",
-    href: "https://childcan.com/video-resources",
+    href: "/video-resources",
   },
   { type: "TertiaryHeader", content: <>Volunteer Tutoring Program</> },
   {
@@ -612,7 +612,7 @@ export const socialSupportPage: PageElement[] = [
       </>
     ),
   },
-  { type: "Button", text: "Learn more", href: "https://childcan.com/dolly" },
+  { type: "Button", text: "Learn more", href: "/dolly" },
   { type: "Subheader", content: <>Family Fun Days</> },
   {
     type: "Paragraph",
@@ -794,6 +794,37 @@ export const researchSupportPage: PageElement[] = [
       </>
     ),
   },
+  {
+    type: "VerticalSplit",
+    left: [
+      {
+        type: "Image",
+        src: "/images/ResearchProject2025.webp",
+        alt: "Research Project 2025",
+        className: "h-80 aspect-square"
+      },
+      {
+        type: "Image",
+        src: "/images/ResearchPortrait.webp",
+        alt: "The Team",
+        className: "h-107"
+      }
+    ],
+    right: [
+      {
+        type: "Image",
+        src: "/images/scientists.webp",
+        alt: "The Scientists",
+        className: "h-80 aspect-square"
+      },
+      {
+        type: "Image",
+        src: "/images/ResearchPoster.webp",
+        alt: "The Poster",
+        className: "h-107"
+      }
+    ],
+  }
 ];
 
 export const upcomingEventsPage: PageElement[] = [
@@ -840,7 +871,7 @@ export const upcomingEventsPage: PageElement[] = [
   {
     type: "Button",
     text: "See all upcoming events",
-    href: "https://childcan.com/events",
+    href: "/events",
   },
 ];
 
