@@ -1,5 +1,5 @@
 import Link from "next/link";
-import HeroImage from "../../../components/heroImage/heroImage";
+import HeroImage from "../../../../components/heroImage/heroImage";
 import { eventList } from "../event";
 import PurpleAccentButton from "@/components/accentButton/purpleAccentButton";
 import Image from "next/image";

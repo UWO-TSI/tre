@@ -1,6 +1,6 @@
 import HeroImage from "@/components/heroImage/heroImage";
-import SocialIcons from "../_components/socialIcons";
-import MyMap from "../_components/Map";
+import SocialIcons from "../../_components/socialIcons";
+import MyMap from "../../_components/Map";
 
 export default function Contact() {
   return (

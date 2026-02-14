@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Quicksand } from "next/font/google";
-import Header from "../components/header/header";
-import Footer from "../components/footer/Footer";
 import { SanityLive } from "@/sanity/lib/live";
 
 const quicksand = Quicksand({
@@ -22,14 +20,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${quicksand.variable} overflow-x-hidden`}>
-      <body className="antialiased overflow-x-hidden">
-        <div id="page-wrapper" className="min-h-screen">
-          <Header></Header>
-          {children}
-          <SanityLive />
-          <Footer></Footer>
-        </div>
+    <html lang="en" className={quicksand.variable}>
+      <body className="antialiased">
+        {children}
+        <SanityLive />
       </body>
     </html>
   );
