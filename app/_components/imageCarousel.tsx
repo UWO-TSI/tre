@@ -6,23 +6,28 @@ import Image from "next/image";
 const images = [
   {
     id: 1,
-    url: "/images/ChildcanWalk2023-12.jpg",
+    url: "/images/ChildcanWalk2023-12.webp",
     text: "my button text 1",
     offset: "20%",
   },
   {
     id: 2,
-    url: "/images/ChildcanWalk2023-108.jpg",
+    url: "/images/ChildcanWalk2023-108.webp",
     text: "my button text 2",
     offset: "20%",
   },
   {
     id: 3,
-    url: "/images/ChildcanWalk2023-304.jpg",
+    url: "/images/ChildcanWalk2023-304.webp",
     text: "my button text 3",
     offset: "20%",
   },
-  { id: 4, url: "/images/family.jpg", text: "my button text 4", offset: "20%" },
+  {
+    id: 4,
+    url: "/images/family.webp",
+    text: "my button text 4",
+    offset: "20%",
+  },
   {
     id: 5,
     url: "/images/_DSC5337.JPG",
@@ -56,7 +61,7 @@ export default function ImageCarousel() {
   }, [currImgIndex]);
 
   return (
-    <div className="relative group">
+    <div className="relative group w-full max-w-full overflow-hidden h-[600px]">
       <button
         className="nav-button left-0 absolute z-20 self-center top-[50%] translate-y-[-50%] p-[10px] cursor-pointer"
         onClick={handlePrevClick}
@@ -90,7 +95,7 @@ export default function ImageCarousel() {
       </button>
 
       {images.map((img, index) => (
-        <div key={index} style={{ height: "110px" }}>
+        <div key={index} className="h-50 md:h-27.5">
           <Image
             key={index}
             alt=""
@@ -101,7 +106,9 @@ export default function ImageCarousel() {
               objectFit: "cover",
             }}
             className={`absolute inset-0 transition-opacity duration-175 ease-in-out ${currImgIndex === index ? "opacity-100" : "opacity-0"}`}
-          ></Image>
+            priority={index === 0}
+            sizes="100vw"
+          />
           <YellowAccentButton className="transition duration-400 ease-in-out right-[50%] absolute z-20 top-[50%] translate-x-[50%] translate-y-[-50%] opacity-0 group-hover:opacity-100">
             {img.text}
           </YellowAccentButton>

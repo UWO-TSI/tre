@@ -13,11 +13,12 @@ function OurFamiliesSection(props: OurFamiliesSectionProps) {
       {/* left side */}
       <div className="relative w-full h-55">
         <Image
-          layout="fill"
+          fill
           style={{ objectFit: "cover", objectPosition: "center top" }}
           src={props.image}
           alt={props.alt}
-        ></Image>
+          sizes="(max-width: 768px) 100vw, 30vw"
+        />
       </div>
       {/* right side */}
       <div>

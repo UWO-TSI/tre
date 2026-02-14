@@ -43,3 +43,10 @@ next-env.d.ts
 
 #prettier
 .prettierrc
+
+# sanity
+.sanity
+/dist
+
+# claude code
+.claude
