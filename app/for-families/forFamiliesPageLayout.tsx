@@ -801,30 +801,30 @@ export const researchSupportPage: PageElement[] = [
         type: "Image",
         src: "/images/ResearchProject2025.webp",
         alt: "Research Project 2025",
-        className: "h-80 aspect-square"
+        className: "h-80 aspect-square",
       },
       {
         type: "Image",
         src: "/images/ResearchPortrait.webp",
         alt: "The Team",
-        className: "h-107"
-      }
+        className: "h-107",
+      },
     ],
     right: [
       {
         type: "Image",
         src: "/images/scientists.webp",
         alt: "The Scientists",
-        className: "h-80 aspect-square"
+        className: "h-80 aspect-square",
       },
       {
         type: "Image",
         src: "/images/ResearchPoster.webp",
         alt: "The Poster",
-        className: "h-107"
-      }
+        className: "h-107",
+      },
     ],
-  }
+  },
 ];
 
 export const upcomingEventsPage: PageElement[] = [
