@@ -15,7 +15,7 @@ export default function Contact() {
         imageVerticalPosition="40%"
         overlay={true}
       ></HeroImage>
-      <div className="place-self-center max-w-[1020px] mx-[168px] px-[32px] py-[96px] bg-white ">
+      <div className="place-self-center max-w-[1020px] mx-[168px] px-[32px] py-[96px] bg-white w-full ">
         <div>
           <p className="bodyText mt-[38.3px]">
             Are you interested in getting involved with Childcan? Or are you a
@@ -27,7 +27,7 @@ export default function Contact() {
             Head Office
           </h1>
         </div>
-        <div className="grid grid-cols-3 auto-rows-min py-[17px] gap-[34px]">
+        <div className="grid grid-cols-1 row-start-1 md:grid-cols-3 auto-rows-min py-[17px] gap-[34px] ">
           <div className="self-center">
             <p className="bodyText">
               792 Commissioners Road W. <br />
@@ -36,12 +36,12 @@ export default function Contact() {
             </p>
           </div>
           <div className="col-span-2 row-span-2">
-            <div className="self-start">
+            <div className="row-start-3 md:self-start">
               <MyMap></MyMap>
               {/* there's a way to make this black and white in the google cloud console - TODO*/}
             </div>
           </div>
-          <div>
+          <div className="row-start-2">
             <p className="bodyText mt-[0px]">
               {" "}
               Phone:{" "}
