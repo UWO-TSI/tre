@@ -13,7 +13,6 @@ export default async function Page({
 }) {
   const { events_template } = await params;
 
-  console.log(events_template);
   const event: Event = await client.fetch(
     `*[_type == "event" && slug.current == "${events_template}"][0]`,
   );
@@ -22,7 +21,6 @@ export default async function Page({
     // have a 404 page appear here
     return <div>event does not exist</div>;
   }
-  console.log(event);
 
   const eventDate = (): string => {
     const options: Intl.DateTimeFormatOptions = {

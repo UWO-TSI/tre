@@ -84,7 +84,6 @@ function useSearch() {
         });
       },
     );
-    console.log(header_list.length);
 
     // add the master list to index
     header_list.forEach((result, index) => {

@@ -4,8 +4,9 @@ import EventCard from "./EventCard";
 import { client } from "@/sanity/lib/client";
 
 export default async function Page() {
-  const events: Event[] = await client.fetch('*[_type == "event"]');
-  console.log(events);
+  const events: Event[] = await client.fetch(
+    '*[_type == "event"] | order(startDate desc)',
+  );
 
   return (
     <div className="flex flex-col">
