@@ -4,7 +4,7 @@ import QuoteBanner from "./_components/quoteBanner";
 import SearchBar from "@/components/header/SearchBar";
 import SectionBox from "./_components/sectionBox";
 import Event from "./_components/Event";
-import ImageCarousel from "./_components/imageCarousel";
+import ImageCarousel, { CarouselItem } from "./_components/imageCarousel";
 import { client } from "@/sanity/lib/client";
 import { Event as TypeEvent } from "./events/event";
 import { QueryParams } from "sanity";
@@ -14,7 +14,9 @@ import HomePageFeaturedFamily from "./homePageFeaturedFamily";
 const fetchClient = (query: string, opts?: QueryParams) => {
   return client.fetch(query, opts);
 };
-const fetchData = async (): Promise<[TypeEvent[], FamilyStory]> => {
+const fetchData = async (): Promise<
+  [TypeEvent[], FamilyStory, CarouselItem[]]
+> => {
   const events = fetchClient(
     '*[_type == "event" && startDate > $currentDate] | order(startDate asc) [0...3]',
     {
@@ -26,20 +28,20 @@ const fetchData = async (): Promise<[TypeEvent[], FamilyStory]> => {
   );
   const data: [
     TypeEvent[],
-    { featuredFamily: FamilyStory; carousel: unknown },
+    { featuredFamily: FamilyStory; carousel: CarouselItem[] },
   ] = await Promise.all([events, featuredFamily]);
   const family: FamilyStory = data[1].featuredFamily;
 
-  return [data[0], family];
+  return [data[0], family, data[1].carousel];
 };
 
 export default async function Home() {
-  const [events, family] = await fetchData();
+  const [events, family, carouselItems] = await fetchData();
   console.log(family);
   return (
     <>
       <SearchBar />
-      <ImageCarousel></ImageCarousel>
+      <ImageCarousel items={carouselItems}></ImageCarousel>
       {/* The quick links title section */}
       <h1 className="text-h1 text-center p-10 bg-white">Quick Links</h1>
 

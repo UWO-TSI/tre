@@ -15,6 +15,9 @@ interface HeaderLinkProps {
 
 function HeaderLink(props: HeaderLinkProps) {
   const [hover, setHover] = useState(false);
+  const putLeadingSlash = (route: string) => {
+    return (route.startsWith("/") ? "" : "/") + route;
+  };
   return (
     <div
       className="flex align-middle relative z-50"
@@ -26,7 +29,7 @@ function HeaderLink(props: HeaderLinkProps) {
       }}
     >
       <Link
-        href={props.link}
+        href={putLeadingSlash(props.link)}
         className="cursor-pointer text-body text-[16px] text-main-grey font-semibold mx-4 my-auto hover:text-header-purple transition-colors z-10"
       >
         {props.title}
@@ -39,7 +42,7 @@ function HeaderLink(props: HeaderLinkProps) {
             return (
               <Link
                 key={item.link + item.label + " Drop down"}
-                href={"/" + item.link}
+                href={putLeadingSlash(item.link)}
                 className={`text-nowrap ${hover ? "animate-dropdown-text-appear" : ""}   text-main-grey font-semibold  text-[1em] py-1 hover:text-header-purple`}
               >
                 {item.label}
