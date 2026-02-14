@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Quicksand } from "next/font/google";
+import { SanityLive } from "@/sanity/lib/live";
 
 const quicksand = Quicksand({
   subsets: ["latin"],
@@ -20,7 +21,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={quicksand.variable}>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        {children}
+        <SanityLive />
+      </body>
     </html>
   );
 }
+
+
