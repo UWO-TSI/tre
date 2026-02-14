@@ -34,7 +34,7 @@ function HeroImage(props: HeroImageProps) {
           src={
             typeof props.image === "string"
               ? props.image
-              : urlForImage(props.image).url()
+              : urlForImage(props.image).auto("format").quality(100).url()
           }
         ></Image>
         {props.overlay && (

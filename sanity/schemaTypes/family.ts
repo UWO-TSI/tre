@@ -31,8 +31,7 @@ export const family = defineType({
     defineField({
       name: "text",
       title: "Story Content",
-      type: "array",
-      of: [{ type: "string" }],
+      type: "text",
       description: "Paragraphs of the story.",
     }),
     defineField({
@@ -57,18 +56,6 @@ export const family = defineType({
               name: "alt",
               title: "Alternative Text",
               type: "string",
-            },
-            {
-              name: "align",
-              title: "Alignment",
-              type: "string",
-              options: {
-                list: [
-                  { title: "Left", value: "left" },
-                  { title: "Right", value: "right" },
-                ],
-              },
-              initialValue: "left",
             },
           ],
         },
