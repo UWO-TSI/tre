@@ -1,18 +1,17 @@
-# TRE - Next.js TypeScript Starter
+# TRE - Childcan Website
 
-A modern, production-ready Next.js starter template with TypeScript, Tailwind CSS v4, and best practices built-in.
+A modern Next.js website built with TypeScript, Tailwind CSS v4, and Sanity CMS integration.
 
 ## 🚀 Features
 
-- ⚡ **Next.js 15.5** - The latest version of Next.js with App Router
+- ⚡ **Next.js 16** - Latest version with App Router
 - 🔷 **TypeScript** - Type safety and better developer experience
-- 🎨 **Tailwind CSS v4** - The latest version with modern CSS capabilities
-- 📦 **Optimized Build** - Production-ready build configuration
-- 🧪 **Type Checking** - Strict TypeScript configuration
-- 🎯 **Developer Experience** - ESLint, Prettier-ready, and hot reload
+- 🎨 **Tailwind CSS v4** - Modern CSS capabilities with @theme directives
+- 📦 **Sanity CMS** - Headless CMS for content management
+- 🧪 **E2E Testing** - Playwright test suite for quality assurance
+- 🎯 **Developer Experience** - ESLint, Prettier, and hot reload
 - 📱 **Responsive** - Mobile-first design approach
-- 🌙 **Dark Mode** - Built-in dark mode support
-- 📝 **Template System** - Issue and PR templates included
+- 🗺️ **Google Maps** - Interactive location features
 
 ## 📋 Prerequisites
 
@@ -56,31 +55,48 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to see the r
 
 ## 📜 Available Scripts
 
+### Development
+
 - `npm run dev` - Start the development server with Turbopack
 - `npm run build` - Build the application for production
 - `npm run start` - Start the production server
-- `npm run lint` - Run ESLint to check code quality (if configured)
+- `npm run lint` - Run ESLint to check code quality
+- `npm run format` - Format code with Prettier
+
+### Testing
+
+- `npm test` - Run all Playwright tests (headless)
+- `npm run test:ui` - Run tests with interactive UI mode
+- `npm run test:smoke` - Run quick smoke tests to verify all pages load
+- `npm run test:headed` - Run tests in headed mode (visible browser)
+- `npm run test:debug` - Run tests in debug mode with Playwright Inspector
 
 ## 📁 Project Structure
 
 ```
 tre/
 ├── app/                    # Next.js App Router directory
+│   ├── (main-route)/      # Main website routes
+│   │   ├── page.tsx       # Home page
+│   │   ├── about-us/      # About page
+│   │   ├── contact/       # Contact page
+│   │   ├── events/        # Events pages
+│   │   └── ...            # Other routes
+│   ├── sanity/            # Sanity Studio integration
 │   ├── layout.tsx         # Root layout component
-│   ├── page.tsx           # Home page
-│   ├── globals.css        # Global styles with Tailwind
-│   └── favicon.ico        # Favicon
-├── public/                # Static files
-├── .github/               # GitHub templates
-│   ├── ISSUE_TEMPLATE/    # Issue templates
-│   └── pull_request_template.md
-├── .env.example           # Environment variables template
-├── .gitignore            # Git ignore rules
+│   └── globals.css        # Global styles with Tailwind
+├── components/            # Reusable React components
+│   └── header/           # Header and navigation
+├── e2e/                  # Playwright E2E tests
+│   ├── smoke.spec.ts     # Page load tests
+│   ├── navigation.spec.ts # Navigation tests
+│   └── forms.spec.ts     # Form interaction tests
+├── public/               # Static files
+├── .env.example          # Environment variables template
+├── playwright.config.ts  # Playwright test configuration
 ├── next.config.ts        # Next.js configuration
 ├── package.json          # Project dependencies
-├── postcss.config.mjs    # PostCSS configuration for Tailwind
-├── tsconfig.json         # TypeScript configuration
-└── README.md             # This file
+└── tsconfig.json         # TypeScript configuration
 ```
 
 ## 🎨 Tailwind CSS v4
@@ -148,6 +164,45 @@ To start the production server:
 ```bash
 npm run start
 ```
+
+## 🧪 Testing
+
+This project uses [Playwright](https://playwright.dev/) for end-to-end testing.
+
+### Running Tests
+
+```bash
+# Quick smoke tests (recommended before deployment)
+npm run test:smoke
+
+# All tests with interactive UI
+npm run test:ui
+
+# Run all tests headless
+npm test
+
+# Debug a specific test
+npm run test:debug
+```
+
+### Test Structure
+
+The test suite is located in the `e2e/` directory:
+
+- **smoke.spec.ts** - Verifies all pages load without errors
+- **navigation.spec.ts** - Tests header navigation and responsive design
+- **forms.spec.ts** - Form interaction tests (customize for your forms)
+
+### What Gets Tested
+
+- ✅ All pages load successfully
+- ✅ No console errors on key pages
+- ✅ Navigation links work correctly
+- ✅ Mobile menu functionality
+- ✅ Responsive design across devices
+- ✅ Cross-browser compatibility (Chrome, Firefox, Safari)
+
+For more details, see [e2e/README.md](e2e/README.md).
 
 ## 🚀 Deployment
 
