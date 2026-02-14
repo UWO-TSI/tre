@@ -3,6 +3,7 @@ import "./globals.css";
 import { Quicksand } from "next/font/google";
 import Header from "../components/header/header";
 import Footer from "../components/footer/Footer";
+import { SanityLive } from "@/sanity/lib/live";
 
 const quicksand = Quicksand({
   subsets: ["latin"],
@@ -26,6 +27,7 @@ export default function RootLayout({
         <div id="page-wrapper" className="min-h-screen">
           <Header></Header>
           {children}
+          <SanityLive />
           <Footer></Footer>
         </div>
       </body>
