@@ -33,6 +33,13 @@ export const homepage = defineType({
               type: "string",
             }),
             defineField({
+              name: "slug",
+              title: "Slug",
+              type: "slug",
+              validation: (Rule) => Rule.required(),
+              description: "Where will the button link to...",
+            }),
+            defineField({
               name: "offset",
               title: "Vertical Offset",
               type: "string",
@@ -61,14 +68,6 @@ export const homepage = defineType({
       type: "reference",
       to: [{ type: "family" }],
       description: "Select the family to feature on the main page",
-    }),
-    defineField({
-      name: "featuredEvents",
-      title: "Featured Events",
-      type: "array",
-      of: [{ type: "reference", to: [{ type: "event" }] }],
-      validation: (Rule) => Rule.max(3).error("You can select up to 3 events."),
-      description: "Select up to 3 events to feature on the homepage.",
     }),
   ],
   preview: {

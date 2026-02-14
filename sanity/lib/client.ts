@@ -13,5 +13,5 @@ export const client = createClient({
 export const builder = imageUrlBuilder(client);
 
 export function urlForImage(source: Image) {
-  return builder.image(source);
+  return builder.image(source).format("webp");
 }

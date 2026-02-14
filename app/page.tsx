@@ -1,4 +1,3 @@
-"use client";
 import QuickNavSection from "./_components/quickNavSection";
 import ResponsiveSupport from "./_components/responsiveSupport";
 import QuoteBanner from "./_components/quoteBanner";
@@ -8,11 +7,35 @@ import Event from "./_components/Event";
 import ImageCarousel from "./_components/imageCarousel";
 import { client } from "@/sanity/lib/client";
 import { Event as TypeEvent } from "./events/event";
+import { QueryParams } from "sanity";
+import { FamilyStory } from "./our-families-stories/story";
+import HomePageFeaturedFamily from "./homePageFeaturedFamily";
+
+const fetchClient = (query: string, opts?: QueryParams) => {
+  return client.fetch(query, opts);
+};
+const fetchData = async (): Promise<[TypeEvent[], FamilyStory]> => {
+  const events = fetchClient(
+    '*[_type == "event" && startDate > $currentDate] | order(startDate asc) [0...3]',
+    {
+      currentDate: new Date().toISOString(),
+    },
+  );
+  const featuredFamily = fetchClient(
+    '*[_type == "homepage" ]{..., featuredFamily->}[0]',
+  );
+  const data: [
+    TypeEvent[],
+    { featuredFamily: FamilyStory; carousel: unknown },
+  ] = await Promise.all([events, featuredFamily]);
+  const family: FamilyStory = data[1].featuredFamily;
+
+  return [data[0], family];
+};
 
 export default async function Home() {
-  const events: TypeEvent[] = await client.fetch(
-    '*[_type == "event"] | order(startDate desc) [0...3]',
-  );
+  const [events, family] = await fetchData();
+  console.log(family);
   return (
     <>
       <SearchBar />
@@ -53,6 +76,7 @@ export default async function Home() {
         ></QuickNavSection>
       </div>
       <ResponsiveSupport></ResponsiveSupport>
+      <HomePageFeaturedFamily family={family}></HomePageFeaturedFamily>
 
       {/* Section descriptions and images */}
       <div className="flex flex-col w-full gap-4 p-10 bg-white" id="test">
