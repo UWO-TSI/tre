@@ -22,12 +22,15 @@ npm run test:debug
 ## Test Structure
 
 ### `smoke.spec.ts`
+
 Fast tests that verify all pages load without errors. Run these first after deployment.
 
 ### `navigation.spec.ts`
+
 Tests for header navigation, mobile menu, and responsive design.
 
 ### `forms.spec.ts`
+
 Form interaction tests (mostly skipped - customize based on your forms).
 
 ## What to Update
@@ -41,16 +44,19 @@ Form interaction tests (mostly skipped - customize based on your forms).
 ## Testing Workflow
 
 **Before deploying:**
+
 ```bash
 npm run test:smoke  # Quick verification (2-3 minutes)
 ```
 
 **Full test run:**
+
 ```bash
 npm test  # Runs across all browsers
 ```
 
 **Visual debugging:**
+
 ```bash
 npm run test:ui  # Interactive UI, great for writing new tests
 ```
@@ -66,6 +72,7 @@ npm run test:ui  # Interactive UI, great for writing new tests
 ## CI Integration
 
 The config is CI-ready. On CI:
+
 - Tests run with 2 retries (0 retries locally)
 - Uses single worker for stability
 - Configured for continuous integration environments
@@ -75,9 +82,11 @@ The config is CI-ready. On CI:
 - ✅ Desktop: Chromium, Firefox, Safari (WebKit)
 
 Mobile browser testing is available but currently disabled. To enable:
+
 1. Uncomment the mobile projects in `playwright.config.ts`
 
 To test only one browser:
+
 ```bash
 npx playwright test --project=chromium
 npx playwright test --project=firefox
