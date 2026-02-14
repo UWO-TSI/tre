@@ -12,7 +12,11 @@ const MobileMenuContext = createContext<MobileMenuContextType | undefined>(
   undefined,
 );
 
-export function MobileMenuProvider({ children }: { children: React.ReactNode }) {
+export function MobileMenuProvider({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
   const [expandedSections, setExpandedSections] = useState<{
     [key: string]: boolean;

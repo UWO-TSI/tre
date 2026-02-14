@@ -3,7 +3,12 @@ import { useMobileMenu } from "./MobileMenuContext";
 import YellowAccentButton from "../accentButton/yellowAccentButton";
 
 export default function MobileMenuDrawer() {
-  const { isMobileMenuOpen, setIsMobileMenuOpen, expandedSections, setExpandedSections } = useMobileMenu();
+  const {
+    isMobileMenuOpen,
+    setIsMobileMenuOpen,
+    expandedSections,
+    setExpandedSections,
+  } = useMobileMenu();
 
   return (
     <div className="mobile-menu-drawer fixed top-0 right-0 h-screen w-4/5 bg-white z-20 md:hidden">
