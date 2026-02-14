@@ -1,5 +1,4 @@
 import { PageElement } from "@/components/pageLayout/PageElement";
-import NewsBlerb, { newsItems } from "./newsBlerb";
 import ReportOfHopeDocs, { reportOfHopeDocsList } from "./reportOfHopeDocs";
 import FamiliesList from "./familiesList";
 import NewsList from "./newsList";
