@@ -1,6 +1,6 @@
-import { aboutUsPageLayout } from "@/app/(main-route)/about-us/aboutUsPageLayout";
-import { forFamilesPageLayout } from "@/app/(main-route)/for-families/forFamiliesPageLayout";
-import { howToHelpLayout } from "@/app/(main-route)/how-to-help/howToHelpPageLayout";
+import { aboutUsPageLayout } from "@/app/about-us/aboutUsPageLayout";
+import { forFamilesPageLayout } from "@/app/for-families/forFamiliesPageLayout";
+import { howToHelpLayout } from "@/app/how-to-help/howToHelpPageLayout";
 import { PageElement } from "@/components/pageLayout/PageElement";
 import { Id, Index } from "flexsearch";
 import React, { useEffect, useRef } from "react";
@@ -84,7 +84,6 @@ function useSearch() {
         });
       },
     );
-    console.log(header_list.length);
 
     // add the master list to index
     header_list.forEach((result, index) => {

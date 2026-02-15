@@ -1,8 +1,10 @@
+import { urlForImage } from "@/sanity/lib/client";
+import { Image as SanityImage } from "@sanity/types";
 import Image from "next/image";
 
 interface HeroImageProps {
   title: string;
-  image: string;
+  image: string | SanityImage;
   alt: string;
   imageVerticalPosition?: string;
   height?: string;
@@ -23,16 +25,18 @@ function HeroImage(props: HeroImageProps) {
       >
         <Image
           className="animate-image-appear"
-          fill
+          layout="fill"
           style={{
             objectPosition: `center ${props.imageVerticalPosition ?? "center"}`,
             objectFit: "cover",
           }}
           alt={props.alt}
-          src={props.image}
-          priority
-          sizes="100vw"
-        />
+          src={
+            typeof props.image === "string"
+              ? props.image
+              : urlForImage(props.image).auto("format").quality(100).url()
+          }
+        ></Image>
         {props.overlay && (
           <div className="absolute inset-0 bg-linear-to-r from-[#575757]/90 to-[#575757]/10"></div>
         )}

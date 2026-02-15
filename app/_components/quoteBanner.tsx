@@ -11,12 +11,9 @@ interface QuoteBannerProps {
 
 function QuoteBanner(props: QuoteBannerProps) {
   return (
-    <div
-      className="grid w-full overflow-hidden"
-      style={{ gridTemplateAreas: '"area"' }}
-    >
+    <div className="grid  w-fill " style={{ gridTemplateAreas: '"area"' }}>
       <div
-        className="w-full h-110 relative"
+        className="w-fill h-110 relative"
         style={{ height: props.height, gridArea: "area" }}
       >
         <Image
@@ -27,20 +24,17 @@ function QuoteBanner(props: QuoteBannerProps) {
           alt={props.altText}
           src={props.imageSrc}
           fill
-          sizes="100vw"
-        />
+        ></Image>
       </div>
 
       <div
-        className="relative h-full w-full px-4 md:px-10 flex flex-col justify-center items-center max-w-full"
+        className="relative h-fill w-fit pl-10 pr-10 flex flex-col justify-center justify-self-center"
         style={{ gridArea: "area" }}
       >
-        <h1 className="text-h1 text-white text-center font-bold mb-5 max-w-full">
+        <h1 className="text-h1 text-white text-center font-bold mb-5">
           {props.quote}
         </h1>
-        <h3 className="text-h2 text-white text-right w-full max-w-full">
-          {"- " + props.author}
-        </h3>
+        <h3 className="text-h2 text-white text-right">{"- " + props.author}</h3>
       </div>
     </div>
   );

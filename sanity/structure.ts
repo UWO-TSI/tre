@@ -5,8 +5,21 @@ export const structure: StructureResolver = (S) =>
   S.list()
     .title("Admin")
     .items([
+      // Homepage - Singleton
+      S.listItem()
+        .title("Homepage Configuration")
+        .child(
+          S.document()
+            .schemaType("homepage")
+            .documentId("homepage")
+            .title("Homepage Configuration"),
+        ),
+
       // Events section - fully editable
       S.documentTypeListItem("event").title("Manage Events"),
+
+      // Families section
+      S.documentTypeListItem("family").title("Manage Families"),
 
       // Guides section - with informational note
       S.listItem()
@@ -19,4 +32,8 @@ export const structure: StructureResolver = (S) =>
               S.document().documentId(documentId).schemaType("guide"),
             ),
         ),
+      S.documentTypeListItem("news").title("News"),
+      S.documentTypeListItem("reportofhope").title(
+        "Manage Report of Hope and Financial Statements",
+      ),
     ]);

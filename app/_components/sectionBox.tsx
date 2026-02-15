@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 interface SectionBoxProps {
   title: string;
   imgSrc: string;
@@ -8,8 +6,8 @@ interface SectionBoxProps {
 
 export default function SectionBox(props: SectionBoxProps) {
   return (
-    <div className="flex flex-col md:flex-row h-auto md:h-1/3 gap-6 p-4 w-full overflow-hidden">
-      <div className="flex flex-col w-full md:w-3/5 gap-2 md:p-4">
+    <div className="flex h-1/3 gap-6 p-4">
+      <div className="flex flex-col w-3/5 gap-2 p-4">
         <h1 className="text-h1 text-header-purple">{props.title}</h1>
         <p className="text-body text-secondary-grey">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit
@@ -23,15 +21,7 @@ export default function SectionBox(props: SectionBoxProps) {
         </p>
       </div>
 
-      <div className="relative w-full md:w-1/3 border-2 min-h-50">
-        <Image
-          src={props.imgSrc}
-          alt={props.altText}
-          fill
-          className="object-cover"
-          sizes="(max-width: 768px) 100vw, 33vw"
-        />
-      </div>
+      <img src={props.imgSrc} alt={props.altText} className="w-1/3 border-2" />
     </div>
   );
 }

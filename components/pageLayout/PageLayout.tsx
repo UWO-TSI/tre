@@ -23,14 +23,14 @@ export default function PageLayout(props: PageLayoutProps) {
 
   return (
     <Suspense>
-      <div className="flex flex-col items-center w-full bg-white">
+      <div className="flex flex-col items-center w-full bg-white ">
         <HeroImage
           image={props.bannerHref}
           title={props.pageTitle}
           alt={props.bannerAlt}
           imageVerticalPosition={props.bannerVertialPosition ?? "15%"}
         ></HeroImage>
-        <div className="px-4 md:px-6 max-w-260 grid grid-rows-1 grid-cols-1 md:grid-cols-[1fr_3fr] gap-8 py-8 md:py-25">
+        <div className=" pl-6 pr-6 max-w-260 grid grid-rows-1 grid-cols-[1fr_3fr] gap-8 pt-25 pb-25">
           <Sidebar
             onItemChange={onPageChange}
             selectedItem={selectedPage}

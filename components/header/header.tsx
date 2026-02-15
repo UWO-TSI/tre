@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import HeaderLink from "./headerLink";
 import YellowAccentButton from "../accentButton/yellowAccentButton";
-import MobileMenuButton from "./MobileMenuButton";
 
 function Header() {
   const [isSticky, setIsSticky] = useState<boolean>(false);
@@ -51,25 +50,19 @@ function Header() {
 
   return (
     <div
-      className={`bg-white transition-transform duration-300 top-0 flex flex-row justify-between items-center px-4 w-full h-auto py-2 md:h-22 z-30 md:z-60 fixed md:${getHeaderAnimation()}`}
+      className={`bg-white transition-transform duration-300 top-0 flex flex-row justify-between align-middle px-4 w-full h-22 z-50  ${getHeaderAnimation()}`}
     >
-      <div className="w-full flex flex-row justify-between items-center bg-white">
-        <a href="/" className="flex items-center">
+      <div className="w-full flex flex-row justify-between align-middle bg-white animate-header-appear">
+        <a href="/">
           <Image
-            className="h-18.5 w-auto"
-            alt="Childcan Logo"
+            className="pl-1 "
+            alt={""}
             height={110}
             width={210}
             src={"/images/Childcan-Logo.png.webp"}
-            priority
           ></Image>
         </a>
-
-        {/* Mobile menu button */}
-        <MobileMenuButton />
-
-        {/* Desktop navigation - hidden on mobile */}
-        <nav className="hidden md:flex flex-row items-center">
+        <nav className="flex flex-row items-center">
           <HeaderLink
             title="About"
             link="/about-us"
@@ -78,10 +71,7 @@ function Header() {
               { link: "about-us?page=Our Families", label: "Our Families" },
               { link: "about-us?page=Our News", label: "Our News" },
               { link: "about-us?page=Our Team", label: "Our Team" },
-              {
-                link: "about-us?page=Report of hope",
-                label: "Report of Hope",
-              },
+              { link: "about-us?page=Report of Hope", label: "Report of Hope" },
               { link: "about-us?page=Careers", label: "Careers" },
             ]}
           ></HeaderLink>
@@ -90,10 +80,7 @@ function Header() {
             link="/for-families"
             title="For Families"
             items={[
-              {
-                link: "for-families?page=Here for You",
-                label: "Here for You",
-              },
+              { link: "for-families?page=Here for You", label: "Here for You" },
               {
                 link: "for-families?page=Financial Support",
                 label: "Financial Support",
@@ -124,10 +111,7 @@ function Header() {
             title="How to Help"
             link="how-to-help"
             items={[
-              {
-                link: "/how-to-help?page=Ways to Give",
-                label: "Ways to Give",
-              },
+              { link: "/how-to-help?page=Ways to Give", label: "Ways to Give" },
               { link: "/how-to-help?page=PJ Day", label: "PJ Day" },
               { link: "/how-to-help?page=Gold", label: "Gold" },
               {
@@ -143,11 +127,11 @@ function Header() {
               },
             ]}
           ></HeaderLink>
-          <HeaderLink link="" title="Events"></HeaderLink>
+          <HeaderLink link="/events" title="Events"></HeaderLink>
           <HeaderLink link="" title="Star"></HeaderLink>
           <HeaderLink link="" title="Hands of Hope"></HeaderLink>
           <HeaderLink link="/contact" title="Contact"></HeaderLink>
-          <YellowAccentButton className="ml-8">Donate</YellowAccentButton>
+          <YellowAccentButton>Donate</YellowAccentButton>
         </nav>
       </div>
     </div>
