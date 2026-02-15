@@ -81,7 +81,7 @@ export default async function Home() {
       <ResponsiveSupport></ResponsiveSupport>
 
       {/* only show if family is defined */}
-      {family != undefined ? (
+      {family == undefined ? (
         <HomePageFeaturedFamily family={family}></HomePageFeaturedFamily>
       ) : (
         ""

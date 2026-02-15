@@ -13,7 +13,7 @@ export default function EventCard(props: { name: string; event: Event }) {
             fill
             className="object-cover"
             src={urlForImage(props.event.mainHeroImage).url()}
-            alt={props.event.mainHeroImage.alt}
+            alt={""}
           ></Image>
           <div className="flex flex-col absolute w-17 aspect-square pt-1 bg-white top-2 right-2 text-secondary-grey">
             <p className="text-center text-body-small">

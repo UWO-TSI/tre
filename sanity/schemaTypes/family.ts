@@ -49,14 +49,6 @@ export const family = defineType({
         hotspot: true,
       },
       validation: (Rule) => Rule.required(),
-      fields: [
-        defineField({
-          name: "alt",
-          title: "Alt Text",
-          type: "string",
-          description: "Alternative text for SEO and Accessibility",
-        }),
-      ],
     }),
     defineField({
       name: "images",
@@ -67,11 +59,11 @@ export const family = defineType({
           type: "image",
           options: { hotspot: true },
           fields: [
-            defineField({
+            {
               name: "alt",
               title: "Alternative Text",
               type: "string",
-            }),
+            },
           ],
         },
       ],

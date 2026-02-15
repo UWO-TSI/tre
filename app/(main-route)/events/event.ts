@@ -11,8 +11,8 @@ export type Event = {
   description: string;
   buttonTitle: string;
   buttonLink: string;
-  mainHeroImage: { image: Image; alt: string };
-  images: { image: Image; alt: string }[];
+  mainHeroImage: Image;
+  images: Image[];
   source: string;
   shortSummary: string;
   slug: Slug;

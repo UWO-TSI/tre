@@ -7,7 +7,7 @@ import { Slug } from "@sanity/types";
 import { urlForImage } from "@/sanity/lib/client";
 
 export interface CarouselItem {
-  image: { image: TypeImage; alt: string };
+  image: TypeImage;
   text: string;
   slug: Slug;
   offset: string;
@@ -81,7 +81,7 @@ export default function ImageCarousel(props: { items: CarouselItem[] }) {
           >
             <Image
               key={index}
-              alt={item.image.alt}
+              alt=""
               src={urlForImage(item.image).url()}
               layout="fill"
               className={` transition-opacity duration-175 ease-in-out ${currImgIndex === index ? "opacity-100" : "opacity-0"}`}

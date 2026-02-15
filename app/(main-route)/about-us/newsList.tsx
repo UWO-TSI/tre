@@ -7,7 +7,7 @@ interface News {
   link: string;
   description: string;
   date: string;
-  image: { image: Image; alt: string };
+  image: Image;
 }
 async function NewsList() {
   const news: News[] = await client.fetch(
@@ -26,7 +26,7 @@ async function NewsList() {
       <NewsBlerb
         key={index + newsItem.link + newsItem.title}
         image={urlForImage(newsItem.image).url()}
-        alt={newsItem.image.alt}
+        alt={""}
         title={newsItem.title}
         subtext={newsItem.description}
         link={newsItem.link}
