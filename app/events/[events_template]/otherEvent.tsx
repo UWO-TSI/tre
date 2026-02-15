@@ -1,16 +1,31 @@
+import { client } from "@/sanity/lib/client";
+import { Event } from "../event";
+import Link from "next/link";
+
 interface OtherEventProps {
-  date: Date;
-  title: string;
+  date: string;
   order: "BEFORE" | "AFTER";
-  link: string;
 }
-function OtherEvent(props: OtherEventProps) {
+async function OtherEvent(props: OtherEventProps) {
+  const afterQuery = `*[_type == "event" && startDate > $date ] | order(startDate asc) [0]`;
+  const beforeQuery = `*[_type == "event" && startDate < $date ] | order(startDate desc) [0]`;
+  const event: Event = await client.fetch(
+    props.order == "BEFORE" ? beforeQuery : afterQuery,
+    {
+      date: props.date,
+    },
+  );
+
+  if (event == undefined) {
+    return <></>;
+  }
+
   const formatDate = () => {
     const options: Intl.DateTimeFormatOptions = {
       month: "long",
       day: "numeric",
     };
-    return props.date.toLocaleDateString("en-US", options);
+    return new Date(event.startDate).toLocaleDateString("en-US", options);
   };
 
   const orderString = () => {
@@ -26,9 +41,12 @@ function OtherEvent(props: OtherEventProps) {
       className={`flex flex-col ${props.order == "BEFORE" ? "items-start" : "items-end"}`}
     >
       <div className="text-body text-main-grey">{`${orderString()}: ${formatDate()}`}</div>
-      <a href={props.link} className="cursor-pointer text-body text-main-grey">
-        {props.title}
-      </a>
+      <Link
+        href={"/events/" + event.slug.current}
+        className="cursor-pointer text-body text-main-grey"
+      >
+        {event.title}
+      </Link>
     </div>
   );
 }

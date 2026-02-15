@@ -38,7 +38,7 @@ export const news = defineType({
     }),
     defineField({
       name: "image",
-      title: "Main image to be shown",
+      title: "Image",
       type: "image",
       options: {
         hotspot: true,

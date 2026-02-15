@@ -21,7 +21,6 @@ async function NewsList() {
   if (news.length == 0) {
     return <div>idk put something</div>;
   }
-  console.log(news);
   return news.map((newsItem, index) => {
     return (
       <NewsBlerb

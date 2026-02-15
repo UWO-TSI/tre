@@ -161,18 +161,8 @@ export default async function Page({
         </div>
         {/* next events section */}
         <div className="max-w-250 w-full flex flex-row justify-between pt-20">
-          <OtherEvent
-            date={new Date(event.startDate)}
-            order="BEFORE"
-            title="Other event title"
-            link=""
-          ></OtherEvent>
-          <OtherEvent
-            date={new Date(event.endDate)}
-            order="AFTER"
-            title="Other event title"
-            link=""
-          ></OtherEvent>
+          <OtherEvent order="BEFORE" date={event.startDate}></OtherEvent>
+          <OtherEvent date={event.startDate} order="AFTER"></OtherEvent>
         </div>
       </div>
     </div>

@@ -27,6 +27,5 @@ export default async function Page({
   }
 
   const mergedFamily = { ...defualtFamily, ...family };
-  console.log(mergedFamily);
   return <FamilyStoryPage family={mergedFamily}></FamilyStoryPage>;
 }

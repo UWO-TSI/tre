@@ -1,7 +1,7 @@
 import { PageElement } from "@/components/pageLayout/PageElement";
-import ReportOfHopeDocs, { reportOfHopeDocsList } from "./reportOfHopeDocs";
 import FamiliesList from "./familiesList";
 import NewsList from "./newsList";
+import ReportList, { ReportImages } from "./reportOfHopeList";
 
 export const aboutUs: PageElement[] = [
   { type: "Header", content: <>About Us</> },
@@ -326,28 +326,21 @@ export const reportOfHope: PageElement[] = [
     left: [
       {
         type: "MiscElement",
-        content: reportOfHopeDocsList.map((report, index) => {
-          return (
-            <ReportOfHopeDocs
-              key={index + report.title + "docs list"}
-              {...report}
-            ></ReportOfHopeDocs>
-          );
-        }),
+        content: (
+          <>
+            <ReportList></ReportList>
+          </>
+        ),
       },
     ],
     right: [
       {
-        type: "Image",
-        src: "/images/2023+Report+of+Hope.webp",
-        alt: "2023 Report of Hope",
-        className: "h-100 mb-5 mt-20",
-      },
-      {
-        type: "Image",
-        src: "/images/Report+of+Hope+p1.webp",
-        alt: "report of hope",
-        className: "h-100 mb-5 mt-20",
+        type: "MiscElement",
+        content: (
+          <>
+            <ReportImages></ReportImages>
+          </>
+        ),
       },
     ],
   },

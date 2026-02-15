@@ -33,4 +33,7 @@ export const structure: StructureResolver = (S) =>
             ),
         ),
       S.documentTypeListItem("news").title("News"),
+      S.documentTypeListItem("reportofhope").title(
+        "Manage Report of Hope and Financial Statements",
+      ),
     ]);

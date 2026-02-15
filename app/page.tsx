@@ -37,7 +37,6 @@ const fetchData = async (): Promise<
 
 export default async function Home() {
   const [events, family, carouselItems] = await fetchData();
-  console.log(family);
   return (
     <>
       <SearchBar />
@@ -78,7 +77,13 @@ export default async function Home() {
         ></QuickNavSection>
       </div>
       <ResponsiveSupport></ResponsiveSupport>
-      <HomePageFeaturedFamily family={family}></HomePageFeaturedFamily>
+
+      {/* only show if family is defined */}
+      {family == undefined ? (
+        <HomePageFeaturedFamily family={family}></HomePageFeaturedFamily>
+      ) : (
+        ""
+      )}
 
       {/* Section descriptions and images */}
       <div className="flex flex-col w-full gap-4 p-10 bg-white" id="test">
