@@ -31,7 +31,7 @@ function HomePageFeaturedFamily(props: { family: FamilyStory }) {
             height={3000}
             width={3000}
             src={urlForImage(props.family.heroImage).url()}
-            alt={""}
+            alt={props.family.heroImage.alt}
           ></Image>
         </div>
         {/* right side */}

@@ -68,6 +68,14 @@ export const event = defineType({
       },
       validation: (Rule) => Rule.required(),
       description: "The main banner image for the event",
+      fields: [
+        defineField({
+          name: "alt",
+          title: "Alt Text",
+          type: "string",
+          description: "Alternative text for SEO and Accessibility",
+        }),
+      ],
     }),
     defineField({
       name: "images",

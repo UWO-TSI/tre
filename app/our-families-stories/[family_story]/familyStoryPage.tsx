@@ -28,7 +28,7 @@ function FamilyStoryPage(props: { family: FamilyStory }) {
               marginRight: align == "right" ? "0" : "2em",
             }}
             src={urlForImage(image).url()}
-            alt={""}
+            alt={image.alt}
             key={i + "lol"}
             height={1920}
             width={1080}
@@ -54,7 +54,7 @@ function FamilyStoryPage(props: { family: FamilyStory }) {
       <HeroImage
         image={props.family.heroImage}
         title={props.family.title}
-        alt={props.family.title}
+        alt={props.family.heroImage.alt}
         textAlignment="center"
         imageVerticalPosition="20%"
       ></HeroImage>
