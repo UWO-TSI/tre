@@ -6,8 +6,8 @@ import { urlForImage } from "@/sanity/lib/client";
 
 export default function EventCard(props: { name: string; event: Event }) {
   return (
-    <div className="flex flex-col md:flex-row flex-wrap m-auto w-5/6 justify-center gap-8">
-      <div className="w-full md:w-75 p-2 relative h-55">
+    <div className="flex flex-wrap m-auto w-5/6 justify-center gap-8">
+      <div className="w-75 p-2 relative h-55">
         <Link href={`/events/${props.name}`}>
           <Image
             fill
@@ -27,7 +27,7 @@ export default function EventCard(props: { name: string; event: Event }) {
           </div>
         </Link>
       </div>
-      <div className="w-full md:w-1/2">
+      <div className="w-1/2">
         <PageContent
           pageLayout={[
             {

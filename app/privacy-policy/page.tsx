@@ -1,7 +1,7 @@
 export default function PrivacyPolicy() {
   return (
     <div className="bg-white">
-      <div className="place-self-center max-w-[1020px] mx-[130px] px-[32px] py-[96px] w-full wrap-break-word">
+      <div className="place-self-center max-w-[1020px] mx-[130px] px-[32px] py-[96px] ">
         <h1 className="heading1">Childcan Privacy Policy</h1>
         <p className="bodyText">
           The terms and conditions outlined in the following Privacy Policy

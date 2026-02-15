@@ -118,8 +118,7 @@ export default function PageContent(props: PageContentProps) {
                       className="object-contain"
                       src={element.src}
                       alt={element.alt}
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    />
+                    ></Image>
                   </a>
                 </div>
               );

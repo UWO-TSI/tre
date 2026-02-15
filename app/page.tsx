@@ -38,16 +38,14 @@ const fetchData = async (): Promise<
 export default async function Home() {
   const [events, family, carouselItems] = await fetchData();
   return (
-    <div className="w-full overflow-x-hidden">
+    <>
       <SearchBar />
       <ImageCarousel items={carouselItems}></ImageCarousel>
       {/* The quick links title section */}
-      <h1 className="text-h1 text-center p-10 bg-white hidden md:block">
-        Quick Links
-      </h1>
+      <h1 className="text-h1 text-center p-10 bg-white">Quick Links</h1>
 
       {/* The menu section */}
-      <div className="grid grid-cols-1 md:grid-rows-2 md:grid-cols-3 xl:grid-cols-5 xl:grid-rows-1 bg-white">
+      <div className="grid md:grid-rows-2 md:grid-cols-3 xl:grid-cols-5 xl:grid-rows-1 grid-rows-1  bg-white">
         <QuickNavSection
           title={"Newly Diagnosed?"}
           buttonText="Find Support Here"
@@ -88,7 +86,7 @@ export default async function Home() {
       )}
 
       {/* Section descriptions and images */}
-      <div className="flex flex-col w-full gap-4 px-4 py-10 md:p-10 bg-white">
+      <div className="flex flex-col w-full gap-4 p-10 bg-white" id="test">
         <SectionBox
           title="For Families"
           imgSrc="/images/ChildcanWalk2023-304.jpg"
@@ -115,7 +113,7 @@ export default async function Home() {
       ></QuoteBanner>
 
       {/* Upcoming events */}
-      <div className="flex flex-col w-full gap-4 px-4 py-10 md:p-20 md:py-15 bg-white">
+      <div className="flex flex-col w-full gap-4 p-20 py-15 bg-white">
         <h1 className="text-h1 text-main-darkpurple text-center">
           Get Connected. <strong>Get Involved.</strong>
         </h1>
@@ -134,6 +132,6 @@ export default async function Home() {
           })}
         </div>
       </div>
-    </div>
+    </>
   );
 }

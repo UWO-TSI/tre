@@ -25,7 +25,7 @@ function HeroImage(props: HeroImageProps) {
       >
         <Image
           className="animate-image-appear"
-          fill
+          layout="fill"
           style={{
             objectPosition: `center ${props.imageVerticalPosition ?? "center"}`,
             objectFit: "cover",

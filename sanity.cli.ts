@@ -4,13 +4,7 @@
  **/
 import { defineCliConfig } from "sanity/cli";
 
-const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "oe44cvdl";
-const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || "production";
+const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
+const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET;
 
-export default defineCliConfig({
-  api: { projectId, dataset },
-  deployment: {
-    appId: "h4azjy1kysq5slucnywkb2ni",
-    autoUpdates: true,
-  },
-});
+export default defineCliConfig({ api: { projectId, dataset } });

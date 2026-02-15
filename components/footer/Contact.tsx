@@ -3,7 +3,7 @@ import ContactForm from "./ContactForm";
 
 export default function Contact() {
   return (
-    <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-12 p-0 md:p-10">
+    <div className="flex justify-between gap-12 p-10">
       <div className="flex flex-col gap-8 items-start">
         <Socials />
         <a
@@ -14,7 +14,7 @@ export default function Contact() {
         </a>
       </div>
 
-      <div className="flex flex-col gap-8 w-full md:w-auto">
+      <div className="flex flex-col gap-8">
         <ContactForm />
       </div>
     </div>
