@@ -1,4 +1,12 @@
 "use client";
+import Script from "next/script";
+import { useEffect } from "react";
+
+declare global {
+  interface Window {
+    _ctct_m?: string;
+  }
+}
 
 import { useEffect } from "react";
 
@@ -36,6 +44,7 @@ export default function ContactForm() {
       <div
         className="ctct-inline-form"
         data-form-id="5b7aa8ea-3df7-4924-8147-41dee4256832"
+        suppressHydrationWarning
       ></div>
       {/* <!-- End Constant Contact Inline Form Code --> */}
     </div>

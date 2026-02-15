@@ -17,7 +17,8 @@ function NewsBlerb(props: NewsBlrebProps) {
           width={2098}
           src={props.image}
           alt={props.alt}
-        ></Image>
+          sizes="(max-width: 768px) 100vw, 50vw"
+        />
       </div>
       <div className="flex flex-col items-start h-full justify-center">
         <Link href={props.link} className="text-header-teal text-h1 mb-4">
