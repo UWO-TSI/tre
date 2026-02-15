@@ -45,6 +45,14 @@ export const news = defineType({
       },
       validation: (Rule) => Rule.required(),
       description: "Image that will show on the news card",
+      fields: [
+        defineField({
+          name: "alt",
+          title: "Alt Text",
+          type: "string",
+          description: "Alternative text for SEO and Accessibility",
+        }),
+      ],
     }),
   ],
   preview: {

@@ -56,7 +56,7 @@ export default async function Page({
     <div className="bg-white">
       <HeroImage
         image={event.mainHeroImage}
-        alt=""
+        alt={event.mainHeroImage.alt}
         height={"20em"}
         title=""
       ></HeroImage>
@@ -122,9 +122,16 @@ export default async function Page({
               })}
             </div>
             {/* button */}
-            <PurpleAccentButton className="ml-auto mr-auto pt-5 pb-5 mt-8 mb-8 text-[20px]">
-              {event.buttonTitle}
-            </PurpleAccentButton>
+            {event.buttonTitle != undefined ? (
+              <PurpleAccentButton
+                href={event.buttonLink}
+                className="ml-auto mr-auto pt-5 pb-5 mt-8 mb-8 text-[20px]"
+              >
+                {event.buttonTitle}
+              </PurpleAccentButton>
+            ) : (
+              ""
+            )}
 
             {/* Images */}
             {event.images != undefined
@@ -143,7 +150,7 @@ export default async function Page({
                           height: "auto",
                         }}
                         src={urlForImage(image).url()}
-                        alt={""}
+                        alt={image.alt}
                       ></Image>
                     </div>
                   );
